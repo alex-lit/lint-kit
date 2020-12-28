@@ -1,3 +1,1 @@
-module.exports = {
-  extends: ['./node_modules/@alexlit/config-eslint'],
-};
+module.exports = require('@alexlit/config-eslint');
