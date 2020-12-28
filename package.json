@@ -51,7 +51,7 @@
     "@alexlit/config-commitlint": "^0.0.2",
     "@alexlit/config-eslint": "^0.0.2",
     "@alexlit/config-prettier": "^0.0.4",
-    "@alexlit/config-stylelint": "^0.0.6",
+    "@alexlit/config-stylelint": "^0.0.7",
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3"
   }
