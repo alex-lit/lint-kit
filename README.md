@@ -72,18 +72,3 @@ module.exports = {
   "*.{vue,pcss,scss,sass,css}": "stylelint --fix"
 },
 ```
-
-## Разработка
-
-Установите зависимости
-
-```sh
-npm i
-```
-
-Настройте конфигурационные файлы в соответствии с документацией
-
-- [commitlint](https://github.com/alex-lit/config-commitlint)
-- [eslint](https://github.com/alex-lit/config-eslint)
-- [prettier](https://github.com/alex-lit/config-prettier)
-- [stylelint](https://github.com/alex-lit/config-stylelint)
