@@ -49,7 +49,7 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^0.0.2",
-    "@alexlit/config-eslint": "^0.1.0",
+    "@alexlit/config-eslint": "^0.2.4",
     "@alexlit/config-prettier": "^0.0.4",
     "@alexlit/config-stylelint": "^0.0.7",
     "husky": "^4.3.6",
