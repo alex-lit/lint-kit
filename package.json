@@ -48,10 +48,10 @@
     "*.{vue,pcss,scss,sass,css}": "stylelint --fix"
   },
   "dependencies": {
-    "@alexlit/config-commitlint": "^0.0.2",
-    "@alexlit/config-eslint": "^0.2.4",
-    "@alexlit/config-prettier": "^0.0.4",
-    "@alexlit/config-stylelint": "^0.0.7",
+    "@alexlit/config-commitlint": "^0.0.3",
+    "@alexlit/config-eslint": "^0.2.7",
+    "@alexlit/config-prettier": "^0.0.6",
+    "@alexlit/config-stylelint": "^0.0.9",
     "husky": "^4.3.7",
     "lint-staged": "^10.5.3"
   }
