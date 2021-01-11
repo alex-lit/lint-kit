@@ -32,6 +32,9 @@
     ".stylelintrc.js"
   ],
   "scripts": {
+    "lint": "./scripts/lint.sh",
+    "lint:eslint": "./scripts/lint.eslint.sh",
+    "lint:stylelint": "./scripts/lint.stylelint.sh",
     "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
@@ -49,7 +52,7 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^0.0.3",
-    "@alexlit/config-eslint": "^0.2.7",
+    "@alexlit/config-eslint": "^0.3.0",
     "@alexlit/config-prettier": "^0.0.6",
     "@alexlit/config-stylelint": "^0.0.9",
     "husky": "^4.3.7",
