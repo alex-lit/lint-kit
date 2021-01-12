@@ -5,7 +5,7 @@
 ## Установка
 
 ```sh
-npm i @alexlit/lint-kit/lint-kit -D
+npm i @alexlit/lint-kit -D
 ```
 
 ## Подключение
@@ -15,7 +15,7 @@ npm i @alexlit/lint-kit/lint-kit -D
   ```js
   // .prettierrc.js
   module.exports = {
-    ...require('@alexlit/lint-kit/lint-kit/.prettierrc.js'),
+    ...require('@alexlit/lint-kit/.prettierrc.js'),
   };
   ```
 
@@ -24,7 +24,7 @@ npm i @alexlit/lint-kit/lint-kit -D
   ```js
   // .eslintrc.js
   module.exports = {
-    extends: ['./node_modules/@alexlit/lint-kit/lint-kit/.eslintrc.js'],
+    extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
   };
   ```
 
@@ -33,7 +33,7 @@ npm i @alexlit/lint-kit/lint-kit -D
   ```js
   // .stylelintrc.js
   module.exports = {
-    extends: ['@alexlit/lint-kit/lint-kit/.stylelintrc.js'],
+    extends: ['@alexlit/lint-kit.stylelintrc.js'],
 
     ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc.js').ignoreFiles],
   };
