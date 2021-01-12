@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/alex-lit/lint-kit/compare/v0.3.3...v0.4.0) (2021-01-12)
+
+
+### Features
+
+* export husky and lint-stagged configs ([998fd7c](https://github.com/alex-lit/lint-kit/commit/998fd7c61a627120e3d4b7c318d7572fc70dbd4c))
+
+
+
 ## [0.3.3](https://github.com/alex-lit/lint-kit/compare/v0.3.2...v0.3.3) (2021-01-12)
 
 
