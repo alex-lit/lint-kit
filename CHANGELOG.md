@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/alex-lit/lint-kit/compare/v0.4.3...v0.5.0) (2021-01-12)
+
+
+### Bug Fixes
+
+* lint root configs ([2e3b068](https://github.com/alex-lit/lint-kit/commit/2e3b06870375565b8751139304d3cbc65c027bd1))
+
+
+
 ## [0.4.3](https://github.com/alex-lit/lint-kit/compare/v0.4.2...v0.4.3) (2021-01-12)
 
 
