@@ -73,14 +73,14 @@ npm i @alexlit/lint-kit/lint-kit -D
 ```js
 // .lintstagedrc.js
 module.exports = {
-  ...require('@alexlit/lint-kit/lint-kit/.lintstagedrc.js'),
+  ...require('@alexlit/lint-kit/.lintstagedrc.js'),
 };
 ```
 
 ```js
 // .huskyrc.js
 module.exports = {
-  ...require('@alexlit/lint-kit/lint-kit/.huskyrc.js'),
+  ...require('@alexlit/lint-kit/.huskyrc.js'),
 };
 ```
 
