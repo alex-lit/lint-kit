@@ -98,8 +98,7 @@ module.exports = {
 
 ```ini
 # .npmrc
-tag-version-prefix="v"
-message="chore(release): %s :tada:"
+globalconfig="./node_modules/@alexlit/lint-kit/.npmrc"
 ```
 
 ```json
