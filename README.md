@@ -58,7 +58,9 @@ npm i @alexlit/lint-kit/lint-kit -D
   ```js
   // .huskyrc.js
   module.exports = {
-    ...require('@alexlit/lint-kit/lint-kit/.huskyrc.js'),
+    hooks: {
+      'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
+    },
   };
   ```
 
@@ -70,6 +72,13 @@ npm i @alexlit/lint-kit/lint-kit -D
 // .lintstagedrc.js
 module.exports = {
   ...require('@alexlit/lint-kit/lint-kit/.lintstagedrc.js'),
+};
+```
+
+```js
+// .huskyrc.js
+module.exports = {
+  ...require('@alexlit/lint-kit/lint-kit/.huskyrc.js'),
 };
 ```
 
