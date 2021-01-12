@@ -62,7 +62,7 @@
   "dependencies": {
     "@alexlit/config-commitlint": "^0.0.3",
     "@alexlit/config-eslint": "^0.3.0",
-    "@alexlit/config-markdownlint": "0.0.2",
+    "@alexlit/config-markdownlint": "0.1.0",
     "@alexlit/config-prettier": "^0.0.6",
     "@alexlit/config-stylelint": "^0.0.9",
     "husky": "^4.3.7",
