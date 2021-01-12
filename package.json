@@ -34,6 +34,8 @@
   "files": [
     ".commitlintrc.js",
     ".eslintrc.js",
+    ".huskyrc.js",
+    ".lintstagedrc.js",
     ".markdownlint.json",
     ".prettierrc.js",
     ".stylelintrc.js",
@@ -48,26 +50,6 @@
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
     "version": "./scripts/version.sh"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,vue}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{vue,pcss,scss,sass,css}": [
-      "stylelint --fix",
-      "prettier --write"
-    ],
-    "*.{md}": [
-      "markdownlint --fix",
-      "prettier --write"
-    ]
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^0.0.3",
