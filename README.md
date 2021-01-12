@@ -53,7 +53,7 @@ npm i @alexlit/lint-kit -D
   ```js
   // .commitlintrc.js
   module.exports = {
-    extends: ['@alexlit/lint-kit/lint-kit/.commitlintrc.js'],
+    extends: ['@alexlit/lint-kit/.commitlintrc.js'],
   };
   ```
 
