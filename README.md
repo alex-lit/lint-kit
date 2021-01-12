@@ -34,6 +34,8 @@ npm i @alexlit/lint-kit/lint-kit -D
   // .stylelintrc.js
   module.exports = {
     extends: ['@alexlit/lint-kit/lint-kit/.stylelintrc.js'],
+
+    ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc.js').ignoreFiles],
   };
   ```
 
