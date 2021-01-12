@@ -44,7 +44,7 @@ npm i @alexlit/lint-kit -D
   ```json
   // .markdownlint.json
   {
-    "extends": "./node_modules/@alexlit/lint-kit/config-markdownlint/.markdownlint.json"
+    "extends": "./node_modules/@alexlit/lint-kit/.markdownlint.json"
   }
   ```
 
