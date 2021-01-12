@@ -10,21 +10,21 @@ npm i @alexlit/lint-kit -D
 
 ## Подключение
 
-### ESLint
-
-```js
-// .eslintrc.js
-module.exports = {
-  extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
-};
-```
-
 ### Prettier
 
 ```js
 // .prettierrc.js
 module.exports = {
   ...require('@alexlit/lint-kit/.prettierrc.js'),
+};
+```
+
+### ESLint
+
+```js
+// .eslintrc.js
+module.exports = {
+  extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
 };
 ```
 
@@ -37,6 +37,15 @@ module.exports = {
 };
 ```
 
+### MarkdownLint
+
+```json
+// .markdownlint.json
+{
+  "extends": "./node_modules/@alexlit/config-markdownlint/.markdownlint.json"
+}
+```
+
 ### CommitLint
 
 ```js
@@ -45,8 +54,6 @@ module.exports = {
   extends: ['@alexlit/lint-kit/.commitlintrc.js'],
 };
 ```
-
-Добавьте в `package.json` конфигурацию:
 
 ```json
 // package.json
@@ -71,6 +78,7 @@ module.exports = {
 },
 "lint-staged": {
   "*.{js,ts,vue}": "eslint --fix",
-  "*.{vue,pcss,scss,sass,css}": "stylelint --fix"
+  "*.{vue,pcss,scss,sass,css}": "stylelint --fix",
+  "*.{md}": "markdownlint --fix"
 },
 ```

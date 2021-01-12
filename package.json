@@ -4,8 +4,14 @@
   "private": false,
   "description": "Lint Kit",
   "keywords": [
+    "commitlint",
+    "config",
+    "eslint",
+    "kit",
     "lint",
-    "kit"
+    "markdownlint",
+    "prettier",
+    "stylelint"
   ],
   "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
@@ -28,12 +34,14 @@
   "files": [
     ".commitlintrc.js",
     ".eslintrc.js",
+    ".markdownlint.json",
     ".prettierrc.js",
     ".stylelintrc.js"
   ],
   "scripts": {
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
+    "lint:markdownlint": "./scripts/lint.markdownlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
     "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
@@ -48,11 +56,13 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix",
-    "*.{vue,pcss,scss,sass,css}": "stylelint --fix"
+    "*.{vue,pcss,scss,sass,css}": "stylelint --fix",
+    "*.{md}": "markdownlint --fix"
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^0.0.3",
     "@alexlit/config-eslint": "^0.3.0",
+    "@alexlit/config-markdownlint": "0.0.2",
     "@alexlit/config-prettier": "^0.0.6",
     "@alexlit/config-stylelint": "^0.0.9",
     "husky": "^4.3.7",
