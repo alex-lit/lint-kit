@@ -1,3 +1,12 @@
+## [0.3.3](https://github.com/alex-lit/lint-kit/compare/v0.3.2...v0.3.3) (2021-01-12)
+
+
+### Bug Fixes
+
+* lint script ([3820cf8](https://github.com/alex-lit/lint-kit/commit/3820cf8ddd201803e40e9aa3bb30f047e5faeab0))
+
+
+
 ## [0.3.2](https://github.com/alex-lit/lint-kit/compare/v0.3.1...v0.3.2) (2021-01-12)
 
 
