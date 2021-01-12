@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/alex-lit/lint-kit/compare/v0.2.3...v0.3.0) (2021-01-12)
+
+
+### Features
+
+* add markdownlint ([32cebfb](https://github.com/alex-lit/lint-kit/commit/32cebfbb0a6472535fd36f0137268769186c60fa))
+
+
+
 ## [0.2.3](https://github.com/alex-lit/lint-kit/compare/v0.2.2...v0.2.3) (2021-01-11)
 
 
