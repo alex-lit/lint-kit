@@ -1,3 +1,12 @@
+## [0.3.2](https://github.com/alex-lit/lint-kit/compare/v0.3.1...v0.3.2) (2021-01-12)
+
+
+### Features
+
+* add scripts to package ([99e3b1b](https://github.com/alex-lit/lint-kit/commit/99e3b1b27e183451f8317a6692944bca9c21772a))
+
+
+
 ## [0.3.1](https://github.com/alex-lit/lint-kit/compare/v0.3.0...v0.3.1) (2021-01-12)
 
 
