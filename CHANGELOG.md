@@ -1,3 +1,12 @@
+## [0.4.3](https://github.com/alex-lit/lint-kit/compare/v0.4.2...v0.4.3) (2021-01-12)
+
+
+### Features
+
+* extend stylelint config ([54ff535](https://github.com/alex-lit/lint-kit/commit/54ff535a1b9cb0d690f0a2baaf9763a1e1dd6df6))
+
+
+
 ## [0.4.2](https://github.com/alex-lit/lint-kit/compare/v0.4.1...v0.4.2) (2021-01-12)
 
 
