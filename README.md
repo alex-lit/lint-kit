@@ -77,10 +77,19 @@ npm i @alexlit/lint-kit/lint-kit -D
     }
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --fix",
-    "*.{vue,pcss,scss,sass,css}": "stylelint --fix",
-    "*.{md}": "markdownlint --fix"
-  }
+    "*.{js,ts,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{vue,pcss,scss,sass,css}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{md}": [
+      "markdownlint --fix",
+      "prettier --write"
+    ]
+  },
   ```
 
 ### Запуска линтинга вручную
