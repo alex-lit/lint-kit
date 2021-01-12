@@ -36,7 +36,8 @@
     ".eslintrc.js",
     ".markdownlint.json",
     ".prettierrc.js",
-    ".stylelintrc.js"
+    ".stylelintrc.js",
+    "scripts/"
   ],
   "scripts": {
     "lint": "./scripts/lint.sh",
