@@ -1,3 +1,12 @@
+## [0.5.1](https://github.com/alex-lit/lint-kit/compare/v0.5.0...v0.5.1) (2021-01-13)
+
+
+### Features
+
+* add example ([bce7e72](https://github.com/alex-lit/lint-kit/commit/bce7e72d47f5cacd68d86dc7dd4ddb70cd8cad15))
+
+
+
 # [0.5.0](https://github.com/alex-lit/lint-kit/compare/v0.4.3...v0.5.0) (2021-01-12)
 
 
