@@ -1,10 +1,10 @@
 const eslint = 'eslint --fix';
-const markdownlint = 'markdownlint --fix';
+const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
-  '*.{js,ts,vue},!./example/.eslintrc.js': [eslint, prettier],
+  '*.{js,ts,vue}': [eslint, prettier],
   '*.{vue,pcss,scss,sass,css}': [stylelint, prettier],
-  '*.{md}': [markdownlint, prettier],
+  '*.md': [markdownlint, prettier],
 };
