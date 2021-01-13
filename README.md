@@ -10,6 +10,9 @@ npm i @alexlit/lint-kit -D
 
 ## Подключение
 
+Примеры конфигурационных файлов находятся в директории
+[examples](https://github.com/alex-lit/lint-kit/tree/master/example)
+
 - Prettier
 
   ```js

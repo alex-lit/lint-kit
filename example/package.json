@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
+    "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
+    "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
+    "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
+    
+    "publish": "./node_modules/@alexlit/lint-kit/scripts/publish.sh",
+    "semver": "./node_modules/@alexlit/lint-kit/scripts/semver.sh",
+    "up": "./node_modules/@alexlit/lint-kit/scripts/up.sh",
+    "version": "./node_modules/@alexlit/lint-kit/scripts/version.sh"
+  }
+}
