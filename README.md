@@ -44,11 +44,11 @@ npm i @alexlit/lint-kit -D
 
 - MarkdownLint
 
-  ```json
-  // .markdownlint.json
-  {
-    "extends": "./node_modules/@alexlit/lint-kit/.markdownlint.json"
-  }
+  ```js
+  // .markdownlintrc.js
+  module.exports = {
+    ...require('@alexlit/lint-kit/.markdownlintrc.js'),
+  };
   ```
 
 - CommitLint

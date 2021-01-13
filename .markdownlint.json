@@ -1,4 +1,0 @@
-{
-  "default": true,
-  "extends": "./node_modules/@alexlit/config-markdownlint/.markdownlint.json"
-}
