@@ -40,7 +40,7 @@
     ".npmrc",
     ".prettierrc.js",
     ".stylelintrc.js",
-    "examples/",
+    "example/",
     "scripts/"
   ],
   "scripts": {
