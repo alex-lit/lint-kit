@@ -1,91 +1,77 @@
+## [0.7.2](https://github.com/alex-lit/lint-kit/compare/v0.7.1...v0.7.2) (2021-01-13)
+
+### Bug Fixes
+
+- lint stagged config
+  ([c76bee1](https://github.com/alex-lit/lint-kit/commit/c76bee19cff41719591fd655af15b93b56c50a5e))
+- mdlint config
+  ([9fbe162](https://github.com/alex-lit/lint-kit/commit/9fbe162608d28c09366e38c82f22a04b9e280cf9))
+
 ## [0.7.1](https://github.com/alex-lit/lint-kit/compare/v0.7.0...v0.7.1) (2021-01-13)
-
-
 
 # [0.7.0](https://github.com/alex-lit/lint-kit/compare/v0.6.0...v0.7.0) (2021-01-13)
 
-
 ### Features
 
-* use js markdowlint config ([19a002a](https://github.com/alex-lit/lint-kit/commit/19a002adb5c69da8d91dca2cfde26536ec1c731f))
-
-
+- use js markdowlint config
+  ([19a002a](https://github.com/alex-lit/lint-kit/commit/19a002adb5c69da8d91dca2cfde26536ec1c731f))
 
 # [0.6.0](https://github.com/alex-lit/lint-kit/compare/v0.5.1...v0.6.0) (2021-01-13)
 
-
-
 ## [0.5.1](https://github.com/alex-lit/lint-kit/compare/v0.5.0...v0.5.1) (2021-01-13)
-
 
 ### Features
 
-* add example ([bce7e72](https://github.com/alex-lit/lint-kit/commit/bce7e72d47f5cacd68d86dc7dd4ddb70cd8cad15))
-
-
+- add example
+  ([bce7e72](https://github.com/alex-lit/lint-kit/commit/bce7e72d47f5cacd68d86dc7dd4ddb70cd8cad15))
 
 # [0.5.0](https://github.com/alex-lit/lint-kit/compare/v0.4.3...v0.5.0) (2021-01-12)
 
-
 ### Bug Fixes
 
-* lint root configs ([2e3b068](https://github.com/alex-lit/lint-kit/commit/2e3b06870375565b8751139304d3cbc65c027bd1))
-
-
+- lint root configs
+  ([2e3b068](https://github.com/alex-lit/lint-kit/commit/2e3b06870375565b8751139304d3cbc65c027bd1))
 
 ## [0.4.3](https://github.com/alex-lit/lint-kit/compare/v0.4.2...v0.4.3) (2021-01-12)
 
-
 ### Features
 
-* extend stylelint config ([54ff535](https://github.com/alex-lit/lint-kit/commit/54ff535a1b9cb0d690f0a2baaf9763a1e1dd6df6))
-
-
+- extend stylelint config
+  ([54ff535](https://github.com/alex-lit/lint-kit/commit/54ff535a1b9cb0d690f0a2baaf9763a1e1dd6df6))
 
 ## [0.4.2](https://github.com/alex-lit/lint-kit/compare/v0.4.1...v0.4.2) (2021-01-12)
 
-
-
 ## [0.4.1](https://github.com/alex-lit/lint-kit/compare/v0.4.0...v0.4.1) (2021-01-12)
-
-
 
 # [0.4.0](https://github.com/alex-lit/lint-kit/compare/v0.3.3...v0.4.0) (2021-01-12)
 
-
 ### Features
 
-* export husky and lint-stagged configs ([998fd7c](https://github.com/alex-lit/lint-kit/commit/998fd7c61a627120e3d4b7c318d7572fc70dbd4c))
-
-
+- export husky and lint-stagged configs
+  ([998fd7c](https://github.com/alex-lit/lint-kit/commit/998fd7c61a627120e3d4b7c318d7572fc70dbd4c))
 
 ## [0.3.3](https://github.com/alex-lit/lint-kit/compare/v0.3.2...v0.3.3) (2021-01-12)
 
-
 ### Bug Fixes
 
-* lint script ([3820cf8](https://github.com/alex-lit/lint-kit/commit/3820cf8ddd201803e40e9aa3bb30f047e5faeab0))
-
-
+- lint script
+  ([3820cf8](https://github.com/alex-lit/lint-kit/commit/3820cf8ddd201803e40e9aa3bb30f047e5faeab0))
 
 ## [0.3.2](https://github.com/alex-lit/lint-kit/compare/v0.3.1...v0.3.2) (2021-01-12)
 
-
 ### Features
 
-* add scripts to package ([99e3b1b](https://github.com/alex-lit/lint-kit/commit/99e3b1b27e183451f8317a6692944bca9c21772a))
-
-
+- add scripts to package
+  ([99e3b1b](https://github.com/alex-lit/lint-kit/commit/99e3b1b27e183451f8317a6692944bca9c21772a))
 
 ## [0.3.1](https://github.com/alex-lit/lint-kit/compare/v0.3.0...v0.3.1) (2021-01-12)
-
-
 
 # [0.3.0](https://github.com/alex-lit/lint-kit/compare/v0.2.3...v0.3.0) (2021-01-12)
 
 ### Features
 
-* add markdownlint ([32cebfb](https://github.com/alex-lit/lint-kit/commit/32cebfbb0a6472535fd36f0137268769186c60fa))
+- add markdownlint
+  ([32cebfb](https://github.com/alex-lit/lint-kit/commit/32cebfbb0a6472535fd36f0137268769186c60fa))
 
 ## [0.2.3](https://github.com/alex-lit/lint-kit/compare/v0.2.2...v0.2.3) (2021-01-11)
 
