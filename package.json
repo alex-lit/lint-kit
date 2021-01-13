@@ -36,7 +36,7 @@
     ".eslintrc.js",
     ".huskyrc.js",
     ".lintstagedrc.js",
-    ".markdownlint.json",
+    ".markdownlintrc.js",
     ".npmrc",
     ".prettierrc.js",
     ".stylelintrc.js",
