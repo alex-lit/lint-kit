@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/alex-lit/lint-kit/compare/v0.6.0...v0.7.0) (2021-01-13)
+
+
+### Features
+
+* use js markdowlint config ([19a002a](https://github.com/alex-lit/lint-kit/commit/19a002adb5c69da8d91dca2cfde26536ec1c731f))
+
+
+
 # [0.6.0](https://github.com/alex-lit/lint-kit/compare/v0.5.1...v0.6.0) (2021-01-13)
 
 
