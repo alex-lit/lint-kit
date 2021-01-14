@@ -5,5 +5,5 @@ VERSION=${1:-minor}
 echo 'Обновление зависимостей до версии:' ${VERSION}
 
 npx npm-check-updates --upgrade --target ${VERSION}
-npm i
+npm i --no-optional
 npm audit fix
