@@ -4,7 +4,11 @@ const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
-  '*.{js,ts,vue}': [eslint, prettier],
-  '*.{vue,pcss,scss,sass,css}': [stylelint, prettier],
+  '*.json': [prettier],
   '*.md': [markdownlint, prettier],
+  '*.php': [prettier],
+  '*.rb': [prettier],
+  '*.sh': [prettier],
+  '*.{css,pcss,postcss,sass,scss,vue}': [stylelint, prettier],
+  '*.{js,ts,vue}': [eslint, prettier],
 };
