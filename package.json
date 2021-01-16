@@ -40,8 +40,8 @@
     ".npmrc",
     ".prettierrc.js",
     ".stylelintrc.js",
-    "example/",
-    "scripts/"
+    "example",
+    "scripts"
   ],
   "scripts": {
     "lint": "./scripts/lint.sh",
