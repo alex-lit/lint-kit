@@ -12,4 +12,5 @@ module.exports = {
   '*.xml': [prettier],
   '*.{css,pcss,postcss,sass,scss,vue}': [stylelint, prettier],
   '*.{js,ts,vue}': [eslint, prettier],
+  '*.{yaml,yml}': [eslint, prettier],
 };
