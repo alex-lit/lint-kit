@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/alex-lit/lint-kit/compare/v0.9.1...v0.10.0) (2021-01-18)
+
+### Features
+
+- add yaml linter
+  ([8dbbec9](https://github.com/alex-lit/lint-kit/commit/8dbbec93fa4cc10de88d2ddc9198fd2b88c8ed9a))
+
 ## [0.9.1](https://github.com/alex-lit/lint-kit/compare/v0.9.0...v0.9.1) (2021-01-18)
 
 ### Features
