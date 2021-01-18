@@ -1,3 +1,10 @@
+## [0.9.1](https://github.com/alex-lit/lint-kit/compare/v0.9.0...v0.9.1) (2021-01-18)
+
+### Features
+
+- xml lintstagged
+  ([5f682c1](https://github.com/alex-lit/lint-kit/commit/5f682c1a0f8a647ceaa7616eb6b0b872fbb22e58))
+
 # [0.9.0](https://github.com/alex-lit/lint-kit/compare/v0.8.1...v0.9.0) (2021-01-16)
 
 ## [0.8.1](https://github.com/alex-lit/lint-kit/compare/v0.8.0...v0.8.1) (2021-01-16)
