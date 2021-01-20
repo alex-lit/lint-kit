@@ -4,7 +4,7 @@ const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
-  '*.{json,jsonp}': [prettier],
+  '*.json': [eslint, prettier],
   '*.md': [markdownlint, prettier],
   '*.php': [prettier],
   '*.rb': [prettier],
