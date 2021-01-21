@@ -1,0 +1,50 @@
+{
+  "name": "@alexlit/config-stylelint",
+  "version": "0.1.1",
+  "private": false,
+  "description": "Stylelint config",
+  "keywords": [
+    "stylelint",
+    "config"
+  ],
+  "homepage": "https://github.com/alex-lit/config-stylelint#readme",
+  "bugs": {
+    "url": "https://github.com/alex-lit/config-stylelint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-lit/config-stylelint.git"
+  },
+  "license": "MIT",
+  "author": "Alexey Litovchenko",
+  "maintainers": [
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+  ],
+  "main": ".stylelintrc.js",
+  "files": [
+    ".stylelintrc.js",
+    "configs"
+  ],
+  "scripts": {
+    "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
+    "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
+    "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
+    "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
+    "publish": "./node_modules/@alexlit/lint-kit/scripts/publish.sh",
+    "semver": "./node_modules/@alexlit/lint-kit/scripts/semver.sh",
+    "up": "./node_modules/@alexlit/lint-kit/scripts/up.sh",
+    "version": "./node_modules/@alexlit/lint-kit/scripts/version.sh"
+  },
+  "dependencies": {
+    "stylelint": "^13.9.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-use-nesting": "^3.0.0"
+  },
+  "devDependencies": {
+    "@alexlit/lint-kit": "0.13.1"
+  }
+}

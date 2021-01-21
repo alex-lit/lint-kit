@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@alexlit/config-prettier'),
+  ...require('./packages/config-prettier'),
 };

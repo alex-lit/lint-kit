@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@alexlit/config-eslint'),
+  ...require('./packages/config-eslint'),
 };

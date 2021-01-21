@@ -1,7 +1,5 @@
 module.exports = {
-  extends: ['@alexlit/config-stylelint'],
+  extends: ['./packages/config-stylelint'],
 
-  ignoreFiles: [
-    ...require('@alexlit/config-stylelint/.stylelintrc.js').ignoreFiles,
-  ],
+  ignoreFiles: [...require('./packages/config-stylelint').ignoreFiles],
 };
