@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./packages/config-stylelint'],
+  extends: ['config-stylelint'],
 
-  ignoreFiles: [...require('./packages/config-stylelint').ignoreFiles],
+  ignoreFiles: [...require('config-stylelint').ignoreFiles],
 };

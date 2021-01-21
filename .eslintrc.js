@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('./packages/config-eslint'),
+  ...require('config-eslint'),
 };

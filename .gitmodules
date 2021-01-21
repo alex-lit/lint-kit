@@ -1,3 +1,15 @@
-[submodule "packages"]
-	path = packages
+[submodule "config-stylelint"]
+	path = config-stylelint
 	url = https://github.com/alex-lit/config-stylelint.git
+[submodule "config-eslint"]
+	path = config-eslint
+	url = https://github.com/alex-lit/config-eslint.git
+[submodule "config-markdownlint"]
+	path = config-markdownlint
+	url = https://github.com/alex-lit/config-markdownlint.git
+[submodule "config-commitlint"]
+	path = config-commitlint
+	url = https://github.com/alex-lit/config-commitlint.git
+[submodule "config-prettier"]
+	path = config-prettier
+	url = https://github.com/alex-lit/config-prettier.git

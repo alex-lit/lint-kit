@@ -5,8 +5,6 @@ DEFAULT='\e[39m'
 
 echo "${GREEN}Установка зависимостей субмодулей...${DEFAULT}"
 
-cd packages
-
 cd config-commitlint
 npm i --no-optional
 
