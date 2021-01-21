@@ -40,11 +40,12 @@
     ".npmrc",
     ".prettierrc.js",
     ".stylelintrc.js",
+    "config-*",
     "example",
-    "config-commitlint/package.json",
     "scripts"
   ],
   "scripts": {
+    "preinstall": "npm install file:config-commitlint",
     "install-submodules": "./scripts/install-submodules.sh",
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
