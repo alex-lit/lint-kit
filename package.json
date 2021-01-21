@@ -45,7 +45,7 @@
     "scripts"
   ],
   "scripts": {
-    "preinstall": "npm install file:config-commitlint",
+    "preinstall": "./scripts/preinstall.sh",
     "install-submodules": "./scripts/install-submodules.sh",
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
@@ -61,10 +61,10 @@
     "lint-staged": "^10.5.3"
   },
   "devDependencies": {
-    "config-commitlint": "file:./config-commitlint",
-    "config-eslint": "file:./config-eslint",
-    "config-markdownlint": "file:./config-markdownlint",
-    "config-prettier": "file:./config-prettier",
-    "config-stylelint": "file:./config-stylelint"
+    "config-commitlint": "file:config-commitlint",
+    "config-eslint": "file:config-eslint",
+    "config-markdownlint": "file:config-markdownlint",
+    "config-prettier": "file:config-prettier",
+    "config-stylelint": "file:config-stylelint"
   }
 }
