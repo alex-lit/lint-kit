@@ -41,8 +41,7 @@
     ".prettierrc.js",
     ".stylelintrc.js",
     "example",
-    "config-commitlint",
-    "config-*",
+    "config-commitlint/package.json",
     "scripts"
   ],
   "scripts": {
