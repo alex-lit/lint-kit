@@ -1,3 +1,10 @@
+## [0.14.4](https://github.com/alex-lit/lint-kit/compare/v0.14.3...v0.14.4) (2021-01-22)
+
+### Bug Fixes
+
+- ignore .gitignore
+  ([c1e1c00](https://github.com/alex-lit/lint-kit/commit/c1e1c0016f576c825a0ca8c76e51753f984f0cbf))
+
 ## [0.14.3](https://github.com/alex-lit/lint-kit/compare/v0.14.2...v0.14.3) (2021-01-22)
 
 ## [0.14.2](https://github.com/alex-lit/lint-kit/compare/v0.14.1...v0.14.2) (2021-01-22)
