@@ -5,4 +5,4 @@ DEFAULT='\e[39m'
 
 echo "Запуск линтера: ${YELLOW}stylelint${DEFAULT}"
 
-stylelint '**/*.{vue,css}' --fix
+stylelint '**/*.{css,pcss,postcss,sass,scss,vue}' --ignore-path .gitignore --fix

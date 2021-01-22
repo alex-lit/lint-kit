@@ -5,4 +5,4 @@ DEFAULT='\e[39m'
 
 echo "Запуск линтера: ${YELLOW}eslint${DEFAULT}"
 
-eslint --ext .js,.ts,.vue,.yaml,.yml ./ --fix
+eslint --ext .js,.ts,.vue,.yaml,.yml --ignore-path .gitignore ./ --fix
