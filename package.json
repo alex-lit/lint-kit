@@ -45,6 +45,7 @@
     "scripts"
   ],
   "scripts": {
+    "postinstall": "./scripts/postinstall.sh",
     "install-submodules": "./scripts/install-submodules.sh",
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
@@ -54,7 +55,6 @@
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
     "version": "./scripts/version.sh",
-    "x-postinstall": "./scripts/postinstall.sh",
     "xxx": "git submodule update --init --recursive"
   },
   "dependencies": {
