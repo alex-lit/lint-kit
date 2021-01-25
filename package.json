@@ -45,7 +45,6 @@
     "scripts"
   ],
   "scripts": {
-    "preinstall": "./scripts/preinstall.sh",
     "install-submodules": "./scripts/install-submodules.sh",
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
@@ -54,14 +53,16 @@
     "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
-    "version": "./scripts/version.sh"
+    "version": "./scripts/version.sh",
+    "x-postinstall": "./scripts/postinstall.sh",
+    "xxx": "git submodule update --init --recursive"
   },
   "dependencies": {
-    "config-commitlint": "file:config-commitlint",
-    "config-eslint": "file:config-eslint",
-    "config-markdownlint": "file:config-markdownlint",
-    "config-prettier": "file:config-prettier",
-    "config-stylelint": "file:config-stylelint",
+    "@alexlit/config-commitlint": "file:config-commitlint",
+    "@alexlit/config-eslint": "file:config-eslint",
+    "@alexlit/config-markdownlint": "file:config-markdownlint",
+    "@alexlit/config-prettier": "file:config-prettier",
+    "@alexlit/config-stylelint": "file:config-stylelint",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3"
   }
