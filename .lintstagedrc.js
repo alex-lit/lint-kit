@@ -4,13 +4,23 @@ const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
+  '*.css': [stylelint, prettier],
+  '*.html': [prettier],
+  '*.js': [eslint, prettier],
   '*.json': [prettier],
+  '*.jsx': [eslint, prettier],
   '*.md': [markdownlint, prettier],
+  '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
+  '*.postcss': [stylelint, prettier],
   '*.rb': [prettier],
+  '*.sass': [stylelint, prettier],
+  '*.scss': [stylelint, prettier],
   '*.sh': [prettier],
+  '*.ts': [eslint, prettier],
+  '*.tsx': [eslint, prettier],
+  '*.vue': [eslint, stylelint, prettier],
   '*.xml': [prettier],
-  '*.{css,pcss,postcss,sass,scss,vue}': [stylelint, prettier],
-  '*.{js,ts,vue}': [eslint, prettier],
-  '*.{yaml,yml}': [eslint, prettier],
+  '*.yaml': [eslint, prettier],
+  '*.yml': [eslint, prettier],
 };

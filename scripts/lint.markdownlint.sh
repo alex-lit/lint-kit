@@ -5,4 +5,4 @@ DEFAULT='\e[39m'
 
 echo "Запуск линтера: ${YELLOW}markdownlint${DEFAULT}"
 
-markdownlint *.md --config .markdownlintrc.js --fix
+markdownlint **/*.md --config .markdownlintrc.js --fix
