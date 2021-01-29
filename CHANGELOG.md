@@ -1,3 +1,10 @@
+# [0.15.0](https://github.com/alex-lit/lint-kit/compare/v0.14.12...v0.15.0) (2021-01-29)
+
+### Features
+
+- **markdown:** autofix
+  ([f03a742](https://github.com/alex-lit/lint-kit/commit/f03a742cec904ba1eed275972a0793489efee2fb))
+
 ## [0.14.12](https://github.com/alex-lit/lint-kit/compare/v0.14.11...v0.14.12) (2021-01-28)
 
 ## [0.14.11](https://github.com/alex-lit/lint-kit/compare/v0.14.10...v0.14.11) (2021-01-27)
