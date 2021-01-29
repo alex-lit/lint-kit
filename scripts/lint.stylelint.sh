@@ -1,8 +1,12 @@
 # Запускает линтер стилей
 
-YELLOW='\e[33m'
-DEFAULT='\e[39m'
+COLOR_NAME='\e[33m'
+COLOR_ARROW='\e[90m'
+COLOR_FILES='\e[96m'
+COLOR_DEFAULT='\e[39m'
 
-echo "Запуск линтера: ${YELLOW}stylelint${DEFAULT}"
+FILES='**/*.{css,pcss,postcss,sass,scss,vue}'
 
-stylelint '**/*.{css,pcss,postcss,sass,scss,vue}' --ignore-path .gitignore --fix
+echo "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+
+stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --fix

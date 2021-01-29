@@ -1,6 +1,6 @@
 # Lint Kit
 
-Пресет конфигурационных файлов и зависимостей для линтинга `vue.js` приложений
+Пресет конфигурационных файлов и зависимостей для линтинга web-приложений
 
 ## Установка
 
@@ -10,10 +10,9 @@ npm i @alexlit/lint-kit -D
 
 ## Подключение
 
-Примеры конфигурационных файлов находятся в директории
-[examples](https://github.com/alex-lit/lint-kit/tree/master/example)
+> Примеры конфигурационных файлов находятся в архиве `example.zip`
 
-- Prettier
+- [Prettier](https://github.com/alex-lit/config-prettier)
 
   ```js
   // .prettierrc.js
@@ -22,7 +21,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- ESLint
+- [ESLint](https://github.com/alex-lit/config-eslint)
 
   ```js
   // .eslintrc.js
@@ -31,7 +30,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- StyleLint
+- [StyleLint](https://github.com/alex-lit/config-stylelint)
 
   ```js
   // .stylelintrc.js
@@ -42,7 +41,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- MarkdownLint
+- [MarkdownLint](https://github.com/alex-lit/config-markdownlint)
 
   ```js
   // .markdownlintrc.js
@@ -51,7 +50,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- CommitLint
+- [CommitLint](https://github.com/alex-lit/config-commitlint)
 
   ```js
   // .commitlintrc.js

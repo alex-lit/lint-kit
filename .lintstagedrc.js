@@ -9,7 +9,7 @@ module.exports = {
   '*.js': [eslint, prettier],
   '*.json': [prettier],
   '*.jsx': [eslint, prettier],
-  '*.md': [markdownlint, prettier],
+  '*.md': [prettier, markdownlint],
   '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
   '*.postcss': [stylelint, prettier],

@@ -1,8 +1,13 @@
 # Запускает линтер .md файлов
 
-YELLOW='\e[33m'
-DEFAULT='\e[39m'
+COLOR_NAME='\e[33m'
+COLOR_ARROW='\e[90m'
+COLOR_FILES='\e[96m'
+COLOR_DEFAULT='\e[39m'
 
-echo "Запуск линтера: ${YELLOW}markdownlint${DEFAULT}"
+FILES='**/*.md'
 
-markdownlint **/*.md --config .markdownlintrc.js --fix
+echo "${COLOR_NAME}markdownlint + prettier ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+
+prettier --write ${FILES}
+markdownlint ${FILES} --config .markdownlintrc.js --fix

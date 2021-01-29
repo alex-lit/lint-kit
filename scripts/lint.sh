@@ -1,10 +1,13 @@
 # Запускает общий линтер
 
-GREEN='\e[32m'
-DEFAULT='\e[39m'
+OPTION=${1} # example: --fix
 
-echo "${GREEN}Запуск линтеров${DEFAULT}"
+COLOR_TITLE='\e[92m'
+COLOR_LINTERS='\e[90m'
+COLOR_DEFAULT='\e[39m'
 
-npm run lint:eslint
-npm run lint:stylelint
-npm run lint:markdownlint
+echo "${COLOR_TITLE}linters: ${COLOR_LINTERS}eslint, stylelint, markdownlint${COLOR_DEFAULT}"
+
+npm run lint:eslint ${OPTION}
+npm run lint:stylelint ${OPTION}
+npm run lint:markdownlint ${OPTION}
