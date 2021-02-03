@@ -2,7 +2,7 @@
   "name": "@alexlit/lint-kit",
   "version": "0.19.1",
   "private": false,
-  "description": "Lint Kit",
+  "description": "Preset of configuration files and dependencies for linting web applications (perfect for vue.js)",
   "keywords": [
     "commitlint",
     "config",
@@ -10,8 +10,10 @@
     "kit",
     "lint",
     "markdownlint",
+    "preset",
     "prettier",
-    "stylelint"
+    "stylelint",
+    "toolkit"
   ],
   "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
