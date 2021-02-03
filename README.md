@@ -1,16 +1,18 @@
 # Lint Kit
 
-Пресет конфигурационных файлов и зависимостей для линтинга web-приложений
+Preset of configuration files and dependencies for linting web applications
+(perfect for [vue.js](https://vuejs.org))
 
-## Установка
+## Installation
 
 ```sh
 npm i @alexlit/lint-kit -D
 ```
 
-## Подключение
+## Connection
 
-> Примеры конфигурационных файлов находятся в архиве `example.zip`
+> Sample configuration files are in
+> [example.zip](https://github.com/alex-lit/lint-kit/raw/master/example.zip)
 
 - [Prettier](https://github.com/alex-lit/config-prettier)
 
@@ -68,9 +70,9 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-## Рецепты
+## Recipes
 
-### Aвтоматический запуск линтеров и исправление кода при коммите
+### Automatic launch linters and code fixes on commit
 
 ```js
 // .lintstagedrc.js
@@ -86,7 +88,7 @@ module.exports = {
 };
 ```
 
-### Запуск линтеров вручную
+### Launching linters manually
 
 ```json
 // package.json
@@ -98,7 +100,7 @@ module.exports = {
 },
 ```
 
-### Публикация пакета
+### Publishing a package
 
 ```ini
 # .npmrc
@@ -116,7 +118,7 @@ globalconfig="./node_modules/@alexlit/lint-kit/.npmrc"
 ```
 
 ```bash
-npm run up # Обновляет зависимости
-npm run semver <patch | minor | major> # Обновляет версию пакета
-npm publish # Публикует пакет в npm-репозиторий
+npm run up # Updates dependencies
+npm run semver <patch | minor | major> # Updates package version
+npm publish # Publishes a package to npm repository
 ```
