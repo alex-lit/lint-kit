@@ -8,4 +8,4 @@ echo "Обновление зависимостей до версии: ${YELLOW}
 
 npx npm-check-updates --upgrade --target ${VERSION}
 npm i --no-optional
-npm audit fix
+# npm audit fix
