@@ -1,3 +1,10 @@
+# [0.22.0](https://github.com/alex-lit/lint-kit/compare/v0.21.0...v0.22.0) (2021-02-05)
+
+### Features
+
+- add fix option
+  ([d9169a9](https://github.com/alex-lit/lint-kit/commit/d9169a90ad3efb85e2a9253ad994fea9745c1cc8))
+
 # [0.21.0](https://github.com/alex-lit/lint-kit/compare/v0.20.2...v0.21.0) (2021-02-04)
 
 ## [0.20.2](https://github.com/alex-lit/lint-kit/compare/v0.20.1...v0.20.2) (2021-02-04)
