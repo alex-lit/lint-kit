@@ -100,6 +100,13 @@ module.exports = {
 },
 ```
 
+```bash
+# lint
+npm run lint
+# autofix errors
+npm run lint fix
+```
+
 ### Publishing a package
 
 ```ini

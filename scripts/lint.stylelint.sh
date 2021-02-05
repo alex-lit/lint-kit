@@ -1,5 +1,7 @@
 # Запускает линтер стилей
 
+OPTION=${1}
+
 COLOR_NAME='\e[33m'
 COLOR_ARROW='\e[90m'
 COLOR_FILES='\e[96m'
@@ -9,4 +11,8 @@ FILES='**/*.{css,pcss,postcss,sass,scss,vue}'
 
 echo "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
-stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --fix
+if [ $OPTION = 'fix' ]; then
+  echo "autofix: true"
+fi
+
+stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --${OPTION}
