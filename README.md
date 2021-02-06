@@ -100,7 +100,7 @@ module.exports = {
 },
 ```
 
-```bash
+```sh
 # lint
 npm run lint
 # autofix errors
@@ -124,7 +124,7 @@ globalconfig="./node_modules/@alexlit/lint-kit/.npmrc"
 },
 ```
 
-```bash
+```sh
 npm run up # Updates dependencies
 npm run semver <patch | minor | major> # Updates package version
 npm publish # Publishes a package to npm repository

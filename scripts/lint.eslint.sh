@@ -1,4 +1,4 @@
-# Запускает линтер скриптов
+# Launch scripts linter
 
 OPTION=${1}
 

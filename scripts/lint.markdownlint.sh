@@ -1,4 +1,4 @@
-# Запускает линтер .md файлов
+# Launch linter for .md files
 
 OPTION=${1}
 

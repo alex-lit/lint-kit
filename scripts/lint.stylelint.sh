@@ -1,4 +1,4 @@
-# Запускает линтер стилей
+# Launch styles linter
 
 OPTION=${1}
 

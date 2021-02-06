@@ -1,5 +1,5 @@
-# Публикация пакета в npm репозитории
-# Предварительно нужно залогиниться - npm login
-# Если требует сделать перозиторий публичным - npm publish --access public
+# Publishing package to npm repository
+# First you need to log in: npm login
+# If you want to make repository public: npm publish --access public
 
 echo "publishing to npm..."

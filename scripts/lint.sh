@@ -1,4 +1,4 @@
-# Запускает общий линтер
+# Launch generic linter
 
 OPTION=${1}
 
