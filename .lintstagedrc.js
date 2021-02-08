@@ -6,6 +6,7 @@ const stylelint = 'stylelint --fix';
 module.exports = {
   '*.css': [stylelint, prettier],
   '*.html': [prettier],
+  '*.jade': [prettier],
   '*.js': [eslint, prettier],
   '*.json': [prettier],
   '*.jsx': [eslint, prettier],
@@ -13,6 +14,7 @@ module.exports = {
   '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
   '*.postcss': [stylelint, prettier],
+  '*.pug': [prettier],
   '*.rb': [prettier],
   '*.sass': [stylelint, prettier],
   '*.scss': [stylelint, prettier],
