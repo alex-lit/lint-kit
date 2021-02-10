@@ -23,6 +23,6 @@ module.exports = {
   '*.tsx': [eslint, prettier],
   '*.vue': [eslint, stylelint, prettier],
   '*.xml': [prettier],
-  '*.yaml': [eslint, prettier],
-  '*.yml': [eslint, prettier],
+  '*.yaml': [prettier],
+  '*.yml': [prettier],
 };
