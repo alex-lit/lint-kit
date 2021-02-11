@@ -6,7 +6,7 @@
   disabled="true",
   disabledq="true",
   disabledq="true"
-)
+) 
 div
   .text(color="primary", disabled="true")
 </template>
