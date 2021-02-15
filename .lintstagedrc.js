@@ -19,6 +19,7 @@ module.exports = {
   '*.sass': [stylelint, prettier],
   '*.scss': [stylelint, prettier],
   '*.sh': [prettier],
+  '*.sol': [prettier],
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
   '*.vue': [eslint, stylelint, prettier],
