@@ -22,6 +22,7 @@ module.exports = {
   '*.sol': [prettier],
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
+  '*.twig': [prettier],
   '*.vue': [eslint, stylelint, prettier],
   '*.xml': [prettier],
   '*.yaml': [prettier],
