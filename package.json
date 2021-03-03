@@ -58,8 +58,8 @@
   "dependencies": {
     "@alexlit/config-commitlint": "^1.0.1",
     "@alexlit/config-eslint": "^1.4.0",
-    "@alexlit/config-markdownlint": "0.3.1",
-    "@alexlit/config-prettier": "^0.7.3",
+    "@alexlit/config-markdownlint": "0.4.0",
+    "@alexlit/config-prettier": "^0.8.0",
     "@alexlit/config-stylelint": "^0.10.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4"
