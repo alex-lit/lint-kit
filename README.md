@@ -1,7 +1,8 @@
 # Lint Kit
 
 Preset of configuration files and dependencies for linting web applications
-(perfect for [vue.js](https://vuejs.org))
+(designed for [Vue.js](https://vuejs.org) with
+[TypeScript](https://www.typescriptlang.org/))
 
 ## Installation
 

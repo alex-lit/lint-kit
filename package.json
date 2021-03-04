@@ -2,7 +2,7 @@
   "name": "@alexlit/lint-kit",
   "version": "1.5.1",
   "private": false,
-  "description": "Preset of configuration files and dependencies for linting web applications (perfect for vue.js)",
+  "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
     "commitlint",
     "config",
@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^1.0.1",
-    "@alexlit/config-eslint": "^1.4.1",
+    "@alexlit/config-eslint": "^1.5.0",
     "@alexlit/config-markdownlint": "0.4.0",
     "@alexlit/config-prettier": "^0.8.0",
     "@alexlit/config-stylelint": "^0.10.1",
