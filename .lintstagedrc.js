@@ -11,6 +11,7 @@ module.exports = {
   '*.json': [prettier],
   '*.jsx': [eslint, prettier],
   '*.md': [prettier, markdownlint],
+  '*.mjs': [eslint, prettier],
   '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
   '*.postcss': [stylelint, prettier],
