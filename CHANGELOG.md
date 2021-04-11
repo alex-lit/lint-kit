@@ -1,3 +1,10 @@
+# [4.0.0](https://github.com/alex-lit/lint-kit/compare/v3.5.2...v4.0.0) (2021-04-11)
+
+### Features
+
+- add htmllint
+  ([a507b7d](https://github.com/alex-lit/lint-kit/commit/a507b7d5395020260c143ce7251a0e41484ab1be))
+
 ## [3.5.2](https://github.com/alex-lit/lint-kit/compare/v3.5.1...v3.5.2) (2021-04-07)
 
 ## [3.5.1](https://github.com/alex-lit/lint-kit/compare/v3.5.0...v3.5.1) (2021-04-07)
