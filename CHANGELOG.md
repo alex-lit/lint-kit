@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/alex-lit/lint-kit/compare/v5.0.0...v5.0.1) (2021-04-11)
+
+### Bug Fixes
+
+- add .linthtmlrc.js to package
+  ([ae20978](https://github.com/alex-lit/lint-kit/commit/ae209787c5b7d13afd6cf106ef2b3030258fd7ad))
+
 # [5.0.0](https://github.com/alex-lit/lint-kit/compare/v4.0.0...v5.0.0) (2021-04-11)
 
 # [4.0.0](https://github.com/alex-lit/lint-kit/compare/v3.5.2...v4.0.0) (2021-04-11)
