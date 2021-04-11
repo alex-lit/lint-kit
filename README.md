@@ -12,9 +12,6 @@ npm i @alexlit/lint-kit -D
 
 ## Connection
 
-> Sample configuration files are in
-> [example.zip](https://github.com/alex-lit/lint-kit/raw/master/example.zip)
-
 - [Prettier](https://github.com/alex-lit/config-prettier)
 
   ```js
@@ -33,7 +30,8 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- [StyleLint](https://github.com/alex-lit/config-stylelint)
+- [StyleLint](<https://github.com/alex-lit/config-styleli>> Sample configuration
+  files are innt)
 
   ```js
   // .stylelintrc.js
@@ -44,7 +42,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-  - [HTMLLint](https://github.com/linthtml/linthtml)
+  - [HTMLLint](https://github.com/alex-lit/config-htmllint)
 
   ```js
   // .linthtmlrc.js
@@ -105,6 +103,7 @@ module.exports = {
 "scripts": {
   "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
   "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
+  "lint:htmllint": "./node_modules/@alexlit/lint-kit/scripts//lint.htmllint.sh",
   "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
   "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
 },

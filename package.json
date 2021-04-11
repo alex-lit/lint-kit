@@ -48,6 +48,7 @@
   "scripts": {
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
+    "lint:htmllint": "./scripts/lint.htmllint.sh",
     "lint:markdownlint": "./scripts/lint.markdownlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
     "publish": "./scripts/publish.sh",
