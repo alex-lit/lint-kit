@@ -38,6 +38,7 @@
     ".commitlintrc.js",
     ".eslintrc.js",
     ".huskyrc.js",
+    ".linthtmlrc.js",
     ".lintstagedrc.js",
     ".markdownlintrc.js",
     ".npmrc",
