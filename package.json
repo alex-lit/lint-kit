@@ -7,6 +7,7 @@
     "commitlint",
     "config",
     "eslint",
+    "htmllint",
     "kit",
     "lint",
     "markdownlint",
