@@ -44,6 +44,15 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
+  - [HTMLLint](https://github.com/linthtml/linthtml)
+
+  ```js
+  // .linthtmlrc.js
+  module.exports = {
+    ...require('@alexlit/lint-kit/.linthtmlrc.js'),
+  };
+  ```
+
 - [MarkdownLint](https://github.com/alex-lit/config-markdownlint)
 
   ```js

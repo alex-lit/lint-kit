@@ -1,11 +1,12 @@
 const eslint = 'eslint --fix';
+const htmllint = 'linthtml';
 const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
   '*.css': [stylelint, prettier],
-  '*.html': [prettier],
+  '*.html': [htmllint, prettier],
   '*.jade': [prettier],
   '*.js': [eslint, prettier],
   '*.json': [prettier],
