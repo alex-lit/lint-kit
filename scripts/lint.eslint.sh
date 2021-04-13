@@ -11,7 +11,7 @@ FILES='.js,.jx,.ts,.tsx,.vue'
 
 echo "${COLOR_NAME}eslint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
-if [ $OPTION = 'fix' ]; then
+if [ ${OPTION} = 'fix' ]; then
   echo "autofix: true"
 fi
 

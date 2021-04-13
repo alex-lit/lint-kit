@@ -11,7 +11,7 @@ FILES='**/*.md'
 
 echo "${COLOR_NAME}markdownlint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
-if [ $OPTION = 'fix' ]; then
+if [ ${OPTION} = 'fix' ]; then
   echo "autofix: true"
   prettier --write ${FILES}
 fi

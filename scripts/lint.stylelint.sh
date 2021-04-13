@@ -11,7 +11,7 @@ FILES='**/*.{css,pcss,postcss,sass,scss,vue}'
 
 echo "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
-if [ $OPTION = 'fix' ]; then
+if [ ${OPTION} = 'fix' ]; then
   echo "autofix: true"
 fi
 
