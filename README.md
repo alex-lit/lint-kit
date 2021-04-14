@@ -30,8 +30,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- [StyleLint](<https://github.com/alex-lit/config-styleli>> Sample configuration
-  files are innt)
+- [StyleLint](https://github.com/alex-lit/config-stylelint)
 
   ```js
   // .stylelintrc.js
@@ -42,7 +41,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-  - [HTMLLint](https://github.com/alex-lit/config-htmllint)
+- [HTMLLint](https://github.com/alex-lit/config-htmllint)
 
   ```js
   // .linthtmlrc.js
