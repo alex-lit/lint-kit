@@ -59,6 +59,15 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
+- [NPMPackageJSONLint](https://github.com/tclindner/npm-package-json-lint)
+
+  ```json
+  // .npmpackagejsonlintrc.json
+  {
+    "extends": "@alexlit/lint-kit/.npmpackagejsonlintrc.json"
+  }
+  ```
+
 - [CommitLint](https://github.com/alex-lit/config-commitlint)
 
   ```js
@@ -104,6 +113,7 @@ module.exports = {
   "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
   "lint:htmllint": "./node_modules/@alexlit/lint-kit/scripts//lint.htmllint.sh",
   "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
+  "lint:npmpackagejsonlint": "./node_modules/@alexlit/lint-kit/scripts/lint.npmpackagejsonlint.sh",
   "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
 },
 ```

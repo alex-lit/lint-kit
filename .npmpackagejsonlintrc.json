@@ -1,0 +1,3 @@
+{
+  "extends": "@alexlit/config-npmpackagejsonlint"
+}

@@ -1,5 +1,6 @@
 const eslint = 'eslint --fix';
 const htmllint = 'linthtml';
+const npmpackagejsonlint = 'npmPkgJsonLint';
 const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
@@ -29,4 +30,5 @@ module.exports = {
   '*.xml': [prettier],
   '*.yaml': [prettier],
   '*.yml': [prettier],
+  'package.json': [npmpackagejsonlint],
 };
