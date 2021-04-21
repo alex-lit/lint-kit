@@ -2,7 +2,7 @@
 
 ### Features
 
-- add npmpackagejsonlint
+- add npmlint
   ([afc6ae8](https://github.com/alex-lit/lint-kit/commit/afc6ae86a412952cfb2805ff58b4e549f9b66731))
 
 # [5.5.0](https://github.com/alex-lit/lint-kit/compare/v5.4.0...v5.5.0) (2021-04-15)
