@@ -8,8 +8,8 @@ COLOR_DEFAULT='\e[39m'
 
 echo "${COLOR_TITLE}linters: ${COLOR_LINTERS}eslint, htmllint, markdownlint, npmlint, stylelint, ${COLOR_DEFAULT}"
 
-npm run lint:eslint ${OPTION}
-npm run lint:htmllint
-npm run lint:markdownlint ${OPTION}
-npm run lint:npmlint
-npm run lint:stylelint ${OPTION}
+npm run lint:eslint --if-present ${OPTION}
+npm run lint:htmllint --if-present
+npm run lint:markdownlint --if-present ${OPTION}
+npm run lint:npmlint --if-present
+npm run lint:stylelint --if-present ${OPTION}
