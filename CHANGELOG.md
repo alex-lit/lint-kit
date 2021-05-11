@@ -1,3 +1,12 @@
+# [12.0.0](https://github.com/alex-lit/lint-kit/compare/v11.0.1...v12.0.0) (2021-05-11)
+
+
+### Bug Fixes
+
+* typo ([a292f46](https://github.com/alex-lit/lint-kit/commit/a292f46cc907076faadb289b98935cc48e3c07d5))
+
+
+
 ## [11.0.1](https://github.com/alex-lit/lint-kit/compare/v11.0.0...v11.0.1) (2021-05-05)
 
 
