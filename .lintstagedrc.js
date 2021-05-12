@@ -23,6 +23,7 @@ module.exports = {
   '*.scss': [stylelint, prettier],
   '*.sh': [prettier],
   '*.sol': [prettier],
+  '*.svg': [prettier],
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
   '*.twig': [prettier],
