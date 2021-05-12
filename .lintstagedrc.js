@@ -1,7 +1,7 @@
 const eslint = 'eslint --fix';
 const htmllint = 'linthtml';
-const npmlint = 'npmPkgJsonLint';
 const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
+const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
