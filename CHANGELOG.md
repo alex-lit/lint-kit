@@ -1,3 +1,12 @@
+# [12.2.0](https://github.com/alex-lit/lint-kit/compare/v12.1.0...v12.2.0) (2021-05-12)
+
+
+### Features
+
+* use prettier for format svg ([dd83e25](https://github.com/alex-lit/lint-kit/commit/dd83e25395a7cee2e067c58ea1bfa3f6ee1f8e66))
+
+
+
 # [12.1.0](https://github.com/alex-lit/lint-kit/compare/v12.0.0...v12.1.0) (2021-05-11)
 
 
