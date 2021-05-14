@@ -1,4 +1,4 @@
-<template lang="pug">
+<templatex lang="pug">
 .text.asd.qwerrtyu(:color="'primary'", xdisabled="true")
 
 .text(
