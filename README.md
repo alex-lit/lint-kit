@@ -17,7 +17,7 @@ npm i @alexlit/lint-kit -D
   ```js
   // .prettierrc.js
   module.exports = {
-    ...require('@alexlit/lint-kit/.prettierrc.js'),
+    ...require('@alexlit/lint-kit/.prettierrc'),
   };
   ```
 
@@ -37,7 +37,7 @@ npm i @alexlit/lint-kit -D
   module.exports = {
     extends: ['@alexlit/lint-kit/.stylelintrc.js'],
 
-    ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc.js').ignoreFiles],
+    ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc').ignoreFiles],
   };
   ```
 
@@ -46,7 +46,7 @@ npm i @alexlit/lint-kit -D
   ```js
   // .linthtmlrc.js
   module.exports = {
-    ...require('@alexlit/lint-kit/.linthtmlrc.js'),
+    ...require('@alexlit/lint-kit/.linthtmlrc'),
   };
   ```
 
@@ -55,7 +55,7 @@ npm i @alexlit/lint-kit -D
   ```js
   // .markdownlintrc.js
   module.exports = {
-    ...require('@alexlit/lint-kit/.markdownlintrc.js'),
+    ...require('@alexlit/lint-kit/.markdownlintrc'),
   };
   ```
 
@@ -93,14 +93,14 @@ npm i @alexlit/lint-kit -D
 ```js
 // .lintstagedrc.js
 module.exports = {
-  ...require('@alexlit/lint-kit/.lintstagedrc.js'),
+  ...require('@alexlit/lint-kit/.lintstagedrc'),
 };
 ```
 
 ```js
 // .huskyrc.js
 module.exports = {
-  ...require('@alexlit/lint-kit/.huskyrc.js'),
+  ...require('@alexlit/lint-kit/.huskyrc'),
 };
 ```
 

@@ -1,60 +1,36 @@
 ## [12.3.1](https://github.com/alex-lit/lint-kit/compare/v12.3.0...v12.3.1) (2021-05-13)
 
-
-
 # [12.3.0](https://github.com/alex-lit/lint-kit/compare/v12.2.0...v12.3.0) (2021-05-12)
-
-
 
 # [12.2.0](https://github.com/alex-lit/lint-kit/compare/v12.1.0...v12.2.0) (2021-05-12)
 
-
 ### Features
 
-* use prettier for format svg ([dd83e25](https://github.com/alex-lit/lint-kit/commit/dd83e25395a7cee2e067c58ea1bfa3f6ee1f8e66))
-
-
+- use prettier for format svg
+  ([dd83e25](https://github.com/alex-lit/lint-kit/commit/dd83e25395a7cee2e067c58ea1bfa3f6ee1f8e66))
 
 # [12.1.0](https://github.com/alex-lit/lint-kit/compare/v12.0.0...v12.1.0) (2021-05-11)
 
-
-
 # [12.0.0](https://github.com/alex-lit/lint-kit/compare/v11.0.1...v12.0.0) (2021-05-11)
-
 
 ### Bug Fixes
 
-* typo ([a292f46](https://github.com/alex-lit/lint-kit/commit/a292f46cc907076faadb289b98935cc48e3c07d5))
-
-
+- typo
+  ([a292f46](https://github.com/alex-lit/lint-kit/commit/a292f46cc907076faadb289b98935cc48e3c07d5))
 
 ## [11.0.1](https://github.com/alex-lit/lint-kit/compare/v11.0.0...v11.0.1) (2021-05-05)
 
-
-
 # [11.0.0](https://github.com/alex-lit/lint-kit/compare/v10.0.0...v11.0.0) (2021-05-05)
-
-
 
 # [10.0.0](https://github.com/alex-lit/lint-kit/compare/v9.0.1...v10.0.0) (2021-05-05)
 
-
-
 ## [9.0.1](https://github.com/alex-lit/lint-kit/compare/v9.0.0...v9.0.1) (2021-05-04)
-
-
 
 # [9.0.0](https://github.com/alex-lit/lint-kit/compare/v8.0.1...v9.0.0) (2021-05-04)
 
-
-
 ## [8.0.1](https://github.com/alex-lit/lint-kit/compare/v8.0.0...v8.0.1) (2021-04-26)
 
-
-
 # [8.0.0](https://github.com/alex-lit/lint-kit/compare/v7.0.1...v8.0.0) (2021-04-26)
-
-
 
 ## [7.0.1](https://github.com/alex-lit/lint-kit/compare/v7.0.0...v7.0.1) (2021-04-23)
 
