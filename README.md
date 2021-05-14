@@ -59,7 +59,7 @@ npm i @alexlit/lint-kit -D
   };
   ```
 
-- [npmlint](https://github.com/tclindner/npm-package-json-lint)
+- [NPMLint](https://github.com/tclindner/npm-package-json-lint)
 
   ```json
   // .npmpackagejsonlintrc.json
