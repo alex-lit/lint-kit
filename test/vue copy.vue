@@ -8,5 +8,5 @@
   disabledq="true"
 ) 
 div
-  a.text(color="primary", disabled="true")
+  z.text(color="primary", disabled="true")
 </template>

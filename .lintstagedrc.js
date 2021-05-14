@@ -4,7 +4,7 @@ const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
-const jscpd = 'jscpd';
+const jscpd = 'npx jscpd';
 
 module.exports = {
   '*.css': [stylelint, prettier],
