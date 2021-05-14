@@ -8,25 +8,5 @@
   disabledq="true"
 ) 
 div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true") 
-  div
-  z.text(color="primary", disabled="true")
+  .text(color="primary", disabled="true")
 </template>

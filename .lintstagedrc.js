@@ -4,7 +4,6 @@ const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
-const jscpd = 'npx jscpd';
 
 module.exports = {
   '*.css': [stylelint, prettier],
@@ -28,7 +27,7 @@ module.exports = {
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
   '*.twig': [prettier],
-  '*.vue': [eslint, stylelint, prettier, jscpd],
+  '*.vue': [eslint, stylelint, prettier],
   '*.xml': [prettier],
   '*.yaml': [prettier],
   '*.yml': [prettier],
