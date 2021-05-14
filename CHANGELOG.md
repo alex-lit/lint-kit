@@ -1,3 +1,7 @@
+## [12.4.1](https://github.com/alex-lit/lint-kit/compare/v12.4.0...v12.4.1) (2021-05-14)
+
+
+
 # [12.4.0](https://github.com/alex-lit/lint-kit/compare/v12.3.1...v12.4.0) (2021-05-14)
 
 
