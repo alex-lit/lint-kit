@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^1.1.2",
-    "@alexlit/config-eslint": "^9.5.0",
+    "@alexlit/config-eslint": "^9.6.0",
     "@alexlit/config-htmllint": "^0.0.4",
     "@alexlit/config-markdownlint": "0.4.0",
     "@alexlit/config-npmlint": "^1.0.0",
