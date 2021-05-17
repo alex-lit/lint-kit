@@ -10,7 +10,7 @@ module.exports = {
   '*.html': [htmllint, prettier],
   '*.jade': [prettier],
   '*.js': [eslint, prettier],
-  '*.json': [prettier],
+  '*.json,!package-lock.json': [prettier],
   '*.jsx': [eslint, prettier],
   '*.md': [prettier, markdownlint],
   '*.mjs': [eslint, prettier],
