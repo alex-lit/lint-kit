@@ -1,3 +1,7 @@
+# [17.0.0](https://github.com/alex-lit/lint-kit/compare/v16.1.2...v17.0.0) (2021-06-02)
+
+
+
 ## [16.1.2](https://github.com/alex-lit/lint-kit/compare/v16.1.1...v16.1.2) (2021-06-02)
 
 
