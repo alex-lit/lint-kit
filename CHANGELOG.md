@@ -1,3 +1,7 @@
+# [21.4.0](https://github.com/alex-lit/lint-kit/compare/v21.3.0...v21.4.0) (2021-07-08)
+
+
+
 # [21.3.0](https://github.com/alex-lit/lint-kit/compare/v21.2.0...v21.3.0) (2021-07-06)
 
 
