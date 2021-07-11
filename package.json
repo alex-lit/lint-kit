@@ -63,11 +63,11 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^1.1.2",
-    "@alexlit/config-eslint": "^12.3.3",
+    "@alexlit/config-eslint": "^12.3.4",
     "@alexlit/config-htmllint": "^0.1.0",
     "@alexlit/config-markdownlint": "0.4.0",
     "@alexlit/config-npmlint": "^1.0.0",
-    "@alexlit/config-prettier": "^2.2.0",
+    "@alexlit/config-prettier": "^2.2.1",
     "@alexlit/config-stylelint": "^6.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^11.0.0"
