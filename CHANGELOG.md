@@ -1,3 +1,5 @@
+# [29.1.0](https://github.com/alex-lit/lint-kit/compare/v29.0.0...v29.1.0) (2021-08-17)
+
 # 29.0.0 (2021-08-14)
 
 ### Bug Fixes
