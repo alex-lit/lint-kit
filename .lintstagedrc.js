@@ -23,7 +23,7 @@ module.exports = {
   '*.scss': [stylelint, prettier],
   '*.sh': [prettier],
   '*.sol': [prettier],
-  '*.svg': [prettier],
+  // '*.svg': [prettier], bug - clear all new svg files in some unknown cases
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
   '*.twig': [prettier],
