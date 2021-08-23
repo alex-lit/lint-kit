@@ -50,13 +50,13 @@
     "scripts"
   ],
   "scripts": {
+    "install-submodules-dependencies": "./scripts/install-submodules-dependencies.sh",
     "lint": "./scripts/lint.sh",
     "lint:eslint": "./scripts/lint.eslint.sh",
     "lint:htmllint": "./scripts/lint.htmllint.sh",
     "lint:markdownlint": "./scripts/lint.markdownlint.sh",
     "lint:npmlint": "./scripts/lint.npmlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
-    "postinstall": "./scripts/postinstall.sh",
     "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
