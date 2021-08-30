@@ -64,7 +64,7 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^2.0.0",
-    "@alexlit/config-eslint": "^17.5.1",
+    "@alexlit/config-eslint": "^18.0.0",
     "@alexlit/config-htmllint": "^0.1.0",
     "@alexlit/config-markdownlint": "0.6.0",
     "@alexlit/config-npmlint": "^1.1.1",
@@ -72,5 +72,8 @@
     "@alexlit/config-stylelint": "^7.1.1",
     "husky": "^4.3.8",
     "lint-staged": "^11.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.2"
   }
 }
