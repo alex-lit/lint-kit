@@ -1,3 +1,5 @@
+## [34.1.1](https://github.com/alex-lit/lint-kit/compare/v34.1.0...v34.1.1) (2021-10-08)
+
 # [34.1.0](https://github.com/alex-lit/lint-kit/compare/v34.0.0...v34.1.0) (2021-10-07)
 
 # [34.0.0](https://github.com/alex-lit/lint-kit/compare/v33.2.0...v34.0.0) (2021-10-06)
