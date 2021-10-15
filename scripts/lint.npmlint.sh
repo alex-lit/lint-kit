@@ -5,8 +5,13 @@ COLOR_ARROW='\e[90m'
 COLOR_FILES='\e[96m'
 COLOR_DEFAULT='\e[39m'
 
-FILES='. ./packages'
+PACKAGE_FILES='. ./packages'
+LOCK_FILE='package-lock.json'
 
-echo "${COLOR_NAME}npmlint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+echo "${COLOR_NAME}npmlint ${COLOR_ARROW}-> ${COLOR_FILES}${PACKAGE_FILES}${COLOR_DEFAULT}"
 
-npmPkgJsonLint ${FILES}
+npmPkgJsonLint ${PACKAGE_FILES}
+
+echo "${COLOR_NAME}lockfilelint ${COLOR_ARROW}-> ${COLOR_FILES}${LOCK_FILE}${COLOR_DEFAULT}"
+
+lockfile-lint --type npm --path ${LOCK_FILE}

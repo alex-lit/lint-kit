@@ -1,5 +1,7 @@
+/* eslint-disable vue/sort-keys */
 const eslint = 'eslint --fix';
 const htmllint = 'linthtml';
+const lockfilelint = 'lockfile-lint --type npm --path package-lock.json';
 const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
 const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
@@ -31,5 +33,7 @@ module.exports = {
   '*.xml': [prettier],
   '*.yaml': [prettier],
   '*.yml': [prettier],
+  'package-lock.json': [lockfilelint],
+  // eslint-disable-next-line sort-keys
   'package.json': [npmlint],
 };

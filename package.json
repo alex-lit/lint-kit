@@ -46,7 +46,6 @@
     ".npmrc",
     ".prettierrc.js",
     ".stylelintrc.js",
-    "example",
     "scripts"
   ],
   "scripts": {
@@ -64,12 +63,12 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^2.1.1",
-    "@alexlit/config-eslint": "^24.0.2",
+    "@alexlit/config-eslint": "^25.0.1",
     "@alexlit/config-htmllint": "^0.1.0",
     "@alexlit/config-markdownlint": "0.7.0",
-    "@alexlit/config-npmlint": "^1.2.0",
+    "@alexlit/config-npmlint": "^2.0.0",
     "@alexlit/config-prettier": "^3.3.3",
-    "@alexlit/config-stylelint": "^8.0.0",
+    "@alexlit/config-stylelint": "^8.0.1",
     "husky": "^4.3.8",
     "lint-staged": "^11.2.3"
   },
