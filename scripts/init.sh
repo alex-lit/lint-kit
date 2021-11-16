@@ -1,4 +1,8 @@
-# Install submodules dependencies
+# Install dependencies
+
+npm i
+
+git submodule update --init
 
 cd submodules
 
