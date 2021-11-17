@@ -1,3 +1,7 @@
+# [48.0.0](https://github.com/alex-lit/lint-kit/compare/v47.0.1...v48.0.0) (2021-11-17)
+
+
+
 ## [47.0.1](https://github.com/alex-lit/lint-kit/compare/v47.0.0...v47.0.1) (2021-11-17)
 
 # [47.0.0](https://github.com/alex-lit/lint-kit/compare/v46.0.1...v47.0.0) (2021-11-17)
