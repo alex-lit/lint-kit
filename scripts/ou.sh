@@ -2,6 +2,9 @@
 
 COLOR_NAME='\e[96m'
 
+echo "\n${COLOR_NAME}check lint-kit..."
+npm ou
+
 cd submodules
 
 echo "\n${COLOR_NAME}check commitlint..."
