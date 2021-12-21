@@ -56,6 +56,7 @@
     "lint:markdownlint": "./scripts/lint.markdownlint.sh",
     "lint:npmlint": "./scripts/lint.npmlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
+    "ou": "./scripts/ou.sh",
     "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
@@ -68,7 +69,7 @@
     "@alexlit/config-markdownlint": "0.8.0",
     "@alexlit/config-npmlint": "^2.0.2",
     "@alexlit/config-prettier": "^4.5.0",
-    "@alexlit/config-stylelint": "^14.0.1",
+    "@alexlit/config-stylelint": "^14.1.0",
     "husky": "^4.3.8",
     "lint-staged": "^12.1.3"
   },
