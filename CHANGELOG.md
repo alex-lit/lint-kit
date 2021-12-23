@@ -1,3 +1,10 @@
+# [51.3.0](https://github.com/alex-lit/lint-kit/compare/v51.2.0...v51.3.0) (2021-12-23)
+
+### Features
+
+- add sql support
+  ([e234860](https://github.com/alex-lit/lint-kit/commit/e2348600edbc38fe32d7eb50c6453e1a9c7236d7))
+
 # [51.2.0](https://github.com/alex-lit/lint-kit/compare/v51.1.0...v51.2.0) (2021-12-21)
 
 # [51.1.0](https://github.com/alex-lit/lint-kit/compare/v51.0.0...v51.1.0) (2021-12-20)
