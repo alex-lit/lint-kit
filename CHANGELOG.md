@@ -1,3 +1,5 @@
+# [51.4.0](https://github.com/alex-lit/lint-kit/compare/v51.3.0...v51.4.0) (2021-12-24)
+
 # [51.3.0](https://github.com/alex-lit/lint-kit/compare/v51.2.0...v51.3.0) (2021-12-23)
 
 ### Features
