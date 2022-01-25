@@ -69,7 +69,7 @@
     "@alexlit/config-markdownlint": "0.9.1",
     "@alexlit/config-npmlint": "^2.0.2",
     "@alexlit/config-prettier": "^4.8.1",
-    "@alexlit/config-stylelint": "^14.2.0",
+    "@alexlit/config-stylelint": "^14.2.1",
     "husky": "^4.3.8",
     "lint-staged": "^12.3.1"
   },
