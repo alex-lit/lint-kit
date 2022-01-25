@@ -1,3 +1,7 @@
+# [56.6.0](https://github.com/alex-lit/lint-kit/compare/v56.5.1...v56.6.0) (2022-01-25)
+
+
+
 ## [56.5.1](https://github.com/alex-lit/lint-kit/compare/v56.5.0...v56.5.1) (2022-01-24)
 
 
