@@ -8,7 +8,9 @@ const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
 module.exports = {
+  '*.cjs': [eslint, prettier],
   '*.css': [stylelint, prettier],
+  '*.cts': [eslint, prettier],
   '*.html': [htmllint, prettier],
   '*.jade': [prettier],
   '*.js': [eslint, prettier],
@@ -16,6 +18,7 @@ module.exports = {
   '*.jsx': [eslint, prettier],
   '*.md': [prettier, markdownlint],
   '*.mjs': [eslint, prettier],
+  '*.mts': [eslint, prettier],
   '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
   '*.postcss': [stylelint, prettier],
