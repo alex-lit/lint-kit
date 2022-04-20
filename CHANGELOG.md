@@ -1,3 +1,7 @@
+## [63.3.2](https://github.com/alex-lit/lint-kit/compare/v63.3.1...v63.3.2) (2022-04-20)
+
+
+
 ## [63.3.1](https://github.com/alex-lit/lint-kit/compare/v63.3.0...v63.3.1) (2022-04-20)
 
 
