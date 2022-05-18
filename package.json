@@ -63,8 +63,8 @@
     "version": "./scripts/version.sh"
   },
   "dependencies": {
-    "@alexlit/config-commitlint": "^5.3.0",
-    "@alexlit/config-eslint": "^46.2.0",
+    "@alexlit/config-commitlint": "^5.4.0",
+    "@alexlit/config-eslint": "^47.0.0",
     "@alexlit/config-htmllint": "^0.1.5",
     "@alexlit/config-markdownlint": "0.10.1",
     "@alexlit/config-npmlint": "^3.2.0",
