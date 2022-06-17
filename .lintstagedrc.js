@@ -11,6 +11,7 @@ module.exports = {
   '*.cjs': [eslint, prettier],
   '*.css': [stylelint, prettier],
   '*.cts': [eslint, prettier],
+  '*.erb': [prettier],
   '*.html': [htmllint, prettier],
   '*.jade': [prettier],
   '*.js': [eslint, prettier],
