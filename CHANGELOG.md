@@ -1,3 +1,7 @@
+## [79.1.1](https://github.com/alex-lit/lint-kit/compare/v79.1.0...v79.1.1) (2022-09-08)
+
+
+
 # [79.1.0](https://github.com/alex-lit/lint-kit/compare/v79.0.0...v79.1.0) (2022-09-07)
 
 
