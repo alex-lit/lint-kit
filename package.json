@@ -69,9 +69,9 @@
     "@alexlit/config-markdownlint": "0.12.3",
     "@alexlit/config-npmlint": "^3.5.0",
     "@alexlit/config-prettier": "^9.13.0",
-    "@alexlit/config-stylelint": "^27.3.0",
+    "@alexlit/config-stylelint": "^27.4.0",
     "husky": "^4.3.8",
-    "lint-staged": "^13.0.4"
+    "lint-staged": "^13.1.0"
   },
   "devDependencies": {
     "typescript": "^4.9.3"
