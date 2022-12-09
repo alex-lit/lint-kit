@@ -2,6 +2,8 @@
 
 COLOR_NAME='\e[96m'
 
+clear
+
 echo "\n${COLOR_NAME}check lint-kit..."
 npm ou
 
