@@ -1,3 +1,7 @@
+# [87.1.0](https://github.com/alex-lit/lint-kit/compare/v87.0.0...v87.1.0) (2023-01-14)
+
+
+
 # [87.0.0](https://github.com/alex-lit/lint-kit/compare/v86.0.0...v87.0.0) (2023-01-06)
 
 
