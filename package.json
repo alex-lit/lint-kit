@@ -70,7 +70,7 @@
     "@alexlit/config-npmlint": "^3.6.0",
     "@alexlit/config-prettier": "^10.2.1",
     "@alexlit/config-stylelint": "^28.1.0",
-    "husky": "^8.0.3",
+    "husky": "^4.3.8",
     "lint-staged": "^13.1.0"
   },
   "devDependencies": {
