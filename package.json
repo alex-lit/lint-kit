@@ -64,14 +64,14 @@
   },
   "dependencies": {
     "@alexlit/config-commitlint": "^6.4.1",
-    "@alexlit/config-eslint": "^57.1.0",
+    "@alexlit/config-eslint": "^57.2.0",
     "@alexlit/config-htmllint": "^0.2.4",
     "@alexlit/config-markdownlint": "0.14.0",
     "@alexlit/config-npmlint": "^3.6.0",
-    "@alexlit/config-prettier": "^10.2.1",
-    "@alexlit/config-stylelint": "^28.1.0",
+    "@alexlit/config-prettier": "^10.2.2",
+    "@alexlit/config-stylelint": "^29.0.0",
     "husky": "^4.3.8",
-    "lint-staged": "^13.1.0"
+    "lint-staged": "^13.1.1"
   },
   "devDependencies": {
     "typescript": "^4.9.5"
