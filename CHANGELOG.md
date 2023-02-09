@@ -1,3 +1,5 @@
+# [90.0.0](https://github.com/alex-lit/lint-kit/compare/v89.1.1...v90.0.0) (2023-02-09)
+
 ## [89.1.1](https://github.com/alex-lit/lint-kit/compare/v89.1.0...v89.1.1) (2023-02-06)
 
 # [89.1.0](https://github.com/alex-lit/lint-kit/compare/v89.0.0...v89.1.0) (2023-02-02)
