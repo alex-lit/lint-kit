@@ -66,7 +66,7 @@
     "@alexlit/config-commitlint": "^6.4.2",
     "@alexlit/config-eslint": "^58.0.0",
     "@alexlit/config-htmllint": "^0.2.4",
-    "@alexlit/config-markdownlint": "0.14.0",
+    "@alexlit/config-markdownlint": "^1.0.0",
     "@alexlit/config-npmlint": "^3.6.1",
     "@alexlit/config-prettier": "^10.4.1",
     "@alexlit/config-stylelint": "^30.0.2",
