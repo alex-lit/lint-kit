@@ -7,6 +7,6 @@ COLOR_DEFAULT='\e[39m'
 
 FILES='**/*.html'
 
-echo "${COLOR_NAME}htmllint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+echo -e "${COLOR_NAME}htmllint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
 linthtml ${FILES}

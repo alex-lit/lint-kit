@@ -9,10 +9,10 @@ COLOR_DEFAULT='\e[39m'
 
 FILES='**/*.{css,pcss,postcss,sass,scss,vue}'
 
-echo "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+echo -e "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
 
 if [ $OPTION ] && [ $OPTION = 'fix' ]; then
-  echo "${COLOR_ARROW}autofix:${COLOR_DEFAULT} true"
+  echo -e "${COLOR_ARROW}autofix:${COLOR_DEFAULT} true"
 fi
 
 stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --${OPTION}

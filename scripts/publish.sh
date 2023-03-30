@@ -2,4 +2,4 @@
 # First you need to log in: npm login
 # If you want to make repository public: npm publish --access public
 
-echo "publishing to npm..."
+echo -e "publishing to npm..."
