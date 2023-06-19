@@ -12,93 +12,103 @@ npm i @alexlit/lint-kit -D
 
 ## Connection
 
-- [Prettier](https://github.com/alex-lit/config-prettier)
+### [Prettier](https://github.com/alex-lit/config-prettier)
 
-  ```js
-  // .prettierrc.js
-  module.exports = {
-    ...require('@alexlit/lint-kit/.prettierrc'),
-  };
-  ```
+`.prettierrc.js`:
 
-- [ESLint](https://github.com/alex-lit/config-eslint)
+```js
+module.exports = {
+  ...require('@alexlit/lint-kit/.prettierrc'),
+};
+```
 
-  ```js
-  // .eslintrc.js
-  module.exports = {
-    extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
-  };
-  ```
+### [ESLint](https://github.com/alex-lit/config-eslint)
 
-- [StyleLint](https://github.com/alex-lit/config-stylelint)
+`.eslintrc.js`:
 
-  ```js
-  // .stylelintrc.js
-  module.exports = {
-    extends: ['@alexlit/lint-kit/.stylelintrc.js'],
+```js
+module.exports = {
+  extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
+};
+```
 
-    ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc').ignoreFiles],
-  };
-  ```
+### [StyleLint](https://github.com/alex-lit/config-stylelint)
 
-- [HTMLLint](https://github.com/alex-lit/config-htmllint)
+`.stylelintrc.js`:
 
-  ```js
-  // .linthtmlrc.js
-  module.exports = {
-    ...require('@alexlit/lint-kit/.linthtmlrc'),
-  };
-  ```
+```js
+module.exports = {
+  extends: ['@alexlit/lint-kit/.stylelintrc.js'],
 
-- [MarkdownLint](https://github.com/alex-lit/config-markdownlint)
+  ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc').ignoreFiles],
+};
+```
 
-  ```js
-  // .markdownlintrc.js
-  module.exports = {
-    ...require('@alexlit/lint-kit/.markdownlintrc'),
-  };
-  ```
+### [HTMLLint](https://github.com/alex-lit/config-htmllint)
 
-- [NPMLint](https://github.com/tclindner/npm-package-json-lint)
+`.linthtmlrc.js`:
 
-  ```json
-  // .npmpackagejsonlintrc.json
-  {
-    "extends": "@alexlit/lint-kit/.npmpackagejsonlintrc.json"
-  }
-  ```
+```js
+module.exports = {
+  ...require('@alexlit/lint-kit/.linthtmlrc'),
+};
+```
 
-- [CommitLint](https://github.com/alex-lit/config-commitlint)
+### [MarkdownLint](https://github.com/alex-lit/config-markdownlint)
 
-  ```js
-  // .commitlintrc.js
-  module.exports = {
-    extends: ['@alexlit/lint-kit/.commitlintrc.js'],
-  };
-  ```
+`.markdownlintrc.js`:
 
-  ```js
-  // .huskyrc.js
-  module.exports = {
-    hooks: {
-      'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-    },
-  };
-  ```
+```js
+module.exports = {
+  ...require('@alexlit/lint-kit/.markdownlintrc'),
+};
+```
+
+### [NPMLint](https://github.com/tclindner/npm-package-json-lint)
+
+`.npmpackagejsonlintrc.json`:
+
+```json
+{
+  "extends": "@alexlit/lint-kit/.npmpackagejsonlintrc.json"
+}
+```
+
+### [CommitLint](https://github.com/alex-lit/config-commitlint)
+
+`.commitlintrc.js`:
+
+```js
+module.exports = {
+  extends: ['@alexlit/lint-kit/.commitlintrc.js'],
+};
+```
+
+`.huskyrc.js`:
+
+```js
+module.exports = {
+  hooks: {
+    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
+  },
+};
+```
 
 ## Recipes
 
 ### Automatic launch linters and code fixes on commit
 
+`.lintstagedrc.js`:
+
 ```js
-// .lintstagedrc.js
 module.exports = {
   ...require('@alexlit/lint-kit/.lintstagedrc'),
 };
 ```
 
+`.huskyrc.js`:
+
 ```js
-// .huskyrc.js
 module.exports = {
   ...require('@alexlit/lint-kit/.huskyrc'),
 };
@@ -106,8 +116,9 @@ module.exports = {
 
 ### Launching linters manually
 
+`package.json`:
+
 ```json
-// package.json
 "scripts": {
   "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
   "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
@@ -127,13 +138,15 @@ npm run lint fix
 
 ### Publishing a package
 
+`.npmrc`:
+
 ```ini
-# .npmrc
 globalconfig="./node_modules/@alexlit/lint-kit/.npmrc"
 ```
 
+`package.json`:
+
 ```json
-// package.json
 "scripts": {
   "publish": "./node_modules/@alexlit/lint-kit/scripts/publish.sh",
   "semver": "./node_modules/@alexlit/lint-kit/scripts/semver.sh",
