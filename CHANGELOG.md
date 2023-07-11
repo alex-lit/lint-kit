@@ -1,3 +1,79 @@
+# [98.0.0](https://github.com/alex-lit/lint-kit/compare/v97.0.0...v98.0.0) (2023-07-11)
+
+# [97.0.0](https://github.com/alex-lit/lint-kit/compare/v96.0.1...v97.0.0) (2023-06-19)
+
+## [96.0.1](https://github.com/alex-lit/lint-kit/compare/v96.0.0...v96.0.1) (2023-05-31)
+
+# [96.0.0](https://github.com/alex-lit/lint-kit/compare/v95.0.0...v96.0.0) (2023-05-31)
+
+# [95.0.0](https://github.com/alex-lit/lint-kit/compare/v94.0.0...v95.0.0) (2023-05-05)
+
+# [94.0.0](https://github.com/alex-lit/lint-kit/compare/v93.0.0...v94.0.0) (2023-04-25)
+
+# [93.0.0](https://github.com/alex-lit/lint-kit/compare/v92.1.0...v93.0.0) (2023-04-12)
+
+# [92.1.0](https://github.com/alex-lit/lint-kit/compare/v92.0.0...v92.1.0) (2023-03-30)
+
+# [92.0.0](https://github.com/alex-lit/lint-kit/compare/v91.2.0...v92.0.0) (2023-03-22)
+
+# [91.2.0](https://github.com/alex-lit/lint-kit/compare/v91.1.0...v91.2.0) (2023-03-14)
+
+# [91.1.0](https://github.com/alex-lit/lint-kit/compare/v91.0.1...v91.1.0) (2023-03-09)
+
+## [91.0.1](https://github.com/alex-lit/lint-kit/compare/v91.0.0...v91.0.1) (2023-03-07)
+
+# [91.0.0](https://github.com/alex-lit/lint-kit/compare/32cebfbb0a6472535fd36f0137268769186c60fa...v91.0.0) (2023-03-07)
+
+### Bug Fixes
+
+- add .linthtmlrc.js to package
+  ([ae20978](https://github.com/alex-lit/lint-kit/commit/ae209787c5b7d13afd6cf106ef2b3030258fd7ad))
+- ignore .gitignore
+  ([c1e1c00](https://github.com/alex-lit/lint-kit/commit/c1e1c0016f576c825a0ca8c76e51753f984f0cbf))
+- lint root configs
+  ([2e3b068](https://github.com/alex-lit/lint-kit/commit/2e3b06870375565b8751139304d3cbc65c027bd1))
+- lint script
+  ([3820cf8](https://github.com/alex-lit/lint-kit/commit/3820cf8ddd201803e40e9aa3bb30f047e5faeab0))
+- lint stagged config
+  ([c76bee1](https://github.com/alex-lit/lint-kit/commit/c76bee19cff41719591fd655af15b93b56c50a5e))
+- mdlint config
+  ([9fbe162](https://github.com/alex-lit/lint-kit/commit/9fbe162608d28c09366e38c82f22a04b9e280cf9))
+- typo
+  ([a292f46](https://github.com/alex-lit/lint-kit/commit/a292f46cc907076faadb289b98935cc48e3c07d5))
+
+### Features
+
+- add example
+  ([bce7e72](https://github.com/alex-lit/lint-kit/commit/bce7e72d47f5cacd68d86dc7dd4ddb70cd8cad15))
+- add fix option
+  ([d9169a9](https://github.com/alex-lit/lint-kit/commit/d9169a90ad3efb85e2a9253ad994fea9745c1cc8))
+- add htmllint
+  ([a507b7d](https://github.com/alex-lit/lint-kit/commit/a507b7d5395020260c143ce7251a0e41484ab1be))
+- add markdownlint
+  ([32cebfb](https://github.com/alex-lit/lint-kit/commit/32cebfbb0a6472535fd36f0137268769186c60fa))
+- add npmpackagejsonlint
+  ([afc6ae8](https://github.com/alex-lit/lint-kit/commit/afc6ae86a412952cfb2805ff58b4e549f9b66731))
+- add scripts to package
+  ([99e3b1b](https://github.com/alex-lit/lint-kit/commit/99e3b1b27e183451f8317a6692944bca9c21772a))
+- add sql support
+  ([e234860](https://github.com/alex-lit/lint-kit/commit/e2348600edbc38fe32d7eb50c6453e1a9c7236d7))
+- add yaml linter
+  ([8dbbec9](https://github.com/alex-lit/lint-kit/commit/8dbbec93fa4cc10de88d2ddc9198fd2b88c8ed9a))
+- colorify console output
+  ([ada234d](https://github.com/alex-lit/lint-kit/commit/ada234d2940703f180eceae76fd6d6361234a334))
+- export husky and lint-stagged configs
+  ([998fd7c](https://github.com/alex-lit/lint-kit/commit/998fd7c61a627120e3d4b7c318d7572fc70dbd4c))
+- extend stylelint config
+  ([54ff535](https://github.com/alex-lit/lint-kit/commit/54ff535a1b9cb0d690f0a2baaf9763a1e1dd6df6))
+- **markdown:** autofix
+  ([f03a742](https://github.com/alex-lit/lint-kit/commit/f03a742cec904ba1eed275972a0793489efee2fb))
+- use js markdowlint config
+  ([19a002a](https://github.com/alex-lit/lint-kit/commit/19a002adb5c69da8d91dca2cfde26536ec1c731f))
+- use prettier for format svg
+  ([dd83e25](https://github.com/alex-lit/lint-kit/commit/dd83e25395a7cee2e067c58ea1bfa3f6ee1f8e66))
+- xml lintstagged
+  ([5f682c1](https://github.com/alex-lit/lint-kit/commit/5f682c1a0f8a647ceaa7616eb6b0b872fbb22e58))
+
 # [97.0.0](https://github.com/alex-lit/lint-kit/compare/v96.0.1...v97.0.0) (2023-06-19)
 
 ## [96.0.1](https://github.com/alex-lit/lint-kit/compare/v96.0.0...v96.0.1) (2023-05-31)
