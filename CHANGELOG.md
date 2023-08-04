@@ -1,3 +1,7 @@
+# [99.0.0](https://github.com/alex-lit/lint-kit/compare/v98.0.2...v99.0.0) (2023-08-04)
+
+
+
 ## [98.0.2](https://github.com/alex-lit/lint-kit/compare/v98.0.1...v98.0.2) (2023-07-11)
 
 ## [98.0.1](https://github.com/alex-lit/lint-kit/compare/v97.0.0...v98.0.1) (2023-07-11)
