@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "100.0.2",
+  "version": "100.1.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -68,8 +68,8 @@
     "@alexlit/config-htmllint": "^0.2.5",
     "@alexlit/config-markdownlint": "^1.4.0",
     "@alexlit/config-npmlint": "^4.1.0",
-    "@alexlit/config-prettier": "^12.2.0",
-    "@alexlit/config-stylelint": "^36.2.0",
+    "@alexlit/config-prettier": "^12.2.2",
+    "@alexlit/config-stylelint": "^36.2.1",
     "husky": "^4.3.8",
     "lint-staged": "^13.3.0"
   },
