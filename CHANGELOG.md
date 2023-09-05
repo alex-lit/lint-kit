@@ -1,3 +1,8 @@
+## 101.0.0 (2023-09-05)
+
+- chore: preparing for version update
+  ([7cb7e68](https://github.com/alex-lit/lint-kit/commit/7cb7e68))
+
 ## [100.1.1](https://github.com/alex-lit/lint-kit/compare/v100.0.2...v100.1.1) (2023-08-24)
 
 # [100.1.0](https://github.com/alex-lit/lint-kit/compare/v100.0.2...v100.1.0) (2023-08-24)
