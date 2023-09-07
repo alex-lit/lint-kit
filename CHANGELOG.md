@@ -1,3 +1,8 @@
+## <small>101.0.1 (2023-09-07)</small>
+
+- chore: preparing for version update
+  ([b6576c4](https://github.com/alex-lit/lint-kit/commit/b6576c4))
+
 ## 101.0.0 (2023-09-05)
 
 - chore: preparing for version update
