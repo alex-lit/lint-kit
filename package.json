@@ -63,13 +63,13 @@
     "version": "./scripts/version.sh"
   },
   "dependencies": {
-    "@alexlit/config-commitlint": "^8.0.0",
-    "@alexlit/config-eslint": "^65.0.0",
+    "@alexlit/config-commitlint": "^8.1.0",
+    "@alexlit/config-eslint": "^65.1.0",
     "@alexlit/config-htmllint": "^0.2.5",
-    "@alexlit/config-markdownlint": "^1.5.0",
+    "@alexlit/config-markdownlint": "^1.6.0",
     "@alexlit/config-npmlint": "^4.1.1",
-    "@alexlit/config-prettier": "^13.0.0",
-    "@alexlit/config-stylelint": "^37.0.1",
+    "@alexlit/config-prettier": "^13.0.1",
+    "@alexlit/config-stylelint": "^37.0.2",
     "husky": "^4.3.8",
     "lint-staged": "^13.3.0"
   },
