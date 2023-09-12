@@ -1,3 +1,8 @@
+## 101.1.0 (2023-09-12)
+
+- chore: preparing for version update
+  ([f96157e](https://github.com/alex-lit/lint-kit/commit/f96157e))
+
 ## <small>101.0.1 (2023-09-07)</small>
 
 - chore: preparing for version update
