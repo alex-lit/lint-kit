@@ -1,3 +1,8 @@
+## 102.0.0 (2023-09-20)
+
+- chore: preparing for version update
+  ([c6298ca](https://github.com/alex-lit/lint-kit/commit/c6298ca))
+
 ## 101.1.0 (2023-09-12)
 
 - chore: preparing for version update
