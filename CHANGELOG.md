@@ -1,3 +1,8 @@
+## 102.2.0 (2023-09-28)
+
+- chore: preparing for version update
+  ([62e32f1](https://github.com/alex-lit/lint-kit/commit/62e32f1))
+
 ## 102.1.0 (2023-09-22)
 
 - chore: preparing for version update
