@@ -1,3 +1,8 @@
+## 102.3.0 (2023-10-06)
+
+- chore: preparing for version update
+  ([ce50ef0](https://github.com/alex-lit/lint-kit/commit/ce50ef0))
+
 ## 102.2.0 (2023-09-28)
 
 - chore: preparing for version update
