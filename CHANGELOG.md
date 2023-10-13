@@ -1,3 +1,8 @@
+## 103.0.0 (2023-10-13)
+
+- chore: preparing for version update
+  ([b509935](https://github.com/alex-lit/lint-kit/commit/b509935))
+
 ## 102.3.0 (2023-10-06)
 
 - chore: preparing for version update
