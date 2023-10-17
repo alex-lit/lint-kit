@@ -1,0 +1,33 @@
+{
+  "name": "@alexlit/config-htmllint",
+  "version": "0.2.5",
+  "private": false,
+  "description": "htmllint config",
+  "keywords": [
+    "config",
+    "html",
+    "htmllint",
+    "linthtml"
+  ],
+  "homepage": "https://github.com/alex-lit/config-htmllint#readme",
+  "bugs": {
+    "url": "https://github.com/alex-lit/config-htmllint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-lit/config-htmllint.git"
+  },
+  "license": "MIT",
+  "author": "Alexey Litovchenko",
+  "maintainers": [
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@linthtml/linthtml": "^0.9.5",
+    "@linthtml/linthtml-config-recommended": "^0.1.0"
+  }
+}

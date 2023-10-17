@@ -1,0 +1,36 @@
+{
+  "name": "@alexlit/config-npmlint",
+  "version": "4.1.1",
+  "private": false,
+  "description": "npmlint config",
+  "keywords": [
+    "config",
+    "json",
+    "lint",
+    "npm",
+    "package",
+    "npmlint"
+  ],
+  "homepage": "https://github.com/alex-lit/config-npmlint#readme",
+  "bugs": {
+    "url": "https://github.com/alex-lit/config-npmlint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-lit/config-npmlint.git"
+  },
+  "license": "MIT",
+  "author": "Alexey Litovchenko",
+  "maintainers": [
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+  ],
+  "main": "index.json",
+  "files": [
+    "index.json"
+  ],
+  "dependencies": {
+    "lockfile-lint": "^4.12.1",
+    "npm-package-json-lint": "^7.0.0",
+    "npm-package-json-lint-config-default": "^6.0.0"
+  }
+}

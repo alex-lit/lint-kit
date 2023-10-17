@@ -33,7 +33,6 @@ module.exports = {
   // '*.svg': [prettier], bug - clear all new svg files in some unknown cases
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
-  '*.twig': [prettier],
   '*.vue': [eslint, stylelint, prettier],
   '*.xml': [prettier],
   '*.yaml': [prettier],

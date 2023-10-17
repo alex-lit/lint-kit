@@ -18,5 +18,6 @@
     "types": []
   },
   "exclude": ["node_modules"],
-  "include": ["test/**/*", "**/*.js", ".*.js"]
-}
+  "include": ["**/*.js", "**/.*.js", "**/*.vue"]
+}  
+    

@@ -122,7 +122,7 @@ module.exports = {
 "scripts": {
   "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
   "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
-  "lint:htmllint": "./node_modules/@alexlit/lint-kit/scripts//lint.htmllint.sh",
+  "lint:htmllint": "./node_modules/@alexlit/lint-kit/scripts/lint.htmllint.sh",
   "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
   "lint:npmlint": "./node_modules/@alexlit/lint-kit/scripts/lint.npmlint.sh",
   "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
