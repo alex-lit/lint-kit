@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alex-lit/config-stylelint.git"
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-stylelint"
   },
   "license": "MIT",
   "author": "Alexey Litovchenko",

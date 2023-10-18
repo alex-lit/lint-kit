@@ -15,7 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alex-lit/config-htmllint.git"
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-htmllint"
   },
   "license": "MIT",
   "author": "Alexey Litovchenko",

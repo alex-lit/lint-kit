@@ -2,7 +2,7 @@
   "name": "@alexlit/config-eslint",
   "version": "67.0.0",
   "private": false,
-  "description": "eslint config",
+  "description": "Eslint config",
   "keywords": [
     "eslint",
     "config"
@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alex-lit/config-eslint.git"
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-eslint"
   },
   "license": "MIT",
   "author": "Alexey Litovchenko",

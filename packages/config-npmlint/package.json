@@ -17,7 +17,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alex-lit/config-npmlint.git"
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-npmlint"
   },
   "license": "MIT",
   "author": "Alexey Litovchenko",
