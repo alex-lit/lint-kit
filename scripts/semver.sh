@@ -6,9 +6,11 @@ DEFAULT='\e[39m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
 
+CURRENT_DIR=${PWD##*/}
+
 clear
 
-echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию пакета...${DEFAULT}"
+echo -e "${YELLOW}Подымаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
 npx standard-version ${VERSION}
 
