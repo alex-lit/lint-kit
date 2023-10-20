@@ -1,15 +1,15 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "37.1.1",
+  "version": "38.0.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
     "stylelint",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/config-stylelint#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
-    "url": "https://github.com/alex-lit/config-stylelint/issues"
+    "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,10 @@
     "index.js",
     "plugins"
   ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
   "dependencies": {
     "@double-great/stylelint-a11y": "^2.0.2",
     "postcss": "^8.4.31",
