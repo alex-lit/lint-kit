@@ -64,7 +64,8 @@
   },
   "dependencies": {
     "husky": "^4.3.8",
-    "lint-staged": "^13.3.0"
+    "lint-staged": "^13.3.0",
+    "standard-version": "^9.5.0"
   },
   "devDependencies": {
     "typescript": "^5.2.2"

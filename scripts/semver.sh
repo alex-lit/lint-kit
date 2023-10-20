@@ -12,7 +12,4 @@ clear
 
 echo -e "${YELLOW}Подымаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
-npx standard-version ${VERSION}
-
-git add --all
-git commit -m 'chore: update version'
+standard-version ${VERSION}
