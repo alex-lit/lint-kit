@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [9.0.4](https://github.com/alex-lit/lint-kit/compare/v9.0.3...v9.0.4) (2023-10-20)
+
 ### [9.0.3](https://github.com/alex-lit/lint-kit/compare/v9.0.2...v9.0.3) (2023-10-20)
 
 ### [9.0.2](https://github.com/alex-lit/lint-kit/compare/v2.0.2...v9.0.2) (2023-10-20)
