@@ -12,9 +12,9 @@ echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию па
 
 # npm version ${VERSION}  test
 
-# conventional-changelog -p angular -i CHANGELOG.md -s ${VERSION}
+conventional-changelog -p angular -i CHANGELOG.md -s ${VERSION}
 
-npx standard-version ${VERSION}
+# npx standard-version ${VERSION}
 
 git add --all
 git commit -m 'chore: update version'
