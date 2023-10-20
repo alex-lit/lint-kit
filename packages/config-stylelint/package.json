@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "38.0.0",
+  "version": "38.0.1",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -23,6 +23,7 @@
   ],
   "main": "index.js",
   "files": [
+    "README.md",
     "index.js",
     "plugins"
   ],
