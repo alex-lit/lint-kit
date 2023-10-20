@@ -2,7 +2,9 @@
 
 All notable changes to this project will be documented in this file. See
 [standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines. test
+for commit guidelines.
+
+### [67.0.25](https://github.com/alex-lit/lint-kit/compare/v67.0.24...v67.0.25) (2023-10-20)
 
 ### [67.0.24](https://github.com/alex-lit/lint-kit/compare/v67.0.23...v67.0.24) (2023-10-20)
 
