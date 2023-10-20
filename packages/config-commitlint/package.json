@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "9.0.2",
+  "version": "9.0.3",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
