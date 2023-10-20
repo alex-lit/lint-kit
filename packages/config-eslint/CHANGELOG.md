@@ -1,3 +1,11 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[standard-version](https://github.com/conventional-changelog/standard-version)
+for commit guidelines.
+
+### [67.0.35](https://github.com/alex-lit/lint-kit/compare/v67.0.25...v67.0.35) (2023-10-20)
+
 ## <small>67.0.34 (2023-10-20)</small>
 
 - chore: update version
