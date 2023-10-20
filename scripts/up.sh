@@ -2,16 +2,17 @@
 
 VERSION=${1:-minor}
 
+DEFAULT='\e[39m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
-DEFAULT='\e[39m'
+
+CURRENT_DIR=${PWD##*/}
 
 clear
 
-echo -e "${YELLOW}Обновляю зависимости до версии ${VERSION}...${DEFAULT}"
+echo -e "${YELLOW}Обновляю зависимости пакета ${GREEN}${CURRENT_DIR}${YELLOW} до версии ${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
 
 # root
-echo -e "${GREEN}root...${DEFAULT}"
 npx npm-check-updates --upgrade --target ${VERSION}
 npm i --legacy-peer-deps
 
@@ -20,7 +21,7 @@ if [ -d "packages" ]; then
   cd packages
 
   for PACKAGE in */; do
-    echo -e "${GREEN}package:${PACKAGE%*/}...${DEFAULT}"
+    echo -e "${YELLOW}package: ${GREEN}${PACKAGE%*/}...${DEFAULT}"
     cd ${PACKAGE}
     npx npm-check-updates --upgrade --target ${VERSION}
     npm i --legacy-peer-deps

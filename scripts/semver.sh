@@ -10,6 +10,9 @@ CURRENT_DIR=${PWD##*/}
 
 clear
 
-echo -e "${YELLOW}Подымаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
+echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
-standard-version --release-as ${VERSION}
+git add ./*
+git commit -m "chore(${CURRENT_DIR}): preparing for version update"
+
+standard-version --release-as ${VERSION} --releaseCommitMessageFormat "chore(release:${CURRENT_DIR}): {{currentTag}}"
