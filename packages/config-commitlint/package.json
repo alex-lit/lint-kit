@@ -1,15 +1,15 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "8.1.1",
+  "version": "9.0.0",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
     "commitlint",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/config-commitlint#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
-    "url": "https://github.com/alex-lit/config-commitlint/issues"
+    "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,10 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
   "dependencies": {
     "@commitlint/cli": "^17.8.0",
     "@commitlint/config-conventional": "^17.8.0",
