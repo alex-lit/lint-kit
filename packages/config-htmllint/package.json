@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-htmllint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "htmllint config",
   "keywords": [
@@ -25,6 +25,7 @@
   ],
   "main": "index.js",
   "files": [
+    "README.md",
     "index.js"
   ],
   "scripts": {
