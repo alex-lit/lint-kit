@@ -12,7 +12,7 @@ echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию па
 
 npm version ${VERSION}
 
-conventional-changelog -p angular -i CHANGELOG.md -s --tag-prefix ""
+conventional-changelog -p angular -i CHANGELOG.md -s --tag-prefix "v"
 
 # npx standard-version ${VERSION}
 
