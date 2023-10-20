@@ -10,7 +10,7 @@ clear
 
 echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию пакета...${DEFAULT}"
 
-# npm version ${VERSION}
+# npm version ${VERSION}  test
 
 # conventional-changelog -p angular -i CHANGELOG.md -s ${VERSION}
 
