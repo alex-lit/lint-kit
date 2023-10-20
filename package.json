@@ -63,6 +63,13 @@
     "up": "./scripts/up.sh"
   },
   "dependencies": {
+    "@alexlit/config-commitlint": "latest",
+    "@alexlit/config-eslint": "latest",
+    "@alexlit/config-htmllint": "latest",
+    "@alexlit/config-markdownlint": "latest",
+    "@alexlit/config-npmlint": "latest",
+    "@alexlit/config-prettier": "latest",
+    "@alexlit/config-stylelint": "latest",
     "husky": "^4.3.8",
     "lint-staged": "^15.0.2"
   },
