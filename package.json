@@ -60,8 +60,7 @@
     "lint:npmlint": "./scripts/lint.npmlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
     "semver": "./scripts/semver.sh",
-    "up": "./scripts/up.sh",
-    "version": "./scripts/version.sh"
+    "up": "./scripts/up.sh"
   },
   "dependencies": {
     "husky": "^4.3.8",

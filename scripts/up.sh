@@ -9,7 +9,7 @@ clear
 
 echo -e "${YELLOW}Обновляю зависимости до версии ${VERSION}${DEFAULT}..."
 
-root
+# root
 echo -e "${GREEN}root...${DEFAULT}"
 npx npm-check-updates --upgrade --target ${VERSION}
 npm i --legacy-peer-deps
