@@ -1,20 +1,11 @@
+## <small>67.0.27 (2023-10-20)</small>
+
+- chore: update version
+  ([7d528db](https://github.com/alex-lit/lint-kit/commit/7d528db))
+- chore: update version
+  ([4c92208](https://github.com/alex-lit/lint-kit/commit/4c92208))
+
 ## <small>67.0.26 (2023-10-20)</small>
 
 - chore: update version
   ([4c92208](https://github.com/alex-lit/lint-kit/commit/4c92208))
-
-# Changelog
-
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
-
-### [67.0.25](https://github.com/alex-lit/lint-kit/compare/v67.0.24...v67.0.25) (2023-10-20)
-
-### [67.0.24](https://github.com/alex-lit/lint-kit/compare/v67.0.23...v67.0.24) (2023-10-20)
-
-### [67.0.23](https://github.com/alex-lit/lint-kit/compare/v67.0.21...v67.0.23) (2023-10-20)
-
-### [67.0.21](https://github.com/alex-lit/lint-kit/compare/v67.0.19...v67.0.21) (2023-10-20)
-
-### [67.0.19](https://github.com/alex-lit/lint-kit/compare/v103.0.1...v67.0.19) (2023-10-20)
