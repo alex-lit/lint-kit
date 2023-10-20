@@ -1,15 +1,15 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "13.2.0",
+  "version": "14.0.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
     "prettier",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/config-prettier#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
-    "url": "https://github.com/alex-lit/config-prettier/issues"
+    "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,10 @@
     "index.js",
     "plugins"
   ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
   "dependencies": {
     "@prettier/plugin-php": "^0.21.0",
     "@prettier/plugin-pug": "^3.0.0",
