@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-markdownlint",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "private": false,
   "description": "markdownlint config",
   "keywords": [
@@ -23,6 +23,7 @@
   ],
   "main": "index.js",
   "files": [
+    "README.md",
     "index.js"
   ],
   "scripts": {
