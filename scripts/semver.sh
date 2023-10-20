@@ -12,7 +12,7 @@ clear
 
 echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
-git add ./*
+git add .
 git commit -m "chore(${CURRENT_DIR}): preparing for version update"
 
 standard-version --release-as ${VERSION} --releaseCommitMessageFormat "chore(release:${CURRENT_DIR}): {{currentTag}}"
