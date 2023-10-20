@@ -1,3 +1,8 @@
+## <small>67.0.26 (2023-10-20)</small>
+
+- chore: update version
+  ([4c92208](https://github.com/alex-lit/lint-kit/commit/4c92208))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See
