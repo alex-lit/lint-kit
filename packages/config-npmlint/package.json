@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-npmlint",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "private": false,
   "description": "npmlint config",
   "keywords": [
@@ -27,6 +27,7 @@
   ],
   "main": "index.json",
   "files": [
+    "README.md",
     "index.json"
   ],
   "scripts": {
