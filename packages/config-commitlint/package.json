@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
@@ -23,6 +23,7 @@
   ],
   "main": "index.js",
   "files": [
+    "README.md",
     "index.js"
   ],
   "scripts": {
