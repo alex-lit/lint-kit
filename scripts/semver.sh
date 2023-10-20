@@ -13,7 +13,7 @@ echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию па
 npm version ${VERSION}
 
 npx conventional-recommended-bump -p angular
-conventional-changelog -p angular -i CHANGELOG.md -s
+conventional-changelog -p angular -i CHANGELOG.md -s --tag-prefix ""
 
 # npx standard-version ${VERSION}
 
