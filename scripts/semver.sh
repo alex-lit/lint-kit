@@ -10,10 +10,9 @@ clear
 
 echo -e "${YELLOW}Обновляю ${GREEN}${VERSION}${YELLOW} версию пакета...${DEFAULT}"
 
-git add --all
-git commit -m 'chore: preparing for version update'
-
 npm version ${VERSION}
 
 conventional-changelog -p angular -i CHANGELOG.md -s ${VERSION}
-git add CHANGELOG.md
+
+git add --all
+git commit -m 'chore: update version'
