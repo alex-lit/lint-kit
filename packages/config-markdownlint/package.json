@@ -1,15 +1,15 @@
 {
   "name": "@alexlit/config-markdownlint",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "private": false,
   "description": "markdownlint config",
   "keywords": [
     "markdownlint",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/config-markdownlint#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
-    "url": "https://github.com/alex-lit/config-markdownlint/issues"
+    "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,10 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
   "dependencies": {
     "markdownlint": "^0.31.1",
     "markdownlint-cli": "^0.37.0"
