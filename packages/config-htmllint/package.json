@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-htmllint",
-  "version": "0.2.5",
+  "version": "1.0.0",
   "private": false,
   "description": "htmllint config",
   "keywords": [
@@ -9,9 +9,9 @@
     "htmllint",
     "linthtml"
   ],
-  "homepage": "https://github.com/alex-lit/config-htmllint#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
   "bugs": {
-    "url": "https://github.com/alex-lit/config-htmllint/issues"
+    "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,10 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
   "dependencies": {
     "@linthtml/linthtml": "^0.9.5",
     "@linthtml/linthtml-config-recommended": "^0.1.0"
