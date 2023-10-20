@@ -1,8 +1,8 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See
-[standard-version](https://github.com/conventional-changelog/standard-version)
-for commit guidelines.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [67.0.42](https://github.com/alex-lit/lint-kit/compare/v67.0.41...v67.0.42) (2023-10-20)
 
 ### [67.0.41](https://github.com/alex-lit/lint-kit/compare/v67.0.40...v67.0.41) (2023-10-20)
 
