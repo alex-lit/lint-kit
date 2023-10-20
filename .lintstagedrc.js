@@ -30,7 +30,7 @@ module.exports = {
   '*.sh': [prettier],
   '*.sol': [prettier],
   '*.sql': [prettier],
-  // '*.svg': [prettier], bug - clear all new svg files in some unknown cases
+  '*.svg': [prettier],
   '*.ts': [eslint, prettier],
   '*.tsx': [eslint, prettier],
   '*.vue': [eslint, stylelint, prettier],
