@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [68.0.0](https://github.com/alex-lit/lint-kit/compare/v67.0.44...v68.0.0) (2023-10-20)
+
+## [67.1.0](https://github.com/alex-lit/lint-kit/compare/v67.0.44...v67.1.0) (2023-10-20)
+
+### [67.0.46](https://github.com/alex-lit/lint-kit/compare/v67.0.44...v67.0.46) (2023-10-20)
+
+### [67.0.45](https://github.com/alex-lit/lint-kit/compare/v67.0.44...v67.0.45) (2023-10-20)
+
 ### [67.0.44](https://github.com/alex-lit/lint-kit/compare/v67.0.43...v67.0.44) (2023-10-20)
 
 ### [67.0.43](https://github.com/alex-lit/lint-kit/compare/v67.0.42...v67.0.43) (2023-10-20)
