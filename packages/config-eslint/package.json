@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "69.0.0",
+  "version": "69.0.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -23,8 +23,9 @@
   ],
   "main": "index.js",
   "files": [
-    "index.js",
+    "README.md",
     "dictionaries",
+    "index.js",
     "plugins"
   ],
   "scripts": {

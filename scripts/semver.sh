@@ -12,4 +12,4 @@ clear
 
 echo -e "${YELLOW}Подымаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
-standard-version ${VERSION}
+standard-version --release-as ${VERSION}
