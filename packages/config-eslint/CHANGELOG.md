@@ -1,3 +1,20 @@
+## <small>67.0.33 (2023-10-20)</small>
+
+- chore: update version
+  ([de6716a](https://github.com/alex-lit/lint-kit/commit/de6716a))
+- chore: update version
+  ([c8ba123](https://github.com/alex-lit/lint-kit/commit/c8ba123))
+- chore: update version
+  ([56f4f19](https://github.com/alex-lit/lint-kit/commit/56f4f19))
+- chore: update version
+  ([077a6ae](https://github.com/alex-lit/lint-kit/commit/077a6ae))
+- chore: update version
+  ([80214b1](https://github.com/alex-lit/lint-kit/commit/80214b1))
+- chore: update version
+  ([7d528db](https://github.com/alex-lit/lint-kit/commit/7d528db))
+- chore: update version
+  ([4c92208](https://github.com/alex-lit/lint-kit/commit/4c92208))
+
 ## <small>67.0.32 (2023-10-20)</small>
 
 - chore: update version
