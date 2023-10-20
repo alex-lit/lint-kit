@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "67.0.8",
+  "version": "67.0.9",
   "private": false,
   "description": "Eslint config",
   "keywords": [

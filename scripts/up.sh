@@ -1,13 +1,14 @@
 # Обновляет зависимости до указанной версии (latest, newest, greatest, minor, patch)
 
 VERSION=${1:-minor}
+
 GREEN='\e[32m'
 YELLOW='\e[33m'
 DEFAULT='\e[39m'
 
 clear
 
-echo -e "${YELLOW}Обновляю зависимости до версии ${VERSION}${DEFAULT}..."
+echo -e "${YELLOW}Обновляю зависимости до версии ${VERSION}...${DEFAULT}"
 
 # root
 echo -e "${GREEN}root...${DEFAULT}"
