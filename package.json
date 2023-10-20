@@ -59,8 +59,6 @@
     "lint:markdownlint": "./scripts/lint.markdownlint.sh",
     "lint:npmlint": "./scripts/lint.npmlint.sh",
     "lint:stylelint": "./scripts/lint.stylelint.sh",
-    "ou": "./scripts/ou.sh",
-    "publish": "./scripts/publish.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh",
     "version": "./scripts/version.sh"

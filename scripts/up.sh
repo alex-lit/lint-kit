@@ -9,18 +9,20 @@ clear
 
 echo -e "${YELLOW}Обновляю зависимости до версии ${VERSION}${DEFAULT}..."
 
-# root
+root
 echo -e "${GREEN}root...${DEFAULT}"
 npx npm-check-updates --upgrade --target ${VERSION}
 npm i --legacy-peer-deps
 
 # packages
-cd packages
-for PACKAGE in */; do
-  echo -e "${GREEN}package:${PACKAGE%*/}...${DEFAULT}"
-  cd ${PACKAGE}
-  npx npm-check-updates --upgrade --target ${VERSION}
-  npm i --legacy-peer-deps
-  cd ../
-done
-cd ../
+if [ -d "packages" ]; then
+  cd packages
+
+  for PACKAGE in */; do
+    echo -e "${GREEN}package:${PACKAGE%*/}...${DEFAULT}"
+    cd ${PACKAGE}
+    npx npm-check-updates --upgrade --target ${VERSION}
+    npm i --legacy-peer-deps
+    cd ../
+  done
+fi
