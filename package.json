@@ -63,13 +63,14 @@
     "up": "./scripts/up.sh"
   },
   "dependencies": {
-    "@alexlit/config-commitlint": "latest",
-    "@alexlit/config-eslint": "latest",
-    "@alexlit/config-htmllint": "latest",
-    "@alexlit/config-markdownlint": "latest",
-    "@alexlit/config-npmlint": "latest",
-    "@alexlit/config-prettier": "latest",
-    "@alexlit/config-stylelint": "latest",
+    "@alexlit/config-commitlint": "^9.0.14",
+    "@alexlit/config-eslint": "^69.0.1",
+    "@alexlit/config-htmllint": "^1.0.1",
+    "@alexlit/config-markdownlint": "^2.0.2",
+    "@alexlit/config-npmlint": "^5.0.1",
+    "@alexlit/config-prettier": "^14.0.1",
+    "@alexlit/config-stylelint": "^38.0.1",
+    "@commitlint/cli": "^18.0.0",
     "husky": "^4.3.8",
     "lint-staged": "^15.0.2"
   },
