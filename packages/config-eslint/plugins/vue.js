@@ -76,19 +76,7 @@ module.exports = {
 
     'vue/html-end-tags': ['error'],
 
-    'vue/html-self-closing': [
-      'error',
-      {
-        html: {
-          component: 'always',
-          normal: 'never',
-          void: 'always',
-        },
-
-        math: 'always',
-        svg: 'always',
-      },
-    ],
+    // 'vue/html-self-closing': [], // delegate to plugins/prettier
 
     'vue/match-component-file-name': ['error'],
 

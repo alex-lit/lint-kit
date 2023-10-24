@@ -12,7 +12,7 @@ module.exports = {
       'error',
       {
         html: {
-          component: 'never',
+          component: 'always',
           normal: 'never',
           void: 'always',
         },
