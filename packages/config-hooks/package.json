@@ -1,0 +1,38 @@
+{
+  "name": "@alexlit/config-hooks",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Hooks config",
+  "keywords": [
+    "hooks",
+    "config"
+  ],
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "bugs": {
+    "url": "https://github.com/alex-lit/lint-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-hooks"
+  },
+  "license": "MIT",
+  "author": "Alexey Litovchenko",
+  "maintainers": [
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+  ],
+  "main": "",
+  "files": [
+    "README.md",
+    "husky.js",
+    "lint-staged.js"
+  ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
+  "dependencies": {
+    "husky": "^4.3.8",
+    "lint-staged": "^15.0.2"
+  }
+}
