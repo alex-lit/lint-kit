@@ -15,8 +15,9 @@ module.exports = {
     '@alexlit/config-stylelint',
 
     /* optional */
+    '@alexlit/config-stylelint/plugins/optional/gamut',
     '@alexlit/config-stylelint/plugins/optional/no-indistinguishable-colors',
-    '@alexlit/config-stylelint/plugins/optional/use-logical-spec',
+    '@alexlit/config-stylelint/plugins/optional/logical-css',
   ],
 
   ignoreFiles: [...require('@alexlit/config-stylelint').ignoreFiles],
@@ -29,10 +30,4 @@ module.exports = {
 
   ```sh
   npx stylelint-find-new-rules
-  ```
-
-- Check rules that are in conflict with Prettier
-
-  ```sh
-  npx stylelint-config-prettier-check
   ```

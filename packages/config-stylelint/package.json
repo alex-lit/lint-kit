@@ -54,7 +54,6 @@
     "stylelint-prettier": "^4.0.2",
     "stylelint-scss": "^5.2.1",
     "stylelint-selector-no-empty": "^1.0.9",
-    "stylelint-use-logical-spec": "^5.0.0",
     "stylelint-use-nesting": "^4.1.0"
   }
 }
