@@ -70,7 +70,7 @@
     "@alexlit/config-markdownlint": "^2.0.2",
     "@alexlit/config-npmlint": "^5.0.1",
     "@alexlit/config-prettier": "^14.0.1",
-    "@alexlit/config-stylelint": "^38.1.0"
+    "@alexlit/config-stylelint": "^38.1.1"
   },
   "devDependencies": {
     "standard-version": "^9.5.0",
