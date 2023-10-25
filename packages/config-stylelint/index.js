@@ -70,7 +70,7 @@ module.exports = {
       true,
       {
         ignoreProperties: {
-          '/.+/': /^v-(bind|deep|global|slotted)|\$/,
+          '/.+/': /^(v-(bind|deep|global|slotted)|view)|\$/,
         },
       },
     ],
@@ -97,7 +97,12 @@ module.exports = {
     'no-missing-end-of-source-newline': null,
     'no-unknown-animations': true,
     'number-max-precision': 3,
-    'property-no-unknown': [true, { ignoreProperties: ['align-tracks'] }],
+
+    'property-no-unknown': [
+      true,
+      { ignoreProperties: ['align-tracks', 'animation-timeline'] },
+    ],
+
     'property-no-vendor-prefix': true,
 
     'rule-empty-line-before': [
