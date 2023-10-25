@@ -52,7 +52,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-lit": "^1.9.1",
+    "eslint-plugin-lit": "^1.10.1",
     "eslint-plugin-lit-a11y": "^4.1.0",
     "eslint-plugin-more": "^1.0.5",
     "eslint-plugin-no-await-in-promise": "^1.1.5",
