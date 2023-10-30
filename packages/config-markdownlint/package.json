@@ -1,0 +1,37 @@
+{
+  "name": "@alexlit/config-markdownlint",
+  "version": "2.0.2",
+  "private": false,
+  "description": "markdownlint config",
+  "keywords": [
+    "markdownlint",
+    "config"
+  ],
+  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "bugs": {
+    "url": "https://github.com/alex-lit/lint-kit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alex-lit/lint-kit.git",
+    "directory": "packages/config-markdownlint"
+  },
+  "license": "MIT",
+  "author": "Alexey Litovchenko",
+  "maintainers": [
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+  ],
+  "main": "index.js",
+  "files": [
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
+  },
+  "dependencies": {
+    "markdownlint": "^0.31.1",
+    "markdownlint-cli": "^0.37.0"
+  }
+}

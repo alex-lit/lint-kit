@@ -1,0 +1,28 @@
+{
+  "[vue]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+      "source.fixAll.stylelint": true,
+      "xxxint": true
+    },
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
+  },
+  "cSpell.allowCompoundWords": true,
+  "breadcrumbs.enabled": true,
+  "cSpell.enableFiletypes": [
+    "browserslist",
+    "gitignore",
+    "postcss",
+    "shellscript",
+    "vue",
+    "vue-html",
+    "vue-postcss"
+  ],
+  "emmet.preferences": {
+    "bem.elementSeparator": "__",
+    "bem.modifierSeparator": "--",
+    "bem.shortElementPrefix": ":"
+  }
+}

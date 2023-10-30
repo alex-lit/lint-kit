@@ -1,0 +1,457 @@
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+) !default;
+
+@import 'logical.scss';
+
+@tailwind utility;
+
+@use 'sass:map';
+@use 'sass:color';
+
+.example-1 {
+  display: inline;
+}
+
+.example {
+  color: rgb(0 0 0);
+
+  @screen sm {
+    color: rebeccapurple;
+  }
+
+  @media ($laptop) {
+    grid-template-columns: 1fr;
+  }
+
+  @media ($mobile-l) {
+    padding: 1rem 0;
+  }
+
+  @media (width >= 500px) and (width <= 600px) {
+  }
+
+  @media (width >= 640px) {
+    color: rebeccapurple;
+  }
+
+  &:hover,
+  &:focus {
+    color: rebeccapurple;
+  }
+}
+
+.test-s {
+  color: rgb(3 3 3);
+  grid-template-areas:
+    'a a a d'
+    'b b b b';
+}
+
+a {
+  color: black;
+}
+
+@each $key, $value in $font-weights {
+  $value: map.get($font-weights, $key);
+}
+
+s {
+}
+
+@keyframes slide-right {
+}
+
+@mixin variables {
+  --ui-button-icon-size: calc(
+    var(--ui-button-font-size) * var(--ui-button-line-height)
+  );
+  --ui-icon-default-background-color: var(
+    --ui-button-color,
+    var(--ui-color-primary)
+  );
+  --ui-button-padding: 8px;
+  --ui-button-font-size: 16px;
+  --ui-button-line-height: 1.5;
+  --ui-button-color: currentColor;
+  --ui-button-color--h: currentColor;
+  --ui-button-color--p: currentColor;
+}
+
+.a {
+  .a,
+  .b {
+  }
+
+  .a,
+  b {
+  }
+
+  a,
+  .b {
+  }
+
+  a,
+  b {
+  }
+
+  .a {
+  }
+
+  .b {
+  }
+
+  * {
+  }
+
+  &[dir] {
+  }
+
+  a {
+  }
+
+  b {
+  }
+}
+
+.test {
+  transition: color 350ms ease-in;
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+@mixin font-size-default {
+  font-size: 16px;
+}
+
+.test2 {
+  @media screen and (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+header {
+  &:hover,
+  &:focus {
+  }
+}
+
+.l__button--3 {
+  @extend %sdf;
+
+  @include ddf();
+  @include variables();
+  @include ddf();
+  @include ddf();
+  @include ddf();
+
+  @apply ddd ring-cyan-500 
+  transition-all duration-500 
+     demo-dark:ring-cyan-400
+         ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow red-500 bg-red-200;
+
+  align-items: center;
+  appearance: none;
+  background-color: var(
+    --ui-button-color,
+    var(--ui-icon-default-background-color)
+  );
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: 600;
+  height: var(--height);
+  letter-spacing: normal;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition-duration: 0s;
+  user-select: none;
+
+  @supports (width: 0) {
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(
+      --ui-button-color--h,
+      var(--ui-icon-default-background-color)
+    );
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: var(
+      --ui-button-color--p,
+      var(--ui-icon-default-background-color)
+    );
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--ui-button-color);
+    }
+  }
+
+  &::before {
+  }
+
+  &::after {
+    color: rebeccapurple;
+  }
+
+  &::file-selector-button {
+  }
+
+  &::-moz-range-track {
+  }
+
+  ::v-deep {
+    .test3 {
+      .test4 {
+        .test5 {
+          .test6 {
+            @media ($mobile-l) {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .animation {
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+      content-visibility: hidden;
+    }
+  }
+
+  .f {
+  }
+
+  &.f {
+  }
+
+  + .ui-button {
+    margin-left: var(--ui-button-padding);
+
+    @media ($mobile-l) {
+      margin-left: calc(var(--ui-button-padding) / 2);
+    }
+  }
+
+  ~ .ui-button {
+    margin-left: var(--ui-button-padding);
+
+    @media ($mobile-l) {
+      margin-left: calc(var(--ui-button-padding) / 2);
+    }
+  }
+
+  ~ .ui-buttons {
+    margin-left: var(--ui-button-padding); // dsf
+
+    @media ($mobile-l) {
+      margin-left: calc(var(--ui-button-padding) / 2);
+    }
+  }
+
+  > .ui-button {
+    margin-left: var(--ui-button-padding);
+
+    @media ($mobile-l) {
+      margin-left: calc(var(--ui-button-padding) / 2);
+    }
+  }
+
+  &.ui-button {
+    + a {
+      margin-left: var(--ui-button-padding);
+
+      @media ($mobile-l) {
+        margin-left: calc(var(--ui-button-padding) / 2);
+      }
+    }
+  }
+
+  * {
+  }
+
+  &[test] {
+  }
+
+  [test] {
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--color {
+    &--light,
+    &--white {
+      --ui-button-icon-size: calc(
+        var(--ui-button-font-size) * var(--ui-button-line-height) - 2px
+      );
+
+      border: solid 1px var(--ui-color-input-border);
+      color: var(--ui-color-secondary);
+    }
+
+    &--link {
+      --ui-button-icon-size: calc(
+        var(--ui-button-font-size) * var(--ui-button-line-height) - 2px
+      );
+
+      background-color: transparent !important;
+      border: solid 1px var(--ui-color-input-border);
+      color: var(--ui-button-color);
+
+      &:hover,
+      &:focus {
+        color: var(
+          --ui-button-color--h,
+          var(--ui-icon-default-background-color)
+        );
+      }
+
+      &:active {
+        color: var(
+          --ui-button-color--p,
+          var(--ui-icon-default-background-color)
+        );
+      }
+    }
+  }
+
+  &--size {
+    &--default {
+      --ui-button-padding: 8px;
+      --ui-button-font-size: 16px;
+      --ui-button-line-height: 1.5;
+    }
+
+    &--large {
+      --ui-button-padding: 16px;
+      --ui-button-font-size: 20px;
+      --ui-button-line-height: 1.2;
+    }
+
+    &--small {
+      --ui-button-padding: 8px;
+      --ui-button-font-size: 14px;
+      --ui-button-line-height: 1.14;
+    }
+  }
+}
+
+.ui-textarea__field {
+  background-color: white;
+  border: 1px solid var(--ui-color-input-border);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px transparent;
+  color: var(--ui-color-article-text);
+  display: block;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1.5;
+  min-height: 58px;
+  min-width: 0;
+  padding: 16px;
+  position: relative;
+  resize: vertical;
+  transition-duration: 0.1s;
+  width: 100%;
+
+  &:focus {
+    background-color: white;
+    border-color: var(--ui-color-outline);
+    box-shadow: inset 0 0 0 1px var(--ui-color-outline);
+    outline: none;
+
+    @at-root .ui-textarea[class*='--invalid'] & {
+      border-color: var(--ui-color-danger);
+      box-shadow: inset 0 0 0 1px var(--ui-color-danger);
+    }
+
+    @at-root .ui-textarea[class*='--invalid'] .ui-textarea__prefix + & {
+      border-left-color: var(--ui-color-danger);
+    }
+  }
+
+  &::placeholder {
+    color: var(--ui-color-placeholder);
+  }
+
+  .test {
+    outline: none;
+  }
+
+  &[disabled] {
+    background-color: var(--ui-color-light);
+    border-color: var(--ui-color-light);
+  }
+}
+
+.ui-button__text-wrap {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  font-size: var(--ui-button-font-size);
+  justify-content: center;
+  line-height: var(--ui-button-line-height);
+  padding: var(--ui-button-padding);
+}
+
+.ui-button__prefix {
+  align-items: center;
+  display: flex;
+  margin-right: 8px;
+
+  &:only-child {
+    margin-right: 0;
+  }
+}
+
+.ui-button__text {
+  position: relative;
+}
+
+.ui-button__suffix {
+  --ui-bitton-suffix-size: calc(
+    calc(var(--ui-button-padding) * 2) + var(--ui-button-icon-size)
+  );
+
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--ui-button-color--h, transparent);
+  border-radius: 4px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  width: var(--ui-bitton-suffix-size);
+
+  @at-root .ui-button[class*='--color--link'] & {
+    background-color: transparent !important;
+  }
+}

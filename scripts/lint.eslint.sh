@@ -15,4 +15,4 @@ if [ $OPTION ] && [ $OPTION = 'fix' ]; then
   echo -e "${COLOR_ARROW}autofix:${COLOR_DEFAULT} true"
 fi
 
-eslint --ext ${FILES} --ignore-path .gitignore --ignore-path .eslintignore ./ --${OPTION}
+eslint --ext ${FILES} --ignore-path .gitignore --ignore-path .eslintignore --ignore-path .prettierignore ./ --${OPTION}

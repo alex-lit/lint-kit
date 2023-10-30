@@ -1,12 +1,14 @@
-# Launch generic linter
+# Запускает линтеры
 
 OPTION=${1}
 
-COLOR_TITLE='\e[92m'
-COLOR_LINTERS='\e[33m'
-COLOR_DEFAULT='\e[39m'
+DEFAULT='\e[39m'
+GREEN='\e[92m'
+YELLOW='\e[33m'
 
-echo -e "${COLOR_TITLE}linters: ${COLOR_LINTERS}eslint, htmllint, markdownlint, npmlint, stylelint, ${COLOR_DEFAULT}"
+clear
+
+echo -e "${YELLOW}Запускаю линтеры: ${GREEN}eslint, htmllint, markdownlint, npmlint, stylelint...${DEFAULT}"
 
 npm run lint:eslint --if-present ${OPTION}
 npm run lint:htmllint --if-present
