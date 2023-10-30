@@ -63,13 +63,13 @@
     "up": "./scripts/up.sh"
   },
   "dependencies": {
-    "@alexlit/config-commitlint": "^10.0.0",
-    "@alexlit/config-eslint": "^69.2.0",
+    "@alexlit/config-commitlint": "^10.1.0",
+    "@alexlit/config-eslint": "^70.0.0",
     "@alexlit/config-hooks": "^0.0.2",
     "@alexlit/config-htmllint": "^1.0.1",
     "@alexlit/config-markdownlint": "^2.0.2",
     "@alexlit/config-npmlint": "^5.0.1",
-    "@alexlit/config-prettier": "^14.0.1",
+    "@alexlit/config-prettier": "^14.0.2",
     "@alexlit/config-stylelint": "^38.1.1"
   },
   "devDependencies": {
