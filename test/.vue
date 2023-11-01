@@ -1,3 +1,8 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<template>
+  <TestTest :key="1" @click="() => {}" />
+</template>
+
 <style lang="scss">
   .inset {
     bottom: 0;
