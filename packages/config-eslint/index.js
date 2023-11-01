@@ -95,8 +95,6 @@ module.exports = defineConfig({
     },
   ],
 
-  parser: '@typescript-eslint/parser',
-
   parserOptions: {
     ecmaFeatures: { jsx: true },
     extraFileExtensions: ['.vue'],
