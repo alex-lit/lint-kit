@@ -53,12 +53,13 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "./scripts/lint.sh",
-    "lint:eslint": "./scripts/lint.eslint.sh",
-    "lint:htmllint": "./scripts/lint.htmllint.sh",
-    "lint:markdownlint": "./scripts/lint.markdownlint.sh",
-    "lint:npmlint": "./scripts/lint.npmlint.sh",
-    "lint:stylelint": "./scripts/lint.stylelint.sh",
+    "check:editorconfig": "./scripts/check.editorconfig.sh",
+    "lint": "time ./scripts/lint.sh",
+    "lint:eslint": "time ./scripts/lint.eslint.sh",
+    "lint:htmllint": "time ./scripts/lint.htmllint.sh",
+    "lint:markdownlint": "time ./scripts/lint.markdownlint.sh",
+    "lint:npmlint": "time ./scripts/lint.npmlint.sh",
+    "lint:stylelint": "time ./scripts/lint.stylelint.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh"
   },

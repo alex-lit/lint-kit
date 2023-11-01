@@ -14,12 +14,12 @@ $test3: blue !default;
 
 @tailwind utility;
 
-@use 'sass:map';
-@use 'sass:color';
-
 .example-1 {
   display: inline;
 }
+
+@use 'sass:map';
+@use 'sass:color';
 
 .example {
   color: rgb(0 0 0);
@@ -155,10 +155,10 @@ header {
   @include ddf();
   @include ddf();
 
-  @apply ddd ring-cyan-500
-  transition-all duration-500
-     demo-dark:ring-cyan-400
-         ring-2 absolute left-1/2 top-1/2 w-4 h-4 -mt-2 -ml-2 flex items-center justify-center bg-white rounded-full shadow red-500 bg-red-200;
+  @apply ddd demo-dark:ring-cyan-400
+    red-500 absolute
+    left-1/2
+    top-1/2 -ml-2 -mt-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-200 bg-white shadow ring-2 ring-cyan-500 transition-all duration-500;
 
   align-items: center;
   appearance: none;
