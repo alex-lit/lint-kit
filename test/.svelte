@@ -14,7 +14,7 @@
 
 <style>
   button {
-    color: red; 
+    color: red;
     z-index: 3;
-  }  
+  }
 </style>

@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>
-      Welcome to Symfony!
-    </title>
+    <title>Welcome to Symfony!</title>
   </head>
   <body>
-     <h1 class="asdasd{{ user.name }}">
-       {{ page_title }}
-    </h1> {% if user.isLoggedIn %}
-      Hello {{ user.name }}!
-    {% endif %}
-
-    {# ... #}
+    <h1 class="asdasd{{ user.name }}">
+      {{ page_title }}
+    </h1>
+    {% if user.isLoggedIn %} Hello {{ user.name }}! {% endif %} {# ... #}
   </body>
 </html>
