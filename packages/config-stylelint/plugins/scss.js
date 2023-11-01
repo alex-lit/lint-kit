@@ -24,7 +24,17 @@ module.exports = {
     'scss/at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['container'],
+        ignoreAtRules: [
+          'container',
+          // tailwind
+          'apply',
+          'config',
+          'layer',
+          'responsive',
+          'screen',
+          'tailwind',
+          'variants',
+        ],
       },
     ],
 
@@ -57,7 +67,17 @@ module.exports = {
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/function-color-relative': true,
 
-    'scss/function-no-unknown': [true, { ignoreFunctions: ['v-bind'] }],
+    'scss/function-no-unknown': [
+      true,
+      {
+        ignoreFunctions: [
+          // vue
+          'v-bind',
+          // tailwind
+          'theme',
+        ],
+      },
+    ],
 
     'scss/function-quote-no-quoted-strings-inside': true,
     'scss/function-unquote-no-unquoted-strings-inside': true,

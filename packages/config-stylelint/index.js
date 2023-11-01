@@ -2,7 +2,6 @@
 module.exports = {
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-tailwindcss/scss',
     ...[
       './plugins/a11y',
       './plugins/at-rule-no-children',
