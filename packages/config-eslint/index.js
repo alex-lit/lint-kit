@@ -67,12 +67,12 @@ module.exports = defineConfig({
 
   ignorePatterns: [
     '.*',
-    '**/build/**',
-    '**/dist/**',
-    '**/docs/**',
-    '**/node_modules/**',
-    '**/storybook-*/**',
-    '**/sw.js',
+    'build',
+    'dist',
+    'docs',
+    'node_modules',
+    'storybook-*',
+    'sw.js',
     '!.*.js',
     '!.node',
     '!.storybook',
@@ -95,11 +95,13 @@ module.exports = defineConfig({
     },
   ],
 
+  parser: '@typescript-eslint/parser',
+
   parserOptions: {
     ecmaFeatures: { jsx: true },
     extraFileExtensions: ['.vue'],
     parser: '@typescript-eslint/parser',
-    project: './tsconfig.json',
+    project: ['./tsconfig.json'],
   },
 
   root: true,
@@ -109,6 +111,7 @@ module.exports = defineConfig({
     curly: 'error',
     'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
     'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+    indent: 'off',
 
     'lines-around-comment': [
       'warn',

@@ -47,6 +47,8 @@ module.exports = {
 
     '@typescript-eslint/explicit-module-boundary-types': 'off',
 
+    '@typescript-eslint/indent': 'off',
+
     '@typescript-eslint/member-ordering': 'off', // delegate to sort-class-members plugin
 
     '@typescript-eslint/method-signature-style': ['error', 'method'],

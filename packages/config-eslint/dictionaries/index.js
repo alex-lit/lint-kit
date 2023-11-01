@@ -24,6 +24,8 @@ module.exports = [
   ...programming,
   ...specialized,
   'aave',
+  'maxerr',
+  'tailwindcss',
   'airbnb',
   'aland',
   'alexey',
