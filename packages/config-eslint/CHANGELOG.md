@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v70.1.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.4...v70.1.1)
+
+### 🏡 Chore
+
+- **config-eslint:** Preparing for version update ([a7a01fe](https://github.com/alex-lit/lint-kit/commit/a7a01fe))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## [70.1.0](https://github.com/alex-lit/lint-kit/compare/v70.0.2...v70.1.0) (2023-11-02)
 
 ### [70.0.2](https://github.com/alex-lit/lint-kit/compare/v70.0.1...v70.0.2) (2023-11-01)
