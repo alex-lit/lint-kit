@@ -15,4 +15,4 @@ echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию па
 git add .
 git commit -m "chore(${CURRENT_DIR}): preparing for version update"
 
-changelogen --bump --${VERSION} --push --publish
+changelogen --bump --${VERSION} --release --push --publish
