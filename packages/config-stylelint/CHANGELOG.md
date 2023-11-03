@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v38.5.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v70.1.1...v38.5.0)
+
+### 🏡 Chore
+
+- **config-eslint:** Bump version ([65703fa](https://github.com/alex-lit/lint-kit/commit/65703fa))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## [38.4.0](https://github.com/alex-lit/lint-kit/compare/v38.3.0...v38.4.0) (2023-11-01)
 
 ## [38.3.0](https://github.com/alex-lit/lint-kit/compare/v15.0.0...v38.3.0) (2023-11-01)
