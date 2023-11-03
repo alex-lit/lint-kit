@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v106.1.4
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.2...v106.1.4)
+
+### 🏡 Chore
+
+- **lint-kit:** Preparing for version update ([5dcec5a](https://github.com/alex-lit/lint-kit/commit/5dcec5a))
+- **lint-kit:** Preparing for version update ([22e8879](https://github.com/alex-lit/lint-kit/commit/22e8879))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v106.1.3
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.2...v106.1.3)
