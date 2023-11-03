@@ -12,7 +12,7 @@ clear
 
 echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
 
-git add .
-git commit -m "chore(${CURRENT_DIR}): preparing for version update"
+changelogen --bump --${VERSION}
 
-changelogen --bump --${VERSION} --release --push --publish
+git add .
+git commit -m "chore(${CURRENT_DIR}): bump version"
