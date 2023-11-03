@@ -1,6 +1,6 @@
 # Обновляет версию пакета
 
-VERSION=${1:-patch} # <major | minor | patch>
+VERSION=${1:-patch} # <major | minor | patch | premajor | preminor | prepatch | prerelease>
 
 DEFAULT='\e[39m'
 GREEN='\e[32m'
@@ -15,4 +15,4 @@ echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию па
 git add .
 git commit -m "chore(${CURRENT_DIR}): preparing for version update"
 
-standard-version --release-as ${VERSION} --releaseCommitMessageFormat "chore(release:${CURRENT_DIR}): {{currentTag}}"
+changelogen --bump --${VERSION} --release --push --publish
