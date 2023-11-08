@@ -1,23 +1,12 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-  const $props = {
-    /** Отображение спиннера */
-    loading: 'boolean',
-
-    /**
-     * Вариант отображения
-     *
-     * @example
-     *   dsfa;
-     */
-    test: 'boolean',
-  };
+  //
 </script>
 
 <template>
   <TestTest
-    class="ololo azaza xy-app-header__logo mx-[10px] my-[10px] rounded rounded bg-blue-500 px-4 py-2 text-base text-white"
     :key="1"
+    class="azaza azazas bg-blue-500 bg-blue-500 mx-[10px] my-[10px] ololo px-4 py-2 rounded rounded text-base text-white xy-app-header__logo"
     @click="() => {}"
   />
 </template>

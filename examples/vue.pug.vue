@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script lang="ts">
   /* eslint-disable vue/block-lang */
 </script>

@@ -16,7 +16,7 @@ module.exports = {
     'prettier-plugin-sql',
     'prettier-plugin-svelte',
 
-    'prettier-plugin-tailwindcss',
+    // 'prettier-plugin-tailwindcss',
   ],
 
   proseWrap: 'always',
@@ -29,6 +29,6 @@ module.exports = {
   ...require('./plugins/pug'),
   ...require('./plugins/sort-json'),
   ...require('./plugins/svelte'),
-  ...require('./plugins/tailwindcss'),
+  // ...require('./plugins/tailwindcss'),
   ...require('./plugins/xml'),
 };

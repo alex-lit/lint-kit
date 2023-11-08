@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-empty-file */
 /**
  * In these configuration files, the rule plugin1/rule1 comes from the plugin
  * named plugin1. You can also use this format with configuration comments, such

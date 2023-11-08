@@ -10,7 +10,7 @@
     "noEmit": true,
     "noImplicitAny": false,
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./*"]
     },
     "resolveJsonModule": true,
     "strict": false,
@@ -18,5 +18,5 @@
     "types": []
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.js", "**/.*.js", "**/*.vue"]
+  "include": ["/**/*"]
 }

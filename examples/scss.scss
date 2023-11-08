@@ -4,7 +4,7 @@ $font-weights: (
   'bold': 700,
 ) !default;
 
-@import '.logical.scss';
+@import 'scss.logical.scss';
 
 @use 'sass:color';
 @use 'sass:math';
