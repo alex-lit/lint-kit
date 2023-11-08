@@ -43,7 +43,51 @@ module.exports = {
 
     'import/first': 'error',
     'import/no-mutable-exports': 'error',
-    'import/order': 'off', // delegated to simple-import-sort plugin
+
+    'import/order': [
+      'error',
+      {
+        alphabetize: { caseInsensitive: true, order: 'asc' },
+
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+
+        'newlines-between': 'always',
+
+        pathGroups: [
+          { group: 'internal', pattern: '{@,~}/core/**', position: 'after' },
+          { group: 'internal', pattern: '{@,~}/modules/**', position: 'after' },
+          // FSD
+          {
+            group: 'internal',
+            pattern: '{@,~}/processes/**',
+            position: 'after',
+          },
+          { group: 'internal', pattern: '{@,~}/pages/**', position: 'after' },
+          { group: 'internal', pattern: '{@,~}/widgets/**', position: 'after' },
+          {
+            group: 'internal',
+            pattern: '{@,~}/features/**',
+            position: 'after',
+          },
+          {
+            group: 'internal',
+            pattern: '{@,~}/entities/**',
+            position: 'after',
+          },
+          { group: 'internal', pattern: '{@,~}/shared/**', position: 'after' },
+        ],
+
+        pathGroupsExcludedImportTypes: ['builtin'],
+      },
+    ],
+
     'import/prefer-default-export': 'off',
   },
 
@@ -66,7 +110,18 @@ module.exports = {
         ],
       },
 
-      node: { extensions: ['.d.ts', '.js', '.json', '.mjs', '.mts', '.ts'] },
+      node: {
+        extensions: [
+          '.cjs',
+          '.cts',
+          '.d.ts',
+          '.js',
+          '.json',
+          '.mjs',
+          '.mts',
+          '.ts',
+        ],
+      },
     },
   },
 };
