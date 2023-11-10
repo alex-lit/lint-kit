@@ -14,5 +14,9 @@ echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию па
 
 changelogen --bump --${VERSION}
 
+if [ $CURRENT_DIR != 'lint-kit' ]; then
+  rm CHANGELOG.md
+fi
+
 git add .
 git commit -m "chore(${CURRENT_DIR}): bump version"

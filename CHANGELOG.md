@@ -1,62 +1,28 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## v106.1.4
+## v106.2.0
 
-[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.2...v106.1.4)
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v70.1.1...v106.2.0)
 
 ### 🏡 Chore
 
-- **lint-kit:** Preparing for version update ([5dcec5a](https://github.com/alex-lit/lint-kit/commit/5dcec5a))
-- **lint-kit:** Preparing for version update ([22e8879](https://github.com/alex-lit/lint-kit/commit/22e8879))
+- **config-eslint:** Bump version ([65703fa](https://github.com/alex-lit/lint-kit/commit/65703fa))
+- **config-stylelint:** Bump version ([4fe7722](https://github.com/alex-lit/lint-kit/commit/4fe7722))
+- Wip ([704458b](https://github.com/alex-lit/lint-kit/commit/704458b))
+- **config-eslint:** Bump version ([675d4d8](https://github.com/alex-lit/lint-kit/commit/675d4d8))
+- **config-npmlint:** Bump version ([462d7b1](https://github.com/alex-lit/lint-kit/commit/462d7b1))
+- **config-stylelint:** Bump version ([2a7737b](https://github.com/alex-lit/lint-kit/commit/2a7737b))
+- Update deps ([0d6eb56](https://github.com/alex-lit/lint-kit/commit/0d6eb56))
+- **config-eslint:** Bump version ([ecc0bb7](https://github.com/alex-lit/lint-kit/commit/ecc0bb7))
+- **config-prettier:** Bump version ([8363a63](https://github.com/alex-lit/lint-kit/commit/8363a63))
+- **config-prettier:** Bump version ([5f73eae](https://github.com/alex-lit/lint-kit/commit/5f73eae))
+- Update deps ([fc4ec57](https://github.com/alex-lit/lint-kit/commit/fc4ec57))
+- **config-commitlint:** Bump version ([58be98d](https://github.com/alex-lit/lint-kit/commit/58be98d))
+- **config-eslint:** Bump version ([9358a51](https://github.com/alex-lit/lint-kit/commit/9358a51))
+- **config-prettier:** Bump version ([716d5f6](https://github.com/alex-lit/lint-kit/commit/716d5f6))
 
 ### ❤️ Contributors
 
 - Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
 
-## v106.1.3
-
-[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.2...v106.1.3)
-
-### 🏡 Chore
-
-- **lint-kit:** Preparing for version update ([5dcec5a](https://github.com/alex-lit/lint-kit/commit/5dcec5a))
-
-### ❤️ Contributors
-
-- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
-
-## v106.1.2
-
-[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.1...v106.1.2)
-
-### 🏡 Chore
-
-- **lint-kit:** Preparing for version update ([ea51c0a](https://github.com/alex-lit/lint-kit/commit/ea51c0a))
-
-### ❤️ Contributors
-
-- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
-
-## v106.1.1
-
-[compare changes](https://github.com/alex-lit/lint-kit/compare/v106.1.0...v106.1.1)
-
-## v106.1.0
-
-[compare changes](https://github.com/alex-lit/lint-kit/compare/v70.1.0...v106.1.0)
-
-## [106.0.0](https://github.com/alex-lit/lint-kit/compare/v70.0.0...v106.0.0) (2023-10-30)
-
-### [105.1.2](https://github.com/alex-lit/lint-kit/compare/v38.1.1...v105.1.2) (2023-10-25)
-
-### [105.1.1](https://github.com/alex-lit/lint-kit/compare/v105.1.0...v105.1.1) (2023-10-25)
-
-## [105.1.0](https://github.com/alex-lit/lint-kit/compare/v38.1.0...v105.1.0) (2023-10-25)
-
-## [105.0.0](https://github.com/alex-lit/lint-kit/compare/v69.1.0...v105.0.0) (2023-10-24)
-
-## [104.0.0](https://github.com/alex-lit/lint-kit/compare/v103.0.3...v104.0.0) (2023-10-23)
-
-### [103.0.3](https://github.com/alex-lit/lint-kit/compare/v103.0.2...v103.0.3) (2023-10-20)
