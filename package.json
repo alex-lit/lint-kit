@@ -63,16 +63,6 @@
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh"
   },
-  "dependencies": {
-    "@alexlit/config-commitlint": "^10.1.0",
-    "@alexlit/config-eslint": "^70.1.2",
-    "@alexlit/config-hooks": "^0.0.2",
-    "@alexlit/config-htmllint": "^1.0.1",
-    "@alexlit/config-markdownlint": "^2.0.2",
-    "@alexlit/config-npmlint": "^5.0.1",
-    "@alexlit/config-prettier": "^14.0.2",
-    "@alexlit/config-stylelint": "^38.5.0"
-  },
   "devDependencies": {
     "changelogen": "latest",
     "typescript": "^5.2.2"
