@@ -1,162 +1,22 @@
 # Lint Kit
 
-Preset of configuration files and dependencies for linting web applications
+Presets of configuration files and dependencies for linting web applications
 (designed for [Vue.js](https://vuejs.org) with
 [TypeScript](https://www.typescriptlang.org/))
 
 ## Installation
 
 ```sh
-npm i @alexlit/lint-kit -D
+npm i @alexlit/config-commitlint @alexlit/config-eslint @alexlit/config-hooks @alexlit/config-htmllint @alexlit/config-markdownlint @alexlit/config-npmlint @alexlit/config-prettier @alexlit/config-stylelint --legacy-peer-deps -D
 ```
 
-## Connection
+## Configuration
 
-### [Prettier](https://github.com/alex-lit/config-prettier)
-
-`.prettierrc.js`:
-
-```js
-module.exports = {
-  ...require('@alexlit/lint-kit/.prettierrc'),
-};
-```
-
-### [ESLint](https://github.com/alex-lit/config-eslint)
-
-`.eslintrc.js`:
-
-```js
-module.exports = {
-  extends: ['./node_modules/@alexlit/lint-kit/.eslintrc.js'],
-};
-```
-
-### [StyleLint](https://github.com/alex-lit/config-stylelint)
-
-`.stylelintrc.js`:
-
-```js
-module.exports = {
-  extends: ['@alexlit/lint-kit/.stylelintrc.js'],
-
-  ignoreFiles: [...require('@alexlit/lint-kit/.stylelintrc').ignoreFiles],
-};
-```
-
-### [HTMLLint](https://github.com/alex-lit/config-htmllint)
-
-`.linthtmlrc.js`:
-
-```js
-module.exports = {
-  ...require('@alexlit/lint-kit/.linthtmlrc'),
-};
-```
-
-### [MarkdownLint](https://github.com/alex-lit/config-markdownlint)
-
-`.markdownlintrc.js`:
-
-```js
-module.exports = {
-  ...require('@alexlit/lint-kit/.markdownlintrc'),
-};
-```
-
-### [NPMLint](https://github.com/tclindner/npm-package-json-lint)
-
-`.npmpackagejsonlintrc.json`:
-
-```json
-{
-  "extends": "@alexlit/lint-kit/.npmpackagejsonlintrc.json"
-}
-```
-
-### [CommitLint](https://github.com/alex-lit/config-commitlint)
-
-`.commitlintrc.js`:
-
-```js
-module.exports = {
-  extends: ['@alexlit/lint-kit/.commitlintrc.js'],
-};
-```
-
-`.huskyrc.js`:
-
-```js
-module.exports = {
-  hooks: {
-    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-  },
-};
-```
-
-## Recipes
-
-### Automatic launch linters and code fixes on commit
-
-`.lintstagedrc.js`:
-
-```js
-module.exports = {
-  ...require('@alexlit/lint-kit/.lintstagedrc'),
-};
-```
-
-`.huskyrc.js`:
-
-```js
-module.exports = {
-  ...require('@alexlit/lint-kit/.huskyrc'),
-};
-```
-
-### Launching linters manually
-
-`package.json`:
-
-```json
-"scripts": {
-  "lint": "./node_modules/@alexlit/lint-kit/scripts/lint.sh",
-  "lint:eslint": "./node_modules/@alexlit/lint-kit/scripts/lint.eslint.sh",
-  "lint:htmllint": "./node_modules/@alexlit/lint-kit/scripts/lint.htmllint.sh",
-  "lint:markdownlint": "./node_modules/@alexlit/lint-kit/scripts/lint.markdownlint.sh",
-  "lint:npmlint": "./node_modules/@alexlit/lint-kit/scripts/lint.npmlint.sh",
-  "lint:stylelint": "./node_modules/@alexlit/lint-kit/scripts/lint.stylelint.sh",
-},
-```
-
-```sh
-# lint
-npm run lint
-# autofix errors
-npm run lint fix
-```
-
-### Publishing a package
-
-`.npmrc`:
-
-```ini
-globalconfig="./node_modules/@alexlit/lint-kit/.npmrc"
-```
-
-`package.json`:
-
-```json
-"scripts": {
-  "publish": "./node_modules/@alexlit/lint-kit/scripts/publish.sh",
-  "semver": "./node_modules/@alexlit/lint-kit/scripts/semver.sh",
-  "up": "./node_modules/@alexlit/lint-kit/scripts/up.sh",
-  "version": "./node_modules/@alexlit/lint-kit/scripts/version.sh"
-},
-```
-
-```sh
-npm run up # Updates dependencies
-npm run semver <patch | minor | major> # Updates package version
-npm publish # Publishes a package to npm repository
-```
+- [commitlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-commitlint/README.md)
+- [eslint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/README.md)
+- [hooks](https://github.com/alex-lit/lint-kit/blob/master/packages/config-hooks/README.md)
+- [htmllint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-htmllint/README.md)
+- [markdownlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-markdownlint/README.md)
+- [npmlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-npmlint/README.md)
+- [prettier](https://github.com/alex-lit/lint-kit/blob/master/packages/config-prettier/README.md)
+- [stylelint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-stylelint/README.md)
