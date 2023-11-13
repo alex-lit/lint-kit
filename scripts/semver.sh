@@ -6,17 +6,18 @@ DEFAULT='\e[39m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
 
-CURRENT_DIR=${PWD##*/}
+MAIN_PACKAGE="@alexlit/lint-kit"
+CURRENT_PACKAGE=$(node -p "require('./package.json').name")
 
 clear
 
-echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_DIR}${YELLOW}...${DEFAULT}"
+echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_PACKAGE}${YELLOW}...${DEFAULT}"
 
-changelogen --bump --${VERSION}
+changelogen --release --no-commit --${VERSION}
 
-if [ $CURRENT_DIR != 'lint-kit' ]; then
+if [ $CURRENT_PACKAGE != $MAIN_PACKAGE ]; then
   rm CHANGELOG.md
 fi
 
 git add .
-git commit -m "chore(${CURRENT_DIR}): bump version"
+git commit -m "chore(${CURRENT_PACKAGE}): bump version"
