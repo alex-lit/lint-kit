@@ -23,8 +23,9 @@ const specialized = [
 module.exports = [
   ...programming,
   ...specialized,
-  'changelogen',
+  'jsonc',
   'aave',
+  'changelogen',
   'maxerr',
   'tailwindcss',
   'airbnb',
