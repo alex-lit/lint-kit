@@ -21,10 +21,10 @@
   "maintainers": [
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
-  "main": "index.js",
+  "main": "index.json",
   "files": [
     "README.md",
-    "index.js"
+    "index.json"
   ],
   "scripts": {
     "semver": "../../scripts/semver.sh",
