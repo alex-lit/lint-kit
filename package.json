@@ -34,18 +34,19 @@
       "url": "https://alexlit.gitlab.io"
     }
   ],
+  "type": "module",
   "main": "README.md",
   "files": [
-    ".commitlintrc.js",
-    ".eslintrc.js",
-    ".huskyrc.js",
-    ".linthtmlrc.js",
-    ".lintstagedrc.js",
-    ".markdownlintrc.js",
+    ".commitlintrc.cjs",
+    ".eslintrc.cjs",
+    ".huskyrc.cjs",
+    ".linthtmlrc.cjs",
+    ".lintstagedrc.cjs",
+    ".markdownlintrc.cjs",
     ".npmpackagejsonlintrc.json",
     ".npmrc",
-    ".prettierrc.js",
-    ".stylelintrc.js",
+    ".prettierrc.cjs",
+    ".stylelintrc.cjs",
     "packages",
     "scripts"
   ],
