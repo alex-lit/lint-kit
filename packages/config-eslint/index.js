@@ -81,7 +81,7 @@ module.exports = defineConfig({
 
   overrides: [
     {
-      files: ['.*.js', '.*.ts', '*.config.js', '*.config.ts'],
+      files: ['.*.cjs', '.*.js'],
 
       rules: {
         'global-require': 'off',
