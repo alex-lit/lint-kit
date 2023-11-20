@@ -16,4 +16,4 @@ if [ $OPTION ] && [ $OPTION = 'fix' ]; then
   prettier --write ${FILES}
 fi
 
-markdownlint ${FILES} --config .markdownlintrc.js --${OPTION}
+markdownlint ${FILES} --${OPTION}
