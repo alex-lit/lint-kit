@@ -2,7 +2,7 @@
 const eslint = 'eslint --fix';
 const htmllint = 'linthtml';
 const lockfilelint = 'lockfile-lint --type npm --path package-lock.json';
-const markdownlint = 'markdownlint --config .markdownlintrc.js --fix';
+const markdownlint = 'markdownlint --fix';
 const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
@@ -10,16 +10,16 @@ const stylelint = 'stylelint --fix';
 module.exports = {
   '*.cjs': [eslint, prettier],
   '*.css': [stylelint, prettier],
-  '*.cts': [eslint, prettier],
   '*.erb': [prettier],
   '*.html': [htmllint, prettier],
   '*.jade': [prettier],
   '*.js': [eslint, prettier],
   '*.json,!package-lock.json': [prettier],
+  '*.jsonc': [prettier],
+  '*.jsonp': [prettier],
   '*.jsx': [eslint, prettier],
   '*.md': [prettier, markdownlint],
   '*.mjs': [eslint, prettier],
-  '*.mts': [eslint, prettier],
   '*.pcss': [stylelint, prettier],
   '*.php': [prettier],
   '*.postcss': [stylelint, prettier],
