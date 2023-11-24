@@ -28,7 +28,6 @@
     "lint-staged.js"
   ],
   "scripts": {
-    "prepare": "husky install",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
   },
