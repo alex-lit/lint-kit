@@ -20,7 +20,7 @@ npm i @alexlit/config-hooks -D
 - lint-staged
 
   ```js
-  // ..lintstagedrc.js
+  // .lintstagedrc.js
   module.exports = {
     ...require('@alexlit/config-hooks/lint-staged'),
   };
