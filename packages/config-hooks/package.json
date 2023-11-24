@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -28,9 +28,9 @@
     "lint-staged.js"
   ],
   "scripts": {
+    "prepare": "husky install",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh",
-    "prepare": "husky install"
+    "up": "../../scripts/up.sh"
   },
   "dependencies": {
     "husky": "^8.0.3",
