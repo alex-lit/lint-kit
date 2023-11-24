@@ -8,16 +8,20 @@ npm i @alexlit/config-hooks -D
 
 ## Connection
 
-```js
-// .huskyrc.js
-module.exports = {
-  ...require('@alexlit/config-hooks/husky'),
-};
-```
+- husky
 
-```js
-// ..lintstagedrc.js
-module.exports = {
-  ...require('@alexlit/config-hooks/lint-staged'),
-};
-```
+  ```sh
+  npx husky install
+  npm pkg set scripts.prepare="husky install"
+  npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+  npx husky add .husky/pre-commit "npx --no lint-staged"
+  ```
+
+- lint-staged
+
+  ```js
+  // .lintstagedrc.js
+  module.exports = {
+    ...require('@alexlit/config-hooks/lint-staged'),
+  };
+  ```
