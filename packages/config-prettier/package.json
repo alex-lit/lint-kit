@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "15.4.0",
+  "version": "15.4.1",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -43,7 +43,7 @@
     "prettier-plugin-solidity": "^1.2.0",
     "prettier-plugin-sort-json": "^3.1.0",
     "prettier-plugin-sql": "^0.16.0",
-    "prettier-plugin-svelte": "^3.1.0",
+    "prettier-plugin-svelte": "^3.1.2",
     "prettier-plugin-tailwindcss": "^0.5.7"
   }
 }
