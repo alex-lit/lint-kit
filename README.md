@@ -10,7 +10,7 @@ Presets of configuration files and dependencies for linting web applications
 npm i @alexlit/config-commitlint @alexlit/config-eslint @alexlit/config-hooks @alexlit/config-htmllint @alexlit/config-markdownlint @alexlit/config-npmlint @alexlit/config-prettier @alexlit/config-stylelint --legacy-peer-deps -D
 ```
 
-## Configuration
+## Configuratzxczxcion
 
 - [commitlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-commitlint/README.md)
 - [eslint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/README.md)
