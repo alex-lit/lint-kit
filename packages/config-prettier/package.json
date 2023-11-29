@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "15.4.1",
+  "version": "15.5.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -34,7 +34,7 @@
   "dependencies": {
     "@prettier/plugin-php": "^0.21.0",
     "@prettier/plugin-pug": "^3.0.0",
-    "@prettier/plugin-ruby": "^4.0.2",
+    "@prettier/plugin-ruby": "^4.0.3",
     "@prettier/plugin-xml": "^3.2.2",
     "prettier": "^3.1.0",
     "prettier-plugin-jsdoc": "^1.1.1",
@@ -42,7 +42,7 @@
     "prettier-plugin-sh": "^0.13.1",
     "prettier-plugin-solidity": "^1.2.0",
     "prettier-plugin-sort-json": "^3.1.0",
-    "prettier-plugin-sql": "^0.16.0",
+    "prettier-plugin-sql": "^0.17.0",
     "prettier-plugin-svelte": "^3.1.2",
     "prettier-plugin-tailwindcss": "^0.5.7"
   }
