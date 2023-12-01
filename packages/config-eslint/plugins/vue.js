@@ -63,9 +63,7 @@ module.exports = {
     'vue/define-props-declaration': ['error'],
 
     'vue/dot-notation': ['error'],
-
     'vue/eqeqeq': ['error'],
-
     'vue/html-button-has-type': ['error'],
 
     'vue/html-comment-content-newline': ['warn'],
@@ -77,7 +75,6 @@ module.exports = {
     'vue/html-end-tags': ['error'],
 
     // 'vue/html-self-closing': [], // delegate to plugins/prettier
-
     'vue/match-component-file-name': ['error'],
 
     'vue/match-component-import-name': ['error'],
@@ -168,6 +165,8 @@ module.exports = {
 
     'vue/no-unused-components': ['error'],
 
+    'vue/no-unused-emit-declarations': ['error'],
+
     'vue/no-unused-refs': 'off',
 
     'vue/no-use-computed-property-like-method': ['error'],
@@ -252,6 +251,8 @@ module.exports = {
     'vue/this-in-template': ['error', 'never'],
 
     'vue/v-for-delimiter-style': ['error'],
+
+    'vue/v-if-else-key': ['error'],
 
     'vue/v-on-event-hyphenation': ['error'],
 

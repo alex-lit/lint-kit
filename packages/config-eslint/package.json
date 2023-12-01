@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "72.3.0",
+  "version": "72.4.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -78,7 +78,7 @@
     "eslint-plugin-unicorn": "^49.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vitest": "^0.3.10",
-    "eslint-plugin-vue": "^9.18.1",
+    "eslint-plugin-vue": "^9.19.2",
     "eslint-plugin-vuejs-accessibility": "^2.2.0",
     "eslint-plugin-wc": "^2.0.4",
     "eslint-plugin-write-good-comments": "^0.2.0",
