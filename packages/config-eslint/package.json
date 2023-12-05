@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "72.5.0",
+  "version": "72.5.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -55,7 +55,7 @@
     "eslint-plugin-lit": "^1.10.1",
     "eslint-plugin-lit-a11y": "^4.1.1",
     "eslint-plugin-more": "^1.0.5",
-    "eslint-plugin-no-await-in-promise": "^1.1.5",
+    "eslint-plugin-no-await-in-promise": "^1.1.6",
     "eslint-plugin-no-constructor-bind": "^2.0.4",
     "eslint-plugin-no-explicit-type-exports": "^0.12.1",
     "eslint-plugin-no-loops": "^0.3.0",
