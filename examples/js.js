@@ -23,4 +23,4 @@
  *
  * @returns {Promise} A return value.
  */
-export const x = 1;
+export const xerox = 1;

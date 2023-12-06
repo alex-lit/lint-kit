@@ -1,4 +1,6 @@
+const config = require('@alexlit/config-stylelint');
+
 module.exports = {
   extends: ['@alexlit/config-stylelint'],
-  ignoreFiles: [...require('@alexlit/config-stylelint').ignoreFiles],
+  ignoreFiles: [...config.ignoreFiles],
 };

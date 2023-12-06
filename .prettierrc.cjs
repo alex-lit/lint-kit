@@ -1,3 +1,5 @@
+const config = require('@alexlit/config-prettier');
+
 module.exports = {
-  ...require('@alexlit/config-prettier'),
+  ...config,
 };

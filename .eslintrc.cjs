@@ -1,3 +1,9 @@
+const config = require('@alexlit/config-eslint');
+
 module.exports = {
-  ...require('@alexlit/config-eslint'),
+  ...config,
+
+  rules: {
+    ...config.rules,
+  },
 };

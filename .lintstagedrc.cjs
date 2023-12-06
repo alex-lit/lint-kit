@@ -1,3 +1,5 @@
+const config = require('@alexlit/config-hooks/lint-staged');
+
 module.exports = {
-  ...require('@alexlit/config-hooks/lint-staged'),
+  ...config,
 };
