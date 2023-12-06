@@ -214,7 +214,17 @@ module.exports = defineConfig({
 
     quotes: ['error', 'single'],
     'require-await': 'off',
-    'sort-imports': 'off',
+
+    'sort-imports': [
+      'warn',
+      {
+        allowSeparatedGroups: true,
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+      },
+    ],
 
     'sort-keys': [
       'warn',
