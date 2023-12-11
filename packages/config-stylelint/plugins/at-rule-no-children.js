@@ -1,5 +1,5 @@
 /** @see [stylelint-at-rule-no-children](https://github.com/adityavm/stylelint-at-rule-no-children) */
-module.exports = {
+export default {
   plugins: ['stylelint-at-rule-no-children'],
 
   rules: {

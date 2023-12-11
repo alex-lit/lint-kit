@@ -61,9 +61,9 @@
     "lint:markdownlint": "time ./scripts/lint.markdownlint.sh",
     "lint:npmlint": "time ./scripts/lint.npmlint.sh",
     "lint:stylelint": "time ./scripts/lint.stylelint.sh",
+    "prepare": "husky install",
     "semver": "./scripts/semver.sh",
-    "up": "./scripts/up.sh",
-    "prepare": "husky install"
+    "up": "./scripts/up.sh"
   },
   "devDependencies": {
     "changelogen": "latest",

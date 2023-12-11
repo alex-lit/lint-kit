@@ -21,6 +21,7 @@
   "maintainers": [
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
+  "type": "module",
   "main": "index.js",
   "files": [
     "README.md",
@@ -35,25 +36,28 @@
     "@double-great/stylelint-a11y": "^2.0.2",
     "postcss": "^8.4.32",
     "postcss-html": "^1.5.0",
-    "prettier": "^3.1.0",
-    "stylelint": "^15.11.0",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.2",
     "stylelint-at-rule-no-children": "^0.3.1",
     "stylelint-color-format": "^1.1.0",
     "stylelint-config-recommended-vue": "^1.5.0",
-    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard": "^35.0.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
-    "stylelint-gamut": "^1.3.3",
+    "stylelint-gamut": "^1.3.4",
     "stylelint-high-performance-animation": "^1.9.0",
     "stylelint-no-indistinguishable-colors": "^1.3.2",
     "stylelint-no-nested-media": "^0.1.0",
     "stylelint-no-unresolved-module": "^2.2.1",
     "stylelint-no-unsupported-browser-features": "^7.0.0",
-    "stylelint-order": "^6.0.3",
+    "stylelint-order": "^6.0.4",
     "stylelint-plugin-logical-css": "^0.13.2",
-    "stylelint-prettier": "^4.1.0",
-    "stylelint-scss": "^5.3.1",
+    "stylelint-prettier": "^5.0.0",
+    "stylelint-scss": "^6.0.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "stylelint-use-nesting": "^4.1.0"
+  },
+  "engines": {
+    "node": ">=18.12.0"
   }
 }

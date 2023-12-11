@@ -1,5 +1,5 @@
 /** @see [stylelint-prettier](https://github.com/prettier/stylelint-prettier) */
-module.exports = {
+export default {
   plugins: ['stylelint-prettier'],
 
   rules: {

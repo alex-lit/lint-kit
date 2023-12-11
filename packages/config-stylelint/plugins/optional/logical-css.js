@@ -1,5 +1,5 @@
 /** @see [stylelint-plugin-logical-css](https://github.com/yuschick/stylelint-plugin-logical-css) */
-module.exports = {
+export default {
   plugins: ['stylelint-plugin-logical-css'],
 
   rules: {

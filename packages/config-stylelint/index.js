@@ -1,29 +1,28 @@
 /* eslint-disable sonarjs/no-duplicate-string, unicorn/no-null */
-module.exports = {
+export default {
   extends: [
     'stylelint-config-standard',
-    ...[
-      './plugins/a11y',
-      './plugins/at-rule-no-children',
-      './plugins/color-format',
-      './plugins/declaration-block-no-ignored-properties',
-      './plugins/high-performance-animation',
-      './plugins/no-nested-media',
-      './plugins/no-unresolved-module',
-      './plugins/no-unsupported-browser-features',
-      './plugins/order',
-      './plugins/scss',
-      './plugins/selector-no-empty',
-      './plugins/use-nesting',
-      './plugins/vue',
 
-      './plugins/prettier',
+    // './plugins/a11y',
+    './plugins/at-rule-no-children',
+    './plugins/color-format',
+    './plugins/declaration-block-no-ignored-properties',
+    // './plugins/high-performance-animation',
+    './plugins/no-nested-media',
+    './plugins/no-unresolved-module',
+    './plugins/no-unsupported-browser-features',
+    './plugins/order',
+    // './plugins/scss',
+    './plugins/selector-no-empty',
+    './plugins/use-nesting',
+    './plugins/vue',
 
-      // optional
-      // './plugins/gamut',
-      // './plugins/no-indistinguishable-colors',
-      // './plugins/optional/logical-css',
-    ].map((config) => require.resolve(config)),
+    './plugins/prettier',
+
+    // optional
+    // './plugins/gamut',
+    // './plugins/no-indistinguishable-colors',
+    './plugins/optional/logical-css',
   ],
 
   ignoreFiles: [

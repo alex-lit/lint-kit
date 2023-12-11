@@ -1,6 +1,6 @@
-const config = require('@alexlit/config-stylelint');
+import config from '@alexlit/config-stylelint';
 
-module.exports = {
+export default {
   extends: ['@alexlit/config-stylelint'],
   ignoreFiles: [...config.ignoreFiles],
 };

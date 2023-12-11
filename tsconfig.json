@@ -18,5 +18,5 @@
     "types": []
   },
   "exclude": ["node_modules"],
-  "include": ["/**/*", "/**/.*.js"]
+  "include": ["/**/*", "/**/.*.js", ".*.js", ".*.cjs", ".*.mjs", ".*.ts"]
 }

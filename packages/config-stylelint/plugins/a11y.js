@@ -1,5 +1,5 @@
 /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
-module.exports = {
+export default {
   plugins: ['@double-great/stylelint-a11y'],
 
   rules: {

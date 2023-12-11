@@ -2,7 +2,7 @@
 const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 
 /** @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss) */
-module.exports = {
+export default {
   extends: ['stylelint-config-standard-scss'],
 
   plugins: ['stylelint-scss'],
