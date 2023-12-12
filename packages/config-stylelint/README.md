@@ -10,7 +10,9 @@ npm i @alexlit/config-stylelint -D
 
 ```js
 // .stylelintrc.js
-module.exports = {
+import config from '@alexlit/config-stylelint';
+
+export default {
   extends: [
     '@alexlit/config-stylelint',
 
@@ -19,8 +21,7 @@ module.exports = {
     '@alexlit/config-stylelint/plugins/optional/no-indistinguishable-colors',
     '@alexlit/config-stylelint/plugins/optional/logical-css',
   ],
-
-  ignoreFiles: [...require('@alexlit/config-stylelint').ignoreFiles],
+  ignoreFiles: [...config.ignoreFiles],
 };
 ```
 

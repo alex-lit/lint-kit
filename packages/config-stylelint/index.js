@@ -12,9 +12,9 @@ export default {
     './plugins/no-unresolved-module',
     './plugins/no-unsupported-browser-features',
     './plugins/order',
-    // './plugins/scss',
+    './plugins/scss',
     './plugins/selector-no-empty',
-    './plugins/use-nesting',
+    // './plugins/use-nesting',
     './plugins/vue',
 
     './plugins/prettier',
@@ -22,7 +22,7 @@ export default {
     // optional
     // './plugins/gamut',
     // './plugins/no-indistinguishable-colors',
-    './plugins/optional/logical-css',
+    // './plugins/optional/logical-css',
   ],
 
   ignoreFiles: [
@@ -79,7 +79,6 @@ export default {
     'function-url-quotes': 'always',
     'function-url-scheme-disallowed-list': ['/^data/', 'ftp', '/^http/'],
     'hue-degree-notation': 'angle',
-    indentation: null,
     'keyframes-name-pattern': '^[a-z]+(-[a-z]+)*$',
 
     'max-nesting-depth': [
@@ -93,7 +92,6 @@ export default {
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': null,
     'no-empty-source': null,
-    'no-missing-end-of-source-newline': null,
     'no-unknown-animations': true,
     'number-max-precision': 3,
 
