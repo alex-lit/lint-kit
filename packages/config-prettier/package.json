@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "15.5.5",
+  "version": "16.0.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -21,6 +21,7 @@
   "maintainers": [
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
+  "type": "module",
   "main": "index.js",
   "files": [
     "README.md",
@@ -45,5 +46,8 @@
     "prettier-plugin-sql": "^0.17.1",
     "prettier-plugin-svelte": "^3.1.2",
     "prettier-plugin-tailwindcss": "^0.5.9"
+  },
+  "engines": {
+    "node": ">=18.12.0"
   }
 }

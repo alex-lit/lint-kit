@@ -1,5 +1,5 @@
 /** @see [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) */
-module.exports = {
+export default {
   svelteAllowShorthand: false,
   svelteIndentScriptAndStyle: true,
   svelteSortOrder: 'options-scripts-markup-styles',

@@ -1,5 +1,11 @@
-/* eslint-disable spellcheck/spell-checker, global-require */
-module.exports = {
+/* eslint-disable spellcheck/spell-checker, import/extensions */
+import jsdoc from './plugins/jsdoc.js';
+import pug from './plugins/pug.js';
+import sortJson from './plugins/sort-json.js';
+import svelte from './plugins/svelte.js';
+import xml from './plugins/xml.js';
+
+export default {
   endOfLine: 'lf',
 
   plugins: [
@@ -25,10 +31,10 @@ module.exports = {
   trailingComma: 'all',
   vueIndentScriptAndStyle: true,
 
-  ...require('./plugins/jsdoc'),
-  ...require('./plugins/pug'),
-  ...require('./plugins/sort-json'),
-  ...require('./plugins/svelte'),
-  // ...require('./plugins/tailwindcss'),
-  ...require('./plugins/xml'),
+  ...jsdoc,
+  ...pug,
+  ...sortJson,
+  ...svelte,
+  // ...tailwindcss,
+  ...xml,
 };
