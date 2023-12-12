@@ -1,5 +1,5 @@
 /** @see [stylelint-use-nesting](https://github.com/csstools/stylelint-use-nesting) */
-module.exports = {
+export default {
   plugins: ['stylelint-use-nesting'],
 
   rules: {

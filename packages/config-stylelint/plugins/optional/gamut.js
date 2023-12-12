@@ -1,5 +1,5 @@
 /** @see [stylelint-gamut](https://github.com/fpetrakov/stylelint-gamut) */
-module.exports = {
+export default {
   plugins: ['stylelint-gamut'],
 
   rules: {

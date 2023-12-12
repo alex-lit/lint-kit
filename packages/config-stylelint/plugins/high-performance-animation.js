@@ -1,5 +1,5 @@
 /** @see [stylelint-high-performance-animation](https://github.com/kristerkari/stylelint-high-performance-animation) */
-module.exports = {
+export default {
   plugins: ['stylelint-high-performance-animation'],
 
   rules: {

@@ -1,5 +1,5 @@
 /** @see [stylelint-color-format](https://github.com/filipekiss/stylelint-color-format) */
-module.exports = {
+export default {
   plugins: ['stylelint-color-format'],
 
   rules: {

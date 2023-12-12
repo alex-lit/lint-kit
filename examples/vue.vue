@@ -13,34 +13,34 @@
 
 <style lang="scss">
   .inset {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+    inset-block-end: 0;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
   }
 
   .margin {
-    margin-left: 0;
+    margin-inline-start: 0;
   }
 
   .padding {
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
   }
 
   .float {
-    float: left;
+    float: inline-start;
   }
 
   .text-align {
-    text-align: left;
+    text-align: start;
   }
 
   .ui-autocomplete__search {
     background-color: white;
-    border-bottom: 1px solid var(--ui-color-border);
-    left: 0;
-    margin-bottom: 0;
+    border-block-end: 1px solid var(--ui-color-border);
+    inset-inline-start: 0;
+    margin-block-end: 0;
     padding: 16px;
     position: sticky;
     transform: translateY(-16px);

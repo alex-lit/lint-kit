@@ -1,5 +1,5 @@
 /** @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features) */
-module.exports = {
+export default {
   plugins: ['stylelint-no-unsupported-browser-features'],
 
   rules: {

@@ -166,6 +166,7 @@ header {
     --ui-button-color,
     var(--ui-icon-default-background-color)
   );
+  block-size: var(--height);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -175,13 +176,12 @@ header {
   font-stretch: normal;
   font-style: normal;
   font-weight: 600;
-  height: var(--height);
+  inset-block-start: 0;
   letter-spacing: normal;
   overflow: hidden;
   position: relative;
   text-align: center;
   text-decoration: none;
-  top: 0;
   transition-duration: 0s;
   user-select: none;
 
@@ -256,43 +256,43 @@ header {
   }
 
   + .ui-button {
-    margin-left: var(--ui-button-padding);
+    margin-inline-start: var(--ui-button-padding);
 
     @media ($mobile-l) {
-      margin-left: calc(var(--ui-button-padding) / 2);
+      margin-inline-start: calc(var(--ui-button-padding) / 2);
     }
   }
 
   ~ .ui-button {
-    margin-left: var(--ui-button-padding);
+    margin-inline-start: var(--ui-button-padding);
 
     @media ($mobile-l) {
-      margin-left: calc(var(--ui-button-padding) / 2);
+      margin-inline-start: calc(var(--ui-button-padding) / 2);
     }
   }
 
   ~ .ui-buttons {
-    margin-left: var(--ui-button-padding); // dsf
+    margin-inline-start: var(--ui-button-padding); // dsf
 
     @media ($mobile-l) {
-      margin-left: calc(var(--ui-button-padding) / 2);
+      margin-inline-start: calc(var(--ui-button-padding) / 2);
     }
   }
 
   > .ui-button {
-    margin-left: var(--ui-button-padding);
+    margin-inline-start: var(--ui-button-padding);
 
     @media ($mobile-l) {
-      margin-left: calc(var(--ui-button-padding) / 2);
+      margin-inline-start: calc(var(--ui-button-padding) / 2);
     }
   }
 
   &.ui-button {
     + a {
-      margin-left: var(--ui-button-padding);
+      margin-inline-start: var(--ui-button-padding);
 
       @media ($mobile-l) {
-        margin-left: calc(var(--ui-button-padding) / 2);
+        margin-inline-start: calc(var(--ui-button-padding) / 2);
       }
     }
   }
@@ -307,7 +307,7 @@ header {
   }
 
   &--block {
-    width: 100%;
+    inline-size: 100%;
   }
 
   &--color {
@@ -379,15 +379,15 @@ header {
   font-stretch: normal;
   font-style: normal;
   font-weight: normal;
+  inline-size: 100%;
   letter-spacing: normal;
   line-height: 1.5;
-  min-height: 58px;
-  min-width: 0;
+  min-block-size: 58px;
+  min-inline-size: 0;
   padding: 16px;
   position: relative;
-  resize: vertical;
+  resize: block;
   transition-duration: 0.1s;
-  width: 100%;
 
   &:focus {
     background-color: white;
@@ -401,7 +401,7 @@ header {
     }
 
     @at-root .ui-textarea[class*='--invalid'] .ui-textarea__prefix + & {
-      border-left-color: var(--ui-color-danger);
+      border-inline-start-color: var(--ui-color-danger);
     }
   }
 
@@ -432,10 +432,10 @@ header {
 .ui-button__prefix {
   align-items: center;
   display: flex;
-  margin-right: 8px;
+  margin-inline-end: 8px;
 
   &:only-child {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 }
 
@@ -454,8 +454,8 @@ header {
   border-radius: 4px;
   display: flex;
   flex-shrink: 0;
+  inline-size: var(--ui-bitton-suffix-size);
   justify-content: center;
-  width: var(--ui-bitton-suffix-size);
 
   @at-root .ui-button[class*='--color--link'] & {
     background-color: transparent !important;

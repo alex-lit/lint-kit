@@ -1,4 +1,4 @@
 /** @see [plugin-xml](https://github.com/prettier/plugin-xml) */
-module.exports = {
+export default {
   xmlWhitespaceSensitivity: 'ignore',
 };

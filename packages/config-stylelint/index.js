@@ -1,29 +1,28 @@
 /* eslint-disable sonarjs/no-duplicate-string, unicorn/no-null */
-module.exports = {
+export default {
   extends: [
     'stylelint-config-standard',
-    ...[
-      './plugins/a11y',
-      './plugins/at-rule-no-children',
-      './plugins/color-format',
-      './plugins/declaration-block-no-ignored-properties',
-      './plugins/high-performance-animation',
-      './plugins/no-nested-media',
-      './plugins/no-unresolved-module',
-      './plugins/no-unsupported-browser-features',
-      './plugins/order',
-      './plugins/scss',
-      './plugins/selector-no-empty',
-      './plugins/use-nesting',
-      './plugins/vue',
 
-      './plugins/prettier',
+    // './plugins/a11y',
+    './plugins/at-rule-no-children',
+    './plugins/color-format',
+    './plugins/declaration-block-no-ignored-properties',
+    // './plugins/high-performance-animation',
+    './plugins/no-nested-media',
+    './plugins/no-unresolved-module',
+    './plugins/no-unsupported-browser-features',
+    './plugins/order',
+    './plugins/scss',
+    './plugins/selector-no-empty',
+    // './plugins/use-nesting',
+    './plugins/vue',
 
-      // optional
-      // './plugins/gamut',
-      // './plugins/no-indistinguishable-colors',
-      // './plugins/optional/logical-css',
-    ].map((config) => require.resolve(config)),
+    './plugins/prettier',
+
+    // optional
+    // './plugins/gamut',
+    // './plugins/no-indistinguishable-colors',
+    // './plugins/optional/logical-css',
   ],
 
   ignoreFiles: [
@@ -80,7 +79,6 @@ module.exports = {
     'function-url-quotes': 'always',
     'function-url-scheme-disallowed-list': ['/^data/', 'ftp', '/^http/'],
     'hue-degree-notation': 'angle',
-    indentation: null,
     'keyframes-name-pattern': '^[a-z]+(-[a-z]+)*$',
 
     'max-nesting-depth': [
@@ -94,7 +92,6 @@ module.exports = {
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': null,
     'no-empty-source': null,
-    'no-missing-end-of-source-newline': null,
     'no-unknown-animations': true,
     'number-max-precision': 3,
 

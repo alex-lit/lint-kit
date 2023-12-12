@@ -10,7 +10,9 @@ npm i @alexlit/config-prettier -D
 
 ```js
 // .prettierrc.js
-module.exports = {
-  ...require('@alexlit/config-prettier'),
+import config from '@alexlit/config-prettier';
+
+export default {
+  ...config,
 };
 ```

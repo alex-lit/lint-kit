@@ -1,5 +1,5 @@
 /** @see [stylelint-no-indistinguishable-colors](https://github.com/ierhyna/stylelint-no-indistinguishable-colors) */
-module.exports = {
+export default {
   plugins: ['stylelint-no-indistinguishable-colors'],
 
   rules: {
