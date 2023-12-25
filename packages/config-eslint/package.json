@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "73.2.0",
+  "version": "74.0.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -75,7 +75,7 @@
     "eslint-plugin-sql": "^2.5.0",
     "eslint-plugin-testing-library": "^6.2.0",
     "eslint-plugin-typescript-sort-keys": "^3.1.0",
-    "eslint-plugin-unicorn": "^49.0.0",
+    "eslint-plugin-unicorn": "^50.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vitest": "^0.3.20",
     "eslint-plugin-vue": "^9.19.2",
