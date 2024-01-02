@@ -37,7 +37,6 @@ module.exports = defineConfig({
       './plugins/no-use-extend-native',
       './plugins/promise',
       './plugins/regexp',
-      './plugins/security',
       './plugins/simple-import-sort',
       './plugins/sonar',
       './plugins/sort-class-members',
@@ -60,6 +59,7 @@ module.exports = defineConfig({
 
       /* optional */
       // './plugins/optional/node',
+      // './plugins/optional/security',
 
       /* prettier */
       './plugins/prettier',
