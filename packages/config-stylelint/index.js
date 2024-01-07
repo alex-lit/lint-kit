@@ -20,8 +20,8 @@ export default {
     './plugins/prettier',
 
     // optional
-    // './plugins/gamut',
-    // './plugins/no-indistinguishable-colors',
+    // './plugins/optional/gamut',
+    // './plugins/optional/no-indistinguishable-colors',
     // './plugins/optional/logical-css',
   ],
 
