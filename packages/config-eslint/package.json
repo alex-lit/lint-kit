@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "75.1.0",
+  "version": "75.2.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -64,7 +64,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-regexp": "^2.1.2",
+    "eslint-plugin-regexp": "^2.2.0",
     "eslint-plugin-security": "^2.1.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-sonarjs": "^0.23.0",
