@@ -57,13 +57,27 @@ module.exports = {
 
     'vue/define-macros-order': [
       'error',
-      { order: ['defineOptions', 'defineProps', 'defineEmits', 'defineSlots'] },
+      {
+        defineExposeLast: true,
+
+        order: [
+          'defineOptions',
+          'defineModel',
+          'defineProps',
+          'defineEmits',
+          'defineSlots',
+        ],
+      },
     ],
 
     'vue/define-props-declaration': ['error'],
 
     'vue/dot-notation': ['error'],
+
+    'vue/enforce-style-attribute': ['error', { allow: ['module'] }],
+
     'vue/eqeqeq': ['error'],
+
     'vue/html-button-has-type': ['error'],
 
     'vue/html-comment-content-newline': ['warn'],
