@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "75.4.0",
+  "version": "75.4.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -79,7 +79,7 @@
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vitest": "^0.3.20",
     "eslint-plugin-vue": "^9.20.1",
-    "eslint-plugin-vuejs-accessibility": "^2.2.0",
+    "eslint-plugin-vuejs-accessibility": "^2.2.1",
     "eslint-plugin-wc": "^2.0.4",
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript": "^5.3.3"
