@@ -11,10 +11,10 @@ npm i @alexlit/config-hooks -D
 - husky
 
   ```sh
-  npx husky install
-  npm pkg set scripts.prepare="husky install"
-  npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
-  npx husky add .husky/pre-commit "npx --no lint-staged"
+  npx husky init
+  
+  echo 'npx --no -- commitlint --edit "$1"' > .husky/commit-msg
+  echo 'npx --no lint-staged' > .husky/pre-commit
   ```
 
 - lint-staged
