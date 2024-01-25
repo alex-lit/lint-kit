@@ -61,7 +61,7 @@
     "lint:markdownlint": "time ./scripts/lint.markdownlint.sh",
     "lint:npmlint": "time ./scripts/lint.npmlint.sh",
     "lint:stylelint": "time ./scripts/lint.stylelint.sh",
-    "prepare": "husky install",
+    "prepare": "husky",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh"
   },
