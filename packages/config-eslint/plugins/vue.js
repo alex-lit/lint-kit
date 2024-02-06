@@ -242,6 +242,8 @@ module.exports = {
 
     'vue/require-direct-export': 'off',
 
+    'vue/require-explicit-slots': ['warn'],
+
     'vue/require-macro-variable-name': [
       'error',
       {
@@ -270,6 +272,14 @@ module.exports = {
     'vue/static-class-names-order': ['warn'],
 
     'vue/this-in-template': ['error', 'never'],
+
+    'vue/v-bind-style': [
+      'error',
+      'shorthand',
+      {
+        sameNameShorthand: 'always',
+      },
+    ],
 
     'vue/v-for-delimiter-style': ['error'],
 

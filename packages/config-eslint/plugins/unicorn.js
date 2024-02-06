@@ -24,6 +24,8 @@ module.exports = {
   rules: {
     'unicorn/better-regex': 'off',
 
+    'unicorn/consistent-destructuring': 'warn',
+
     'unicorn/consistent-function-scoping': [
       'error',
       { checkArrowFunctions: false },
