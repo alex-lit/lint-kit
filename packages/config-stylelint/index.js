@@ -3,11 +3,11 @@ export default {
   extends: [
     'stylelint-config-standard',
 
-    // './plugins/a11y',
+    './plugins/a11y',
     './plugins/at-rule-no-children',
     './plugins/color-format',
     './plugins/declaration-block-no-ignored-properties',
-    // './plugins/high-performance-animation',
+    './plugins/high-performance-animation',
     './plugins/no-nested-media',
     './plugins/no-unresolved-module',
     './plugins/no-unsupported-browser-features',
