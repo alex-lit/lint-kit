@@ -2,7 +2,6 @@
 import jsdoc from './plugins/jsdoc.js';
 import pug from './plugins/pug.js';
 import sortJson from './plugins/sort-json.js';
-import svelte from './plugins/svelte.js';
 import xml from './plugins/xml.js';
 
 export default {
@@ -20,8 +19,7 @@ export default {
     'prettier-plugin-solidity',
     'prettier-plugin-sort-json',
     'prettier-plugin-sql',
-    'prettier-plugin-svelte',
-
+    // 'prettier-plugin-svelte',
     // 'prettier-plugin-tailwindcss',
   ],
 
@@ -34,7 +32,7 @@ export default {
   ...jsdoc,
   ...pug,
   ...sortJson,
-  ...svelte,
+  // ...svelte,
   // ...tailwindcss,
   ...xml,
 };
