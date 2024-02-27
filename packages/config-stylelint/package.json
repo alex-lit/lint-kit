@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "42.4.2",
+  "version": "42.4.3",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -48,7 +48,7 @@
     "stylelint-high-performance-animation": "^1.10.0",
     "stylelint-no-indistinguishable-colors": "^2.3.0",
     "stylelint-no-nested-media": "^0.1.0",
-    "stylelint-no-unresolved-module": "^2.2.1",
+    "stylelint-no-unresolved-module": "^2.2.2",
     "stylelint-no-unsupported-browser-features": "^8.0.1",
     "stylelint-order": "^6.0.4",
     "stylelint-plugin-logical-css": "^1.0.0",
