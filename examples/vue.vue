@@ -11,7 +11,7 @@
   />
 </template>
 
-<style lang="scss">
+<style lang="scss" module>
   .inset {
     inset-block-end: 0;
     inset-block-start: 0;
