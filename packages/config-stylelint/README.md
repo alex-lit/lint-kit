@@ -9,7 +9,7 @@ npm i @alexlit/config-stylelint -D
 ## Connection
 
 ```js
-// .stylelintrc.js
+// stylelint.config.js
 import config from '@alexlit/config-stylelint';
 
 export default {
