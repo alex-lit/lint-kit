@@ -12,17 +12,13 @@ npm i @alexlit/config-commitlint -D
 ## Connection
 
 ```js
-// .commitlintrc.js
-module.exports = {
+// commitlint.config.js
+export default {
   extends: ['@alexlit/config-commitlint'],
 };
 ```
 
-```js
-// .huskyrc.js
-module.exports = {
-  hooks: {
-    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-  },
-};
+```bash
+# .husky/commit-msg
+npx --no -- commitlint --edit "$1"
 ```
