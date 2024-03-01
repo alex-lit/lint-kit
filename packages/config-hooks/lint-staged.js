@@ -7,7 +7,7 @@ const npmlint = 'npmPkgJsonLint';
 const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix';
 
-module.exports = {
+export const lintStagedConfig = {
   '*.cjs': [eslint, prettier],
   '*.css': [stylelint, prettier],
   '*.erb': [prettier],

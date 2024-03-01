@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -21,10 +21,11 @@
   "maintainers": [
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
-  "main": "",
+  "type": "module",
+  "main": "index.js",
   "files": [
     "README.md",
-    "husky.js",
+    "index.js",
     "lint-staged.js"
   ],
   "scripts": {
