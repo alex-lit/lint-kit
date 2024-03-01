@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "107.3.0",
+  "version": "108.0.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -37,16 +37,15 @@
   "type": "module",
   "main": "README.md",
   "files": [
-    ".commitlintrc.cjs",
     ".eslintrc.cjs",
-    ".huskyrc.cjs",
     ".linthtmlrc.cjs",
     ".lintstagedrc.cjs",
     ".markdownlintrc.cjs",
     ".npmpackagejsonlintrc.json",
     ".npmrc",
-    ".prettierrc.cjs",
-    ".stylelintrc.cjs",
+    "commitlint.config.js",
+    "prettier.config.js",
+    "stylelint.config.js",
     "packages",
     "scripts"
   ],
