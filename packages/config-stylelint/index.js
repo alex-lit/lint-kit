@@ -69,7 +69,7 @@ export default {
       true,
       {
         ignoreProperties: {
-          '/.+/': /^(v-(bind|deep|global|slotted)|view)|\$/,
+          '/.+/': /^(v-(bind|deep|global|slotted)|theme|view)|\$/,
         },
       },
     ],
@@ -88,7 +88,11 @@ export default {
       },
     ],
 
-    'media-feature-name-no-unknown': [true, { ignoreMediaFeatureNames: [] }],
+    'media-feature-name-no-unknown': [
+      true,
+      { ignoreMediaFeatureNames: ['screen'] },
+    ],
+
     'media-feature-name-no-vendor-prefix': true,
     'no-descending-specificity': null,
     'no-empty-source': null,
