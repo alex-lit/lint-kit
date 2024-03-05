@@ -5,7 +5,7 @@ export default {
   rules: {
     'aditayvm/at-rule-no-children': [
       {
-        ignore: ['for', 'each', 'mixin', 'while'],
+        ignore: ['for', 'each', 'layer', 'mixin', 'while'],
         severity: 'error',
       },
     ],

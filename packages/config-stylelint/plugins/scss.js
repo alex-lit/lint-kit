@@ -71,6 +71,8 @@ export default {
       true,
       {
         ignoreFunctions: [
+          'format',
+          'url',
           // vue
           'v-bind',
           // tailwind
