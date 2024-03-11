@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/no-null */
 const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 
-/** @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss) */
 export default {
   extends: ['stylelint-config-standard-scss'],
 

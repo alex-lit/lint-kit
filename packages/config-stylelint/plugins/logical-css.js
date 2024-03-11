@@ -1,4 +1,3 @@
-/** @see [stylelint-plugin-logical-css](https://github.com/yuschick/stylelint-plugin-logical-css) */
 export default {
   plugins: ['stylelint-plugin-logical-css'],
 

@@ -1,4 +1,3 @@
-/** @see [stylelint-at-rule-no-children](https://github.com/adityavm/stylelint-at-rule-no-children) */
 export default {
   plugins: ['stylelint-at-rule-no-children'],
 
