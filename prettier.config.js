@@ -1,5 +1,8 @@
-import config from '@alexlit/config-prettier';
+import { createConfig } from '@alexlit/config-prettier';
 
-export default {
-  ...config,
-};
+export default createConfig({
+  php: true,
+  ruby: true,
+  sql: false,
+  tailwindcss: false,
+});

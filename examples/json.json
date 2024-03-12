@@ -9,8 +9,8 @@
     "editor.formatOnSave": false,
     "editor.formatOnType": false
   },
-  "cSpell.allowCompoundWords": true,
   "breadcrumbs.enabled": true,
+  "cSpell.allowCompoundWords": true,
   "cSpell.enableFiletypes": [
     "browserslist",
     "gitignore",

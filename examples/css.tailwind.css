@@ -1,12 +1,13 @@
 @tailwind utility;
 
 .test {
-  @apply blue blue-d  demo-dark:ring-cyan-400
-    red-500             test
-    absolute
-    left-1/2 top-1/2 -ml-2 -mt-2 flex h-4
-    w-4 items-center justify-center rounded-full
-    bg-red-200 bg-white shadow ring-2 ring-cyan-500
-    transition-all
+  @apply blue blue-d  demo-dark:ring-cyan-400  red-500      absolute left-1/2 top-1/2 -ml-2 -mt-2
+      flex h-4 w-4 items-center justify-center rounded-full
+    bg-red-200 
+     bg-white 
+     
+     shadow              
+     ring-2
+     ring-cyan-500 transition-all
     duration-500;
 }
