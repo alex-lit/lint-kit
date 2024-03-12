@@ -1,5 +1,6 @@
-/** @see [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) */
 export default {
+  plugins: ['prettier-plugin-svelte'],
+
   svelteAllowShorthand: false,
   svelteIndentScriptAndStyle: true,
   svelteSortOrder: 'options-scripts-markup-styles',

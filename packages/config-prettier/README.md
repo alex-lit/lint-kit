@@ -8,14 +8,26 @@ npm i @alexlit/config-prettier -D
 
 ## Connection
 
-```js
-// prettier.config.js
-import config from '@alexlit/config-prettier';
+- Default
+  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-prettier/index.js#L5))
 
-export default {
-  ...config,
+  ```js
+  // prettier.config.js
+  import { createConfig } from '@alexlit/config-prettier';
 
-  // if additional plugins needed
-  plugins: [...config.plugins, 'your-favorite-plugin'],
-};
-```
+  export default createConfig();
+  ```
+
+- Custom
+
+  ```js
+  // prettier.config.js
+  import { createConfig } from '@alexlit/config-prettier';
+
+  export default createConfig({
+    php: true,
+    ruby: true,
+    sql: false,
+    tailwindcss: false,
+  });
+  ```

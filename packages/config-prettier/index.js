@@ -1,38 +1,97 @@
-/* eslint-disable spellcheck/spell-checker, import/extensions */
-import jsdoc from './plugins/jsdoc.js';
-import pug from './plugins/pug.js';
-import sortJson from './plugins/sort-json.js';
-import xml from './plugins/xml.js';
+/* eslint-disable no-loops/no-loops, no-restricted-syntax, no-await-in-loop */
 
-export default {
-  endOfLine: 'lf',
+import { omit } from 'radash';
 
-  plugins: [
-    '@prettier/plugin-php',
-    '@prettier/plugin-pug',
-    '@prettier/plugin-ruby',
-    '@prettier/plugin-xml',
+const PLUGINS = {
+  /** @see [prettier-plugin-jsdoc](https://github.com/hosseinmd/prettier-plugin-jsdoc) */
+  jsdoc: true,
 
-    'prettier-plugin-jsdoc',
-    'prettier-plugin-packagejson',
-    'prettier-plugin-sh',
-    'prettier-plugin-solidity',
-    'prettier-plugin-sort-json',
-    'prettier-plugin-sql',
-    // 'prettier-plugin-svelte',
-    // 'prettier-plugin-tailwindcss',
-  ],
+  /** @see [prettier-plugin-packagejson](https://github.com/matzkoh/prettier-plugin-packagejson) */
+  packagejson: true,
 
-  proseWrap: 'always',
-  singleQuote: true,
-  tabWidth: 2,
-  trailingComma: 'all',
-  vueIndentScriptAndStyle: true,
+  /** @see [plugin-php](https://github.com/prettier/plugin-php) */
+  php: false,
 
-  ...jsdoc,
-  ...pug,
-  ...sortJson,
-  // ...svelte,
-  // ...tailwindcss,
-  ...xml,
+  /** @see [plugin-pug](https://github.com/prettier/plugin-pug) */
+  pug: true,
+
+  /** @see [plugin-ruby](https://github.com/prettier/plugin-ruby) */
+  ruby: false,
+
+  /** @see [prettier-plugin-sh](https://github.com/astorije/prettier-plugin-sh) */
+  sh: true,
+
+  /** @see [prettier-plugin-solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) */
+  solidity: true,
+
+  /** @see [prettier-plugin-sort-json](https://github.com/Gudahtt/prettier-plugin-sort-json) */
+  'sort-json': true,
+
+  /** @see [prettier-plugin-sql](https://github.com/un-ts/prettier/tree/master/packages/sql) */
+  sql: false,
+
+  /** @see [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) */
+  svelte: false,
+
+  /** @see [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) */
+  tailwindcss: false,
+
+  /** @see [plugin-xml](https://github.com/prettier/plugin-xml) */
+  xml: true,
+};
+
+/**
+ * Create plugins config list
+ *
+ * @param {PLUGINS} plugins Enabled/disabled plugins list
+ *
+ * @returns {import('prettier').Config} Prettier configuration
+ */
+const createPluginsConfig = async (plugins = {}) => {
+  let pluginsConfig = { plugins: [] };
+
+  const pluginEntries = Object.entries({ ...PLUGINS, ...plugins });
+
+  for (const [name, isActive] of pluginEntries) {
+    if (isActive) {
+      const { default: config } = await import(
+        `@alexlit/config-prettier/plugins/${name}.js`
+      );
+
+      if (config.plugins?.length > 0) {
+        pluginsConfig.plugins.push(...config.plugins);
+      }
+
+      pluginsConfig = { ...pluginsConfig, ...omit(config, ['plugins']) };
+    }
+  }
+
+  return pluginsConfig;
+};
+
+/**
+ * Create prettier config
+ *
+ * @param {PLUGINS} plugins
+ * @param {import('prettier').Config} options Prettier options
+ *
+ * @returns {import('prettier').Config} Prettier configuration
+ */
+export const createConfig = async (plugins = {}, options = {}) => {
+  const pluginsConfig = await createPluginsConfig(plugins);
+
+  return {
+    endOfLine: 'lf',
+
+    plugins: [...pluginsConfig.plugins, ...(options.plugins ?? [])],
+
+    proseWrap: 'always',
+    singleQuote: true,
+    tabWidth: 2,
+    trailingComma: 'all',
+    vueIndentScriptAndStyle: true,
+
+    ...omit(pluginsConfig, ['plugins']),
+    ...omit(options, ['plugins']),
+  };
 };
