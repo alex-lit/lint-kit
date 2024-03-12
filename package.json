@@ -39,14 +39,14 @@
   "files": [
     ".eslintrc.cjs",
     ".linthtmlrc.cjs",
-    ".lintstagedrc.cjs",
     ".markdownlintrc.cjs",
     ".npmpackagejsonlintrc.json",
     ".npmrc",
     "commitlint.config.js",
+    "lint-staged.config.js",
+    "packages",
     "prettier.config.js",
     "stylelint.config.js",
-    "packages",
     "scripts"
   ],
   "workspaces": [
