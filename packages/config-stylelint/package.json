@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "45.0.2",
+  "version": "45.1.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.36",
     "postcss-html": "^1.6.0",
     "prettier": "^3.2.5",
     "stylelint": "^16.2.1",
@@ -51,7 +51,7 @@
     "stylelint-no-unresolved-module": "^2.2.2",
     "stylelint-no-unsupported-browser-features": "^8.0.1",
     "stylelint-order": "^6.0.4",
-    "stylelint-plugin-logical-css": "^1.0.0",
+    "stylelint-plugin-logical-css": "^1.2.0",
     "stylelint-prettier": "^5.0.0",
     "stylelint-scss": "^6.2.1",
     "stylelint-selector-no-empty": "^1.0.9",
