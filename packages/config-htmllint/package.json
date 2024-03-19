@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-htmllint",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "private": false,
   "description": "htmllint config",
   "keywords": [
@@ -23,6 +23,7 @@
   "maintainers": [
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
+  "type": "module",
   "main": "index.js",
   "files": [
     "README.md",
@@ -33,7 +34,7 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@linthtml/linthtml": "^0.9.5",
+    "@linthtml/linthtml": "^0.10.0-beta.5",
     "@linthtml/linthtml-config-recommended": "^0.1.0"
   }
 }

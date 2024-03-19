@@ -1,11 +1,27 @@
-/** @see [linthtml](https://github.com/linthtml/linthtml/blob/develop/docs/rules.md) */
-module.exports = {
+/**
+ * Create linthtml config
+ *
+ * @param options LintHTML options
+ *
+ * @see [linthtml](https://github.com/linthtml/linthtml)
+ */
+export const createConfig = (options = {}) => ({
   'attr-name-ignore-regex': false,
-  extends: '@linthtml/linthtml-config-recommended',
   'id-class-ignore-regex': false,
   'line-max-len-ignore-regex': false,
   maxerr: false,
   'raw-ignore-regex': false,
+  'spec-char-escape': false,
+  'text-ignore-regex': false,
+
+  ...options,
+
+  extends: [
+    '@linthtml/linthtml-config-recommended',
+    ...(options.extends ?? []),
+  ],
+
+  ignoreFiles: [...(options.rules ?? [])],
 
   rules: {
     'attr-order': [true, ['id', 'class']],
@@ -23,8 +39,7 @@ module.exports = {
     'lang-style': [true, 'case'],
     'tag-name-match': true,
     'title-max-len': false,
-  },
 
-  'spec-char-escape': false,
-  'text-ignore-regex': false,
-};
+    ...options.rules,
+  },
+});
