@@ -84,7 +84,7 @@ const createPluginsList = (plugins = {}) => {
  * Create stylelint config
  *
  * @param {PLUGINS} plugins Enabled/disabled plugins list
- * @param {import('stylelint').Config} options Stylelint config
+ * @param {import('stylelint').Config} options Stylelint options
  */
 const createConfig = (plugins = {}, options = {}) => ({
   ...options,
