@@ -22,7 +22,10 @@ npm i @alexlit/config-eslint -D
 
   ```js
   // .eslintrc.js
-  import { createConfig, extendSpellChecker } from '@alexlit/config-eslint';
+  const {
+    createConfig,
+    extendSpellChecker,
+  } = require('@alexlit/config-eslint');
 
   module.exports = createConfig(
     {
