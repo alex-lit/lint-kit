@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 module.exports = {
   extends: ['plugin:unicorn/recommended'],
 

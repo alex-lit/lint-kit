@@ -1,7 +1,3 @@
-/**
- * @see [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
- * @see [eslint-import-resolver-alias](https://github.com/johvin/eslint-import-resolver-alias)
- */
 module.exports = {
   extends: [
     'plugin:import/errors',

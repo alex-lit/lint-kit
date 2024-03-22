@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-sort-class-members](https://github.com/bryanrsmith/eslint-plugin-sort-class-members) */
 module.exports = {
   plugins: ['sort-class-members'],
 

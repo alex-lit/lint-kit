@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
 module.exports = {
   extends: ['plugin:jsdoc/recommended'],
 

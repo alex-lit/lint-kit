@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest) */
 module.exports = {
   overrides: [
     {

@@ -1,10 +1,9 @@
 /* eslint-disable unicorn/no-null */
 
-const ALLOW_BOOLEAN_PROPERTY_LIST = require('./allow-boolean-property-list.const');
-const BOOLEAN_PREFIXES = require('./boolean-prefixes.const');
-const ENGLISH_VERBS = require('./english-verbs.const');
+const ALLOW_BOOLEAN_PROPERTY_LIST = require('../constants/allow-boolean-property-list');
+const BOOLEAN_PREFIXES = require('../constants/boolean-prefixes');
+const ENGLISH_VERBS = require('../constants/english-verbs');
 
-/** @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) */
 module.exports = {
   extends: ['plugin:@typescript-eslint/recommended'],
 

@@ -1,5 +1,4 @@
 /* eslint-disable spellcheck/spell-checker */
-/** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
 module.exports = {
   extends: ['plugin:vue/vue3-recommended'],
 
@@ -259,15 +258,7 @@ module.exports = {
 
     'vue/require-typed-ref': ['error'],
 
-    'vue/sort-keys': [
-      'warn',
-      'asc',
-      {
-        caseSensitive: true,
-        minKeys: 2,
-        natural: true,
-      },
-    ],
+    'vue/sort-keys': 'off', // delegate to sort-keys-fix,
 
     'vue/static-class-names-order': ['warn'],
 

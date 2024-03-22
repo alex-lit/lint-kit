@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-vuejs-accessibility](https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility) */
 module.exports = {
   extends: ['plugin:vuejs-accessibility/recommended'],
 

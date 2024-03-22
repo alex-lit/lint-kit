@@ -1,5 +1,4 @@
 /* eslint-disable unicorn/prevent-abbreviations */
-/** @see [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func) */
 module.exports = {
   extends: ['plugin:array-func/all'],
 

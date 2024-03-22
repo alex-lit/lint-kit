@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-security](https://github.com/nodesecurity/eslint-plugin-security) */
 module.exports = {
   extends: ['plugin:security/recommended'],
 

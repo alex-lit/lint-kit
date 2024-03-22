@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "76.8.0",
+  "version": "77.0.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -24,9 +24,11 @@
   "main": "index.js",
   "files": [
     "README.md",
+    "constants",
     "dictionaries",
     "index.js",
-    "plugins"
+    "plugins",
+    "utils"
   ],
   "scripts": {
     "semver": "../../scripts/semver.sh",

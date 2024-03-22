@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-no-explicit-type-exports](https://github.com/intuit/eslint-plugin-no-explicit-type-exports) */
 module.exports = {
   plugins: ['eslint-plugin-no-explicit-type-exports'],
 

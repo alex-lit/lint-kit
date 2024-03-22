@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/) */
 module.exports = {
   extends: ['plugin:@intlify/vue-i18n/recommended'],
 

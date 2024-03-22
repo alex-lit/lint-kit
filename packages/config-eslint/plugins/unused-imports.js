@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-unused-imports](https://github.com/sweepline/eslint-plugin-unused-imports) */
 module.exports = {
   plugins: ['unused-imports'],
 

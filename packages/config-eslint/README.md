@@ -8,62 +8,38 @@ npm i @alexlit/config-eslint -D
 
 ## Connection
 
-```js
-// .eslintrc.js
-module.exports = {
-  ...require('@alexlit/config-eslint'),
-};
-```
-
-## Recipes
-
-### Vue
-
-- If you use vue.js with `options api` syntax you need to turn off `sort-keys`
-  rule for `*.vue` files
+- Default
+  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/index.js))
 
   ```js
   // .eslintrc.js
-  overrides: [
+  const { createConfig } = require('@alexlit/config-eslint');
+
+  module.exports = createConfig();
+  ```
+
+- Custom
+
+  ```js
+  // .eslintrc.js
+  import { createConfig, extendSpellChecker } from '@alexlit/config-eslint';
+
+  module.exports = createConfig(
     {
-      files: ['*.vue'],
+      // disable some default plugins
+      vitest: false,
+
+      // enable some optional plugins
+      node: true,
+    },
+    {
+      // add custom rules
       rules: {
-        'sort-keys': 'off',
+        'no-implicit-coercion': 'warn',
+        'spellcheck/spell-checker': extendSpellChecker({
+          skipWords: ['word1', 'word2'],
+        }),
       },
     },
-  ];
-  ```
-
-### Spell check
-
-- Skip some words
-
-  ```js
-  // .eslintrc.js
-  const SPELLCHECK_RULES = require('@alexlit/config-eslint/plugins/spellcheck')
-    .rules['spellcheck/spell-checker'][1];
-
-  module.exports = {
-    rules: {
-      'spellcheck/spell-checker': [
-        'warn',
-        {
-          ...SPELLCHECK_RULES,
-
-          skipWords: [...SPELLCHECK_RULES.skipWords, 'word1', 'word2'],
-        },
-      ],
-    },
-  };
-  ```
-
-- Disable spell checking
-
-  ```js
-  // .eslintrc.js
-  module.exports = {
-    rules: {
-      'spellcheck/spell-checker': 'off',
-    },
-  };
+  );
   ```

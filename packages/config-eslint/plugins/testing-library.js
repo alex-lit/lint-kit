@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) */
 module.exports = {
   overrides: [
     {

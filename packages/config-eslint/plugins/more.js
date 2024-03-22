@@ -1,4 +1,3 @@
-/** @see [eslint-plugin-more](https://github.com/WebbyLab/eslint-plugin-more) */
 module.exports = {
   overrides: [
     {
