@@ -52,7 +52,7 @@ const OPTIONAL_PLUGINS = {
   'no-indistinguishable-colors': false,
 };
 
-const PRETTIER_PLUGINS = {
+const CODESTYLE_PLUGINS = {
   /** @see [stylelint-prettier](https://github.com/prettier/stylelint-prettier) */
   prettier: true,
 };
@@ -60,7 +60,7 @@ const PRETTIER_PLUGINS = {
 const PLUGINS = {
   ...ADDITIONAL_PLUGINS,
   ...OPTIONAL_PLUGINS,
-  ...PRETTIER_PLUGINS,
+  ...CODESTYLE_PLUGINS,
 };
 
 /**

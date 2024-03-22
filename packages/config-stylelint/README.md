@@ -9,7 +9,7 @@ npm i @alexlit/config-stylelint -D
 ## Connection
 
 - Default
-  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-stylelint/index.js#L62))
+  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-stylelint/index.js))
 
   ```js
   // stylelint.config.js
