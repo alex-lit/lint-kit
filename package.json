@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "111.0.0",
+  "version": "111.1.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -54,6 +54,7 @@
   ],
   "scripts": {
     "check:editorconfig": "./scripts/check.editorconfig.sh",
+    "i": "./scripts/i.sh",
     "lint": "time ./scripts/lint.sh",
     "lint:eslint": "time ./scripts/lint.eslint.sh",
     "lint:htmllint": "time ./scripts/lint.htmllint.sh",
