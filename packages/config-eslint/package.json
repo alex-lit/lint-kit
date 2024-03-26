@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "79.0.0",
+  "version": "79.1.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -37,8 +37,8 @@
   "dependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@tanstack/eslint-plugin-query": "^5.28.6",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -79,8 +79,8 @@
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
     "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-unused-imports": "^3.1.0",
-    "eslint-plugin-vitest": "^0.3.26",
-    "eslint-plugin-vue": "^9.23.0",
+    "eslint-plugin-vitest": "^0.4.0",
+    "eslint-plugin-vue": "^9.24.0",
     "eslint-plugin-vuejs-accessibility": "^2.2.1",
     "eslint-plugin-wc": "^2.0.4",
     "eslint-plugin-write-good-comments": "^0.2.0",
