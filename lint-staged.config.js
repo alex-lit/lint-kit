@@ -1,5 +1,3 @@
-import { lintStagedConfig } from '@alexlit/config-hooks';
+import { createLintStagedConfig } from '@alexlit/config-hooks';
 
-export default {
-  ...lintStagedConfig,
-};
+export default createLintStagedConfig();

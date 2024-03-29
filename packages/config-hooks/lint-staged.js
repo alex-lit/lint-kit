@@ -19,31 +19,21 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     ...plugins,
   };
 
-  const eslint = pluginsList.eslint11 ? 'eslint --fix' : 'true';
+  const eslint = pluginsList.eslint ? 'eslint --fix' : 'true';
 
-  const htmllint = pluginsList.htmllint
-    ? 'linthtml'
-    : 'echo "skip htmllint..."';
+  const htmllint = pluginsList.htmllint ? 'linthtml' : 'true';
 
   const lockfilelint = pluginsList.lockfilelint
     ? 'lockfile-lint --type npm --path package-lock.json'
-    : 'echo "skip lockfilelint..."';
+    : 'true';
 
-  const markdownlint = pluginsList.markdownlint
-    ? 'markdownlint --fix'
-    : 'echo "skip markdownlint..."';
+  const markdownlint = pluginsList.markdownlint ? 'markdownlint --fix' : 'true';
 
-  const npmlint = pluginsList.npmlint
-    ? 'npmPkgJsonLint'
-    : 'echo "skip npmlint..."';
+  const npmlint = pluginsList.npmlint ? 'npmPkgJsonLint' : 'true';
 
-  const prettier = pluginsList.prettier
-    ? 'prettier --write'
-    : 'echo "skip prettier..."';
+  const prettier = pluginsList.prettier ? 'prettier --write' : 'true';
 
-  const stylelint = pluginsList.stylelint
-    ? 'stylelint --fix"'
-    : 'echo "skip stylelint..."';
+  const stylelint = pluginsList.stylelint ? 'stylelint --fix' : 'true';
 
   return {
     '*.cjs': [eslint, prettier],
@@ -76,7 +66,6 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     '*.yaml': [prettier],
     '*.yml': [prettier],
     'package-lock.json': [lockfilelint],
-    // eslint-disable-next-line sort-keys
     'package.json': [npmlint],
 
     ...config,
