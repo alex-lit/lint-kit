@@ -7,7 +7,7 @@
  * @returns {Record<string, any>} Lint-staged configuration
  */
 const createLintStagedConfig = (plugins = {}, config = {}) => {
-  const pluginsConfig = {
+  const pluginsList = {
     eslint: true,
     htmllint: true,
     lockfilelint: true,
@@ -19,18 +19,31 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     ...plugins,
   };
 
-  const eslint = (pluginsConfig.eslint1111 && 'eslint --fix') || 'echo "1"';
+  const eslint = pluginsList.eslint ? 'eslint --fix' : 'echo "skip eslint..."';
 
-  const htmllint = pluginsConfig.htmllint && 'linthtml';
+  const htmllint = pluginsList.htmllint
+    ? 'linthtml'
+    : 'echo "skip htmllint..."';
 
-  const lockfilelint =
-    pluginsConfig.lockfilelint &&
-    'lockfile-lint --type npm --path package-lock.json';
+  const lockfilelint = pluginsList.lockfilelint
+    ? 'lockfile-lint --type npm --path package-lock.json'
+    : 'echo "skip lockfilelint..."';
 
-  const markdownlint = pluginsConfig.markdownlint && 'markdownlint --fix';
-  const npmlint = pluginsConfig.npmlint && 'npmPkgJsonLint';
-  const prettier = pluginsConfig.prettier && 'prettier --write';
-  const stylelint = pluginsConfig.stylelint && 'stylelint --fix"';
+  const markdownlint = pluginsList.markdownlint
+    ? 'markdownlint --fix'
+    : 'echo "skip markdownlint..."';
+
+  const npmlint = pluginsList.npmlint
+    ? 'npmPkgJsonLint'
+    : 'echo "skip npmlint..."';
+
+  const prettier = pluginsList.prettier
+    ? 'prettier --write'
+    : 'echo "skip prettier..."';
+
+  const stylelint = pluginsList.stylelint
+    ? 'stylelint --fix"'
+    : 'echo "skip stylelint..."';
 
   return {
     '*.cjs': [eslint, prettier],

@@ -12,16 +12,17 @@ npm i @alexlit/config-hooks -D
 
   ```js
   // lint-staged.config.js
-  import {
-    createLintStagedConfig,
-    LINT_STAGED_CONFIG,
-  } from '@alexlit/config-hooks';
+  import { createLintStagedConfig } from '@alexlit/config-hooks';
 
   export default createLintStagedConfig(
+    // optional plugins list
+    {
+      stylelint: false,
+    },
+
     // optional config
     {
       '*.css': [], // disable existing rule
-      '*.vue': [...LINT_STAGED_CONFIG['*.vue'], 'echo "Hello, .vue!"'], // extend existing rule
       '*.yaml': ['echo "Hello, .yaml!"'], // custom rule
     },
   );
