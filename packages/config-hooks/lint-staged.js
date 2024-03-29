@@ -3,7 +3,7 @@ const htmllint = 'linthtml';
 const lockfilelint = 'lockfile-lint --type npm --path package-lock.json';
 const markdownlint = 'markdownlint --fix';
 const npmlint = 'npmPkgJsonLint';
-const prettier = 'prettier --write';
+const prettier = 'prettier -v && prettier --write';
 const stylelint = 'stylelint --fix"';
 
 const LINT_STAGED_CONFIG = {
