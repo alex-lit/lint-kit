@@ -1,9 +1,9 @@
-const eslint = 'eslint -v && eslint --fix';
+const eslint = 'eslint --fix';
 const htmllint = 'linthtml';
 const lockfilelint = 'lockfile-lint --type npm --path package-lock.json';
 const markdownlint = 'markdownlint --fix';
 const npmlint = 'npmPkgJsonLint';
-const prettier = 'prettier -v && prettier --write';
+const prettier = 'prettier --write';
 const stylelint = 'stylelint --fix"';
 
 const LINT_STAGED_CONFIG = {
@@ -12,7 +12,7 @@ const LINT_STAGED_CONFIG = {
   '*.erb': [prettier],
   '*.html': [htmllint, prettier],
   '*.jade': [prettier],
-  '*.js': [eslint, prettier],
+  '*.js': [eslint, prettier, ''],
   '*.json,!package-lock.json': [prettier],
   '*.jsonc': [prettier],
   '*.jsonp': [prettier],
@@ -44,9 +44,9 @@ const LINT_STAGED_CONFIG = {
 /**
  * Create lint-staged config
  *
- * @param {Record<string, string | string[]>} config Users config
+ * @param {Record<string, any>} config Users config
  *
- * @returns {Record<string, string | string[]>} Lint-staged configuration
+ * @returns {Record<string, any>} Lint-staged configuration
  */
 const createLintStagedConfig = (config = {}) => ({
   ...LINT_STAGED_CONFIG,
