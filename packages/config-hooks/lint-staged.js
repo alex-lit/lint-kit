@@ -19,7 +19,7 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     ...plugins,
   };
 
-  const eslint = pluginsList.eslint ? 'eslint --fix' : 'echo "skip eslint..."';
+  const eslint = pluginsList.eslint11 ? 'eslint --fix' : 'true';
 
   const htmllint = pluginsList.htmllint
     ? 'linthtml'
