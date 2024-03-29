@@ -19,7 +19,7 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     ...plugins,
   };
 
-  const eslint = (pluginsConfig.eslint111 && 'eslint --fix') || '';
+  const eslint = (pluginsConfig.eslint1111 && 'eslint --fix') || '';
 
   const htmllint = pluginsConfig.htmllint && 'linthtml';
 
