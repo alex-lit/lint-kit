@@ -29,6 +29,7 @@
     "lint-staged.js"
   ],
   "scripts": {
+    "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
   },

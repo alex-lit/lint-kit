@@ -10,9 +10,9 @@ CURRENT_DIR=${PWD##*/}
 
 clear
 
-echo -e "${YELLOW}Релиз пакета ${GREEN}${CURRENT_DIR}${YELLOW}@${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
-
 npm run semver ${VERSION}
+
+echo -e "${YELLOW}Релиз пакета ${GREEN}${CURRENT_DIR}${YELLOW}@${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
 
 npm pu
 
