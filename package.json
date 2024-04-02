@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "112.2.0",
+  "version": "112.3.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -62,6 +62,7 @@
     "lint:npmlint": "time ./scripts/lint.npmlint.sh",
     "lint:stylelint": "time ./scripts/lint.stylelint.sh",
     "prepare": "husky",
+    "release": "./scripts/release.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh"
   },
