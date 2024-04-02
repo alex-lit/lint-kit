@@ -15,6 +15,8 @@ CURRENT_PACKAGE_VERSION=$(node -p "require('./package.json').version")
 
 echo -e "${YELLOW}Релиз пакета ${GREEN}${CURRENT_PACKAGE_NAME}@${CURRENT_PACKAGE_VERSION}${YELLOW}...${DEFAULT}"
 
-npm pu
-
+echo -e "${YELLOW}Коммит в ${GREEN}git${YELLOW}...${DEFAULT}"
 git push
+
+echo -e "${YELLOW}Публикация в ${GREEN}npm${YELLOW}...${DEFAULT}"
+npm pu
