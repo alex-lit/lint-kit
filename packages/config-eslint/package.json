@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "80.3.0",
+  "version": "80.4.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -80,11 +80,15 @@
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
     "eslint-plugin-unicorn": "^52.0.0",
     "eslint-plugin-unused-imports": "^3.1.0",
-    "eslint-plugin-vitest": "^0.5.0",
+    "eslint-plugin-vitest": "^0.4.1",
     "eslint-plugin-vue": "^9.24.1",
     "eslint-plugin-vuejs-accessibility": "^2.2.1",
     "eslint-plugin-wc": "^2.1.0",
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript": "^5.4.4"
+  },
+  "overrides": {
+    "eslint-plugin-vitest": "^0.4.1",
+    "eslint-plugin-array-func": "^4.0.0"
   }
 }
