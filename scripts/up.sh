@@ -9,7 +9,7 @@ YELLOW='\e[33m'
 
 CURRENT_DIR=${PWD##*/}
 
-SKIPED_PACKAGES='eslint-plugin-vitest,eslint-plugin-array-func' # <string | ''>
+SKIPED_PACKAGES='eslint,eslint-plugin-vitest,eslint-plugin-array-func' # <string | ''>
 
 echo -e "${YELLOW}Обновляю зависимости пакета ${GREEN}${CURRENT_DIR}${YELLOW} до версии ${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
 
