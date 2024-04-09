@@ -6,8 +6,6 @@ DEFAULT='\e[39m'
 GREEN='\e[92m'
 YELLOW='\e[33m'
 
-clear
-
 echo -e "${YELLOW}Запускаю линтеры: ${GREEN}eslint, htmllint, markdownlint, npmlint, stylelint...${DEFAULT}"
 
 npm run lint:eslint --if-present ${OPTION}

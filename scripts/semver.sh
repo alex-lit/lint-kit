@@ -9,8 +9,6 @@ YELLOW='\e[33m'
 MAIN_PACKAGE="@alexlit/lint-kit"
 CURRENT_PACKAGE=$(node -p "require('./package.json').name")
 
-clear
-
 echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_PACKAGE}${YELLOW}...${DEFAULT}"
 
 changelogen --release --no-commit --${VERSION}

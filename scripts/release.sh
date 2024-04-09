@@ -6,8 +6,6 @@ DEFAULT='\e[39m'
 GREEN='\e[32m'
 YELLOW='\e[33m'
 
-clear
-
 npm run semver ${VERSION}
 
 CURRENT_PACKAGE_NAME=$(node -p "require('./package.json').name")

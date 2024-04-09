@@ -8,8 +8,6 @@ YELLOW='\e[33m'
 
 CURRENT_DIR=${PWD##*/}
 
-clear
-
 echo -e "${YELLOW}Обновляю зависимости пакета ${GREEN}${CURRENT_DIR}${YELLOW} до версии ${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
 
 # root
