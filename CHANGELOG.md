@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v114.1.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v18.3.0...v114.1.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-prettier:** Bump version ([1debbaa](https://github.com/alex-lit/lint-kit/commit/1debbaa))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v114.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v81.0.0...v114.0.0)
