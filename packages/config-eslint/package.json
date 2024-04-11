@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "80.4.1",
+  "version": "80.4.2",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -85,7 +85,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.2.1",
     "eslint-plugin-wc": "^2.1.0",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "eslint": "^8.57.0",
