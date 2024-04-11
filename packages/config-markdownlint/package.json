@@ -34,5 +34,8 @@
   "dependencies": {
     "markdownlint": "^0.34.0",
     "markdownlint-cli": "^0.39.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

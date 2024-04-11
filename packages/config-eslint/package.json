@@ -87,6 +87,9 @@
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript": "^5.4.5"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "overrides": {
     "eslint": "^8.57.0",
     "eslint-plugin-array-func": "^4.0.0",

@@ -9,7 +9,7 @@ YELLOW='\e[33m'
 
 CURRENT_DIR=${PWD##*/}
 
-SKIPED_PACKAGES='eslint,eslint-plugin-vitest,eslint-plugin-array-func' # <string | ''>
+SKIPED_PACKAGES='eslint,eslint-plugin-vitest,eslint-plugin-array-func'
 
 echo -e "${YELLOW}Обновляю зависимости пакета ${GREEN}${CURRENT_DIR}${YELLOW} до версии ${GREEN}${VERSION}${YELLOW}...${DEFAULT}"
 
@@ -20,6 +20,7 @@ fi
 # root
 npx npm-check-updates --upgrade --reject ${SKIPED_PACKAGES} --target ${VERSION}
 npm i --legacy-peer-deps
+npm audit fix
 
 # packages
 if [ -d "packages" ]; then
@@ -30,6 +31,7 @@ if [ -d "packages" ]; then
     cd ${PACKAGE}
     npx npm-check-updates --upgrade --target ${VERSION}
     npm i --legacy-peer-deps
+    npm audit fix
     cd ../
   done
 fi

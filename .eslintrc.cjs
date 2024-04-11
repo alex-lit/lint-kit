@@ -1,3 +1,3 @@
 const { createConfig } = require('@alexlit/config-eslint');
 
-module.exports = createConfig();
+module.exports = createConfig({ security: true, node: true });
