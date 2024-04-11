@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-extraneous-import
 import { createConfig } from '@alexlit/config-prettier';
 
 export default createConfig({
