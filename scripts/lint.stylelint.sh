@@ -1,18 +1,15 @@
 # Launch styles linter
 
-OPTION=${1}
+source "$(dirname $0)"/.config.sh
 
-COLOR_NAME='\e[33m'
-COLOR_ARROW='\e[90m'
-COLOR_FILES='\e[96m'
-COLOR_DEFAULT='\e[39m'
+OPTION=${1}
 
 FILES='**/*.{css,pcss,postcss,sass,scss,vue}'
 
-echo -e "${COLOR_NAME}stylelint ${COLOR_ARROW}-> ${COLOR_FILES}${FILES}${COLOR_DEFAULT}"
+echo -e "${YELLOW}stylelint ${GREY}-> ${CYAN}${FILES}${WHITE}"
 
 if [ $OPTION ] && [ $OPTION = 'fix' ]; then
-  echo -e "${COLOR_ARROW}autofix:${COLOR_DEFAULT} true"
+  echo -e "${GREY}autofix:${WHITE} true"
 fi
 
 stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --${OPTION}

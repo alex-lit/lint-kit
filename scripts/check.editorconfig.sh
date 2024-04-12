@@ -1,8 +1,7 @@
 # Подсчет кол-ва строк кода в исходных файлах
 
-YELLOW='\e[33m'
-DEFAULT='\e[39m'
+source "$(dirname $0)"/.config.sh
 
-echo -e "${YELLOW}Проверяю editorconfig...${DEFAULT}"
+echo -e "${YELLOW}Проверяю editorconfig...${WHITE}"
 
 npx editorconfig-checker

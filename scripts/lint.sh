@@ -1,12 +1,10 @@
 # Запускает линтеры
 
+source "$(dirname $0)"/.config.sh
+
 OPTION=${1}
 
-DEFAULT='\e[39m'
-GREEN='\e[92m'
-YELLOW='\e[33m'
-
-echo -e "${YELLOW}Запускаю линтеры: ${GREEN}eslint, htmllint, markdownlint, npmlint, stylelint...${DEFAULT}"
+echo -e "${YELLOW}Запускаю линтеры: ${GREEN}eslint, htmllint, markdownlint, npmlint, stylelint...${WHITE}"
 
 npm run lint:eslint --if-present ${OPTION}
 npm run lint:htmllint --if-present
