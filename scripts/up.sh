@@ -1,7 +1,5 @@
 # Обновляет зависимости до указанной версии (latest, newest, greatest, minor, patch)
 
-echo "$PWD"
-
 source "$(dirname $0)"/.config.sh
 
 VERSION=${1:-minor}
@@ -9,7 +7,7 @@ VERSION=${1:-minor}
 echo -e "${YELLOW}Обновляю зависимости пакета ${GREEN}${CURRENT_DIR}${YELLOW} до версии ${GREEN}${VERSION}${YELLOW}...${WHITE}"
 
 if [ ${SKIPED_PACKAGES} != '' ]; then
-  echo -e "${BLUE}--reject ${WHITE}${SKIPED_PACKAGES}"
+  echo -e "${BLUE}--reject ${GREY}${SKIPED_PACKAGES}"
 fi
 
 # root
