@@ -1,5 +1,4 @@
-// @ts-check
-/* eslint-disable sonarjs/no-duplicate-string, import/order */
+/* eslint-disable sonarjs/no-duplicate-string, import/order, no-undef */
 
 const { defineConfig } = require('eslint-define-config');
 const { extendSpellChecker } = require('./utils/extend-spell-checker');

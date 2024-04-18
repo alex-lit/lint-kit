@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   extends: [
     'plugin:import/errors',
@@ -57,8 +58,10 @@ module.exports = {
         'newlines-between': 'always',
 
         pathGroups: [
-          { group: 'internal', pattern: '{@,~}/core/**', position: 'after' },
-          { group: 'internal', pattern: '{@,~}/modules/**', position: 'after' },
+          // Nuxt
+          { group: 'internal', pattern: '#**', position: 'after' },
+          // Structure
+          { group: 'internal', pattern: '{@,~}/**', position: 'after' },
           // FSD
           {
             group: 'internal',
