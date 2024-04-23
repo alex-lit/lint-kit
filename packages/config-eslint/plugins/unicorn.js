@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   extends: ['plugin:unicorn/recommended'],
 
@@ -44,6 +45,7 @@ module.exports = {
       'warn',
       {
         allowList: {
+          ImportMetaEnv: true,
           ProcessEnv: true,
           args: true,
           attrs: true,

@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "81.2.0",
+  "version": "81.2.2",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -38,8 +38,8 @@
   "dependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@tanstack/eslint-plugin-query": "^5.28.11",
-    "@typescript-eslint/eslint-plugin": "^7.7.0",
-    "@typescript-eslint/parser": "^7.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
