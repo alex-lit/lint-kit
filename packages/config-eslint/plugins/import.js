@@ -61,9 +61,14 @@ module.exports = {
           // Nuxt
           { group: 'internal', pattern: '#**', position: 'after' },
           // Structure
-          { group: 'internal', pattern: '{@,~}/core', position: 'after' },
-          { group: 'internal', pattern: '{@,~}/features', position: 'after' },
-          { group: 'internal', pattern: '{@,~}/modules', position: 'after' },
+          { group: 'internal', pattern: '{@,~}/api/**', position: 'after' },
+          { group: 'internal', pattern: '{@,~}/core/**', position: 'after' },
+          {
+            group: 'internal',
+            pattern: '{@,~}/features/**',
+            position: 'after',
+          },
+          { group: 'internal', pattern: '{@,~}/modules/**', position: 'after' },
           // FSD
           {
             group: 'internal',
