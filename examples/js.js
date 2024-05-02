@@ -1,30 +1,38 @@
+/* eslint-disable no-secrets/no-secrets */
+/* eslint-disable spellcheck/spell-checker */
 /**
- * In these configuration files, the rule plugin1/rule1 comes from the plugin
- * named plugin1. You can also use this format with configuration comments, such
- * as:
- *
- * Hello.
+ * Генератор случайных строк
  *
  * @example
- *   <h1>test</h1>;
+ *   generateRandomString({ length: 10, hasUppercase: false }); // 'z1ewf5dr86'
  *
- * @type {React.FC<{ message: string }>}
+ * @param {object} options
+ * @param {number} [options.lengths] Длина строки
+ * @param {boolean} [options.hasDigits] Цифры
+ * @param {boolean} [options.hasLowercase] Латинские буквы в нижнем регистре
+ * @param {boolean} [options.hasUppercase] Латинские буквы в верхнем регистре
  *
- * @param x Test
- * @param x.dsf Test
- * @param {any} var An example text that is long and spans lines followed by a
- *   list
- *
- *   - Item 1.
- *   - Item 2.
- *   - Item 3.
- *
- *   And more text to come.
- *
- * @returns {Promise} A return value.
+ * @returns {string}
  */
-export const xerox = {
-  a: 1,
-  b: 2,
-  x: 2,
+export const generateRandomString = (options) => {
+  const { hasDigits, hasLowercase, hasUppercase, length } = {
+    hasDigits: true,
+    hasLowercase: true,
+    hasUppercase: true,
+    length: 10,
+
+    ...options,
+  };
+
+  const allowedChars = `${hasDigits ? '0123456789' : ''}${
+    hasLowercase ? 'abcdefghijklmnopqrstuvwxyz' : ''
+  }${hasUppercase ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : ''}`;
+
+  if (allowedChars.length === 0) {
+    throw new Error('Не выбраны допустимые символы!');
+  }
+
+  return Array.from({ length }, () =>
+    allowedChars.charAt(Math.floor(Math.random() * allowedChars.length)),
+  ).join('');
 };
