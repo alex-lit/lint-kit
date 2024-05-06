@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "11.4.0",
+  "version": "12.0.0",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
@@ -35,7 +35,7 @@
   "dependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "conventional-changelog-cli": "^4.1.0"
+    "conventional-changelog-cli": "^5.0.0"
   },
   "engines": {
     "node": ">=18"
