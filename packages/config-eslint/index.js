@@ -280,6 +280,18 @@ const createConfig = (plugins = {}, options = {}) =>
         },
       ],
 
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['.', '..', '*/..'],
+              message: 'Use absolute path instead',
+            },
+          ],
+        },
+      ],
+
       'no-return-await': 'off',
 
       'no-shadow': 'off',
