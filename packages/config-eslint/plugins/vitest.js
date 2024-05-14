@@ -1,7 +1,7 @@
 module.exports = {
   overrides: [
     {
-      extends: ['plugin:vitest/all'],
+      extends: ['plugin:vitest/legacy-all'],
       files: ['*.{test,spec}.{js,ts}'],
       plugins: ['vitest'],
 

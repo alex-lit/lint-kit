@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "84.0.0",
+  "version": "84.1.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -39,8 +39,8 @@
   "dependencies": {
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@tanstack/eslint-plugin-query": "^5.35.6",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -81,7 +81,7 @@
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
     "eslint-plugin-unicorn": "^53.0.0",
     "eslint-plugin-unused-imports": "^3.2.0",
-    "eslint-plugin-vitest": "^0.4.1",
+    "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.26.0",
     "eslint-plugin-vuejs-accessibility": "^2.3.0",
     "eslint-plugin-wc": "^2.1.0",
@@ -94,6 +94,6 @@
   "overrides": {
     "eslint": "^8.57.0",
     "eslint-plugin-array-func": "^4.0.0",
-    "eslint-plugin-vitest": "^0.4.1"
+    "eslint-plugin-vitest": "^0.5.4"
   }
 }
