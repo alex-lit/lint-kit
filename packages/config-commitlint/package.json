@@ -38,6 +38,6 @@
     "conventional-changelog-cli": "^5.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.18"
   }
 }
