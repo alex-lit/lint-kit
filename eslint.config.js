@@ -1,7 +1,6 @@
-const { createConfig } = require('@alexlit/config-eslint');
+import { createFlatConfig } from '@alexlit/config-eslint';
 
-module.exports = createConfig(
-  { node: true, security: true },
+export default [
   {
     overrides: [
       {
@@ -13,4 +12,6 @@ module.exports = createConfig(
       },
     ],
   },
-);
+
+  ...createFlatConfig(),
+];
