@@ -45,9 +45,6 @@ const DEFAULT_PLUGINS = {
   /** @see [eslint-plugin-more](https://github.com/WebbyLab/eslint-plugin-more) */
   more: true,
 
-  /** @see [eslint-plugin-no-await-in-promise](https://github.com/hugo-vrijswijk/eslint-plugin-no-await-in-promise/) */
-  'no-await-in-promise': true,
-
   /** @see [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind) */
   'no-constructor-bind': true,
 
@@ -128,6 +125,9 @@ const DEFAULT_PLUGINS = {
 };
 
 const OPTIONAL_PLUGINS = {
+  /** @see [eslint-plugin-no-await-in-promise](https://github.com/hugo-vrijswijk/eslint-plugin-no-await-in-promise/) */
+  'no-await-in-promise': false, // won't work
+
   /** @see [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) */
   node: false,
 
@@ -190,7 +190,6 @@ const createConfig = (plugins = {}, options = {}) =>
     ],
 
     ignorePatterns: [
-      '.*',
       'build',
       'dist',
       'docs',
