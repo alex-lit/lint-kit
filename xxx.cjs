@@ -1,7 +1,7 @@
 const { createConfig } = require('@alexlit/config-eslint');
 
 module.exports = createConfig(
-  { node: true, security: true },
+  { node: true, security: true, 'no-await-in-promise': false },
   {
     overrides: [
       {

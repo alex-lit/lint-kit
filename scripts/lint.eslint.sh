@@ -12,4 +12,4 @@ if [ $OPTION ] && [ $OPTION = 'fix' ]; then
   echo -e "${GREY}autofix:${WHITE} true"
 fi
 
-eslint --ext ${FILES} --ignore-path .gitignore --ignore-path .eslintignore --ignore-path .prettierignore ./ --${OPTION}
+ESLINT_USE_FLAT_CONFIG=true && eslint ./**/*{${FILES}} --${OPTION}

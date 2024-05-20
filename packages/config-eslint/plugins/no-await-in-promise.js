@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['plugin:no-await-in-promise/recommended'],
+  extends: ['plugin:no-await-in-promise/recommended-legacy'],
 
-  plugins: ['eslint-plugin-no-await-in-promise'],
+  plugins: ['no-await-in-promise'],
 };
