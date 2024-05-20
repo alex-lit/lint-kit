@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "84.3.1",
+  "version": "84.3.2",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -28,6 +28,7 @@
     "constants",
     "dictionaries",
     "index.js",
+    "legacy.js",
     "plugins",
     "utils"
   ],
