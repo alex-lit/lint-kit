@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "84.3.2",
+  "version": "84.4.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -42,8 +42,8 @@
     "@eslint/eslintrc": "^3.1.0",
     "@intlify/eslint-plugin-vue-i18n": "^2.0.0",
     "@tanstack/eslint-plugin-query": "^5.35.6",
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -62,7 +62,7 @@
     "eslint-plugin-lit": "^1.13.0",
     "eslint-plugin-lit-a11y": "^4.1.2",
     "eslint-plugin-more": "^1.0.5",
-    "eslint-plugin-no-await-in-promise": "^2.0.0",
+    "eslint-plugin-no-await-in-promise": "^1.1.6",
     "eslint-plugin-no-constructor-bind": "^2.0.4",
     "eslint-plugin-no-explicit-type-exports": "^0.12.1",
     "eslint-plugin-no-loops": "^0.3.0",
@@ -93,10 +93,5 @@
   },
   "engines": {
     "node": ">=18.18"
-  },
-  "overrides": {
-    "eslint": "^8.57.0",
-    "eslint-plugin-array-func": "^4.0.0",
-    "eslint-plugin-vitest": "^0.5.4"
   }
 }
