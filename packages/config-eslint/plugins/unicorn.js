@@ -47,6 +47,7 @@ module.exports = {
         allowList: {
           ImportMetaEnv: true,
           ProcessEnv: true,
+          Props: true,
           args: true,
           attrs: true,
           env: true,
