@@ -4,13 +4,15 @@ Presets of configuration files and dependencies for linting web applications
 (designed for [Vue.js](https://vuejs.org) with
 [TypeScript](https://www.typescriptlang.org/))
 
-## Installation
+## Usage
+
+### Instal all linters
 
 ```sh
 npm i @alexlit/config-commitlint @alexlit/config-eslint @alexlit/config-hooks @alexlit/config-htmllint @alexlit/config-markdownlint @alexlit/config-npmlint @alexlit/config-prettier @alexlit/config-stylelint --legacy-peer-deps -D
 ```
 
-## Configuration
+### Configuration
 
 - [commitlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-commitlint/README.md)
 - [eslint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/README.md)
@@ -20,3 +22,11 @@ npm i @alexlit/config-commitlint @alexlit/config-eslint @alexlit/config-hooks @a
 - [npmlint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-npmlint/README.md)
 - [prettier](https://github.com/alex-lit/lint-kit/blob/master/packages/config-prettier/README.md)
 - [stylelint](https://github.com/alex-lit/lint-kit/blob/master/packages/config-stylelint/README.md)
+
+## Dev mode
+
+### Installation
+
+```sh
+npm run i
+```
