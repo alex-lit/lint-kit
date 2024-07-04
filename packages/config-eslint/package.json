@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "86.5.0",
+  "version": "86.6.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -41,9 +41,9 @@
     "@babel/eslint-parser": "^7.24.7",
     "@eslint/eslintrc": "^3.1.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.0.0",
-    "@tanstack/eslint-plugin-query": "^5.49.1",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "@typescript-eslint/parser": "^7.14.1",
+    "@tanstack/eslint-plugin-query": "^5.50.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -73,7 +73,7 @@
     "eslint-plugin-promise": "^6.4.0",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-sonarjs": "^1.0.3",
     "eslint-plugin-sort-class-members": "^1.20.0",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
@@ -85,11 +85,11 @@
     "eslint-plugin-unicorn": "^54.0.0",
     "eslint-plugin-unused-imports": "^4.0.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "eslint-plugin-vue": "^9.26.0",
+    "eslint-plugin-vue": "^9.27.0",
     "eslint-plugin-vuejs-accessibility": "^2.3.1",
     "eslint-plugin-wc": "^2.1.0",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "engines": {
     "node": ">=18.18"
