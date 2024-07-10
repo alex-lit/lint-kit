@@ -1,10 +1,10 @@
 module.exports = {
   extends: ['prettier'],
 
-  plugins: ['prettier'],
+  // plugins: ['prettier'],
 
   rules: {
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
 
     /** Fix for prettier/vue */
     'vue/html-self-closing': [

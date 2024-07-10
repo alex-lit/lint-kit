@@ -3,26 +3,8 @@
 const { defineConfig } = require('eslint-define-config');
 
 const DEFAULT_PLUGINS = {
-  /** @see [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func) */
-  'array-func': true,
-
-  /** @see [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) */
-  compat: true,
-
   /** @see [eslint-plugin-decorator-position](https://github.com/NullVoxPopuli/eslint-plugin-decorator-position) */
   'decorator-position': true,
-
-  /** @see [eslint-plugin-eslint-comments](hhttps://github.com/mysticatea/eslint-plugin-eslint-comments) */
-  'eslint-comments': true,
-
-  /** @see [eslint-plugin-etc](https://github.com/cartant/eslint-plugin-etc) */
-  etc: true,
-
-  /** @see [eslint-plugin-ext](https://github.com/jiangfengming/eslint-plugin-ext) */
-  ext: true,
-
-  /** @see [eslint-plugin-filenames](https://github.com/selaux/eslint-plugin-filenames) */
-  filenames: true,
 
   /**
    * @see [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
@@ -32,39 +14,6 @@ const DEFAULT_PLUGINS = {
 
   /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
   jsdoc: true,
-
-  /** @see [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) */
-  'jsx-a11y': true,
-
-  /** @see [eslint-plugin-lit](https://github.com/43081j/eslint-plugin-lit) */
-  lit: true,
-
-  /** @see [eslint-plugin-lit-a11y](https://www.npmjs.com/package/eslint-plugin-lit-a11y) */
-  'lit-a11y': true,
-
-  /** @see [eslint-plugin-more](https://github.com/WebbyLab/eslint-plugin-more) */
-  more: true,
-
-  /** @see [eslint-plugin-no-await-in-promise](https://github.com/hugo-vrijswijk/eslint-plugin-no-await-in-promise/) */
-  'no-await-in-promise': true,
-
-  /** @see [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind) */
-  'no-constructor-bind': true,
-
-  /** @see [eslint-plugin-no-explicit-type-exports](https://github.com/intuit/eslint-plugin-no-explicit-type-exports) */
-  'no-explicit-type-exports': true,
-
-  /** @see [eslint-plugin-no-loops](https://github.com/buildo/eslint-plugin-no-loops) */
-  'no-loops': true,
-
-  /** @see [eslint-plugin-no-secrets](https://github.com/nickdeis/eslint-plugin-no-secrets) */
-  'no-secrets': true,
-
-  /** @see [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) */
-  'no-use-extend-native': true,
-
-  /** @see [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise) */
-  promise: true,
 
   /** @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) */
   regexp: true,
@@ -83,12 +32,6 @@ const DEFAULT_PLUGINS = {
 
   /** @see [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix) */
   'sort-keys-fix': true,
-
-  /** @see [eslint-plugin-spellcheck](https://github.com/aotaduy/eslint-plugin-spellcheck) */
-  spellcheck: true,
-
-  /** @see [eslint-plugin-sql](https://github.com/gajus/eslint-plugin-sql) */
-  sql: true,
 
   /** @see [@tanstack/query](https://tanstack.com/query/v4/docs/react/eslint/eslint-plugin-query) */
   'tanstack-query': true,
@@ -119,20 +62,77 @@ const DEFAULT_PLUGINS = {
 
   /** @see [eslint-plugin-vuejs-accessibility](https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility) */
   'vuejs-accessibility': true,
-
-  /** @see [eslint-plugin-wc](https://github.com/43081j/eslint-plugin-wc) */
-  wc: true,
-
-  /** @see [eslint-plugin-write-good-comments](https://github.com/kantord/eslint-plugin-write-good-comments) */
-  'write-good-comments': true,
 };
 
 const OPTIONAL_PLUGINS = {
+  /** @see [eslint-plugin-array-func](https://github.com/freaktechnik/eslint-plugin-array-func) */
+  'array-func': false,
+
+  /** @see [eslint-plugin-compat](https://github.com/amilajack/eslint-plugin-compat) */
+  compat: false,
+
+  /** @see [eslint-plugin-eslint-comments](https://github.com/mysticatea/eslint-plugin-eslint-comments) */
+  'eslint-comments': false,
+
+  /** @see [eslint-plugin-etc](https://github.com/cartant/eslint-plugin-etc) */
+  etc: false,
+
+  /** @see [eslint-plugin-ext](https://github.com/jiangfengming/eslint-plugin-ext) */
+  ext: false,
+
+  /** @see [eslint-plugin-filenames](https://github.com/selaux/eslint-plugin-filenames) */
+  filenames: false,
+
+  /** @see [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y) */
+  'jsx-a11y': false,
+
+  /** @see [eslint-plugin-lit](https://github.com/43081j/eslint-plugin-lit) */
+  lit: false,
+
+  /** @see [eslint-plugin-lit-a11y](https://www.npmjs.com/package/eslint-plugin-lit-a11y) */
+  'lit-a11y': false,
+
+  /** @see [eslint-plugin-more](https://github.com/WebbyLab/eslint-plugin-more) */
+  more: false,
+
+  /** @see [eslint-plugin-no-await-in-promise](https://github.com/hugo-vrijswijk/eslint-plugin-no-await-in-promise/) */
+  'no-await-in-promise': false,
+
+  /** @see [eslint-plugin-no-constructor-bind](https://github.com/markalfred/eslint-plugin-no-constructor-bind) */
+  'no-constructor-bind': false,
+
+  /** @see [eslint-plugin-no-explicit-type-exports](https://github.com/intuit/eslint-plugin-no-explicit-type-exports) */
+  'no-explicit-type-exports': false,
+
+  /** @see [eslint-plugin-no-loops](https://github.com/buildo/eslint-plugin-no-loops) */
+  'no-loops': false,
+
+  /** @see [eslint-plugin-no-secrets](https://github.com/nickdeis/eslint-plugin-no-secrets) */
+  'no-secrets': false,
+
+  /** @see [eslint-plugin-no-use-extend-native](https://github.com/dustinspecker/eslint-plugin-no-use-extend-native) */
+  'no-use-extend-native': false,
+
   /** @see [eslint-plugin-node](https://github.com/mysticatea/eslint-plugin-node) */
   node: false,
 
+  /** @see [eslint-plugin-promise](https://github.com/xjamundx/eslint-plugin-promise) */
+  promise: false,
+
   /** @see [eslint-plugin-security](https://github.com/nodesecurity/eslint-plugin-security) */
   security: false,
+
+  /** @see [eslint-plugin-spellcheck](https://github.com/aotaduy/eslint-plugin-spellcheck) */
+  spellcheck: false,
+
+  /** @see [eslint-plugin-sql](https://github.com/gajus/eslint-plugin-sql) */
+  sql: false,
+
+  /** @see [eslint-plugin-wc](https://github.com/43081j/eslint-plugin-wc) */
+  wc: false,
+
+  /** @see [eslint-plugin-write-good-comments](https://github.com/kantord/eslint-plugin-write-good-comments) */
+  'write-good-comments': false,
 };
 
 const CODESTYLE_PLUGINS = {

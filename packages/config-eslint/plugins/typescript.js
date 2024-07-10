@@ -1,8 +1,8 @@
 /* eslint-disable unicorn/no-null */
 
-const ALLOW_BOOLEAN_PROPERTY_LIST = require('../constants/allow-boolean-property-list');
-const BOOLEAN_PREFIXES = require('../constants/boolean-prefixes');
-const ENGLISH_VERBS = require('../constants/english-verbs');
+// const ALLOW_BOOLEAN_PROPERTY_LIST = require('../constants/allow-boolean-property-list');
+// const BOOLEAN_PREFIXES = require('../constants/boolean-prefixes');
+// const ENGLISH_VERBS = require('../constants/english-verbs');
 
 module.exports = {
   extends: ['plugin:@typescript-eslint/recommended'],
@@ -52,89 +52,91 @@ module.exports = {
 
     '@typescript-eslint/method-signature-style': ['error', 'method'],
 
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        selector: 'default',
-      },
-      {
-        format: ['camelCase'],
-        selector: 'variable',
-      },
-      {
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-        selector: 'parameter',
-      },
-      {
-        format: ['camelCase'],
-        leadingUnderscore: 'require',
-        modifiers: ['private'],
-        selector: 'memberLike',
-      },
-      {
-        format: ['PascalCase'],
-        selector: ['typeLike'],
-      },
-      {
-        format: ['UPPER_CASE'],
-        selector: ['enumMember'],
-      },
-      {
-        custom: {
-          match: false,
-          regex: '^I[A-Z]',
-        },
+    '@typescript-eslint/naming-convention': 'off', // slow
 
-        format: ['PascalCase'],
-        selector: 'interface',
-      },
-      {
-        format: null,
-        leadingUnderscore: 'allow',
-        selector: 'objectLiteralProperty',
-      },
-      {
-        format: null,
-        selector: 'objectLiteralMethod',
-      },
-      {
-        format: null,
-        modifiers: ['destructured'],
-        selector: 'parameter',
-      },
-      {
-        format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-        modifiers: ['const'],
-        selector: 'variable',
-      },
-      {
-        filter: {
-          match: false,
-          regex: `(${ALLOW_BOOLEAN_PROPERTY_LIST.join('|')})`,
-        },
+    // '@typescript-eslint/naming-convention': [
+    //   'error',
+    //   {
+    //     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+    //     selector: 'default',
+    //   },
+    //   {
+    //     format: ['camelCase'],
+    //     selector: 'variable',
+    //   },
+    //   {
+    //     format: ['camelCase'],
+    //     leadingUnderscore: 'allow',
+    //     selector: 'parameter',
+    //   },
+    //   {
+    //     format: ['camelCase'],
+    //     leadingUnderscore: 'require',
+    //     modifiers: ['private'],
+    //     selector: 'memberLike',
+    //   },
+    //   {
+    //     format: ['PascalCase'],
+    //     selector: ['typeLike'],
+    //   },
+    //   {
+    //     format: ['UPPER_CASE'],
+    //     selector: ['enumMember'],
+    //   },
+    //   {
+    //     custom: {
+    //       match: false,
+    //       regex: '^I[A-Z]',
+    //     },
 
-        format: ['PascalCase'],
+    //     format: ['PascalCase'],
+    //     selector: 'interface',
+    //   },
+    //   {
+    //     format: null,
+    //     leadingUnderscore: 'allow',
+    //     selector: 'objectLiteralProperty',
+    //   },
+    //   {
+    //     format: null,
+    //     selector: 'objectLiteralMethod',
+    //   },
+    //   {
+    //     format: null,
+    //     modifiers: ['destructured'],
+    //     selector: 'parameter',
+    //   },
+    //   {
+    //     format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+    //     modifiers: ['const'],
+    //     selector: 'variable',
+    //   },
+    //   {
+    //     filter: {
+    //       match: false,
+    //       regex: `(${ALLOW_BOOLEAN_PROPERTY_LIST.join('|')})`,
+    //     },
 
-        leadingUnderscore: 'allow',
+    //     format: ['PascalCase'],
 
-        prefix: BOOLEAN_PREFIXES,
+    //     leadingUnderscore: 'allow',
 
-        selector: ['accessor', 'parameter', 'variable'],
+    //     prefix: BOOLEAN_PREFIXES,
 
-        types: ['boolean'],
-      },
-      {
-        format: ['PascalCase'],
+    //     selector: ['accessor', 'parameter', 'variable'],
 
-        leadingUnderscore: 'allow',
+    //     types: ['boolean'],
+    //   },
+    //   {
+    //     format: ['PascalCase'],
 
-        prefix: [...ENGLISH_VERBS, 'on'],
+    //     leadingUnderscore: 'allow',
 
-        selector: ['classMethod', 'function'],
-      },
-    ],
+    //     prefix: [...ENGLISH_VERBS, 'on'],
+
+    //     selector: ['classMethod', 'function'],
+    //   },
+    // ],
 
     '@typescript-eslint/no-explicit-any': 'off',
 
