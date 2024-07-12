@@ -1,6 +1,6 @@
 # Обновляет зависимости до указанной версии (latest, newest, greatest, minor, patch)
 
-source "$(dirname $0)"/.config.sh
+source "$(dirname $0)"/../bash.config.sh
 
 VERSION=${1:-minor}
 
