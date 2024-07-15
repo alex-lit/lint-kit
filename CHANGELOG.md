@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v121.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v45.11.0...v121.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-stylelint:** Bump version ([50344bb](https://github.com/alex-lit/lint-kit/commit/50344bb))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v120.8.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v87.1.0...v120.8.0)
