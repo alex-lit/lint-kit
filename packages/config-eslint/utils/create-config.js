@@ -33,7 +33,7 @@ const DEFAULT_PLUGINS = {
   /** @see [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix) */
   'sort-keys-fix': true,
 
-  /** @see [@tanstack/query](https://tanstack.com/query/v4/docs/react/eslint/eslint-plugin-query) */
+  /** @see [@tanstack/query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query) */
   'tanstack-query': true,
 
   /** @see [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) */
