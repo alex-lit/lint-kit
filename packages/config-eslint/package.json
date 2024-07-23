@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "88.1.0",
+  "version": "88.2.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -42,8 +42,8 @@
     "@eslint/eslintrc": "^3.1.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.0.0",
     "@tanstack/eslint-plugin-query": "^5.51.12",
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
@@ -83,13 +83,13 @@
     "eslint-plugin-testing-library": "^6.2.2",
     "eslint-plugin-typescript-sort-keys": "^3.2.0",
     "eslint-plugin-unicorn": "^54.0.0",
-    "eslint-plugin-unused-imports": "^4.0.0",
+    "eslint-plugin-unused-imports": "^4.0.1",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.27.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.0",
     "eslint-plugin-wc": "^2.1.0",
     "eslint-plugin-write-good-comments": "^0.2.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "engines": {
     "node": ">=18.18"
