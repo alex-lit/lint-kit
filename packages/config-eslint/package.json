@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "88.2.0",
+  "version": "89.0.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -70,11 +70,11 @@
     "eslint-plugin-no-use-extend-native": "^0.5.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sonarjs": "^1.0.3",
+    "eslint-plugin-sonarjs": "^1.0.4",
     "eslint-plugin-sort-class-members": "^1.20.0",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
@@ -86,7 +86,7 @@
     "eslint-plugin-unused-imports": "^4.0.1",
     "eslint-plugin-vitest": "^0.5.4",
     "eslint-plugin-vue": "^9.27.0",
-    "eslint-plugin-vuejs-accessibility": "^2.4.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "eslint-plugin-wc": "^2.1.0",
     "eslint-plugin-write-good-comments": "^0.2.0",
     "typescript": "^5.5.4"
