@@ -12,4 +12,4 @@ if [ $OPTION ] && [ $OPTION = 'fix' ]; then
   echo -e "${GREY}autofix:${WHITE} true"
 fi
 
-ESLINT_USE_FLAT_CONFIG=true && eslint ./**/*{${FILES}} --${OPTION}
+eslint ./**/*{${FILES}} --${OPTION}

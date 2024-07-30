@@ -1,13 +1,8 @@
-import { createFlatConfig } from '@alexlit/config-eslint';
+import { config } from '@alexlit/config-eslint';
 
 export default [
-  ...createFlatConfig(),
-
+  ...config,
   {
-    files: ['./packages/config-eslint/**/*.js'],
-
-    rules: {
-      'no-undef': 'off',
-    },
+    ignores: ['packages/config-eslint/_legacy'],
   },
 ];

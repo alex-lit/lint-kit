@@ -1,13 +1,13 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-  //
+  const test = () => {};
 </script>
 
 <template>
   <TestTest
     :key="1"
     class="azaza azazas bg-blue-500 bg-blue-500 mx-[10px] my-[10px] ololo px-4 py-2 rounded rounded text-base text-white xy-app-header__logo"
-    @click="() => {}"
+    @click="() => test()"
   />
 </template>
 
