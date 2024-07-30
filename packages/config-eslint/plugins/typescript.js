@@ -4,4 +4,12 @@ import plugin from 'typescript-eslint';
 export const typescript = [
   ...plugin.configs.strict,
   ...plugin.configs.stylistic,
+
+  {
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.json'],
+      },
+    },
+  },
 ];
