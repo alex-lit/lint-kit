@@ -4,6 +4,7 @@ import globals from 'globals';
 import { javascript } from './plugins/javascript.js';
 import { jsdoc } from './plugins/jsdoc.js';
 import { perfectionist } from './plugins/perfectionist.js';
+import { prettier } from './plugins/prettier.js';
 import { regexp } from './plugins/regexp.js';
 import { sonar } from './plugins/sonar.js';
 import { tanstackQuery } from './plugins/tanstack-query.js';
@@ -30,12 +31,15 @@ export const config = [
   ...vue,
   ...vueAccessibility,
   ...vueI18n,
+
+  ...prettier, // must be last
 ];
 
 export {
   javascript,
   jsdoc,
   perfectionist,
+  prettier,
   regexp,
   sonar,
   tanstackQuery,

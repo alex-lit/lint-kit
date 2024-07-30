@@ -6,10 +6,8 @@ export const typescript = [
   ...plugin.configs.stylistic,
 
   {
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.json'],
-      },
+    rules: {
+      '@typescript-eslint/consistent-type-assertions': 'off', // too slow
     },
   },
 ];
