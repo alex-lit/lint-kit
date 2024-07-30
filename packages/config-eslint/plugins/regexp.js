@@ -1,7 +1,4 @@
-module.exports = {
-  extends: ['plugin:regexp/recommended'],
+import plugin from 'eslint-plugin-regexp';
 
-  plugins: ['regexp'],
-
-  rules: {},
-};
+/** @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) */
+export const regexp = [plugin.configs['flat/recommended']];

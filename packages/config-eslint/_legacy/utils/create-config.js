@@ -10,7 +10,7 @@ const DEFAULT_PLUGINS = {
    * @see [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
    * @see [eslint-import-resolver-alias](https://github.com/johvin/eslint-import-resolver-alias)
    */
-  import: true,
+  import: false,
 
   /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
   jsdoc: true,
@@ -19,37 +19,37 @@ const DEFAULT_PLUGINS = {
   regexp: true,
 
   /** @see [eslint-plugin-simple-import-sort](https://github.com/lydell/eslint-plugin-simple-import-sort) */
-  'simple-import-sort': true,
+  // 'simple-import-sort': false,
 
   /** @see [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) */
   sonar: true,
 
   /** @see [eslint-plugin-sort-class-members](https://github.com/bryanrsmith/eslint-plugin-sort-class-members) */
-  'sort-class-members': true,
+  // 'sort-class-members': false,
 
   /** @see [eslint-plugin-sort-destructure-keys](https://github.com/mthadley/eslint-plugin-sort-destructure-keys) */
-  'sort-destructure-keys': true,
+  // 'sort-destructure-keys': false,
 
   /** @see [eslint-plugin-sort-keys-fix](https://github.com/leo-buneev/eslint-plugin-sort-keys-fix) */
-  'sort-keys-fix': true,
+  // 'sort-keys-fix': false,
 
   /** @see [@tanstack/query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query) */
   'tanstack-query': true,
 
   /** @see [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library) */
-  'testing-library': true,
+  'testing-library': false,
 
   /** @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) */
   typescript: true,
 
   /** @see [eslint-plugin-typescript-sort-keys](https://github.com/infctr/eslint-plugin-typescript-sort-keys) */
-  'typescript-sort-keys': true,
+  // 'typescript-sort-keys': true,
 
   /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
   unicorn: true,
 
   /** @see [eslint-plugin-unused-imports](https://github.com/sweepline/eslint-plugin-unused-imports) */
-  'unused-imports': true,
+  // 'unused-imports': true,
 
   /** @see [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest) */
   vitest: true,
@@ -60,7 +60,7 @@ const DEFAULT_PLUGINS = {
   /** @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/) */
   'vue-i18n': true,
 
-  /** @see [eslint-plugin-vuejs-accessibility](https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility) */
+  /** @see [eslint-plugin-vuejs-accessibility](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/) */
   'vuejs-accessibility': true,
 };
 

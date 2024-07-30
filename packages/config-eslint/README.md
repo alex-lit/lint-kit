@@ -1,5 +1,10 @@
 # ESLint Configuration
 
+> [!WARNING]  
+> For **eslint version < 9** use
+> [@alexlit/config-eslint@90](https://www.npmjs.com/package/@alexlit/config-eslint?activeTab=versions)
+> or lower.
+
 ## Installation
 
 ```sh
@@ -9,40 +14,20 @@ npm i @alexlit/config-eslint -D
 ## Connection
 
 - Default
-  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/index.js))
 
   ```js
-  // .eslintrc.js
-  const { createConfig } = require('@alexlit/config-eslint');
+  // eslint.config.js
+  import { config } from '@alexlit/config-eslint';
 
-  module.exports = createConfig();
+  export default [...config];
   ```
 
-- Custom
+- Pick some plugins
+  ([available plugins](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/index.js))
 
   ```js
-  // .eslintrc.js
-  const {
-    createConfig,
-    extendSpellChecker,
-  } = require('@alexlit/config-eslint');
+  // eslint.config.js
+  import { typescript, unicorn, vitest } from '@alexlit/config-eslint';
 
-  module.exports = createConfig(
-    {
-      // disable some default plugins
-      vitest: false,
-
-      // enable some optional plugins
-      node: true,
-    },
-    {
-      // add custom rules
-      rules: {
-        'no-implicit-coercion': 'warn',
-        'spellcheck/spell-checker': extendSpellChecker({
-          skipWords: ['word1', 'word2'],
-        }),
-      },
-    },
-  );
+  export default [...typescript, ...unicorn, ...vitest];
   ```

@@ -1,4 +1,4 @@
-module.exports = {
-  extends: ['plugin:@tanstack/eslint-plugin-query/recommended'],
-  plugins: ['@tanstack/query'],
-};
+import plugin from '@tanstack/eslint-plugin-query';
+
+/** @see [@tanstack/query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query) */
+export const tanstackQuery = [...plugin.configs['flat/recommended']];

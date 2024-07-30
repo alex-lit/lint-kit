@@ -1,5 +1,11 @@
-module.exports = {
-  extends: ['plugin:sonarjs/recommended-legacy'],
+import plugin from 'eslint-plugin-sonarjs';
 
-  plugins: ['sonarjs'],
-};
+/** @see [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) */
+export const sonar = [
+  plugin.configs.recommended,
+  {
+    plugins: {
+      sonar: plugin,
+    },
+  },
+];

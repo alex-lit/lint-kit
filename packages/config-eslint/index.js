@@ -1,12 +1,48 @@
-const { FlatCompat } = require('@eslint/eslintrc');
+/* eslint-disable no-restricted-imports */
+import globals from 'globals';
 
-const { createConfig } = require('./utils/create-config');
-const { extendSpellChecker } = require('./utils/extend-spell-checker');
+import { javascript } from './plugins/javascript.js';
+import { jsdoc } from './plugins/jsdoc.js';
+import { perfectionist } from './plugins/perfectionist.js';
+import { regexp } from './plugins/regexp.js';
+import { sonar } from './plugins/sonar.js';
+import { tanstackQuery } from './plugins/tanstack-query.js';
+import { typescript } from './plugins/typescript.js';
+import { unicorn } from './plugins/unicorn.js';
+import { vitest } from './plugins/vitest.js';
+import { vueAccessibility } from './plugins/vue-accessibility.js';
+import { vueI18n } from './plugins/vue-i18n.js';
+import { vue } from './plugins/vue.js';
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+export const config = [
+  { files: ['**/*.{js,mjs,cjs,typescript,vue}'] },
+  { languageOptions: { globals: globals.browser } },
 
-const createFlatConfig = () => [...compat.extends('./legacy.js')];
+  ...javascript,
+  ...jsdoc,
+  ...perfectionist,
+  ...regexp,
+  ...sonar,
+  ...tanstackQuery,
+  ...typescript,
+  ...unicorn,
+  ...vitest,
+  ...vue,
+  ...vueAccessibility,
+  ...vueI18n,
+];
 
-module.exports = { createConfig, createFlatConfig, extendSpellChecker };
+export {
+  javascript,
+  jsdoc,
+  perfectionist,
+  regexp,
+  sonar,
+  tanstackQuery,
+  typescript,
+  unicorn,
+  vitest,
+  vue,
+  vueAccessibility,
+  vueI18n,
+};
