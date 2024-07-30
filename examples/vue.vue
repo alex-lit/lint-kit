@@ -1,6 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-  const test = () => {};
+  const test = () => {
+    //silent
+  };
 </script>
 
 <template>
@@ -8,7 +10,13 @@
     :key="1"
     class="azaza azazas bg-blue-500 bg-blue-500 mx-[10px] my-[10px] ololo px-4 py-2 rounded rounded text-base text-white xy-app-header__logo"
     @click="() => test()"
-  />
+  >
+    <Test />
+
+    <hr />
+
+    <template #title> Дополнительно </template>
+  </TestTest>
 </template>
 
 <style lang="scss" module>
