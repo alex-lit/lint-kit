@@ -4,7 +4,7 @@ import globals from 'globals';
 import { javascript } from './plugins/javascript.js';
 import { jsdoc } from './plugins/jsdoc.js';
 import { perfectionist } from './plugins/perfectionist.js';
-import { prettier } from './plugins/prettier.js';
+import { prettier, prettierConfig } from './plugins/prettier.js';
 import { regexp } from './plugins/regexp.js';
 import { sonar } from './plugins/sonar.js';
 import { tanstackQuery } from './plugins/tanstack-query.js';
@@ -16,7 +16,21 @@ import { vueI18n } from './plugins/vue-i18n.js';
 import { vue } from './plugins/vue.js';
 
 export const config = [
-  { files: ['**/*.{js,mjs,cjs,typescript,vue}'] },
+  {
+    files: ['**/*.{js,mjs,cjs,typescript,vue}'],
+    ignores: [
+      '**/.temp',
+      '**/mockServiceWorker.js',
+      '.histoire',
+      '.nuxt',
+      'build',
+      'dist',
+      'docs',
+      'storybook-*',
+      'sw.js',
+    ],
+  },
+
   { languageOptions: { globals: globals.browser } },
 
   ...javascript,
@@ -32,7 +46,7 @@ export const config = [
   ...vueAccessibility,
   ...vueI18n,
 
-  ...prettier, // must be last
+  ...prettierConfig, // must be last
 ];
 
 export {
@@ -40,6 +54,7 @@ export {
   jsdoc,
   perfectionist,
   prettier,
+  prettierConfig,
   regexp,
   sonar,
   tanstackQuery,
