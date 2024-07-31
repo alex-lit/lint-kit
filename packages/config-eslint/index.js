@@ -18,6 +18,9 @@ import { vue } from './plugins/vue.js';
 export const config = [
   {
     files: ['**/*.{js,mjs,cjs,typescript,vue}'],
+  },
+
+  {
     ignores: [
       '**/.temp',
       '**/mockServiceWorker.js',
