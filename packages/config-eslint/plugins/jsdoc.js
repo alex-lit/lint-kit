@@ -14,7 +14,7 @@ export const jsdoc = [
 
           require: {
             ArrowFunctionExpression: false,
-            ClassDeclaration: true,
+            ClassDeclaration: false,
             ClassExpression: false,
             FunctionDeclaration: false,
             FunctionExpression: false,
