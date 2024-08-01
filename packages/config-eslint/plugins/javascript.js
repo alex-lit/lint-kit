@@ -34,6 +34,7 @@ export const javascript = [
           ],
         },
       ],
+      'prefer-template': 'warn',
     },
   },
 ];
