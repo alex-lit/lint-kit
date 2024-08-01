@@ -1,5 +1,3 @@
-/* eslint-disable no-secrets/no-secrets */
-/* eslint-disable spellcheck/spell-checker */
 /**
  * Генератор случайных строк
  *
@@ -18,6 +16,9 @@ export const generateRandomString = (options) => {
   const { hasDigits, hasLowercase, hasUppercase, length } = {
     hasDigits: true,
     hasLowercase: true,
+    hastest: {
+      for: '123',
+    },
     hasUppercase: true,
     length: 10,
 

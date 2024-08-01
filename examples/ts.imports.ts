@@ -1,6 +1,8 @@
 /* eslint-disable no-restricted-imports */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { a, b } from 'foo.js';
+import type { AaaaASD } from 'radash';
+
+import { a, b, c } from 'foo.js';
 import { aaa, capitalize, group, sort, v, w, x, xx, y } from 'radash';
 import z from 'zoo.js';
 
@@ -17,4 +19,3 @@ import SVGO_CHEVRON_DOWN from '~~/core/assets/icons/chevron-down.svg';
 import { useBacklogTasksActionsAPI } from '../api/use-backlog-tasks-actions-api';
 import { useBacklogTasksAPI } from '../api/use-backlog-tasks-api.js';
 import * as foo from './foo.js';
-  
