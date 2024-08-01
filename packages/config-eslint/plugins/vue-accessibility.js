@@ -4,6 +4,7 @@ import plugin from 'eslint-plugin-vuejs-accessibility';
 export const vueAccessibility = [
   ...plugin.configs['flat/recommended'],
   {
+    files: ['**/*.vue'],
     rules: {
       'vuejs-accessibility/label-has-for': [
         'warn',

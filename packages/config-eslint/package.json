@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "92.0.1",
+  "version": "92.0.2",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -29,6 +29,7 @@
     "index.js"
   ],
   "scripts": {
+    "inspect": "npx @eslint/config-inspector@latest",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"

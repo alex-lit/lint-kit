@@ -31,3 +31,7 @@ npm i @alexlit/config-eslint -D
 
   export default [...typescript, ...unicorn, ...vitest];
   ```
+
+## Usefull links
+
+- [Awesome ESLint](https://github.com/dustinspecker/awesome-eslint)

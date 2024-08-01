@@ -19,7 +19,19 @@ const fixes = {
 };
 
 /** @see [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) */
-export const prettier = [plugin, { rules: { ...fixes } }];
+export const prettier = [
+  plugin,
+  {
+    files: ['**/*.vue'],
+    rules: { ...fixes },
+  },
+];
 
 /** @see [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) */
-export const prettierConfig = [config, { rules: { ...fixes } }];
+export const prettierConfig = [
+  config,
+  {
+    files: ['**/*.vue'],
+    rules: { ...fixes },
+  },
+];

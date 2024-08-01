@@ -7,18 +7,13 @@ export const vue = [
   {
     files: ['**/*.vue'],
     languageOptions: { parserOptions: { parser: typescript.parser } },
-  },
-  {
-    files: ['**/pages/**/*', '**/layouts/**/*'],
-    rules: { 'vue/multi-word-component-names': 'off' },
-  },
-  {
     rules: {
       'vue/attributes-order': ['error', { alphabetical: true }],
       'vue/block-lang': [
         'error',
         { script: { lang: 'ts' }, style: { lang: 'scss' }, template: {} },
       ],
+      'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/component-api-style': ['error', ['script-setup']],
       'vue/component-definition-name-casing': ['error', 'kebab-case'],
       'vue/component-name-in-template-casing': [
@@ -27,10 +22,6 @@ export const vue = [
         { registeredComponentsOnly: false },
       ],
       'vue/component-options-name-casing': ['error', 'PascalCase'],
-      'vue/component-tags-order': [
-        'error',
-        { order: ['script', 'template', 'style'] },
-      ],
       'vue/define-emits-declaration': ['error'],
       'vue/define-macros-order': [
         'error',
@@ -85,7 +76,6 @@ export const vue = [
       'vue/no-deprecated-slot-scope-attribute': ['error'],
       'vue/no-duplicate-attr-inheritance': ['error'],
       'vue/no-empty-component-block': ['error'],
-      'vue/no-invalid-model-keys': ['error'],
       'vue/no-irregular-whitespace': ['error'],
       'vue/no-loss-of-precision': ['error'],
       'vue/no-multiple-objects-in-class': ['error'],
@@ -168,5 +158,9 @@ export const vue = [
       'vue/valid-v-bind-sync': ['error'],
       'vue/valid-v-slot': ['error'],
     },
+  },
+  {
+    files: ['**/pages/**/*.vue', '**/layouts/**/*.vue'],
+    rules: { 'vue/multi-word-component-names': 'off' },
   },
 ];

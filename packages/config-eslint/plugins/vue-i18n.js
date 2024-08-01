@@ -4,6 +4,7 @@ import plugin from '@intlify/eslint-plugin-vue-i18n';
 export const vueI18n = [
   ...plugin.configs['flat/recommended'],
   {
+    files: ['**/*.vue'],
     rules: {
       '@intlify/vue-i18n/key-format-style': [
         'error',
