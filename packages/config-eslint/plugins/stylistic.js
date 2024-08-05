@@ -35,7 +35,6 @@ export const stylistic = [
           beforeLineComment: false,
         },
       ],
-      '@stylistic/nonblock-statement-body-position': ['error', 'below'],
       '@stylistic/padding-line-between-statements': [
         'warn',
         // always
