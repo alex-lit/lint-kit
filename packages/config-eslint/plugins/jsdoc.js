@@ -5,6 +5,7 @@ export const jsdoc = [
   plugin.configs['flat/recommended'],
   {
     rules: {
+      'jsdoc/lines-before-block': 'off',
       'jsdoc/no-undefined-types': 'off',
 
       'jsdoc/require-jsdoc': [
