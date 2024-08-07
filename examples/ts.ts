@@ -1,5 +1,9 @@
 export interface Test {
-  /** Test */
+  /**
+   * Test dsaf
+   *
+   * Asfas
+   */
   type: number;
 }
 
