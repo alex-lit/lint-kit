@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-imports */
 import globals from 'globals';
 
 import { javascript } from './plugins/javascript.js';

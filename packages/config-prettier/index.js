@@ -1,5 +1,3 @@
-/* eslint-disable no-loops/no-loops, no-restricted-syntax, no-await-in-loop */
-
 import { omit } from 'radash';
 
 const DEFAULT_PLUGINS = {

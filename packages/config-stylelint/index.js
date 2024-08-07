@@ -1,4 +1,4 @@
-/* eslint-disable no-console, import/extensions, sonarjs/no-duplicate-string, unicorn/no-null */
+/* eslint-disable sonarjs/no-duplicate-string, unicorn/no-null */
 
 const ADDITIONAL_PLUGINS = {
   /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
