@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "92.1.1",
+  "version": "93.0.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -41,7 +41,7 @@
     "@tanstack/eslint-plugin-query": "^5.51.15",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^48.11.0",
+    "eslint-plugin-jsdoc": "^49.0.0",
     "eslint-plugin-perfectionist": "^3.1.2",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.6.0",
