@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "94.0.2",
+  "version": "94.1.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -35,13 +35,13 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.9.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.0.0",
     "@stylistic/eslint-plugin": "^2.6.2",
     "@tanstack/eslint-plugin-query": "^5.51.15",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^50.0.0",
+    "eslint-plugin-jsdoc": "^50.0.1",
     "eslint-plugin-perfectionist": "^3.1.3",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.6.0",
