@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v126.4.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v94.4.0...v126.4.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([5db326b](https://github.com/alex-lit/lint-kit/commit/5db326b))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v126.3.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v94.3.0...v126.3.0)
