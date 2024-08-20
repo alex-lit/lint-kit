@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "94.4.1",
+  "version": "94.5.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -52,7 +52,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "globals": "^15.9.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.2.0"
   },
   "engines": {
     "node": ">=18.18"
