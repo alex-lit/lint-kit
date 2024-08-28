@@ -11,8 +11,12 @@ if [ ${SKIPED_PACKAGES} != '' ]; then
 fi
 
 # root
-npx npm-check-updates --upgrade --reject ${SKIPED_PACKAGES} --target ${VERSION}
-npm i --legacy-peer-deps
+npx npm-check-updates \
+  --upgrade \
+  --reject ${SKIPED_PACKAGES} \
+  --target ${VERSION}
+npm i \
+  --legacy-peer-deps
 npm audit fix
 
 # packages
