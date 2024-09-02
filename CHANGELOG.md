@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v127.5.2
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v127.5.1...v127.5.2)
+
+### 🏡 Chore
+
+- **@alexlit/lint-kit:** Bump version ([06b1c1b](https://github.com/alex-lit/lint-kit/commit/06b1c1b))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v127.5.1
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v45.15.2...v127.5.1)
