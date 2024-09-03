@@ -1,4 +1,4 @@
-/* eslint-disable sonarjs/no-duplicate-string, unicorn/no-null */
+/* eslint-disable unicorn/no-null */
 
 const ADDITIONAL_PLUGINS = {
   /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
@@ -145,6 +145,7 @@ const createConfig = (plugins = {}, options = {}) => ({
       true,
       {
         ignoreProperties: {
+          // eslint-disable-next-line sonarjs/anchor-precedence
           '/.+/': /^(v-(bind|deep|global|slotted)|theme|view)|\$/,
         },
       },
