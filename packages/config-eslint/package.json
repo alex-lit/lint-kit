@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "95.4.0",
+  "version": "95.5.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -48,11 +48,11 @@
     "eslint-plugin-sonarjs": "^2.0.2",
     "eslint-plugin-unicorn": "^55.0.0",
     "eslint-plugin-vitest": "^0.5.4",
-    "eslint-plugin-vue": "^9.27.0",
+    "eslint-plugin-vue": "^9.28.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "globals": "^15.9.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^8.3.0"
+    "typescript-eslint": "^8.4.0"
   },
   "engines": {
     "node": ">=18.18"

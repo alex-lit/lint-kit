@@ -5,7 +5,6 @@ import { jsdoc } from './plugins/jsdoc.js';
 import { perfectionist } from './plugins/perfectionist.js';
 import { prettier, prettierConfig } from './plugins/prettier.js';
 import { regexp } from './plugins/regexp.js';
-import { sonar } from './plugins/sonar.js';
 import { stylistic } from './plugins/stylistic.js';
 import { tanstackQuery } from './plugins/tanstack-query.js';
 import { typescript } from './plugins/typescript.js';
@@ -40,7 +39,7 @@ export const config = [
   ...jsdoc,
   ...perfectionist,
   ...regexp,
-  ...sonar,
+  // ...sonar, // TODO: до обновления плагина (TypeError: context.getSource is not a function)
   ...stylistic,
   ...tanstackQuery,
   ...typescript,
@@ -60,7 +59,6 @@ export {
   prettier,
   prettierConfig,
   regexp,
-  sonar,
   stylistic,
   tanstackQuery,
   typescript,
@@ -70,3 +68,5 @@ export {
   vueAccessibility,
   vueI18n,
 };
+
+export { sonar } from './plugins/sonar.js';
