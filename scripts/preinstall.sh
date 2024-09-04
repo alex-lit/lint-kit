@@ -1,0 +1,1 @@
+npx only-allow pnpm

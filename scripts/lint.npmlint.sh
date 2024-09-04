@@ -11,4 +11,4 @@ npmPkgJsonLint ${PACKAGE_FILES}
 
 echo -e "${YELLOW}lockfilelint ${GREY}-> ${CYAN}${LOCK_FILE}${WHITE}"
 
-lockfile-lint --type npm --path ${LOCK_FILE}
+lockfile-lint --type pnpm --path ${LOCK_FILE}

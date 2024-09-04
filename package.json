@@ -55,12 +55,14 @@
   "scripts": {
     "check:editorconfig": "./scripts/check.editorconfig.sh",
     "i": "./scripts/i.sh",
+    "preinstall": "./scripts/preinstall.sh",
     "lint": "time ./scripts/lint.sh",
     "lint:eslint": "time ./scripts/lint.eslint.sh",
     "lint:htmllint": "time ./scripts/lint.htmllint.sh",
     "lint:markdownlint": "time ./scripts/lint.markdownlint.sh",
     "lint:npmlint": "time ./scripts/lint.npmlint.sh",
     "lint:stylelint": "time ./scripts/lint.stylelint.sh",
+    "ou": "./scripts/ou.sh",
     "prepare": "husky",
     "release": "./scripts/release.sh",
     "semver": "./scripts/semver.sh",
@@ -70,6 +72,7 @@
     "changelogen": "latest"
   },
   "engines": {
-    "node": ">=18.18"
+    "node": ">=18",
+    "pnpm": ">=9"
   }
 }

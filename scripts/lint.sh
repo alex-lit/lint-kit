@@ -6,8 +6,8 @@ OPTION=${1}
 
 echo -e "${YELLOW}Запускаю линтеры: ${GREEN}eslint, htmllint, markdownlint, npmlint, stylelint...${WHITE}"
 
-npm run lint:eslint --if-present ${OPTION}
-npm run lint:htmllint --if-present
-npm run lint:markdownlint --if-present ${OPTION}
-npm run lint:npmlint --if-present
-npm run lint:stylelint --if-present ${OPTION}
+pnpm run lint:eslint ${OPTION}
+pnpm run lint:htmllint
+pnpm run lint:markdownlint ${OPTION}
+pnpm run lint:npmlint
+pnpm run lint:stylelint ${OPTION}
