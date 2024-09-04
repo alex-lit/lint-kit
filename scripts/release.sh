@@ -15,4 +15,4 @@ echo -e "${YELLOW}Коммит в ${GREEN}git${YELLOW}...${WHITE}"
 git push
 
 echo -e "${YELLOW}Публикация в ${GREEN}registry.npmjs.org${YELLOW}...${WHITE}"
-pnpm pu
+pnpm publish
