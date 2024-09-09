@@ -22,9 +22,6 @@ const ADDITIONAL_PLUGINS = {
   /** @see [stylelint-no-unresolved-module](https://github.com/niksy/stylelint-no-unresolved-module) */
   'no-unresolved-module': true,
 
-  /** @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features) */
-  'no-unsupported-browser-features': true,
-
   /** @see [stylelint-order](https://github.com/hudochenkov/stylelint-order) */
   order: true,
 
@@ -50,6 +47,9 @@ const OPTIONAL_PLUGINS = {
 
   /** @see [stylelint-no-indistinguishable-colors](https://github.com/ierhyna/stylelint-no-indistinguishable-colors) */
   'no-indistinguishable-colors': false,
+
+  /** @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features) */
+  'no-unsupported-browser-features': false,
 };
 
 const CODESTYLE_PLUGINS = {

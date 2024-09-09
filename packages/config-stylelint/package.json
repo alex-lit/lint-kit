@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "45.15.4",
+  "version": "46.0.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -56,7 +56,7 @@
     "stylelint-prettier": "^5.0.2",
     "stylelint-scss": "^6.5.1",
     "stylelint-selector-no-empty": "^1.0.9",
-    "stylelint-use-nesting": "^5.1.2"
+    "stylelint-use-nesting": "^6.0.0"
   },
   "engines": {
     "node": ">=18.18"
