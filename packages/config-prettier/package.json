@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "18.7.1",
+  "version": "18.8.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@prettier/plugin-php": "^0.22.2",
-    "@prettier/plugin-pug": "^3.0.0",
+    "@prettier/plugin-pug": "^3.1.0",
     "@prettier/plugin-ruby": "^4.0.4",
     "@prettier/plugin-xml": "^3.4.1",
     "prettier": "^3.3.3",
