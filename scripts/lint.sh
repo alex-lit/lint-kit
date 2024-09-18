@@ -11,3 +11,5 @@ pnpm run lint:htmllint
 pnpm run lint:markdownlint ${OPTION}
 pnpm run lint:npmlint
 pnpm run lint:stylelint ${OPTION}
+
+SAY_GOODBYE

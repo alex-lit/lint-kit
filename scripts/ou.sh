@@ -6,3 +6,5 @@ echo -e "${YELLOW}Проверяю наличие устаревших паке�
 
 pnpm outdated \
   --recursive
+
+SAY_GOODBYE

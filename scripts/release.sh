@@ -16,3 +16,5 @@ git push
 
 echo -e "${YELLOW}Публикация в ${GREEN}registry.npmjs.org${YELLOW}...${WHITE}"
 pnpm publish --no-git-checks
+
+SAY_GOODBYE

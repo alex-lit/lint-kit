@@ -16,4 +16,4 @@ echo -e "${YELLOW}Обновляю зависимости...${WHITE}"
 
 update
 
-echo -e "${GREEN}Готово! "
+SAY_GOODBYE

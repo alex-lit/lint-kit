@@ -12,4 +12,7 @@ if [ $OPTION ] && [ $OPTION = 'fix' ]; then
   echo -e "${GREY}autofix:${WHITE} true"
 fi
 
-stylelint ${FILES} --ignore-path .gitignore --allow-empty-input --${OPTION}
+stylelint ${FILES} \
+  --${OPTION} \
+  --allow-empty-input \
+  --ignore-path .gitignore
