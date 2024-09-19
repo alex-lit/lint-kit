@@ -44,8 +44,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-jsdoc:
-        specifier: ^50.2.3
-        version: 50.2.3(eslint@9.10.0(jiti@1.21.6))
+        specifier: ^50.2.4
+        version: 50.2.4(eslint@9.10.0(jiti@1.21.6))
       eslint-plugin-perfectionist:
         specifier: ^3.6.0
         version: 3.6.0(eslint@9.10.0(jiti@1.21.6))(svelte@4.2.19)(typescript@5.6.2)(vue-eslint-parser@9.4.3(eslint@9.10.0(jiti@1.21.6)))
@@ -227,8 +227,8 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2(prettier@3.3.3)(stylelint@16.9.0(typescript@5.6.2))
       stylelint-scss:
-        specifier: ^6.6.0
-        version: 6.6.0(stylelint@16.9.0(typescript@5.6.2))
+        specifier: ^6.7.0
+        version: 6.7.0(stylelint@16.9.0(typescript@5.6.2))
       stylelint-selector-no-empty:
         specifier: ^1.0.9
         version: 1.0.9(stylelint@16.9.0(typescript@5.6.2))
@@ -1732,10 +1732,10 @@ packages:
         integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==,
       }
 
-  '@types/estree@1.0.5':
+  '@types/estree@1.0.6':
     resolution:
       {
-        integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==,
+        integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==,
       }
 
   '@types/json-schema@7.0.15':
@@ -3567,10 +3567,10 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jsdoc@50.2.3:
+  eslint-plugin-jsdoc@50.2.4:
     resolution:
       {
-        integrity: sha512-aNh/dz3wSkyo53y2KWDCrA8fDuXDMtMVflcbesd8AFPgcF8ugOv9mJxC7qKB95R96nzCB91iEwU7MMznh/7okQ==,
+        integrity: sha512-020jA+dXaXdb+TML3ZJBvpPmzwbNROjnYuTYi/g6A5QEmEjhptz4oPJDKkOGMIByNxsPpdTLzSU1HYVqebOX1w==,
       }
     engines: { node: '>=18' }
     peerDependencies:
@@ -7455,10 +7455,10 @@ packages:
       prettier: '>=3.0.0'
       stylelint: '>=16.0.0'
 
-  stylelint-scss@6.6.0:
+  stylelint-scss@6.7.0:
     resolution:
       {
-        integrity: sha512-aK2Rdt41Jt9Gv/ClMN5BYhP7xR3IEoRMDKpJkIDI9frZQ6KkxeLishusxs2JtEGZdJWXvPoBOhswNxj3gx8L/g==,
+        integrity: sha512-RFIa2A+pVWS5wjNT+whtK7wsbZEWazyqesCuSaPbPlZ8lh2TujwVJSnCYJijg6ChZzwI8pZPRZS1L6A9aCbXDg==,
       }
     engines: { node: '>=18.12.0' }
     peerDependencies:
@@ -9341,11 +9341,11 @@ snapshots:
 
   '@types/eslint@9.6.1':
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       '@types/json-schema': 7.0.15
     optional: true
 
-  '@types/estree@1.0.5': {}
+  '@types/estree@1.0.6': {}
 
   '@types/json-schema@7.0.15':
     optional: true
@@ -10013,7 +10013,7 @@ snapshots:
   code-red@1.0.4:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       acorn: 8.12.1
       estree-walker: 3.0.3
       periscopic: 3.1.0
@@ -10614,7 +10614,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jsdoc@50.2.3(eslint@9.10.0(jiti@1.21.6)):
+  eslint-plugin-jsdoc@50.2.4(eslint@9.10.0(jiti@1.21.6)):
     dependencies:
       '@es-joy/jsdoccomment': 0.48.0
       are-docs-informative: 0.0.2
@@ -10890,7 +10890,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   esutils@2.0.3: {}
 
@@ -11437,7 +11437,7 @@ snapshots:
 
   is-reference@3.0.2:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
 
   is-regex@1.1.4:
     dependencies:
@@ -12318,7 +12318,7 @@ snapshots:
 
   periscopic@3.1.0:
     dependencies:
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       estree-walker: 3.0.3
       is-reference: 3.0.2
 
@@ -12960,7 +12960,7 @@ snapshots:
       postcss-scss: 4.0.9(postcss@8.4.47)
       stylelint: 16.9.0(typescript@5.6.2)
       stylelint-config-recommended: 14.0.1(stylelint@16.9.0(typescript@5.6.2))
-      stylelint-scss: 6.6.0(stylelint@16.9.0(typescript@5.6.2))
+      stylelint-scss: 6.7.0(stylelint@16.9.0(typescript@5.6.2))
     optionalDependencies:
       postcss: 8.4.47
 
@@ -13042,7 +13042,7 @@ snapshots:
       prettier-linter-helpers: 1.0.0
       stylelint: 16.9.0(typescript@5.6.2)
 
-  stylelint-scss@6.6.0(stylelint@16.9.0(typescript@5.6.2)):
+  stylelint-scss@6.7.0(stylelint@16.9.0(typescript@5.6.2)):
     dependencies:
       css-tree: 2.3.1
       is-plain-object: 5.0.0
@@ -13126,7 +13126,7 @@ snapshots:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
-      '@types/estree': 1.0.5
+      '@types/estree': 1.0.6
       acorn: 8.12.1
       aria-query: 5.3.1
       axobject-query: 4.1.0
