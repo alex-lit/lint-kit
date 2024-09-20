@@ -145,8 +145,7 @@ const createConfig = (plugins = {}, options = {}) => ({
       true,
       {
         ignoreProperties: {
-          // eslint-disable-next-line sonarjs/anchor-precedence
-          '/.+/': /^(v-(bind|deep|global|slotted)|theme|view)|\$/,
+          '/.+/': /(v-(bind|deep|global|slotted)|theme|view)|\$/,
         },
       },
     ],
