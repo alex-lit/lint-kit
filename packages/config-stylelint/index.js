@@ -177,7 +177,13 @@ const createConfig = (plugins = {}, options = {}) => ({
 
     'property-no-unknown': [
       true,
-      { ignoreProperties: ['align-tracks', 'animation-timeline'] },
+      {
+        ignoreProperties: [
+          'align-tracks',
+          'animation-timeline',
+          'interpolate-size',
+        ],
+      },
     ],
 
     'property-no-vendor-prefix': true,
