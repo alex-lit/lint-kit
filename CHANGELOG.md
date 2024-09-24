@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v128.8.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v18.8.1...v128.8.1)
+
+### 🏡 Chore
+
+- **@alexlit/config-prettier:** Bump version ([885c93c](https://github.com/alex-lit/lint-kit/commit/885c93c))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v128.8.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v2.10.0...v128.8.0)
