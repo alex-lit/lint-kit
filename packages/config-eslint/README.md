@@ -13,23 +13,32 @@ npm i @alexlit/config-eslint -D
 
 ## Connection
 
-- Default
+- With preset
 
   ```js
   // eslint.config.js
-  import { config } from '@alexlit/config-eslint';
+  import { defaultPreset } from '@alexlit/config-eslint';
 
-  export default [...config];
+  export default [...defaultPreset];
   ```
 
-- Pick some plugins
+- Custom rules
   ([available plugins](https://github.com/alex-lit/lint-kit/blob/master/packages/config-eslint/index.js))
 
   ```js
   // eslint.config.js
   import { typescript, unicorn, vitest } from '@alexlit/config-eslint';
 
-  export default [...typescript, ...unicorn, ...vitest];
+  // config example:
+  export default [
+    ...typescript,
+    ...unicorn,
+    ...vitest,
+
+    ...[
+      // <custom rules>
+    ],
+  ];
   ```
 
 ## Usefull links
