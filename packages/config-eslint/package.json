@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "96.0.0",
+  "version": "96.0.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -24,9 +24,10 @@
   "type": "module",
   "main": "index.js",
   "files": [
-    "plugins",
     "README.md",
-    "index.js"
+    "index.js",
+    "plugins",
+    "presets"
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
