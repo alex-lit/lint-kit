@@ -1,7 +1,7 @@
-import { config } from '@alexlit/config-eslint';
+import { defaultPreset } from '@alexlit/config-eslint';
 
 export default [
-  ...config,
+  ...defaultPreset,
 
   {
     ignores: ['packages/config-eslint/_legacy'],
