@@ -8,7 +8,8 @@ export const sonar = [
       sonar: plugin,
     },
     rules: {
-      'sonarjs/pluginRules-of-hooks': 'off', // TODO: до обновления плагина (TypeError: context.getSource is not a function)
+      'sonarjs/no-commented-code': 'warn',
+      'sonarjs/no-vue-bypass-sanitization': 'warn',
       'sonarjs/todo-tag': 'warn',
     },
   },

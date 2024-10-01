@@ -95,7 +95,7 @@ export const vue = [
       'vue/no-restricted-component-options': ['error'],
       'vue/no-restricted-props': ['error'],
       'vue/no-root-v-if': ['error'],
-      'vue/no-setup-props-reactivity-loss': ['error'],
+      'vue/no-setup-props-reactivity-loss': 'off',
       'vue/no-static-inline-styles': ['error', { allowBinding: true }],
       'vue/no-this-in-before-route-enter': ['error'],
       'vue/no-unsupported-features': ['error'],
