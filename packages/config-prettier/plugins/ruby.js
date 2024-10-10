@@ -1,3 +1,11 @@
 export default {
-  plugins: ['@prettier/plugin-ruby'],
+  overrides: [
+    {
+      files: '*.html.erb',
+      options: {
+        parser: 'eruby-parse',
+      },
+    },
+  ],
+  plugins: ['@prettier/plugin-ruby', 'prettier-plugin-eruby'],
 };
