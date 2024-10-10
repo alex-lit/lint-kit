@@ -1,0 +1,68 @@
+<%# meta %>
+<% content_for :title do %>
+  <%= "#{@profession.title} - Профессии, которым можно обучиться | Карьерный портал РЖД" %>
+<% end %>
+<% content_for :description do %>
+  <%= "#{@profession.title}. На этой странице вы можете ознакомиться с информацией о профессии «#{@profession.title}»: чему вы научитесь, что от вас требуется и кто может пройти обучение. Найди себя в РЖД и стань частью нашей команды!" %>
+<% end %>
+<%# /meta %>
+
+<%# header %>
+<% cache @profession do %>
+  <%= render(
+    DefaultPageElements::PageHeaderComponent.new(
+  classes: 'px-5 lg:px-0 pb-5 bg-lightgray',
+  inner_classes: ''
+    )
+  ) do %>
+    <%= render(
+        DefaultPageElements::PageHeaderComponent::PageHeadTextComponent.new(
+          classes: 'relative',
+            title: @profession.title,
+          text: @profession.additional
+        )
+      ) do %>
+      <div class="flex justify-between">
+        <%= render(
+            BreadcrumbsComponent.new(
+              steps: [
+                {title: 'Соискателям', url: career_index_path},
+                {title: 'Каталог профессий', url: career_professions_path},
+                {title: 'Рабочая профессия'}
+              ],
+              classes: 'hidden lg:flex'
+            )
+          ) %>
+        <%= render LinkButtonComponent.new(
+            url: career_education_application_path(profession_id: @profession),
+            text: 'Подать заявку',
+            arrow: true,
+            classes: 'bg-rzdred hover:bg-rzdblue text-white py-3'
+          ) %>
+      </div>
+    <% end %>
+  <% end %>
+  <%# /header %>
+
+  <%= render Professions::TestComponent.new(
+      title: 'comp title'
+  ) do |slot| %>
+    <%= slot.with_left do %>
+      <%= render Professions::TestInerComponent.new(
+            title: 'comp title 1'
+            ) %>
+    <% end %>
+    <%= slot.with_right do %>
+      <%= render Professions::TestInerComponent.new(
+        title: 'comp title 2'
+      ) %>
+    <% end %>
+  <% end %>
+
+  <%# vue %>
+  <div data-behavior="vue">
+    <pages-career-education-professions-id :profession="<%= @profession.to_json %>">
+    </pages-career-education-professions-id>
+  </div>
+  <%# /vue %>
+<% end %>
