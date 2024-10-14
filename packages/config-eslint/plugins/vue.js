@@ -70,6 +70,7 @@ export const vue = [
       'vue/no-child-content': ['error'],
       'vue/no-console': ['error'],
       'vue/no-custom-modifiers-on-v-model': 'off',
+      'vue/no-deprecated-delete-set': ['error'],
       'vue/no-deprecated-model-definition': ['error'],
       'vue/no-deprecated-scope-attribute': ['error'],
       'vue/no-deprecated-slot-attribute': ['error'],
