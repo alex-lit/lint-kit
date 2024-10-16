@@ -32,9 +32,6 @@ const OPTIONAL_PLUGINS = {
 
   /** @see [prettier-plugin-sql](https://github.com/un-ts/prettier/tree/master/packages/sql) */
   sql: false,
-
-  /** @see [prettier-plugin-svelte](https://github.com/sveltejs/prettier-plugin-svelte) */
-  svelte: false,
 };
 
 const CODESTYLE_PLUGINS = {
