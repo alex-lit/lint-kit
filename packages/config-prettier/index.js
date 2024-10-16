@@ -1,41 +1,18 @@
 import { omit } from 'radash';
 
 const DEFAULT_PLUGINS = {
-  /** @see [prettier-plugin-jsdoc](https://github.com/hosseinmd/prettier-plugin-jsdoc) */
   jsdoc: true,
-
-  /** @see [prettier-plugin-packagejson](https://github.com/matzkoh/prettier-plugin-packagejson) */
   packagejson: true,
-
-  /** @see [plugin-pug](https://github.com/prettier/plugin-pug) */
   pug: true,
-
-  /** @see [prettier-plugin-sh](https://github.com/astorije/prettier-plugin-sh) */
   sh: true,
-
-  /** @see [prettier-plugin-solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) */
   solidity: true,
-
-  /** @see [prettier-plugin-sort-json](https://github.com/Gudahtt/prettier-plugin-sort-json) */
   'sort-json': true,
-
-  /** @see [plugin-xml](https://github.com/prettier/plugin-xml) */
   xml: true,
 };
 
-const OPTIONAL_PLUGINS = {
-  /** @see [plugin-php](https://github.com/prettier/plugin-php) */
-  php: false,
-
-  /** @see [plugin-ruby](https://github.com/prettier/plugin-ruby) */
-  ruby: false,
-
-  /** @see [prettier-plugin-sql](https://github.com/un-ts/prettier/tree/master/packages/sql) */
-  sql: false,
-};
+const OPTIONAL_PLUGINS = { php: false, ruby: false, sql: false };
 
 const CODESTYLE_PLUGINS = {
-  /** @see [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) */
   tailwindcss: false,
 };
 
@@ -88,8 +65,12 @@ export const createConfig = async (plugins = {}, options = {}) => {
   return {
     endOfLine: 'lf',
 
-    overrides: [...pluginsConfig.overrides, ...(options.overrides ?? [])],
-    plugins: [...pluginsConfig.plugins, ...(options.plugins ?? [])],
+    overrides: [
+      ...(pluginsConfig.overrides ?? []),
+      ...(options.overrides ?? []),
+    ],
+
+    plugins: [...(pluginsConfig.plugins ?? []), ...(options.plugins ?? [])],
 
     proseWrap: 'always',
     singleQuote: true,
