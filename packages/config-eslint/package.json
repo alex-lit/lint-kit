@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "97.2.0",
+  "version": "97.2.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -43,8 +43,8 @@
     "@unocss/eslint-config": "^0.63.4",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsdoc": "^50.4.1",
-    "eslint-plugin-perfectionist": "^3.9.0",
+    "eslint-plugin-jsdoc": "^50.4.3",
+    "eslint-plugin-perfectionist": "^3.9.1",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-sonarjs": "^2.0.3",
