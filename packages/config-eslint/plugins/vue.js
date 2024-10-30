@@ -105,6 +105,12 @@ export const vue = [
       'vue/no-unused-refs': 'off',
       'vue/no-use-computed-property-like-method': ['error'],
       'vue/no-use-v-else-with-v-for': ['warn'],
+      'vue/no-use-v-if-with-v-for': [
+        'warn',
+        {
+          allowUsingIterationVar: true,
+        },
+      ],
       'vue/no-useless-mustaches': ['error'],
       'vue/no-useless-template-attributes': ['error'],
       'vue/no-useless-v-bind': ['error'],

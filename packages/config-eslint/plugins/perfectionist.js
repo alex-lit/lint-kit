@@ -11,6 +11,13 @@ export const perfectionist = [
           internalPattern: ['#**/**', '~/**', '~~/**', '@/**', '@@/**'],
         },
       ],
+      'perfectionist/sort-objects': [
+        'warn',
+        {
+          partitionByComment: true,
+          type: 'natural',
+        },
+      ],
       'perfectionist/sort-vue-attributes': 'off',
     },
   },

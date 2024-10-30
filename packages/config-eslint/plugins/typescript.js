@@ -4,4 +4,10 @@ import plugin from 'typescript-eslint';
 export const typescript = [
   ...plugin.configs.strict,
   ...plugin.configs.stylistic,
+
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
 ];
