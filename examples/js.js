@@ -34,6 +34,11 @@ export const generateRandomString = (options) => {
   }
 
   return Array.from({ length }, () =>
+    // eslint-disable-next-line sonarjs/pseudo-random
     allowedChars.charAt(Math.floor(Math.random() * allowedChars.length)),
   ).join('');
 };
+
+if (globalThis.true) {
+  alert(1);
+}

@@ -15,7 +15,7 @@ importers:
     dependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
-        version: 19.5.0(@types/node@22.8.4)(typescript@5.6.3)
+        version: 19.5.0(@types/node@22.8.5)(typescript@5.6.3)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.5.0
@@ -32,8 +32,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(eslint@9.13.0(jiti@2.3.3))
       '@stylistic/eslint-plugin':
-        specifier: ^2.9.0
-        version: 2.9.0(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)
+        specifier: ^2.10.0
+        version: 2.10.0(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)
       '@tanstack/eslint-plugin-query':
         specifier: ^5.59.7
         version: 5.59.7(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)
@@ -1966,10 +1966,10 @@ packages:
         integrity: sha512-yfORGUIPgLck41qyN7nbwJRAx17/jAIXCTanHOJZhB6PJ1iAk/84b/xlsVKFSyNyLXIj0dhppoE0+CRws7wlzA==,
       }
 
-  '@stylistic/eslint-plugin@2.9.0':
+  '@stylistic/eslint-plugin@2.10.0':
     resolution:
       {
-        integrity: sha512-OrDyFAYjBT61122MIY1a3SfEgy3YCMgt2vL4eoPmvTwDBwyQhAXurxNQznlRD/jESNfYWfID8Ej+31LljvF7Xg==,
+        integrity: sha512-neWEgjp0qKxutbrKac5g23V5LX2c2Clyiz3zFxxybY8VSMfr+MmvwM204zg8YFbe9n2zcTwkpppCL2luwYcMhg==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
     peerDependencies:
@@ -2043,10 +2043,10 @@ packages:
         integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==,
       }
 
-  '@types/node@22.8.4':
+  '@types/node@22.8.5':
     resolution:
       {
-        integrity: sha512-SpNNxkftTJOPk0oN+y2bIqurEXHTA2AOZ3EJDDKeJ5VzkvvORSvmQXGQarcOzWV1ac7DCaPBEdMDxBsM+d8jWw==,
+        integrity: sha512-5iYk6AMPtsMbkZqCO1UGF9W5L38twq11S2pYWkybGHH2ogPUvXWNlQqJBzuEZWKj/WRH+QTeiv6ySWqJtvIEgA==,
       }
 
   '@types/normalize-package-data@2.4.4':
@@ -2410,6 +2410,14 @@ packages:
     resolution:
       {
         integrity: sha512-8zSiw54Oxrdym50NlZ9sUusyO1Z1ZchgRLWRaK6c86XJFClyCgFKetdowBg5bKxyp/u+CDBJG4Mpp0m3HLZl9w==,
+      }
+    engines: { node: '>=0.4.0' }
+    hasBin: true
+
+  acorn@8.14.0:
+    resolution:
+      {
+        integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==,
       }
     engines: { node: '>=0.4.0' }
     hasBin: true
@@ -4069,6 +4077,13 @@ packages:
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
+  eslint-visitor-keys@4.2.0:
+    resolution:
+      {
+        integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
   eslint@9.13.0:
     resolution:
       {
@@ -4086,6 +4101,13 @@ packages:
     resolution:
       {
         integrity: sha512-upbkBJbckcCNBDBDXEbuhjbP68n+scUd3k/U2EkyM9nw+I/jPiL4cLF/Al06CF96wRltFda16sxDFrxsI1v0/g==,
+      }
+    engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
+
+  espree@10.3.0:
+    resolution:
+      {
+        integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==,
       }
     engines: { node: ^18.18.0 || ^20.9.0 || >=21.1.0 }
 
@@ -9241,11 +9263,11 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.7
       to-fast-properties: 2.0.0
 
-  '@commitlint/cli@19.5.0(@types/node@22.8.4)(typescript@5.6.3)':
+  '@commitlint/cli@19.5.0(@types/node@22.8.5)(typescript@5.6.3)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@22.8.4)(typescript@5.6.3)
+      '@commitlint/load': 19.5.0(@types/node@22.8.5)(typescript@5.6.3)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.1
@@ -9292,7 +9314,7 @@ snapshots:
       '@commitlint/rules': 19.5.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@22.8.4)(typescript@5.6.3)':
+  '@commitlint/load@19.5.0(@types/node@22.8.5)(typescript@5.6.3)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -9300,7 +9322,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.8.4)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@22.8.5)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -9672,12 +9694,12 @@ snapshots:
 
   '@solidity-parser/parser@0.18.0': {}
 
-  '@stylistic/eslint-plugin@2.9.0(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)':
+  '@stylistic/eslint-plugin@2.10.0(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.9.0(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)
+      '@typescript-eslint/utils': 8.12.2(eslint@9.13.0(jiti@2.3.3))(typescript@5.6.3)
       eslint: 9.13.0(jiti@2.3.3)
-      eslint-visitor-keys: 4.1.0
-      espree: 10.2.0
+      eslint-visitor-keys: 4.2.0
+      espree: 10.3.0
       estraverse: 5.3.0
       picomatch: 4.0.2
     transitivePeerDependencies:
@@ -9720,7 +9742,7 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
-  '@types/node@22.8.4':
+  '@types/node@22.8.5':
     dependencies:
       undici-types: 6.19.8
 
@@ -10040,9 +10062,15 @@ snapshots:
     dependencies:
       acorn: 8.13.0
 
+  acorn-jsx@5.3.2(acorn@8.14.0):
+    dependencies:
+      acorn: 8.14.0
+
   acorn@7.4.1: {}
 
   acorn@8.13.0: {}
+
+  acorn@8.14.0: {}
 
   add-stream@1.0.0: {}
 
@@ -10593,9 +10621,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@22.8.4)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@22.8.5)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
     dependencies:
-      '@types/node': 22.8.4
+      '@types/node': 22.8.5
       cosmiconfig: 9.0.0(typescript@5.6.3)
       jiti: 1.21.6
       typescript: 5.6.3
@@ -11245,6 +11273,8 @@ snapshots:
 
   eslint-visitor-keys@4.1.0: {}
 
+  eslint-visitor-keys@4.2.0: {}
+
   eslint@9.13.0(jiti@2.3.3):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.13.0(jiti@2.3.3))
@@ -11292,6 +11322,12 @@ snapshots:
       acorn: 8.13.0
       acorn-jsx: 5.3.2(acorn@8.13.0)
       eslint-visitor-keys: 4.1.0
+
+  espree@10.3.0:
+    dependencies:
+      acorn: 8.14.0
+      acorn-jsx: 5.3.2(acorn@8.14.0)
+      eslint-visitor-keys: 4.2.0
 
   espree@9.6.1:
     dependencies:
