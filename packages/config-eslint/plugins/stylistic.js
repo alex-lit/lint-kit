@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 import plugin from '@stylistic/eslint-plugin';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
