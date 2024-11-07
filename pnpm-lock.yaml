@@ -35,8 +35,8 @@ importers:
         specifier: ^2.10.1
         version: 2.10.1(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.59.7
-        version: 5.59.7(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
+        specifier: ^5.59.20
+        version: 5.59.20(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
       '@unocss/eslint-config':
         specifier: ^0.64.0
         version: 0.64.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
@@ -182,7 +182,7 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
       stylelint:
-        specifier: ^16.8.0
+        specifier: 16.8.0
         version: 16.8.0(typescript@5.6.3)
       stylelint-at-rule-no-children:
         specifier: ^0.3.1
@@ -1982,10 +1982,10 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@tanstack/eslint-plugin-query@5.59.7':
+  '@tanstack/eslint-plugin-query@5.59.20':
     resolution:
       {
-        integrity: sha512-txQGX5yC+4gmbR81EXaum2tOxeDQkRCWnaLmaP/pSrbIVCUkbMbrxxsaoOgN+fBqqqGo9V3LoCVL6ez1tRUF7Q==,
+        integrity: sha512-uZwF6N1Krcwrhx0+5wuLjU3E1zcb19bTJ5xhd38ZRvWbjrKQ3HAnf7OZ8w9lCAcdoPPSMEbyVrodgcmjAfZS8w==,
       }
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
@@ -9709,9 +9709,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tanstack/eslint-plugin-query@5.59.7(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)':
+  '@tanstack/eslint-plugin-query@5.59.20(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.9.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
+      '@typescript-eslint/utils': 8.13.0(eslint@9.14.0(jiti@2.4.0))(typescript@5.6.3)
       eslint: 9.14.0(jiti@2.4.0)
     transitivePeerDependencies:
       - supports-color
