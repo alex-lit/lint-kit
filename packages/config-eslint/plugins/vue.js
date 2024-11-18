@@ -133,6 +133,7 @@ export const vue = [
       'vue/prefer-prop-type-boolean-first': ['error'],
       'vue/prefer-separate-static-class': ['error'],
       'vue/prefer-true-attribute-shorthand': ['error'],
+      'vue/prefer-use-template-ref': ['error'],
       'vue/quote-props': ['error', 'as-needed'],
       'vue/require-direct-export': 'off',
       'vue/require-explicit-slots': ['warn'],
