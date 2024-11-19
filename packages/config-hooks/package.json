@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "4.2.6",
+  "version": "4.2.7",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -34,7 +34,7 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10"
   },
   "engines": {
