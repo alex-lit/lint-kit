@@ -11,7 +11,6 @@ export CURRENT_DIR=${PWD##*/}
 export CURRENT_PACKAGE_NAME=$(node -p "require('./package.json').name")
 export CURRENT_PACKAGE_VERSION=$(node -p "require('./package.json').version")
 export MAIN_PACKAGE="@alexlit/lint-kit"
-export SKIPED_PACKAGES='NONE'
 
 # Сообщает об окончании работы скрипта
 SAY_GOODBYE() {

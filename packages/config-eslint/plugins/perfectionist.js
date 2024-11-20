@@ -8,17 +8,17 @@ export const perfectionist = [
       'perfectionist/sort-imports': [
         'warn',
         {
-          internalPattern: ['#**/**', '~/**', '~~/**', '@/**', '@@/**'],
+          internalPattern: ['^#.*', '^~/.*', '^~~/.*', '^@/.*', '^@@/.*'],
         },
       ],
       'perfectionist/sort-objects': [
         'warn',
         {
+          ignorePattern: ['Property', 'breakpoints', 'plugins', 'screens'],
           partitionByComment: true,
           type: 'natural',
         },
       ],
-      'perfectionist/sort-vue-attributes': 'off',
     },
   },
 ];
