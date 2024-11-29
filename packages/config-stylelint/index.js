@@ -4,9 +4,6 @@ const ADDITIONAL_PLUGINS = {
   /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
   a11y: true,
 
-  /** @see [stylelint-at-rule-no-children](https://github.com/adityavm/stylelint-at-rule-no-children) */
-  'at-rule-no-children': true,
-
   /** @see [stylelint-color-format](https://github.com/filipekiss/stylelint-color-format) */
   'color-format': true,
 
