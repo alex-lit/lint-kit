@@ -149,6 +149,7 @@ export const vue = [
       ],
       'vue/require-typed-object-prop': ['error'],
       'vue/require-typed-ref': ['error'],
+      'vue/slot-name-casing': ['error', 'kebab-case'],
       'vue/sort-keys': 'off',
       'vue/static-class-names-order': ['warn'],
       'vue/this-in-template': ['error', 'never'],

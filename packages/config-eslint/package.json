@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "98.1.0",
+  "version": "98.2.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -36,25 +36,25 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@eslint/js": "^9.15.0",
+    "@eslint/js": "^9.16.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.1.0",
     "@stylistic/eslint-plugin": "^2.11.0",
-    "@tanstack/eslint-plugin-query": "^5.61.6",
-    "@unocss/eslint-config": "^0.64.1",
+    "@tanstack/eslint-plugin-query": "^5.62.1",
+    "@unocss/eslint-config": "^0.65.0",
     "eslint": "9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsdoc": "^50.6.0",
-    "eslint-plugin-perfectionist": "^4.1.2",
+    "eslint-plugin-perfectionist": "^4.2.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-sonarjs": "^2.0.4",
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-vitest": "^0.5.4",
-    "eslint-plugin-vue": "^9.31.0",
+    "eslint-plugin-vue": "^9.32.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
-    "globals": "^15.12.0",
+    "globals": "^15.13.0",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.16.0"
+    "typescript-eslint": "^8.17.0"
   },
   "engines": {
     "node": ">=18.18"
