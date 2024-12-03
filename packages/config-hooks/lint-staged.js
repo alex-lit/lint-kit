@@ -65,8 +65,8 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     '*.xml': [prettier],
     '*.yaml': [prettier],
     '*.yml': [prettier],
-    'package.json': [npmlint],
     'package-lock.json': [lockfilelint],
+    'package.json': [npmlint],
 
     ...config,
   };
