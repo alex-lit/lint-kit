@@ -14,7 +14,13 @@ export const perfectionist = [
       'perfectionist/sort-objects': [
         'warn',
         {
-          ignorePattern: ['Property', 'breakpoints', 'plugins', 'screens'],
+          ignorePattern: [
+            'Property',
+            'breakpoints',
+            'endpoints',
+            'plugins',
+            'screens',
+          ],
           partitionByComment: true,
           type: 'natural',
         },
