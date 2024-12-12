@@ -7,6 +7,7 @@ export const javascript = [
   {
     rules: {
       curly: 'error',
+      'dot-notation': ['error'],
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
       'no-implicit-coercion': 'error',

@@ -120,6 +120,7 @@ export const vue = [
       'vue/no-v-text': ['error'],
       'vue/no-v-text-v-html-on-component': ['error'],
       'vue/object-shorthand': ['error'],
+      'vue/order-in-components': 'off',
       'vue/padding-line-between-blocks': ['error'],
       'vue/padding-line-between-tags': [
         'error',
