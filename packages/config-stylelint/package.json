@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "47.1.0",
+  "version": "47.1.1",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -29,6 +29,7 @@
     "plugins"
   ],
   "scripts": {
+    "lint": "cd ../../ && ./scripts/lint.stylelint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
