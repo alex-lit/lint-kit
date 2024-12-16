@@ -27,7 +27,7 @@
     "index.json"
   ],
   "scripts": {
-    "lint": "../../scripts/lint.markdownlint.sh",
+    "lint": "cd ../../ && ./scripts/lint.markdownlint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"

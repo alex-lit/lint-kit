@@ -30,7 +30,7 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "../../scripts/lint.htmllint.sh",
+    "lint": "cd ../../ && ./scripts/lint.htmllint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"

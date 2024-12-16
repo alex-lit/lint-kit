@@ -31,7 +31,7 @@
     "index.json"
   ],
   "scripts": {
-    "lint": "../../scripts/lint.npmlint.sh",
+    "lint": "cd ../../ && ./scripts/lint.npmlint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"

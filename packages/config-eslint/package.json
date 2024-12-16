@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
-    "lint": "../../scripts/lint.eslint.sh",
+    "lint": "cd ../../ && ./scripts/lint.eslint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
