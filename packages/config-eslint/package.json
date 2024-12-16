@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "99.3.1",
+  "version": "99.4.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -31,17 +31,18 @@
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
+    "lint": "../../scripts/lint.eslint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@eslint/js": "^9.16.0",
+    "@eslint/js": "^9.17.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@tanstack/eslint-plugin-query": "^5.62.1",
     "@unocss/eslint-config": "^0.65.1",
-    "eslint": "9.16.0",
+    "eslint": "9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsdoc": "^50.6.1",
     "eslint-plugin-perfectionist": "^4.3.0",
