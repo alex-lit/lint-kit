@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-npmlint",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "private": false,
   "description": "npmlint config",
   "keywords": [
@@ -31,6 +31,7 @@
     "index.json"
   ],
   "scripts": {
+    "lint": "../../scripts/lint.npmlint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
