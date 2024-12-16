@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-markdownlint",
-  "version": "2.14.1",
+  "version": "2.14.2",
   "private": false,
   "description": "markdownlint config",
   "keywords": [
@@ -27,6 +27,7 @@
     "index.json"
   ],
   "scripts": {
+    "lint": "../../scripts/lint.markdownlint.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
     "up": "../../scripts/up.sh"
