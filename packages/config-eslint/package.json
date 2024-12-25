@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "99.6.0",
+  "version": "99.6.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -41,7 +41,7 @@
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "@tanstack/eslint-plugin-query": "^5.62.9",
-    "@unocss/eslint-config": "^0.65.2",
+    "@unocss/eslint-config": "^0.65.3",
     "eslint": "9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-jsdoc": "^50.6.1",
