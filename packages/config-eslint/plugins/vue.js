@@ -19,7 +19,10 @@ export const vue = [
       'vue/component-name-in-template-casing': [
         'error',
         'PascalCase',
-        { registeredComponentsOnly: false },
+        {
+          ignores: [String.raw`/^[A-Z][a-zA-Z]*\.[A-Z][a-zA-Z]*$/`],
+          registeredComponentsOnly: false,
+        },
       ],
       'vue/component-options-name-casing': ['error', 'PascalCase'],
       'vue/define-emits-declaration': ['error'],
