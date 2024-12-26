@@ -1,4 +1,8 @@
-import { defaultPreset } from '@alexlit/config-eslint';
+import {
+  defaultPreset,
+  prettierConfig,
+  tailwindcss,
+} from '@alexlit/config-eslint';
 
 export default [
   ...defaultPreset,
@@ -13,4 +17,7 @@ export default [
       'no-restricted-imports': 'off',
     },
   },
+
+  ...tailwindcss,
+  ...prettierConfig,
 ];

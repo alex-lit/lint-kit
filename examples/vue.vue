@@ -1,12 +1,10 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-  import ArticleAccessSelector from '~~/layers/articles/components/article-access-selector.vue';
-  import { useArticleStore } from '~~/layers/articles/stores/article.store';
-
-  const articleStore = useArticleStore();
+  const articleStore = 1;
 </script>
 
 <template>
-  <UiCard :class="$style['article-access']">
+  <UiCard class="article-access left-[-5px] top-[-5px] m-5">
     <UiSection>
       <template #title> Видимость материала </template>
 
