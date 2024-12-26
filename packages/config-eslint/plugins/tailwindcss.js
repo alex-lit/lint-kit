@@ -10,5 +10,20 @@ export const tailwindcss = [
 
       'vue/static-class-names-order': 'off',
     },
+    settings: {
+      tailwindcss: {
+        callees: [
+          //
+          'classnames',
+          'clsx',
+          'cn',
+          'ctl',
+          'cva',
+          'tv',
+          'tw',
+          'twMerge',
+        ],
+      },
+    },
   },
 ];
