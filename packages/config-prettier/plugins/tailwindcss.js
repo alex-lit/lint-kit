@@ -2,5 +2,15 @@
 export default {
   plugins: ['prettier-plugin-tailwindcss'],
 
-  tailwindFunctions: ['tw'],
+  tailwindFunctions: [
+    //
+    'classnames',
+    'clsx',
+    'cn',
+    'ctl',
+    'cva',
+    'tv',
+    'tw',
+    'twMerge',
+  ],
 };
