@@ -8,7 +8,6 @@ import { stylistic } from '../plugins/stylistic.js';
 import { tanstackQuery } from '../plugins/tanstack-query.js';
 import { typescript } from '../plugins/typescript.js';
 import { unicorn } from '../plugins/unicorn.js';
-import { unocss } from '../plugins/unocss.js';
 import { vitest } from '../plugins/vitest.js';
 import { vueAccessibility } from '../plugins/vue-accessibility.js';
 import { vueI18n } from '../plugins/vue-i18n.js';
@@ -27,7 +26,6 @@ export const defaultPreset = [
   ...tanstackQuery,
   ...typescript,
   ...unicorn,
-  ...unocss,
   ...vitest,
   ...vue,
   ...vueAccessibility,
