@@ -1,3 +1,4 @@
+/** @see [stylelint-order](https://github.com/hudochenkov/stylelint-order) */
 export default {
   plugins: ['stylelint-order'],
 

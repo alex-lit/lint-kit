@@ -1,3 +1,4 @@
+/** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
 export default {
   plugins: ['@double-great/stylelint-a11y'],
 

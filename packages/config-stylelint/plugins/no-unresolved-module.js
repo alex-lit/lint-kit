@@ -1,3 +1,4 @@
+/** @see [stylelint-no-unresolved-module](https://github.com/niksy/stylelint-no-unresolved-module) */
 export default {
   plugins: ['stylelint-no-unresolved-module'],
 

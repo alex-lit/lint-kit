@@ -1,3 +1,4 @@
+/** @see [stylelint-color-format](https://github.com/filipekiss/stylelint-color-format) */
 export default {
   plugins: ['stylelint-color-format'],
 

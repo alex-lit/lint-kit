@@ -1,56 +1,27 @@
 /* eslint-disable unicorn/no-null */
 
 const ADDITIONAL_PLUGINS = {
-  /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
   a11y: true,
-
-  /** @see [stylelint-color-format](https://github.com/filipekiss/stylelint-color-format) */
   'color-format': true,
-
-  /** @see [stylelint-declaration-block-no-ignored-properties](https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties) */
   'declaration-block-no-ignored-properties': true,
-
-  /** @see [stylelint-high-performance-animation](https://github.com/kristerkari/stylelint-high-performance-animation) */
   'high-performance-animation': true,
-
-  /** @see [stylelint-no-nested-media](https://github.com/dkrnl/stylelint-no-nested-media) */
   'no-nested-media': true,
-
-  /** @see [stylelint-no-unresolved-module](https://github.com/niksy/stylelint-no-unresolved-module) */
   'no-unresolved-module': true,
-
-  /** @see [stylelint-order](https://github.com/hudochenkov/stylelint-order) */
   order: true,
-
-  /** @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss) */
   scss: true,
-
-  /** @see [stylelint-selector-no-empty](https://github.com/ssivanatarajan/stylelint-selector-no-empty) */
   'selector-no-empty': true,
-
-  /** @see [stylelint-use-nesting](https://github.com/csstools/stylelint-use-nesting) */
   'use-nesting': true,
-
-  /** @see [stylelint-config-recommended-vue](https://github.com/ota-meshi/stylelint-config-recommended-vue) */
   vue: true,
 };
 
 const OPTIONAL_PLUGINS = {
-  /** @see [stylelint-gamut](https://github.com/fpetrakov/stylelint-gamut) */
   gamut: false,
-
-  /** @see [stylelint-plugin-logical-css](https://github.com/yuschick/stylelint-plugin-logical-css) */
   'logical-css': false,
-
-  /** @see [stylelint-no-indistinguishable-colors](https://github.com/ierhyna/stylelint-no-indistinguishable-colors) */
   'no-indistinguishable-colors': false,
-
-  /** @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features) */
   'no-unsupported-browser-features': false,
 };
 
 const CODESTYLE_PLUGINS = {
-  /** @see [stylelint-prettier](https://github.com/prettier/stylelint-prettier) */
   prettier: true,
 };
 
