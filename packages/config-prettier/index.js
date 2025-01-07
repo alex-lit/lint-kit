@@ -64,14 +64,11 @@ export const createConfig = async (plugins = {}, options = {}) => {
 
   return {
     endOfLine: 'lf',
-
     overrides: [
       ...(pluginsConfig.overrides ?? []),
       ...(options.overrides ?? []),
     ],
-
     plugins: [...(pluginsConfig.plugins ?? []), ...(options.plugins ?? [])],
-
     proseWrap: 'always',
     singleQuote: true,
     tabWidth: 2,
