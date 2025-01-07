@@ -11,7 +11,6 @@ const fixes = {
         normal: 'never',
         void: 'always',
       },
-
       math: 'always',
       svg: 'always',
     },

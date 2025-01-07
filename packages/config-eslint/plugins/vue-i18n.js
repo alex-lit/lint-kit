@@ -13,20 +13,17 @@ export const vueI18n = [
           allowArray: false,
         },
       ],
-
       '@intlify/vue-i18n/no-duplicate-keys-in-locale': [
         'error',
         {
           ignoreI18nBlock: false,
         },
       ],
-
       '@intlify/vue-i18n/no-dynamic-keys': 'warn',
       '@intlify/vue-i18n/no-raw-text': 'off',
       '@intlify/vue-i18n/no-unused-keys': 'warn',
       '@intlify/vue-i18n/prefer-sfc-lang-attr': 'error',
     },
-
     settings: {
       'vue-i18n': {
         localeDir: './**/locales/*.{json,json5,yaml,yml}',

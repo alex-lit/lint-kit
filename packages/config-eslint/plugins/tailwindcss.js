@@ -7,13 +7,11 @@ export const tailwindcss = [
   {
     rules: {
       'tailwindcss/no-custom-classname': 'off',
-
       'vue/static-class-names-order': 'off',
     },
     settings: {
       tailwindcss: {
         callees: [
-          //
           'classnames',
           'clsx',
           'cn',

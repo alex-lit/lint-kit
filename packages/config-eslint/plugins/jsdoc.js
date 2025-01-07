@@ -7,12 +7,10 @@ export const jsdoc = [
     rules: {
       'jsdoc/lines-before-block': 'off',
       'jsdoc/no-undefined-types': 'off',
-
       'jsdoc/require-jsdoc': [
         'warn',
         {
           enableFixer: false,
-
           require: {
             ArrowFunctionExpression: false,
             ClassDeclaration: false,
@@ -23,7 +21,6 @@ export const jsdoc = [
           },
         },
       ],
-
       'jsdoc/require-param-description': 'off',
       'jsdoc/require-param-type': 'off',
       'jsdoc/require-returns': 'off',

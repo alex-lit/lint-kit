@@ -10,13 +10,11 @@ export const vueAccessibility = [
         'warn',
         {
           allowChildren: true,
-
           required: {
             some: ['nesting', 'id'],
           },
         },
       ],
-
       'vuejs-accessibility/no-autofocus': ['warn', { ignoreNonDOM: true }],
     },
   },

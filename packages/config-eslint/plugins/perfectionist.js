@@ -11,6 +11,13 @@ export const perfectionist = [
           internalPattern: ['^#.*', '^~/.*', '^~~/.*', '^@/.*', '^@@/.*'],
         },
       ],
+      'perfectionist/sort-object-types': [
+        'warn',
+        {
+          newlinesBetween: 'always',
+          partitionByComment: true,
+        },
+      ],
       'perfectionist/sort-objects': [
         'warn',
         {
@@ -21,6 +28,7 @@ export const perfectionist = [
             'plugins',
             'screens',
           ],
+          newlinesBetween: 'always',
           partitionByComment: true,
           type: 'natural',
         },

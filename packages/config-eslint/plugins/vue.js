@@ -56,7 +56,6 @@ export const vue = [
             normal: 'never',
             void: 'always',
           },
-
           math: 'always',
           svg: 'always',
         },
