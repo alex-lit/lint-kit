@@ -13,16 +13,13 @@ export const createConfig = (options = {}) => ({
   'raw-ignore-regex': false,
   'spec-char-escape': false,
   'text-ignore-regex': false,
-
   ...options,
-
   extends: [
     '@linthtml/linthtml-config-recommended',
+
     ...(options.extends ?? []),
   ],
-
   ignoreFiles: [...(options.rules ?? [])],
-
   rules: {
     'attr-order': [true, ['id', 'class']],
     'attr-quote-style': [true, 'double'],

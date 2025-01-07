@@ -1,7 +1,6 @@
 /** @see [stylelint-no-unresolved-module](https://github.com/niksy/stylelint-no-unresolved-module) */
 export default {
   plugins: ['stylelint-no-unresolved-module'],
-
   rules: {
     'plugin/no-unresolved-module': {
       alias: {
@@ -9,7 +8,6 @@ export default {
         '~public': 'public',
         '~static': 'static',
       },
-
       modules: [
         'assets',
         'node_modules',

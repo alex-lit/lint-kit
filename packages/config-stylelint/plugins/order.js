@@ -1,7 +1,6 @@
 /** @see [stylelint-order](https://github.com/hudochenkov/stylelint-order) */
 export default {
   plugins: ['stylelint-order'],
-
   rules: {
     'order/order': [
       // SASS variables
@@ -480,7 +479,6 @@ export default {
       { selector: /__z/, type: 'rule' },
       { selector: /__/, type: 'rule' },
     ],
-
     'order/properties-alphabetical-order': true,
   },
 };

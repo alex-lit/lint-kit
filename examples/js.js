@@ -16,6 +16,7 @@ export const generateRandomString = (options) => {
   const { hasDigits, hasLowercase, hasUppercase, length } = {
     hasDigits: true,
     hasLowercase: true,
+    // group
     hastest: {
       for: '123',
     },
@@ -42,3 +43,15 @@ export const generateRandomString = (options) => {
 if (globalThis.true) {
   alert(1);
 }
+
+export const user = {
+  // Group 1
+  firstName: 'John',
+  lastName: 'Doe',
+  // Group 2
+  age: 30,
+  birthDate: '1990-01-01',
+  // Group 3
+  email: 'john.doe@example.com',
+  phone: '555-555-5555',
+};
