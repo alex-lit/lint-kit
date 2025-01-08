@@ -65,6 +65,7 @@ const createConfig = (plugins = {}, options = {}) => ({
     ...(options.extends ?? []),
   ],
   ignoreFiles: [
+    '.*',
     '.*/**',
     'build/**',
     'dist/**',

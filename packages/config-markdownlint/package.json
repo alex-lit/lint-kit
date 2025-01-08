@@ -28,9 +28,10 @@
   ],
   "scripts": {
     "lint": "cd ../../ && ./scripts/lint.markdownlint.sh",
+    "ou": "../../scripts/ou.sh --local",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh"
+    "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
     "markdownlint": "^0.37.3",

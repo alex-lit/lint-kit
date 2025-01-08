@@ -31,9 +31,10 @@
   ],
   "scripts": {
     "lint": "cd ../../ && ./scripts/lint.htmllint.sh",
+    "ou": "../../scripts/ou.sh --local",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh"
+    "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
     "@linthtml/linthtml": "^0.10.1",

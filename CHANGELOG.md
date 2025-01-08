@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v134.1.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v134.1.0...v134.1.1)
+
+### 🏡 Chore
+
+- **@alexlit/lint-kit:** Bump version ([9bbcb91](https://github.com/alex-lit/lint-kit/commit/9bbcb91))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v134.1.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v4.3.0...v134.1.0)

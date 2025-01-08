@@ -30,9 +30,10 @@
   ],
   "scripts": {
     "lint": "cd ../../ && ./scripts/lint.stylelint.sh",
+    "ou": "../../scripts/ou.sh --local",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh"
+    "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.0.2",

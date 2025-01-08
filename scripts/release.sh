@@ -4,7 +4,7 @@ source "$(dirname $0)"/../bash.config.sh
 
 VERSION=${1:-patch} # patch | minor | major
 
-pnpm run semver ${VERSION}
+npx pnpm run semver ${VERSION}
 
 CURRENT_PACKAGE_NAME=$(node -p "require('./package.json').name")
 CURRENT_PACKAGE_VERSION=$(node -p "require('./package.json').version")
@@ -15,6 +15,6 @@ echo -e "${YELLOW}Коммит в ${GREEN}git${YELLOW}...${WHITE}"
 git push
 
 echo -e "${YELLOW}Публикация в ${GREEN}registry.npmjs.org${YELLOW}...${WHITE}"
-pnpm publish --no-git-checks
+npx pnpm publish --no-git-checks
 
 SAY_GOODBYE
