@@ -1,8 +1,8 @@
-# Подсчет кол-ва строк кода в исходных файлах
+# Проверяет .editorconfig
 
 source "$(dirname $0)"/../bash.config.sh
 
-echo -e "${YELLOW}Проверяю editorconfig...${WHITE}"
+echo -e "${YELLOW}Проверяю .editorconfig...${WHITE}"
 
 npx editorconfig-checker
 
