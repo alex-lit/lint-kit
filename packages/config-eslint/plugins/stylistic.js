@@ -30,7 +30,7 @@ export const stylistic = [
           allowTypeEnd: true,
           allowTypeStart: true,
           applyDefaultIgnorePatterns: true,
-          beforeBlockComment: true,
+          beforeBlockComment: false,
           beforeLineComment: false,
         },
       ],
