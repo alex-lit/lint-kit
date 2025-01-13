@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/no-null */
 
 const ADDITIONAL_PLUGINS = {
-  a11y: true,
   'color-format': true,
   'declaration-block-no-ignored-properties': true,
   'high-performance-animation': true,
@@ -15,6 +14,7 @@ const ADDITIONAL_PLUGINS = {
 };
 
 const OPTIONAL_PLUGINS = {
+  a11y: false,
   gamut: false,
   'logical-css': false,
   'no-indistinguishable-colors': false,
