@@ -2,7 +2,7 @@
 
 source "$(dirname $0)"/../bash.config.sh
 
-echo -e "${YELLOW}Обновляю зависимости...${WHITE}"
+echo -e "${YELLOW}Обновляю зависимости ${CURRENT_PACKAGE_NAME}...${WHITE}"
 
 # Инициализация переменных
 local_mode=false
@@ -24,6 +24,7 @@ if $local_mode; then
   echo -e "${GREY}Режим проверки: ${WHITE}локальный${WHITE}"
   npx pnpm update \
     --interactive \
+    --recursive \
     --latest
 else
   echo -e "${GREY}Режим проверки: ${WHITE}глобальный${WHITE}"
