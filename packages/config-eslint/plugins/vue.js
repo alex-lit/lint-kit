@@ -67,7 +67,7 @@ export const vue = [
         'warn',
         { script: 500, skipBlankLines: true, style: 500, template: 500 },
       ],
-      'vue/new-line-between-multi-line-property': ['error'],
+      'vue/new-line-between-multi-line-property': 'off',
       'vue/next-tick-style': ['error', 'promise'],
       'vue/no-child-content': ['error'],
       'vue/no-console': ['error'],
