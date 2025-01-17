@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-markdownlint",
-  "version": "2.14.4",
+  "version": "2.14.5",
   "private": false,
   "description": "markdownlint config",
   "keywords": [
@@ -34,7 +34,7 @@
     "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
-    "markdownlint": "^0.37.3",
+    "markdownlint": "^0.37.4",
     "markdownlint-cli": "^0.43.0"
   },
   "engines": {
