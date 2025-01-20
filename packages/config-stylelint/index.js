@@ -87,6 +87,7 @@ const createConfig = (plugins = {}, options = {}) => ({
         ignoreAtRules: ['else'],
       },
     ],
+    'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply', 'tailwind'] }],
     'at-rule-no-unknown': null,
     'at-rule-no-vendor-prefix': true,
     'block-no-empty': null,

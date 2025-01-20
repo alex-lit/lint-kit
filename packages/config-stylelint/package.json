@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "48.1.1",
+  "version": "48.1.2",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -36,7 +36,7 @@
     "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "^3.0.2",
+    "@double-great/stylelint-a11y": "^3.0.3",
     "postcss": "^8.5.1",
     "postcss-html": "^1.8.0",
     "prettier": "^3.4.2",
