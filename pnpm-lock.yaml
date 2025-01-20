@@ -35,8 +35,8 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       '@tanstack/eslint-plugin-query':
-        specifier: ^5.62.16
-        version: 5.62.16(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
+        specifier: ^5.64.2
+        version: 5.64.2(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       '@unocss/eslint-config':
         specifier: ^65.4.2
         version: 65.4.2(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
@@ -47,14 +47,14 @@ importers:
         specifier: ^10.0.1
         version: 10.0.1(eslint@9.18.0(jiti@2.4.2))
       eslint-plugin-jsdoc:
-        specifier: ^50.6.1
-        version: 50.6.1(eslint@9.18.0(jiti@2.4.2))
+        specifier: ^50.6.2
+        version: 50.6.2(eslint@9.18.0(jiti@2.4.2))
       eslint-plugin-perfectionist:
         specifier: ^4.6.0
         version: 4.6.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       eslint-plugin-prettier:
-        specifier: ^5.2.2
-        version: 5.2.2(eslint-config-prettier@10.0.1(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)
+        specifier: ^5.2.3
+        version: 5.2.3(eslint-config-prettier@10.0.1(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2)
       eslint-plugin-regexp:
         specifier: ^2.7.0
         version: 2.7.0(eslint@9.18.0(jiti@2.4.2))
@@ -62,8 +62,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1(eslint@9.18.0(jiti@2.4.2))
       eslint-plugin-tailwindcss:
-        specifier: ^3.17.5
-        version: 3.17.5(tailwindcss@3.4.17)
+        specifier: ^3.18.0
+        version: 3.18.0(tailwindcss@3.4.17)
       eslint-plugin-unicorn:
         specifier: ^56.0.1
         version: 56.0.1(eslint@9.18.0(jiti@2.4.2))
@@ -128,8 +128,8 @@ importers:
   packages/config-prettier:
     dependencies:
       '@prettier/plugin-php':
-        specifier: ^0.22.2
-        version: 0.22.2(prettier@3.4.2)
+        specifier: ^0.22.3
+        version: 0.22.3(prettier@3.4.2)
       '@prettier/plugin-pug':
         specifier: ^3.2.0
         version: 3.2.0(prettier@3.4.2)
@@ -173,8 +173,8 @@ importers:
   packages/config-stylelint:
     dependencies:
       '@double-great/stylelint-a11y':
-        specifier: ^3.0.2
-        version: 3.0.2(stylelint@16.13.2(typescript@5.7.3))
+        specifier: ^3.0.3
+        version: 3.0.3(stylelint@16.13.2(typescript@5.7.3))
       postcss:
         specifier: ^8.5.1
         version: 8.5.1
@@ -1295,10 +1295,10 @@ packages:
     peerDependencies:
       postcss-selector-parser: ^7.0.0
 
-  '@double-great/stylelint-a11y@3.0.2':
+  '@double-great/stylelint-a11y@3.0.3':
     resolution:
       {
-        integrity: sha512-HPYUwHtn03cO7og4/hhBGyAJ8eF45HI20QQkIAWyiMPW68rigzltOiS98iBONznKXNwoSvMjlIX0q7JJeJnkDg==,
+        integrity: sha512-4LJ5fVK+Vb79ZyYxerYXra07nqB2oRKnhZaTSK9nGs4IrgFE9Gg9U0AbfweHdwVuhk9cJe0dJVZtssgGLMlfvg==,
       }
     engines: { node: '>=18.12.0' }
     peerDependencies:
@@ -2029,10 +2029,10 @@ packages:
       }
     engines: { node: ^12.20.0 || ^14.18.0 || >=16.0.0 }
 
-  '@prettier/plugin-php@0.22.2':
+  '@prettier/plugin-php@0.22.3':
     resolution:
       {
-        integrity: sha512-md0+7tNbsP0oy+wIP3KZZc6fzx1k1jtWaMjOy/gM8yU9f2BDYEi+iHOc/UNPihYvPI28zFTbjvlhH4QXQjQwNg==,
+        integrity: sha512-EoThySFj8uMe98TpEqSicFhZFm7hxLJqExKMrFsgoJNtQMDYq72gLi+bhzjwqAthTS2II8gKVALUFM6LInKH0Q==,
       }
     peerDependencies:
       prettier: ^3.0.0
@@ -2077,10 +2077,10 @@ packages:
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@tanstack/eslint-plugin-query@5.62.16':
+  '@tanstack/eslint-plugin-query@5.64.2':
     resolution:
       {
-        integrity: sha512-VhnHSQ/hc62olLzGhlLJ4BJGWynwjs3cDMsByasKJ3zjW1YZ+6raxOv0gHHISm+VEnAY42pkMowmSWrXfL4NTw==,
+        integrity: sha512-Xq7jRYvNtGMHjQEGUZLHgEMNB59hgTlqdmKor6cdJ6CMZ/nwmBGpnlr/dcHden7W7BPCdBVN4PWMZBICWvCNQQ==,
       }
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
@@ -3758,10 +3758,10 @@ packages:
       }
     engines: { node: '>= 0.4' }
 
-  es-module-lexer@1.5.4:
+  es-module-lexer@1.6.0:
     resolution:
       {
-        integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==,
+        integrity: sha512-qqnD1yMU6tk/jnaMosogGySTZP8YtUgAffA9nMN+E/rjxcfRQ6IEk7IiozUjgxKoFHBGjTLnrHB/YC45r/59EQ==,
       }
 
   es-object-atoms@1.0.0:
@@ -3846,10 +3846,10 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-jsdoc@50.6.1:
+  eslint-plugin-jsdoc@50.6.2:
     resolution:
       {
-        integrity: sha512-UWyaYi6iURdSfdVVqvfOs2vdCVz0J40O/z/HTsv2sFjdjmdlUI/qlKLOTmwbPQ2tAfQnE5F9vqx+B+poF71DBQ==,
+        integrity: sha512-n7GNZ4czMAAbDg7DsDA7PvHo1IPIUwAXYmxTx6j/hTlXbt5V0x5q/kGkiJ7s4wA9SpB/yaiK8jF7CO237lOLew==,
       }
     engines: { node: '>=18' }
     peerDependencies:
@@ -3864,10 +3864,10 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0'
 
-  eslint-plugin-prettier@5.2.2:
+  eslint-plugin-prettier@5.2.3:
     resolution:
       {
-        integrity: sha512-1yI3/hf35wmlq66C8yOyrujQnel+v5l1Vop5Cl2I6ylyNTT1JbuUUnV3/41PzwTzcyDp/oF0jWE3HXvcH5AQOQ==,
+        integrity: sha512-qJ+y0FfCp/mQYQ/vWQ3s7eUlFEL4PyKfAJxsnYTJ4YT73nsJBWqmEpFryxV9OeUiqmsTsYJ5Y+KDNaeP31wrRw==,
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
     peerDependencies:
@@ -3898,10 +3898,10 @@ packages:
     peerDependencies:
       eslint: ^8.0.0 || ^9.0.0
 
-  eslint-plugin-tailwindcss@3.17.5:
+  eslint-plugin-tailwindcss@3.18.0:
     resolution:
       {
-        integrity: sha512-8Mi7p7dm+mO1dHgRHHFdPu4RDTBk69Cn4P0B40vRQR+MrguUpwmKwhZy1kqYe3Km8/4nb+cyrCF+5SodOEmaow==,
+        integrity: sha512-PQDU4ZMzFH0eb2DrfHPpbgo87Zgg2EXSMOj1NSfzdZm+aJzpuwGerfowMIaVehSREEa0idbf/eoNYAOHSJoDAQ==,
       }
     engines: { node: '>=18.12.0' }
     peerDependencies:
@@ -6073,14 +6073,6 @@ packages:
         integrity: sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==,
       }
 
-  nanoid@3.3.7:
-    resolution:
-      {
-        integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==,
-      }
-    engines: { node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1 }
-    hasBin: true
-
   nanoid@3.3.8:
     resolution:
       {
@@ -6498,10 +6490,10 @@ packages:
         integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==,
       }
 
-  php-parser@3.2.1:
+  php-parser@3.2.2:
     resolution:
       {
-        integrity: sha512-WT5AMqe39ZdqAxp9Yp7uR6e3clBWlT1dxHHs49GmnDx2d+975NEiLSVy2tRGLdSC9tgdQOLiN1Yz54g1d2cZDQ==,
+        integrity: sha512-voj3rzCJmEbwHwH3QteON28wA6K+JbcaJEofyUZkUXmcViiXofjbSbcE5PtqtjX6nstnnAEYCFoRq0mkjP5/cg==,
       }
 
   picocolors@1.1.1:
@@ -6688,13 +6680,6 @@ packages:
       {
         integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==,
       }
-
-  postcss@8.4.49:
-    resolution:
-      {
-        integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==,
-      }
-    engines: { node: ^10 || ^12 || >=14 }
 
   postcss@8.5.1:
     resolution:
@@ -7449,6 +7434,12 @@ packages:
     resolution:
       {
         integrity: sha512-jg25NiDV/1fLtSgEgyvVyDunvaNHbuwF9lfNV17gSmPFAlYzdfNBlLtLzXTevwkPj7DhGbmN9VnmJIgLnhvaBw==,
+      }
+
+  spdx-license-ids@3.0.21:
+    resolution:
+      {
+        integrity: sha512-Bvg/8F5XephndSK3JffaRqdT+gyhfqIPwDHpX80tJrF8QQRYMo8sNMeaZ2Dp5+jhwKnUmIOyFFQfHRkjJm5nXg==,
       }
 
   split2@4.2.0:
@@ -9350,7 +9341,7 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.0.0
 
-  '@double-great/stylelint-a11y@3.0.2(stylelint@16.13.2(typescript@5.7.3))':
+  '@double-great/stylelint-a11y@3.0.3(stylelint@16.13.2(typescript@5.7.3))':
     dependencies:
       postcss: 8.5.1
       stylelint: 16.13.2(typescript@5.7.3)
@@ -9709,10 +9700,10 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@prettier/plugin-php@0.22.2(prettier@3.4.2)':
+  '@prettier/plugin-php@0.22.3(prettier@3.4.2)':
     dependencies:
       linguist-languages: 7.27.0
-      php-parser: 3.2.1
+      php-parser: 3.2.2
       prettier: 3.4.2
 
   '@prettier/plugin-pug@3.2.0(prettier@3.4.2)':
@@ -9743,9 +9734,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tanstack/eslint-plugin-query@5.62.16(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)':
+  '@tanstack/eslint-plugin-query@5.64.2(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)':
     dependencies:
-      '@typescript-eslint/utils': 8.19.1(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
+      '@typescript-eslint/utils': 8.20.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3)
       eslint: 9.18.0(jiti@2.4.2)
     transitivePeerDependencies:
       - supports-color
@@ -10827,7 +10818,7 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  es-module-lexer@1.5.4: {}
+  es-module-lexer@1.6.0: {}
 
   es-object-atoms@1.0.0:
     dependencies:
@@ -10919,7 +10910,7 @@ snapshots:
     dependencies:
       eslint: 9.18.0(jiti@2.4.2)
 
-  eslint-plugin-jsdoc@50.6.1(eslint@9.18.0(jiti@2.4.2)):
+  eslint-plugin-jsdoc@50.6.2(eslint@9.18.0(jiti@2.4.2)):
     dependencies:
       '@es-joy/jsdoccomment': 0.49.0
       are-docs-informative: 0.0.2
@@ -10946,7 +10937,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-prettier@5.2.2(eslint-config-prettier@10.0.1(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2):
+  eslint-plugin-prettier@5.2.3(eslint-config-prettier@10.0.1(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))(prettier@3.4.2):
     dependencies:
       eslint: 9.18.0(jiti@2.4.2)
       prettier: 3.4.2
@@ -10987,10 +10978,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-tailwindcss@3.17.5(tailwindcss@3.4.17):
+  eslint-plugin-tailwindcss@3.18.0(tailwindcss@3.4.17):
     dependencies:
-      fast-glob: 3.3.2
-      postcss: 8.4.49
+      fast-glob: 3.3.3
+      postcss: 8.5.1
       tailwindcss: 3.4.17
 
   eslint-plugin-unicorn@56.0.1(eslint@9.18.0(jiti@2.4.2)):
@@ -12370,8 +12361,6 @@ snapshots:
       object-assign: 4.1.1
       thenify-all: 1.6.0
 
-  nanoid@3.3.7: {}
-
   nanoid@3.3.8: {}
 
   natural-compare@1.4.0: {}
@@ -12593,7 +12582,7 @@ snapshots:
 
   parse-imports@2.2.1:
     dependencies:
-      es-module-lexer: 1.5.4
+      es-module-lexer: 1.6.0
       slashes: 3.0.12
 
   parse-json@5.2.0:
@@ -12641,7 +12630,7 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  php-parser@3.2.1: {}
+  php-parser@3.2.2: {}
 
   picocolors@1.1.1: {}
 
@@ -12731,12 +12720,6 @@ snapshots:
       postcss: 8.5.1
 
   postcss-value-parser@4.2.0: {}
-
-  postcss@8.4.49:
-    dependencies:
-      nanoid: 3.3.7
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.1:
     dependencies:
@@ -13160,9 +13143,11 @@ snapshots:
   spdx-expression-parse@4.0.0:
     dependencies:
       spdx-exceptions: 2.5.0
-      spdx-license-ids: 3.0.20
+      spdx-license-ids: 3.0.21
 
   spdx-license-ids@3.0.20: {}
+
+  spdx-license-ids@3.0.21: {}
 
   split2@4.2.0: {}
 
