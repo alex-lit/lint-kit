@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v136.3.2
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v136.3.1...v136.3.2)
+
+### 🏡 Chore
+
+- **@alexlit/lint-kit:** Bump version ([dab0a51](https://github.com/alex-lit/lint-kit/commit/dab0a51))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v136.3.1
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v20.2.7...v136.3.1)

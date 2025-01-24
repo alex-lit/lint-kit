@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "136.3.1",
+  "version": "136.3.2",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -37,13 +37,13 @@
   "type": "module",
   "main": "README.md",
   "files": [
-    ".linthtmlrc.cjs",
-    ".markdownlintrc.cjs",
+    ".markdownlint.json",
     ".npmpackagejsonlintrc.json",
     ".npmrc",
     "commitlint.config.js",
     "eslint.config.js",
     "lint-staged.config.js",
+    "linthtml.config.js",
     "packages",
     "prettier.config.js",
     "scripts",
