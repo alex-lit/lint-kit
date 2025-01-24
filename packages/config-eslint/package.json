@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "101.1.0",
+  "version": "101.2.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -42,11 +42,11 @@
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@stylistic/eslint-plugin": "^2.13.0",
     "@tanstack/eslint-plugin-query": "^5.64.2",
-    "@unocss/eslint-config": "^65.4.2",
+    "@unocss/eslint-config": "^65.4.3",
     "eslint": "9.18.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-jsdoc": "^50.6.2",
-    "eslint-plugin-perfectionist": "^4.6.0",
+    "eslint-plugin-perfectionist": "^4.7.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-sonarjs": "^3.0.1",
@@ -57,7 +57,10 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "globals": "^15.14.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.21.0"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.17"
   },
   "engines": {
     "node": ">=18.18"
