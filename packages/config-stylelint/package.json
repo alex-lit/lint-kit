@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "48.2.0",
+  "version": "48.3.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -40,7 +40,7 @@
     "postcss": "^8.5.1",
     "postcss-html": "^1.8.0",
     "prettier": "^3.4.2",
-    "stylelint": "16.13.2",
+    "stylelint": "16.14.0",
     "stylelint-color-format": "^1.1.0",
     "stylelint-config-recommended-vue": "^1.6.0",
     "stylelint-config-standard": "^37.0.0",
@@ -54,7 +54,7 @@
     "stylelint-no-unsupported-browser-features": "^8.0.2",
     "stylelint-order": "^6.0.4",
     "stylelint-plugin-logical-css": "^1.2.1",
-    "stylelint-prettier": "^5.0.2",
+    "stylelint-prettier": "^5.0.3",
     "stylelint-scss": "^6.10.1",
     "stylelint-selector-no-empty": "^1.0.9",
     "stylelint-use-nesting": "^6.0.0"
