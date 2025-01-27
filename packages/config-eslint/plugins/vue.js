@@ -15,7 +15,7 @@ export const vue = [
       ],
       'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/component-api-style': ['error', ['script-setup']],
-      'vue/component-definition-name-casing': ['error', 'kebab-case'],
+      'vue/component-definition-name-casing': ['error', 'PascalCase'],
       'vue/component-name-in-template-casing': [
         'error',
         'PascalCase',
