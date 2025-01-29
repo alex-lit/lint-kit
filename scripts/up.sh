@@ -19,7 +19,8 @@ while [[ "$#" -gt 0 ]]; do
   shift
 done
 
-# Вывод результатов
+# Вывод списка для выбора обновляемых зависимостей
+# TODO: pnpm@9 bug - ставит все зависимости вместо выбранных
 if $local_mode; then
   echo -e "${GREY}Режим проверки: ${WHITE}локальный${WHITE}"
   npx pnpm update \
