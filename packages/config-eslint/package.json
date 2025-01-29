@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "102.0.0",
+  "version": "102.1.0",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -41,7 +41,7 @@
     "@eslint/js": "^9.19.0",
     "@intlify/eslint-plugin-vue-i18n": "^3.2.0",
     "@stylistic/eslint-plugin": "^3.0.0",
-    "@tanstack/eslint-plugin-query": "^5.64.2",
+    "@tanstack/eslint-plugin-query": "^5.65.0",
     "@unocss/eslint-config": "^65.4.3",
     "eslint": "9.19.0",
     "eslint-config-prettier": "^10.0.1",
@@ -57,7 +57,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "globals": "^15.14.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.21.0"
+    "typescript-eslint": "^8.22.0"
   },
   "peerDependencies": {
     "tailwindcss": "^3.4.17"
