@@ -34,14 +34,34 @@ export default {
       // Bootstrap media mixins
       { name: 'include', parameter: 'media', type: 'at-rule' },
 
-      // Tailwind breakpoints
+      // Tailwind@3 breakpoints (from large to small)
       { name: 'screen', parameter: '2xl', type: 'at-rule' },
       { name: 'screen', parameter: 'xl', type: 'at-rule' },
       { name: 'screen', parameter: 'lg', type: 'at-rule' },
       { name: 'screen', parameter: 'md', type: 'at-rule' },
       { name: 'screen', parameter: 'sm', type: 'at-rule' },
 
-      // Chrome breakpoints
+      // Tailwind@4 breakpoints (from large to small)
+      { name: 'media', parameter: 'breakpoint-2xl', type: 'at-rule' },
+      { name: 'media', parameter: 'breakpoint-xl', type: 'at-rule' },
+      { name: 'media', parameter: 'breakpoint-lg', type: 'at-rule' },
+      { name: 'media', parameter: 'breakpoint-md', type: 'at-rule' },
+      { name: 'media', parameter: 'breakpoint-sm', type: 'at-rule' },
+      { name: 'media', parameter: 'container-7xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-6xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-5xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-4xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-3xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-2xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-xl', type: 'at-rule' },
+      { name: 'media', parameter: 'container-lg', type: 'at-rule' },
+      { name: 'media', parameter: 'container-md', type: 'at-rule' },
+      { name: 'media', parameter: 'container-sm', type: 'at-rule' },
+      { name: 'media', parameter: 'container-xs', type: 'at-rule' },
+      { name: 'media', parameter: 'container-2xs', type: 'at-rule' },
+      { name: 'media', parameter: 'container-3xs', type: 'at-rule' },
+
+      // Chrome breakpoints (from large to small)
       { name: 'media', parameter: 'laptop-4k', type: 'at-rule' },
       { name: 'media', parameter: 'laptop-xl', type: 'at-rule' },
       { name: 'media', parameter: 'laptop-l', type: 'at-rule' },
@@ -52,7 +72,7 @@ export default {
       { name: 'media', parameter: 'mobile-s', type: 'at-rule' },
       { name: 'media', parameter: 'mobile', type: 'at-rule' },
 
-      // Bootstrap breakpoints
+      // Bootstrap breakpoints (from large to small)
       { name: 'media', parameter: 'xxl', type: 'at-rule' },
       { name: 'media', parameter: 'xl', type: 'at-rule' },
       { name: 'media', parameter: 'lg', type: 'at-rule' },
