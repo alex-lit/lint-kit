@@ -12,8 +12,6 @@ $font-weights: (
 $test2: blue !default;
 $test3: blue !default;
 
-// @tailwind utility;
-
 .example-1 {
   display: inline;
 }
@@ -27,6 +25,14 @@ $test3: blue !default;
 
   @screen sm {
     color: rebeccapurple;
+  }
+
+  @media (--breakpoint-xl) {
+    padding: 1rem 0;
+  }
+
+  @media (--container-7xl) {
+    padding: 1rem 0;
   }
 
   @media ($laptop) {
