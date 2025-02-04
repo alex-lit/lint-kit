@@ -19,21 +19,31 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     ...plugins,
   };
 
-  const eslint = pluginsList.eslint ? 'eslint --fix' : 'true';
+  const eslint = pluginsList.eslint ? 'eslint --fix' : 'echo "eslint disabled"';
 
-  const htmllint = pluginsList.htmllint ? 'linthtml' : 'true';
+  const htmllint = pluginsList.htmllint
+    ? 'linthtml'
+    : 'echo "htmllint disabled"';
 
   const lockfilelint = pluginsList.lockfilelint
     ? 'lockfile-lint --type npm --path package-lock.json'
-    : 'true';
+    : 'echo "lockfilelint disabled"';
 
-  const markdownlint = pluginsList.markdownlint ? 'markdownlint --fix' : 'true';
+  const markdownlint = pluginsList.markdownlint
+    ? 'markdownlint --fix'
+    : 'markdownlint "eslint disabled"';
 
-  const npmlint = pluginsList.npmlint ? 'npmPkgJsonLint' : 'true';
+  const npmlint = pluginsList.npmlint
+    ? 'npmPkgJsonLint'
+    : 'echo "npmlint disabled"';
 
-  const prettier = pluginsList.prettier ? 'prettier --write' : 'true';
+  const prettier = pluginsList.prettier
+    ? 'prettier --write'
+    : 'echo "prettier disabled"';
 
-  const stylelint = pluginsList.stylelint ? 'stylelint --fix' : 'true';
+  const stylelint = pluginsList.stylelint
+    ? 'stylelint --fix'
+    : 'echo "stylelint disabled"';
 
   return {
     '*.cjs': [eslint, prettier],
