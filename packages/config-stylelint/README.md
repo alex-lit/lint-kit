@@ -54,3 +54,9 @@ npm i @alexlit/config-stylelint -D
   ```sh
   npx stylelint-find-new-rules
   ```
+
+## Usefull links
+
+- [Awesome StyleLint](https://github.com/stylelint/awesome-stylelint)
+- [stylelint-scales](https://github.com/jeddy3/stylelint-scales)
+- [stylelint-value-no-unknown-custom-properties](https://github.com/csstools/stylelint-value-no-unknown-custom-properties)

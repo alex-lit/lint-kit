@@ -46,6 +46,9 @@ $test3: blue !default;
   @media (width >= 500px) and (width <= 600px) {
   }
 
+  @media (--ololo) and (--azaza) {
+  }
+
   @media (width >= 640px) {
     color: rebeccapurple;
 
@@ -166,7 +169,7 @@ header {
   @include ddf();
   @include ddf();
 
-  @apply ddd demo-dark:ring-cyan-400 red-500 absolute left-1/2 top-1/2 -ml-2 -mt-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-200 bg-white shadow ring-2 ring-cyan-500 transition-all duration-500;
+  @apply ddd demo-dark:ring-cyan-400 red-500 absolute top-1/2 left-1/2 -mt-2 -ml-2 flex h-4 w-4 items-center justify-center rounded-full bg-red-200 bg-white ring-2 shadow ring-cyan-500 transition-all duration-500;
 
   align-items: center;
   appearance: none;
