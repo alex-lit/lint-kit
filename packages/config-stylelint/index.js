@@ -17,6 +17,7 @@ const OPTIONAL_PLUGINS = {
   a11y: false,
   gamut: false,
   'logical-css': false,
+  'media-use-custom-media': false,
   'no-indistinguishable-colors': false,
   'no-unsupported-browser-features': false,
 };

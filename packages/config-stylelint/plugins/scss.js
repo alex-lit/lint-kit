@@ -25,6 +25,7 @@ export default {
           // tailwind
           'apply',
           'config',
+          'custom-variant',
           'layer',
           'reference',
           'responsive',
