@@ -4,8 +4,8 @@ const ADDITIONAL_PLUGINS = {
   'color-format': true,
   'declaration-block-no-ignored-properties': true,
   'high-performance-animation': true,
+  'no-browser-hacks': true,
   'no-nested-media': true,
-  'no-unresolved-module': true,
   order: true,
   scss: true,
   'selector-no-empty': true,
@@ -19,6 +19,7 @@ const OPTIONAL_PLUGINS = {
   'logical-css': false,
   'media-use-custom-media': false,
   'no-indistinguishable-colors': false,
+  'no-unresolved-module': false,
   'no-unsupported-browser-features': false,
 };
 
