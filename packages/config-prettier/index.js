@@ -1,13 +1,13 @@
 import { omit } from 'radash';
 
 const DEFAULT_PLUGINS = {
-  jsdoc: true,
-  packagejson: true,
-  pug: true,
-  sh: true,
-  solidity: true,
+  'jsdoc': true,
+  'packagejson': true,
+  'pug': true,
+  'sh': true,
+  'solidity': true,
   'sort-json': true,
-  xml: true,
+  'xml': true,
 };
 
 const OPTIONAL_PLUGINS = { php: false, ruby: false, sql: false };
@@ -63,13 +63,17 @@ export const createConfig = async (plugins = {}, options = {}) => {
   const pluginsConfig = await createPluginsConfig(plugins);
 
   return {
+    bracketSameLine: false,
     endOfLine: 'lf',
+    objectWrapping: 'collapse',
     overrides: [
       ...(pluginsConfig.overrides ?? []),
       ...(options.overrides ?? []),
     ],
     plugins: [...(pluginsConfig.plugins ?? []), ...(options.plugins ?? [])],
     proseWrap: 'always',
+    quoteProps: 'consistent',
+    singleAttributePerLine: true,
     singleQuote: true,
     tabWidth: 2,
     trailingComma: 'all',
