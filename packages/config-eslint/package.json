@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "103.0.0",
+  "version": "103.0.1",
   "private": false,
   "description": "Eslint config",
   "keywords": [
@@ -22,7 +22,7 @@
     "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
   ],
   "type": "module",
-  "exports": "./index.js",
+  "main": "index.js",
   "files": [
     "README.md",
     "index.js",
