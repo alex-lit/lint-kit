@@ -2,40 +2,41 @@
   "name": "@alexlit/config-eslint",
   "version": "104.0.0",
   "private": false,
-  "description": "Eslint config",
+  "description": "Sharable ESLint configuration",
   "keywords": [
     "eslint",
-    "config"
+    "eslint-config",
+    "lint",
+    "code-quality",
+    "javascript",
+    "typescript"
   ],
-  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit/tree/main/packages/config-eslint#readme",
   "bugs": {
     "url": "https://github.com/alex-lit/lint-kit/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alex-lit/lint-kit.git",
+    "url": "git+https://github.com/alex-lit/lint-kit.git",
     "directory": "packages/config-eslint"
   },
   "license": "MIT",
-  "author": "Alexey Litovchenko",
-  "maintainers": [
-    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
-  ],
+  "author": "Alexey Litovchenko <alex.lit@outlook.com> (https://github.com/alex-lit)",
   "type": "module",
-  "main": "index.js",
+  "main": "./index.js",
   "files": [
-    "README.md",
     "index.js",
-    "plugins",
-    "presets"
+    "plugins/",
+    "presets/",
+    "README.md"
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
     "lint": "cd ../../ && ./scripts/lint.eslint.sh",
-    "ou": "../../scripts/ou.sh --local",
-    "release": "../../scripts/release.sh",
-    "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh --local"
+    "ou": "sh ../../scripts/ou.sh --local",
+    "release": "sh ../../scripts/release.sh",
+    "semver": "sh ../../scripts/semver.sh",
+    "up": "sh ../../scripts/up.sh --local"
   },
   "dependencies": {
     "@eslint/js": "^9.20.0",
@@ -59,7 +60,13 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
   },
+  "packageManager": "pnpm@9.x",
   "engines": {
-    "node": ">=18.18"
+    "node": ">=18.18",
+    "pnpm": ">=9"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

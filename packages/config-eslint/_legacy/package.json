@@ -19,7 +19,7 @@
   "license": "MIT",
   "author": "Alexey Litovchenko",
   "maintainers": [
-    "Alexey Litovchenko <alex.lit@outlook.com> (https://alexlit.gitlab.io)"
+    "Alexey Litovchenko <alex.lit@outlook.com> (https://github.com/alex-lit)"
   ],
   "type": "commonjs",
   "main": "index.js",
