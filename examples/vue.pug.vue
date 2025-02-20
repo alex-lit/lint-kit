@@ -1,8 +1,4 @@
-<!-- eslint-disable vue/multi-word-component-names -->
-<script lang="ts">
-  /* eslint-disable vue/block-lang */
-</script>
-
+<!-- eslint-disable vue/block-lang, vue/multi-word-component-names -->
 <template lang="pug">
 .container
   .row

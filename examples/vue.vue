@@ -1,16 +1,14 @@
-<!-- eslint-disable vue/multi-word-component-names -->
+<!-- eslint-disable     vue/multi-word-component-names -->
 <script setup lang="ts">
-  const articleStore = 1;
+  //  sdf
 </script>
 
 <template>
-  <UiCard class="article-access left-[-5px] top-[-5px] m-5">
-    <UiSection>
-      <template #title> Видимость материала </template>
-
-      <ArticleAccessSelector v-model="articleStore.formData.allowed_for" />
-    </UiSection>
-  </UiCard>
+  <div class="article-access top-[-5px] left-[-5px] m-5">
+    <div>
+      <div></div>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" module>
