@@ -5,7 +5,12 @@ import typescript from 'typescript-eslint';
 export const vue = [
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
-    ignores: ['**/*.json', '**/*.jsonc', '**/*.json5'],
+    ignores: [
+      ...(config.ignores ?? []),
+      '**/*.json',
+      '**/*.jsonc',
+      '**/*.json5',
+    ],
   })),
 
   {

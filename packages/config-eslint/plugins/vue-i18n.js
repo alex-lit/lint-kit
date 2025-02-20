@@ -4,7 +4,12 @@ import plugin from '@intlify/eslint-plugin-vue-i18n';
 export const vueI18n = [
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
-    ignores: ['**/*.json', '**/*.jsonc', '**/*.json5'],
+    ignores: [
+      ...(config.ignores ?? []),
+      '**/*.json',
+      '**/*.jsonc',
+      '**/*.json5',
+    ],
   })),
 
   {
