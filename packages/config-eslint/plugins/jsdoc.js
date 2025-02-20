@@ -1,9 +1,15 @@
 import plugin from 'eslint-plugin-jsdoc';
 
+import { FILES } from '../presets/_base.js';
+
 /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
 export const jsdoc = [
-  plugin.configs['flat/recommended'],
   {
+    files: FILES,
+    ...plugin.configs['flat/recommended'],
+  },
+  {
+    files: FILES,
     rules: {
       'jsdoc/lines-before-block': 'off',
       'jsdoc/no-undefined-types': 'off',

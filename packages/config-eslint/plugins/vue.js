@@ -3,7 +3,11 @@ import typescript from 'typescript-eslint';
 
 /** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
 export const vue = [
-  ...plugin.configs['flat/recommended'],
+  ...plugin.configs['flat/recommended'].map((config) => ({
+    ...config,
+    files: ['**/*.vue'],
+  })),
+
   {
     files: ['**/*.vue'],
     languageOptions: { parserOptions: { parser: typescript.parser } },

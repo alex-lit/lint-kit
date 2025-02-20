@@ -1,6 +1,8 @@
 import config from 'eslint-config-prettier';
 import plugin from 'eslint-plugin-prettier/recommended';
 
+import { FILES } from '../presets/_base.js';
+
 const fixes = {
   // fix  for prettier/vue
   'vue/html-self-closing': [
@@ -19,7 +21,7 @@ const fixes = {
 
 /** @see [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) */
 export const prettier = [
-  plugin,
+  { files: FILES, ...plugin },
   {
     files: ['**/*.vue'],
     rules: { ...fixes },
@@ -28,7 +30,7 @@ export const prettier = [
 
 /** @see [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) */
 export const prettierConfig = [
-  config,
+  { files: FILES, ...config },
   {
     files: ['**/*.vue'],
     rules: { ...fixes },

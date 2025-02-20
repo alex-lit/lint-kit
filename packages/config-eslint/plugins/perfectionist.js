@@ -1,9 +1,15 @@
 import plugin from 'eslint-plugin-perfectionist';
 
+import { FILES } from '../presets/_base.js';
+
 /** @see [eslint-plugin-perfectionist](https://perfectionist.dev) */
 export const perfectionist = [
-  plugin.configs['recommended-natural'],
   {
+    files: FILES,
+    ...plugin.configs['recommended-natural'],
+  },
+  {
+    files: FILES,
     rules: {
       'perfectionist/sort-imports': [
         'warn',

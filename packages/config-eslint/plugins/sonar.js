@@ -1,9 +1,15 @@
 import plugin from 'eslint-plugin-sonarjs';
 
+import { FILES } from '../presets/_base.js';
+
 /** @see [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) */
 export const sonar = [
-  plugin.configs.recommended,
   {
+    files: FILES,
+    ...plugin.configs.recommended,
+  },
+  {
+    files: FILES,
     plugins: {
       sonar: plugin,
     },

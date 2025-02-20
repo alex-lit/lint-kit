@@ -1,10 +1,12 @@
 // import tailwind from 'eslint-plugin-tailwindcss';
+import { FILES } from '../presets/_base.js';
 
 /** @see [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss) */
 export const tailwindcss = [
   // TODO: включить после обновления плагина
   // ...tailwind.configs['flat/recommended'],
   {
+    files: FILES,
     rules: {
       // 'tailwindcss/no-custom-classname': 'off',
       'vue/static-class-names-order': 'off',

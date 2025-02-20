@@ -1,12 +1,17 @@
 import plugin from '@eslint/js';
 
+import { FILES } from '../presets/_base.js';
+
 /** @see [eslint](https://eslint.org) */
 export const javascript = [
-  plugin.configs.recommended,
-
   {
+    files: FILES,
+    ...plugin.configs.recommended,
+  },
+  {
+    files: FILES,
     rules: {
-      curly: 'error',
+      'curly': 'error',
       'dot-notation': ['error'],
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],

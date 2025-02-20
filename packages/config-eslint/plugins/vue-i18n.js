@@ -2,7 +2,11 @@ import plugin from '@intlify/eslint-plugin-vue-i18n';
 
 /** @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/) */
 export const vueI18n = [
-  ...plugin.configs['flat/recommended'],
+  ...plugin.configs['flat/recommended'].map((config) => ({
+    ...config,
+    files: ['**/*.vue'],
+  })),
+
   {
     files: ['**/*.vue'],
     rules: {
@@ -24,6 +28,8 @@ export const vueI18n = [
       '@intlify/vue-i18n/no-unused-keys': 'warn',
       '@intlify/vue-i18n/prefer-sfc-lang-attr': 'error',
     },
+  },
+  {
     settings: {
       'vue-i18n': {
         localeDir: './**/locales/*.{json,json5,yaml,yml}',

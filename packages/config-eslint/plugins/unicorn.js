@@ -1,9 +1,15 @@
 import plugin from 'eslint-plugin-unicorn';
 
+import { FILES } from '../presets/_base.js';
+
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = [
-  plugin.configs['flat/all'],
   {
+    files: FILES,
+    ...plugin.configs['flat/all'],
+  },
+  {
+    files: FILES,
     rules: {
       'unicorn/better-regex': 'off',
       'unicorn/consistent-destructuring': 'warn',

@@ -1,11 +1,15 @@
 import globals from 'globals';
 
+export const FILES = ['**/*.{js,mjs,cjs,typescript,vue}'];
+
 /** Base config */
 export const _base = [
   {
-    files: ['**/*.{js,mjs,cjs,typescript,vue}'],
+    files: FILES,
+    languageOptions: {
+      globals: globals.browser,
+    },
   },
-
   {
     ignores: [
       '**/.temp',
@@ -19,6 +23,4 @@ export const _base = [
       'sw.js',
     ],
   },
-
-  { languageOptions: { globals: globals.browser } },
 ];

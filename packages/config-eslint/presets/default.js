@@ -1,5 +1,6 @@
 import { javascript } from '../plugins/javascript.js';
 import { jsdoc } from '../plugins/jsdoc.js';
+import { json } from '../plugins/json.js';
 import { perfectionist } from '../plugins/perfectionist.js';
 import { prettierConfig } from '../plugins/prettier.js';
 import { regexp } from '../plugins/regexp.js';
@@ -19,6 +20,7 @@ export const defaultPreset = [
 
   ...javascript,
   ...jsdoc,
+  ...json,
   ...perfectionist,
   ...regexp,
   ...sonar,
