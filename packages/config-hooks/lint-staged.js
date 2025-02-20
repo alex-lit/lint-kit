@@ -31,7 +31,7 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
 
   const markdownlint = pluginsList.markdownlint
     ? 'markdownlint --fix'
-    : 'markdownlint "eslint disabled"';
+    : 'echo "markdownlint disabled"';
 
   const npmlint = pluginsList.npmlint
     ? 'npmPkgJsonLint'
@@ -52,8 +52,9 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     '*.html': [htmllint, prettier],
     '*.jade': [prettier],
     '*.js': [eslint, prettier],
-    '*.json,!package-lock.json': [prettier],
-    '*.jsonc': [prettier],
+    '*.json5': [prettier, eslint],
+    '*.json,!package-lock.json': [eslint, prettier],
+    '*.jsonc': [prettier, eslint],
     '*.jsonp': [prettier],
     '*.jsx': [eslint, prettier],
     '*.md': [prettier, markdownlint],
