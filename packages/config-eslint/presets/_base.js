@@ -1,6 +1,6 @@
 import globals from 'globals';
 
-export const FILES = ['**/*.{js,mjs,cjs,typescript,vue}'];
+export const FILES = ['**/*.{js,mjs,cjs,jsx,ts,tsx,vue}'];
 
 /** Base config */
 export const _base = [
