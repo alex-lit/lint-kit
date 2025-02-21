@@ -12,9 +12,7 @@ const DEFAULT_PLUGINS = {
 
 const OPTIONAL_PLUGINS = { php: false, ruby: false, sql: false };
 
-const CODESTYLE_PLUGINS = {
-  tailwindcss: false,
-};
+const CODESTYLE_PLUGINS = { tailwindcss: false };
 
 const PLUGINS = {
   ...DEFAULT_PLUGINS,
@@ -65,7 +63,7 @@ export const createConfig = async (plugins = {}, options = {}) => {
   return {
     bracketSameLine: false,
     endOfLine: 'lf',
-    objectWrapping: 'collapse',
+    objectWrap: 'collapse',
     overrides: [
       ...(pluginsConfig.overrides ?? []),
       ...(options.overrides ?? []),
