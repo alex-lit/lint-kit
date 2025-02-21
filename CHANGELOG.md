@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v142.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v105.0.4...v142.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([5dbf799](https://github.com/alex-lit/lint-kit/commit/5dbf799))
+- **@alexlit/config-eslint:** Bump version ([f107f76](https://github.com/alex-lit/lint-kit/commit/f107f76))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](http://github.com/alex-lit))
+
 ## v141.1.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v20.4.0...v141.1.0)
