@@ -34,6 +34,7 @@ export const vue = [
         },
       ],
       'vue/component-options-name-casing': ['error', 'PascalCase'],
+      'vue/custom-event-name-casing': ['error', 'camelCase', { ignores: [] }],
       'vue/define-emits-declaration': ['error'],
       'vue/define-macros-order': [
         'error',
@@ -60,11 +61,7 @@ export const vue = [
       'vue/html-self-closing': [
         'error',
         {
-          html: {
-            component: 'always',
-            normal: 'never',
-            void: 'always',
-          },
+          html: { component: 'always', normal: 'never', void: 'always' },
           math: 'always',
           svg: 'always',
         },
@@ -88,6 +85,7 @@ export const vue = [
       'vue/no-deprecated-slot-scope-attribute': ['error'],
       'vue/no-duplicate-attr-inheritance': ['error'],
       'vue/no-empty-component-block': ['error'],
+      'vue/no-import-compiler-macros': ['error'],
       'vue/no-irregular-whitespace': ['error'],
       'vue/no-loss-of-precision': ['error'],
       'vue/no-multiple-objects-in-class': ['error'],
@@ -117,12 +115,7 @@ export const vue = [
       'vue/no-unused-refs': ['error'],
       'vue/no-use-computed-property-like-method': ['error'],
       'vue/no-use-v-else-with-v-for': ['warn'],
-      'vue/no-use-v-if-with-v-for': [
-        'warn',
-        {
-          allowUsingIterationVar: true,
-        },
-      ],
+      'vue/no-use-v-if-with-v-for': ['warn', { allowUsingIterationVar: true }],
       'vue/no-useless-mustaches': ['error'],
       'vue/no-useless-template-attributes': ['error'],
       'vue/no-useless-v-bind': ['error'],
