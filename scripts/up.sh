@@ -23,13 +23,13 @@ done
 # TODO: pnpm@9 bug - ставит все зависимости вместо выбранных
 if $local_mode; then
   echo -e "${GREY}Режим проверки: ${WHITE}локальный${WHITE}"
-  npx pnpm update \
+  pnpm update \
     --interactive \
     --recursive \
     --latest
 else
   echo -e "${GREY}Режим проверки: ${WHITE}глобальный${WHITE}"
-  npx pnpm update \
+  pnpm update \
     --interactive \
     --latest \
     --recursive
