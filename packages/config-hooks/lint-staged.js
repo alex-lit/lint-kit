@@ -74,7 +74,7 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
     '*.tsx': [eslint, prettier],
     '*.vue': [eslint, stylelint, prettier],
     '*.xml': [prettier],
-    '*.yaml': [prettier],
+    '*.yaml,!pnpm-lock.yaml,!yarn-lock.yaml': [prettier],
     '*.yml': [prettier],
     'package-lock.json': [lockfilelint],
     'package.json': [npmlint],
