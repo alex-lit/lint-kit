@@ -1,13 +1,13 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "20.4.3",
+  "version": "20.4.4",
   "private": false,
   "description": "prettier config",
   "keywords": [
     "prettier",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-prettier#readme",
   "bugs": {
     "url": "https://github.com/alex-lit/lint-kit/issues"
   },
