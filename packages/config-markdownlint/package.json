@@ -1,13 +1,13 @@
 {
   "name": "@alexlit/config-markdownlint",
-  "version": "2.15.0",
+  "version": "2.15.1",
   "private": false,
   "description": "markdownlint config",
   "keywords": [
     "markdownlint",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-markdownlint#readme",
   "bugs": {
     "url": "https://github.com/alex-lit/lint-kit/issues"
   },
