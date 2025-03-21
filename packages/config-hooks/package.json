@@ -1,13 +1,13 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "4.6.0",
+  "version": "4.6.1",
   "private": false,
   "description": "Hooks config",
   "keywords": [
     "hooks",
     "config"
   ],
-  "homepage": "https://github.com/alex-lit/lint-kit#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-hooks#readme",
   "bugs": {
     "url": "https://github.com/alex-lit/lint-kit/issues"
   },
