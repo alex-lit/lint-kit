@@ -111,8 +111,8 @@ importers:
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.8.2)
       '@linthtml/linthtml-config-recommended':
-        specifier: ^0.1.1
-        version: 0.1.1(@linthtml/linthtml@0.10.1(typescript@5.8.2))
+        specifier: ^0.2.0
+        version: 0.2.0(@linthtml/linthtml@0.10.1(typescript@5.8.2))
 
   packages/config-markdownlint:
     dependencies:
@@ -597,8 +597,8 @@ packages:
   '@linthtml/html-parser@0.10.0':
     resolution: {integrity: sha512-9gOVBQy/AMOJQYUWnCJ8oOkSpvvSSzCTT4itFSLBRyB0n/6GxzJmTRRmMVG2/7gT/4eW3raO9LPDlxdEi8TceA==}
 
-  '@linthtml/linthtml-config-recommended@0.1.1':
-    resolution: {integrity: sha512-Pi67lqAb13p6v4Zj0wgUf5NVb30hKH6Yt+KqD5Ge6iUyfCsuNv1nc9ff9+i7eCbGaepyx4AWgE1zJ1vYq+yoIA==}
+  '@linthtml/linthtml-config-recommended@0.2.0':
+    resolution: {integrity: sha512-JgRnnR7VwzqCvKGAxIvHv/NERw/ymDwqRdLVWRPv64RqBQ0H8gkYtQ00FjSfcfRBVnskjjlDwx2hHYLEhQEYFg==}
     peerDependencies:
       '@linthtml/linthtml': '>= 0.6.0'
 
@@ -4940,7 +4940,7 @@ snapshots:
       domhandler: 4.3.1
       htmlparser2: 7.2.0
 
-  '@linthtml/linthtml-config-recommended@0.1.1(@linthtml/linthtml@0.10.1(typescript@5.8.2))':
+  '@linthtml/linthtml-config-recommended@0.2.0(@linthtml/linthtml@0.10.1(typescript@5.8.2))':
     dependencies:
       '@linthtml/linthtml': 0.10.1(typescript@5.8.2)
 
