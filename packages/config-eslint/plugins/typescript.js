@@ -7,10 +7,14 @@ export const typescript = [
   ...plugin.configs.strict,
   ...plugin.configs.stylistic,
 
+  { files: FILES, rules: { '@typescript-eslint/no-explicit-any': 'warn' } },
   {
-    files: FILES,
+    files: ['**/*.vue'],
     rules: {
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-empty-object-type': [
+        'error',
+        { allowWithName: 'Props$' },
+      ],
     },
   },
 ];
