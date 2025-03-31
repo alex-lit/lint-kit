@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "20.4.4",
+  "version": "20.5.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -43,7 +43,7 @@
     "prettier-plugin-eruby": "^0.0.3",
     "prettier-plugin-jsdoc": "^1.3.2",
     "prettier-plugin-packagejson": "^2.5.10",
-    "prettier-plugin-sh": "^0.15.0",
+    "prettier-plugin-sh": "^0.16.0",
     "prettier-plugin-solidity": "^1.4.2",
     "prettier-plugin-sort-json": "^4.1.1",
     "prettier-plugin-sql": "^0.18.1",
