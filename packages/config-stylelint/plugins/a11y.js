@@ -1,8 +1,10 @@
+/* eslint-disable unicorn/no-null */
+
 /** @see [stylelint-a11y](https://github.com/double-great/stylelint-a11y) */
 export default {
   plugins: ['@double-great/stylelint-a11y'],
   rules: {
-    'a11y/media-prefers-reduced-motion': false,
+    'a11y/media-prefers-reduced-motion': null,
     'a11y/no-obsolete-attribute': true,
     'a11y/no-obsolete-element': true,
     'a11y/no-outline-none': true,
