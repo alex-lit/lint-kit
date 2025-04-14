@@ -17,7 +17,6 @@ const OPTIONAL_PLUGINS = {
   'gamut': false,
   'logical-css': false,
   'media-use-custom-media': false,
-  'no-browser-hacks': false,
   'no-indistinguishable-colors': false,
   'no-unresolved-module': false,
   'no-unsupported-browser-features': false,
