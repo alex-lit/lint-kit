@@ -17,9 +17,7 @@ export const generateRandomString = (options) => {
     hasDigits: true,
     hasLowercase: true,
     // group
-    hastest: {
-      for: '123',
-    },
+    hastest: { for: '123' },
     hasUppercase: true,
     length: 10,
 

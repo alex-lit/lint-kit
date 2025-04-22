@@ -1,10 +1,15 @@
 export interface Test {
+  a: 'a';
+
+  type1: number;
+
+  type2: number;
   /**
    * Test dsaf
    *
    * Asfas
    */
-  type: number;
+  type3: number;
 }
 
 export const qw = 1;
@@ -14,8 +19,12 @@ export const q = 1;
 export const { b, c, x } = { b: 1, c: 1, x: 1 };
 
 export enum Enumerator {
-  /** Sdfsa */
   a = 1,
+
   b = 2,
+
   c = 3,
+  d = 4,
+
+  er = 5,
 }

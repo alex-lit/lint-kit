@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "146.0.0",
+  "version": "146.1.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
