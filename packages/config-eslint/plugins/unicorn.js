@@ -4,15 +4,11 @@ import { FILES } from '../presets/_base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = [
-  {
-    files: FILES,
-    ...plugin.configs['flat/all'],
-  },
+  { files: FILES, ...plugin.configs['flat/all'] },
   {
     files: FILES,
     rules: {
       'unicorn/better-regex': 'off',
-      'unicorn/consistent-destructuring': 'warn',
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
@@ -21,8 +17,9 @@ export const unicorn = [
       'unicorn/no-array-reduce': ['error', { allowSimpleOperations: true }],
       'unicorn/no-empty-file': 'off',
       'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }],
-      'unicorn/prefer-module': 'off',
-      'unicorn/prefer-node-protocol': 'off',
+      'unicorn/prefer-import-meta-properties': 'warn',
+      'unicorn/prefer-module': 'warn',
+      'unicorn/prefer-node-protocol': 'warn',
       'unicorn/prevent-abbreviations': [
         'warn',
         {
@@ -51,16 +48,6 @@ export const unicorn = [
       ],
     },
   },
-  {
-    files: ['.*'],
-    rules: {
-      'unicorn/no-null': 'off',
-    },
-  },
-  {
-    files: ['*.d.ts'],
-    rules: {
-      'unicorn/prefer-export-from': 'off',
-    },
-  },
+  { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
+  { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
 ];
