@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "148.2.1",
+  "version": "149.0.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -72,7 +72,7 @@
     "changelogen": "^0.6.1"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=9"
+    "node": ">=20",
+    "pnpm": ">=10"
   }
 }
