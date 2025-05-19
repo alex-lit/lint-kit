@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-null */
 import plugin from 'typescript-eslint';
 
 import { FILES } from '../presets/_base.js';
@@ -7,7 +8,34 @@ export const typescript = [
   ...plugin.configs.strict,
   ...plugin.configs.stylistic,
 
-  { files: FILES, rules: { '@typescript-eslint/no-explicit-any': 'warn' } },
+  {
+    files: FILES,
+    rules: {
+      '@typescript-eslint/naming-convention': [
+        'error',
+
+        { format: ['strictCamelCase'], selector: 'function' },
+        {
+          format: ['strictCamelCase'],
+          leadingUnderscore: 'require',
+          modifiers: ['private'],
+          selector: 'memberLike',
+        },
+        {
+          format: ['strictCamelCase'],
+          leadingUnderscore: 'allow',
+          selector: 'parameter',
+        },
+        { format: ['StrictPascalCase'], selector: 'typeLike' },
+        {
+          format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+          selector: 'variable',
+        },
+        { format: null, modifiers: ['destructured'], selector: 'variable' },
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
   {
     files: ['**/*.vue'],
     rules: {
