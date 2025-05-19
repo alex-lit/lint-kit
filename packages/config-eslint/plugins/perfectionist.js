@@ -1,6 +1,6 @@
 import plugin from 'eslint-plugin-perfectionist';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-perfectionist](https://perfectionist.dev) */
 export const perfectionist = [

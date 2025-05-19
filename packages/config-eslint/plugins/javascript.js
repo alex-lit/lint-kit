@@ -1,13 +1,10 @@
 import plugin from '@eslint/js';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [eslint](https://eslint.org) */
 export const javascript = [
-  {
-    files: FILES,
-    ...plugin.configs.recommended,
-  },
+  { files: FILES, ...plugin.configs.recommended },
   {
     files: FILES,
     rules: {
@@ -33,10 +30,7 @@ export const javascript = [
               group: ['.', '..', '*/..'],
               message: 'Use absolute path instead',
             },
-            {
-              group: ['@/', '@@/'],
-              message: 'Use "~" instead of "@"',
-            },
+            { group: ['@/', '@@/'], message: 'Use "~" instead of "@"' },
           ],
         },
       ],

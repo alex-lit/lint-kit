@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/no-null */
 import plugin from 'typescript-eslint';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) */
 export const typescript = [

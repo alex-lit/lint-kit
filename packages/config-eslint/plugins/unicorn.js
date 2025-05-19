@@ -1,6 +1,6 @@
 import plugin from 'eslint-plugin-unicorn';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = [

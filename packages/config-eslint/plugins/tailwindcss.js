@@ -1,5 +1,5 @@
 // import tailwind from 'eslint-plugin-tailwindcss';
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss) */
 export const tailwindcss = [

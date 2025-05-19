@@ -1,13 +1,10 @@
 import plugin from 'eslint-plugin-jsdoc';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
 export const jsdoc = [
-  {
-    files: FILES,
-    ...plugin.configs['flat/recommended'],
-  },
+  { files: FILES, ...plugin.configs['flat/recommended'] },
   {
     files: FILES,
     rules: {

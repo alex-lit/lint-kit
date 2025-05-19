@@ -1,14 +1,12 @@
 import plugin from '@stylistic/eslint-plugin';
 
-import { FILES } from '../presets/_base.js';
+import { FILES } from '../presets/base.js';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
 export const stylistic = [
   {
     files: FILES,
-    plugins: {
-      '@stylistic': plugin,
-    },
+    plugins: { '@stylistic': plugin },
     rules: {
       '@stylistic/lines-around-comment': [
         'warn',

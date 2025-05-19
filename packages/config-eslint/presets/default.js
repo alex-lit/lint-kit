@@ -13,10 +13,10 @@ import { vitest } from '../plugins/vitest.js';
 import { vueAccessibility } from '../plugins/vue-accessibility.js';
 import { vueI18n } from '../plugins/vue-i18n.js';
 import { vue } from '../plugins/vue.js';
-import { _base } from './_base.js';
+import { base } from './base.js';
 
 export const defaultPreset = [
-  ..._base, // must be first
+  ...base, // must be first
 
   ...javascript,
   ...jsdoc,
