@@ -50,7 +50,7 @@ export const vue = [
         },
       ],
       'vue/define-props-declaration': ['error'],
-      'vue/define-props-destructuring': ['error', { destructure: 'always' }],
+      'vue/define-props-destructuring': ['warn', { destructure: 'always' }],
       'vue/dot-notation': ['error'],
       'vue/enforce-style-attribute': ['error', { allow: ['module'] }],
       'vue/eqeqeq': ['error'],
