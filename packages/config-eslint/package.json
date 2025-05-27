@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "109.7.0",
+  "version": "109.8.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -43,7 +43,7 @@
     "@eslint/json": "^0.12.0",
     "@intlify/eslint-plugin-vue-i18n": "^4.0.1",
     "@stylistic/eslint-plugin": "^4.4.0",
-    "@tanstack/eslint-plugin-query": "^5.74.7",
+    "@tanstack/eslint-plugin-query": "^5.78.0",
     "@unocss/eslint-config": "^66.1.2",
     "eslint": "9.27.0",
     "eslint-config-prettier": "^10.1.5",
