@@ -86,9 +86,9 @@ export default {
       { name: 'container', type: 'at-rule' },
       { name: 'supports', type: 'at-rule' },
       { name: 'document', type: 'at-rule' },
+      { name: 'page', type: 'at-rule' },
 
       // Nested
-      { name: 'page', type: 'at-rule' },
       { name: 'font-face', type: 'at-rule' },
       { name: 'keyframes', type: 'at-rule' },
       { name: 'viewport', type: 'at-rule' },
@@ -102,6 +102,10 @@ export default {
       { name: 'stylistic', type: 'at-rule' },
       { name: 'styleset', type: 'at-rule' },
       { name: 'character-variant', type: 'at-rule' },
+
+      // Transition
+      { name: 'starting-style', type: 'at-rule' },
+      { name: 'view-transition', type: 'at-rule' },
 
       'at-rules',
 
