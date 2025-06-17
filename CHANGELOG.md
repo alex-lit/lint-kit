@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v150.0.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v110.1.0...v150.0.1)
+
 ## v150.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v53.1.3...v150.0.0)
