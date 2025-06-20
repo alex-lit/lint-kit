@@ -104,7 +104,7 @@ const createConfig = (plugins = {}, options = {}) => ({
       true,
       {
         ignoreProperties: {
-          '/.+/': /(v-(bind|deep|global|slotted)|calc-size|theme|view)|\$/,
+          '/.+/': /(v-(bind|deep|global|slotted)|calc-size|rgb|theme|view)|\$/,
         },
       },
     ],
