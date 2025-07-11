@@ -10,15 +10,14 @@ const DEFAULT_PLUGINS = {
   'xml': true,
 };
 
-const OPTIONAL_PLUGINS = { php: false, ruby: false, sql: false };
-
-const CODESTYLE_PLUGINS = { tailwindcss: false };
-
-const PLUGINS = {
-  ...DEFAULT_PLUGINS,
-  ...OPTIONAL_PLUGINS,
-  ...CODESTYLE_PLUGINS,
+const OPTIONAL_PLUGINS = {
+  php: false,
+  ruby: false,
+  sql: false,
+  tailwindcss: false,
 };
+
+const PLUGINS = { ...DEFAULT_PLUGINS, ...OPTIONAL_PLUGINS };
 
 /**
  * Create plugins config list
