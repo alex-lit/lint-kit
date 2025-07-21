@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "111.7.1",
+  "version": "111.7.2",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -46,10 +46,10 @@
     "@tanstack/eslint-plugin-query": "^5.81.2",
     "@unocss/eslint-config": "^66.3.3",
     "eslint": "9.31.0",
-    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^51.4.1",
     "eslint-plugin-perfectionist": "^4.15.0",
-    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-prettier": "^5.5.3",
     "eslint-plugin-regexp": "^2.9.0",
     "eslint-plugin-sonarjs": "^3.0.4",
     "eslint-plugin-tailwindcss": "^3.18.2",
