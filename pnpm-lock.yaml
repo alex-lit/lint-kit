@@ -48,8 +48,8 @@ importers:
         specifier: 9.31.0
         version: 9.31.0(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.1.5
-        version: 10.1.5(eslint@9.31.0(jiti@2.4.2))
+        specifier: ^10.1.8
+        version: 10.1.8(eslint@9.31.0(jiti@2.4.2))
       eslint-plugin-jsdoc:
         specifier: ^51.4.1
         version: 51.4.1(eslint@9.31.0(jiti@2.4.2))
@@ -57,8 +57,8 @@ importers:
         specifier: ^4.15.0
         version: 4.15.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-prettier:
-        specifier: ^5.5.1
-        version: 5.5.1(@types/eslint@9.6.1)(eslint-config-prettier@10.1.5(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))(prettier@3.6.2)
+        specifier: ^5.5.3
+        version: 5.5.3(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))(prettier@3.6.2)
       eslint-plugin-regexp:
         specifier: ^2.9.0
         version: 2.9.0(eslint@9.31.0(jiti@2.4.2))
@@ -159,8 +159,8 @@ importers:
         specifier: ^1.3.3
         version: 1.3.3(prettier@3.6.2)
       prettier-plugin-packagejson:
-        specifier: ^2.5.18
-        version: 2.5.18(prettier@3.6.2)
+        specifier: ^2.5.19
+        version: 2.5.19(prettier@3.6.2)
       prettier-plugin-sh:
         specifier: ^0.18.0
         version: 0.18.0(prettier@3.6.2)
@@ -184,7 +184,7 @@ importers:
     dependencies:
       '@double-great/stylelint-a11y':
         specifier: ^3.0.4
-        version: 3.0.4(stylelint@16.21.1(typescript@5.8.3))
+        version: 3.0.4(stylelint@16.22.0(typescript@5.8.3))
       postcss:
         specifier: ^8.5.6
         version: 8.5.6
@@ -195,62 +195,62 @@ importers:
         specifier: ^3.6.2
         version: 3.6.2
       stylelint:
-        specifier: 16.21.1
-        version: 16.21.1(typescript@5.8.3)
+        specifier: 16.22.0
+        version: 16.22.0(typescript@5.8.3)
       stylelint-color-format:
         specifier: ^1.1.0
-        version: 1.1.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.1.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-recommended-vue:
         specifier: ^1.6.1
-        version: 1.6.1(postcss-html@1.8.0)(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.6.1(postcss-html@1.8.0)(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-standard:
         specifier: ^38.0.0
-        version: 38.0.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 38.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-standard-scss:
         specifier: ^15.0.1
-        version: 15.0.1(postcss@8.5.6)(stylelint@16.21.1(typescript@5.8.3))
+        version: 15.0.1(postcss@8.5.6)(stylelint@16.22.0(typescript@5.8.3))
       stylelint-declaration-block-no-ignored-properties:
         specifier: ^2.8.0
-        version: 2.8.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 2.8.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-gamut:
         specifier: ^1.3.4
-        version: 1.3.4(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.3.4(stylelint@16.22.0(typescript@5.8.3))
       stylelint-high-performance-animation:
         specifier: ^1.11.0
-        version: 1.11.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.11.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-media-use-custom-media:
         specifier: ^4.0.0
-        version: 4.0.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 4.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-no-indistinguishable-colors:
         specifier: ^2.3.1
-        version: 2.3.1(stylelint@16.21.1(typescript@5.8.3))
+        version: 2.3.1(stylelint@16.22.0(typescript@5.8.3))
       stylelint-no-nested-media:
         specifier: ^0.1.0
         version: 0.1.0
       stylelint-no-unresolved-module:
         specifier: ^2.3.0
-        version: 2.3.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 2.3.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-no-unsupported-browser-features:
         specifier: ^8.0.4
-        version: 8.0.4(stylelint@16.21.1(typescript@5.8.3))
+        version: 8.0.4(stylelint@16.22.0(typescript@5.8.3))
       stylelint-order:
         specifier: ^7.0.0
-        version: 7.0.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 7.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-plugin-logical-css:
         specifier: ^1.2.3
-        version: 1.2.3(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.2.3(stylelint@16.22.0(typescript@5.8.3))
       stylelint-prettier:
         specifier: ^5.0.3
-        version: 5.0.3(prettier@3.6.2)(stylelint@16.21.1(typescript@5.8.3))
+        version: 5.0.3(prettier@3.6.2)(stylelint@16.22.0(typescript@5.8.3))
       stylelint-scss:
         specifier: ^6.12.1
-        version: 6.12.1(stylelint@16.21.1(typescript@5.8.3))
+        version: 6.12.1(stylelint@16.22.0(typescript@5.8.3))
       stylelint-selector-no-empty:
         specifier: ^1.0.9
-        version: 1.0.9(stylelint@16.21.1(typescript@5.8.3))
+        version: 1.0.9(stylelint@16.22.0(typescript@5.8.3))
       stylelint-use-nesting:
         specifier: ^6.0.0
-        version: 6.0.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 6.0.0(stylelint@16.22.0(typescript@5.8.3))
 
 packages:
 
@@ -504,8 +504,8 @@ packages:
   '@jridgewell/sourcemap-codec@1.5.4':
     resolution: {integrity: sha512-VT2+G1VQs/9oz078bLrYbecdZKs912zQlkelYpuf+SXF+QvZDYJlbx/LSx+meSAwdDFnF8FVXW92AVjjkVmgFw==}
 
-  '@keyv/serialize@1.0.3':
-    resolution: {integrity: sha512-qnEovoOp5Np2JDGonIDL6Ayihw0RhnRh6vxPuHo4RDn1UOzwEo4AeIfpL6UGIrsceWrCMiVPgwRjbHu4vYFc3g==}
+  '@keyv/serialize@1.1.0':
+    resolution: {integrity: sha512-RlDgexML7Z63Q8BSaqhXdCYNBy/JQnqYIwxofUrNLGCblOMHp+xux2Q8nLMLlPpgHQPoU0Do8Z6btCpRBEqZ8g==}
 
   '@linthtml/core@0.10.2':
     resolution: {integrity: sha512-bgQ/spWq8hon+17ZYzSJXiluG+giuC/9icoEtlrByHJPsMW75YBlKbhrueadi6+sGxCfzH3ASC7k87N7O9GPNw==}
@@ -550,6 +550,10 @@ packages:
 
   '@pkgr/core@0.2.7':
     resolution: {integrity: sha512-YLT9Zo3oNPJoBjBc4q8G2mjU4tqIbf5CEOORbUUr48dCD9q3umJ3IPlVqOqDakPfd2HuwccBaqlGhN4Gmr5OWg==}
+    engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+
+  '@pkgr/core@0.2.9':
+    resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@prettier/plugin-php@0.24.0':
@@ -1008,9 +1012,6 @@ packages:
   buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
 
-  buffer@6.0.3:
-    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
-
   builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
@@ -1038,8 +1039,8 @@ packages:
       magicast:
         optional: true
 
-  cacheable@1.10.1:
-    resolution: {integrity: sha512-Fa2BZY0CS9F0PFc/6aVA6tgpOdw+hmv9dkZOlHXII5v5Hw+meJBIWDcPrG9q/dXxGcNbym5t77fzmawrBQfTmQ==}
+  cacheable@1.10.2:
+    resolution: {integrity: sha512-hMkETCRV4hwBAvjQY1/xGw15tlPj+7cM4d5HOlYJJFftLQVRCboVX+mT6AJ6eL0fsqUhSUwDiF+pgfTR2r2Hxg==}
 
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
@@ -1625,8 +1626,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@10.1.5:
-    resolution: {integrity: sha512-zc1UmCpNltmVY34vuLRV61r1K27sWuX39E+uyUnY8xS2Bex88VV9cugG+UZbRSRGtGyFboj+D8JODyme1plMpw==}
+  eslint-config-prettier@10.1.8:
+    resolution: {integrity: sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1643,8 +1644,8 @@ packages:
     peerDependencies:
       eslint: '>=8.45.0'
 
-  eslint-plugin-prettier@5.5.1:
-    resolution: {integrity: sha512-dobTkHT6XaEVOo8IO90Q4DOSxnm3Y151QxPJlM/vKC0bVy+d6cVWQZLlFiuZPP0wS6vZwSKeJgKkcS+KfMBlRw==}
+  eslint-plugin-prettier@5.5.3:
+    resolution: {integrity: sha512-NAdMYww51ehKfDyDhv59/eIItUVzU0Io9H2E8nHNGKEeeqlnci+1gCvrHib6EmZdf6GxF+LCV5K7UC65Ezvw7w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       '@types/eslint': '>=8.0.0'
@@ -2432,8 +2433,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  keyv@5.3.4:
-    resolution: {integrity: sha512-ypEvQvInNpUe+u+w8BIcPkQvEqXquyyibWE/1NB5T2BTzIpS5cGEV1LZskDzPSTvNAaT4+5FutvzlvnkxOSKlw==}
+  keyv@5.4.0:
+    resolution: {integrity: sha512-TMckyVjEoacG5IteUpUrOBsFORtheqziVyyY2dLUwg1jwTb8u48LX4TgmtogkNl9Y9unaEJ1luj10fGyjMGFOQ==}
 
   kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
@@ -2997,10 +2998,6 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  picomatch@4.0.2:
-    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
-    engines: {node: '>=12'}
-
   picomatch@4.0.3:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
@@ -3092,8 +3089,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier-plugin-packagejson@2.5.18:
-    resolution: {integrity: sha512-NKznPGcGrcj4NPGxnh+w78JXPyfB6I4RQSCM0v+CAXwpDG7OEpJQ5zMyfC5NBgKH1k7Skwcj5ak5by2mrHvC5g==}
+  prettier-plugin-packagejson@2.5.19:
+    resolution: {integrity: sha512-Qsqp4+jsZbKMpEGZB1UP1pxeAT8sCzne2IwnKkr+QhUe665EXUo3BAvTf1kAPCqyMv9kg3ZmO0+7eOni/C6Uag==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -3728,8 +3725,8 @@ packages:
     peerDependencies:
       stylelint: '>= 16.9.0'
 
-  stylelint@16.21.1:
-    resolution: {integrity: sha512-WCXdXnYK2tpCbebgMF0Bme3YZH/Rh/UXerj75twYo4uLULlcrLwFVdZTvTEF8idFnAcW21YUDJFyKOfaf6xJRw==}
+  stylelint@16.22.0:
+    resolution: {integrity: sha512-SVEMTdjKNV4ollUrIY9ordZ36zHv2/PHzPjfPMau370MlL2VYXeLgSNMMiEbLGRO8RmD2R8/BVUeF2DfnfkC0w==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -3750,6 +3747,10 @@ packages:
 
   synckit@0.10.3:
     resolution: {integrity: sha512-R1urvuyiTaWfeCggqEvpDJwAlDVdsT9NM+IP//Tk2x7qHCkSvBk/fwFgw/TLAHzZlrAnnazMcRw0ZD8HlYFTEQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+
+  synckit@0.11.11:
+    resolution: {integrity: sha512-MeQTA1r0litLUf0Rp/iisCaL8761lKAZHaimlbGK4j0HysC4PLfqygQj9srcs0m2RdtDYnF8UuYyKpbjHYp7Jw==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   synckit@0.11.8:
@@ -4218,10 +4219,10 @@ snapshots:
     dependencies:
       postcss-selector-parser: 7.1.0
 
-  '@double-great/stylelint-a11y@3.0.4(stylelint@16.21.1(typescript@5.8.3))':
+  '@double-great/stylelint-a11y@3.0.4(stylelint@16.22.0(typescript@5.8.3))':
     dependencies:
       postcss: 8.5.6
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
   '@dual-bundle/import-meta-resolve@4.1.0': {}
 
@@ -4364,9 +4365,7 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.4': {}
 
-  '@keyv/serialize@1.0.3':
-    dependencies:
-      buffer: 6.0.3
+  '@keyv/serialize@1.1.0': {}
 
   '@linthtml/core@0.10.2(typescript@5.8.3)':
     dependencies:
@@ -4434,6 +4433,8 @@ snapshots:
   '@pkgr/core@0.2.1': {}
 
   '@pkgr/core@0.2.7': {}
+
+  '@pkgr/core@0.2.9': {}
 
   '@prettier/plugin-php@0.24.0(prettier@3.6.2)':
     dependencies:
@@ -4978,11 +4979,6 @@ snapshots:
       base64-js: 1.5.1
       ieee754: 1.2.1
 
-  buffer@6.0.3:
-    dependencies:
-      base64-js: 1.5.1
-      ieee754: 1.2.1
-
   builtin-modules@3.3.0: {}
 
   builtin-modules@5.0.0: {}
@@ -5012,10 +5008,10 @@ snapshots:
       pkg-types: 2.2.0
       rc9: 2.1.2
 
-  cacheable@1.10.1:
+  cacheable@1.10.2:
     dependencies:
       hookified: 1.10.0
-      keyv: 5.3.4
+      keyv: 5.4.0
 
   call-bind-apply-helpers@1.0.2:
     dependencies:
@@ -5650,7 +5646,7 @@ snapshots:
       eslint: 9.31.0(jiti@2.4.2)
       semver: 7.7.1
 
-  eslint-config-prettier@10.1.5(eslint@9.31.0(jiti@2.4.2)):
+  eslint-config-prettier@10.1.8(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
       eslint: 9.31.0(jiti@2.4.2)
 
@@ -5680,15 +5676,15 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-prettier@5.5.1(@types/eslint@9.6.1)(eslint-config-prettier@10.1.5(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))(prettier@3.6.2):
+  eslint-plugin-prettier@5.5.3(@types/eslint@9.6.1)(eslint-config-prettier@10.1.8(eslint@9.31.0(jiti@2.4.2)))(eslint@9.31.0(jiti@2.4.2))(prettier@3.6.2):
     dependencies:
       eslint: 9.31.0(jiti@2.4.2)
       prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
-      synckit: 0.11.8
+      synckit: 0.11.11
     optionalDependencies:
       '@types/eslint': 9.6.1
-      eslint-config-prettier: 10.1.5(eslint@9.31.0(jiti@2.4.2))
+      eslint-config-prettier: 10.1.8(eslint@9.31.0(jiti@2.4.2))
 
   eslint-plugin-regexp@2.9.0(eslint@9.31.0(jiti@2.4.2)):
     dependencies:
@@ -5896,9 +5892,9 @@ snapshots:
     dependencies:
       reusify: 1.1.0
 
-  fdir@6.4.6(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.3):
     optionalDependencies:
-      picomatch: 4.0.2
+      picomatch: 4.0.3
 
   file-entry-cache@10.1.1:
     dependencies:
@@ -5946,7 +5942,7 @@ snapshots:
 
   flat-cache@6.1.11:
     dependencies:
-      cacheable: 1.10.1
+      cacheable: 1.10.2
       flatted: 3.3.3
       hookified: 1.10.0
 
@@ -6514,9 +6510,9 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  keyv@5.3.4:
+  keyv@5.4.0:
     dependencies:
-      '@keyv/serialize': 1.0.3
+      '@keyv/serialize': 1.1.0
 
   kind-of@6.0.3: {}
 
@@ -7263,8 +7259,6 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  picomatch@4.0.2: {}
-
   picomatch@4.0.3: {}
 
   pidtree@0.6.0: {}
@@ -7347,10 +7341,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-packagejson@2.5.18(prettier@3.6.2):
+  prettier-plugin-packagejson@2.5.19(prettier@3.6.2):
     dependencies:
       sort-package-json: 3.4.0
-      synckit: 0.11.8
+      synckit: 0.11.11
     optionalDependencies:
       prettier: 3.6.2
 
@@ -7833,77 +7827,77 @@ snapshots:
 
   style-search@0.1.0: {}
 
-  stylelint-color-format@1.1.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-color-format@1.1.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       color: 3.2.1
       style-search: 0.1.0
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-config-html@1.1.0(postcss-html@1.8.0)(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-html@1.1.0(postcss-html@1.8.0)(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       postcss-html: 1.8.0
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-config-recommended-scss@15.0.1(postcss@8.5.6)(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-recommended-scss@15.0.1(postcss@8.5.6)(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.5.6)
-      stylelint: 16.21.1(typescript@5.8.3)
-      stylelint-config-recommended: 16.0.0(stylelint@16.21.1(typescript@5.8.3))
-      stylelint-scss: 6.12.1(stylelint@16.21.1(typescript@5.8.3))
+      stylelint: 16.22.0(typescript@5.8.3)
+      stylelint-config-recommended: 16.0.0(stylelint@16.22.0(typescript@5.8.3))
+      stylelint-scss: 6.12.1(stylelint@16.22.0(typescript@5.8.3))
     optionalDependencies:
       postcss: 8.5.6
 
-  stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.0)(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-recommended-vue@1.6.1(postcss-html@1.8.0)(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       postcss-html: 1.8.0
       semver: 7.7.2
-      stylelint: 16.21.1(typescript@5.8.3)
-      stylelint-config-html: 1.1.0(postcss-html@1.8.0)(stylelint@16.21.1(typescript@5.8.3))
-      stylelint-config-recommended: 16.0.0(stylelint@16.21.1(typescript@5.8.3))
+      stylelint: 16.22.0(typescript@5.8.3)
+      stylelint-config-html: 1.1.0(postcss-html@1.8.0)(stylelint@16.22.0(typescript@5.8.3))
+      stylelint-config-recommended: 16.0.0(stylelint@16.22.0(typescript@5.8.3))
 
-  stylelint-config-recommended@16.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-recommended@16.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-config-standard-scss@15.0.1(postcss@8.5.6)(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-standard-scss@15.0.1(postcss@8.5.6)(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
-      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.6)(stylelint@16.21.1(typescript@5.8.3))
-      stylelint-config-standard: 38.0.0(stylelint@16.21.1(typescript@5.8.3))
+      stylelint: 16.22.0(typescript@5.8.3)
+      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.6)(stylelint@16.22.0(typescript@5.8.3))
+      stylelint-config-standard: 38.0.0(stylelint@16.22.0(typescript@5.8.3))
     optionalDependencies:
       postcss: 8.5.6
 
-  stylelint-config-standard@38.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-standard@38.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
-      stylelint-config-recommended: 16.0.0(stylelint@16.21.1(typescript@5.8.3))
+      stylelint: 16.22.0(typescript@5.8.3)
+      stylelint-config-recommended: 16.0.0(stylelint@16.22.0(typescript@5.8.3))
 
-  stylelint-declaration-block-no-ignored-properties@2.8.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-declaration-block-no-ignored-properties@2.8.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-gamut@1.3.4(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-gamut@1.3.4(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       colorjs.io: 0.4.5
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-high-performance-animation@1.11.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-high-performance-animation@1.11.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       postcss-value-parser: 4.2.0
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-media-use-custom-media@4.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-media-use-custom-media@4.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-no-indistinguishable-colors@2.3.1(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-no-indistinguishable-colors@2.3.1(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       colorguard-processor: 2.0.36
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
   stylelint-no-nested-media@0.1.0: {}
 
-  stylelint-no-unresolved-module@2.3.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-no-unresolved-module@2.3.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       ajv: 6.12.6
       enhanced-resolve: 5.17.1
@@ -7911,31 +7905,31 @@ snapshots:
       p-waterfall: 2.1.1
       postcss-value-parser: 4.2.0
       scss-parser: 1.0.6
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-no-unsupported-browser-features@8.0.4(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-no-unsupported-browser-features@8.0.4(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       doiuse: 6.0.5
       postcss: 8.5.6
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-order@7.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-order@7.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       postcss: 8.5.6
       postcss-sorting: 9.1.0(postcss@8.5.6)
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-plugin-logical-css@1.2.3(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-plugin-logical-css@1.2.3(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-prettier@5.0.3(prettier@3.6.2)(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-prettier@5.0.3(prettier@3.6.2)(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       prettier: 3.6.2
       prettier-linter-helpers: 1.0.0
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-scss@6.12.1(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-scss@6.12.1(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
       css-tree: 3.1.0
       is-plain-object: 5.0.0
@@ -7945,17 +7939,17 @@ snapshots:
       postcss-resolve-nested-selector: 0.1.6
       postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-selector-no-empty@1.0.9(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-selector-no-empty@1.0.9(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-use-nesting@6.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-use-nesting@6.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint@16.21.1(typescript@5.8.3):
+  stylelint@16.22.0(typescript@5.8.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
@@ -8017,6 +8011,10 @@ snapshots:
       '@pkgr/core': 0.2.1
       tslib: 2.8.1
 
+  synckit@0.11.11:
+    dependencies:
+      '@pkgr/core': 0.2.9
+
   synckit@0.11.8:
     dependencies:
       '@pkgr/core': 0.2.7
@@ -8064,8 +8062,8 @@ snapshots:
 
   tinyglobby@0.2.14:
     dependencies:
-      fdir: 6.4.6(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
 
   tmp@0.0.33:
     dependencies:
