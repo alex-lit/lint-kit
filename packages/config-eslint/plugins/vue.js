@@ -91,6 +91,8 @@ export const vue = [
       'vue/no-loss-of-precision': ['error'],
       'vue/no-multiple-objects-in-class': ['error'],
       'vue/no-multiple-template-root': 'off',
+      'vue/no-negated-condition': ['error'],
+      'vue/no-negated-v-if-condition': ['error'],
       'vue/no-parsing-error': ['error'],
       'vue/no-potential-component-option-typo': ['error'],
       'vue/no-ref-object-reactivity-loss': ['error'],
