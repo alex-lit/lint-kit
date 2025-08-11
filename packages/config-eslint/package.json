@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "113.4.0",
+  "version": "113.5.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -39,13 +39,13 @@
     "up": "sh ../../scripts/up.sh --local"
   },
   "dependencies": {
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.33.0",
     "@eslint/json": "^0.13.1",
     "@intlify/eslint-plugin-vue-i18n": "^4.1.0",
-    "@stylistic/eslint-plugin": "^5.2.2",
+    "@stylistic/eslint-plugin": "^5.2.3",
     "@tanstack/eslint-plugin-query": "^5.83.1",
     "@unocss/eslint-config": "^66.4.2",
-    "eslint": "9.32.0",
+    "eslint": "9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^52.0.4",
     "eslint-plugin-perfectionist": "^4.15.0",
