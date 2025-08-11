@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v155.6.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v113.5.0...v155.6.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([a75057e](https://github.com/alex-lit/lint-kit/commit/a75057e))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v155.5.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v55.1.1...v155.5.0)
