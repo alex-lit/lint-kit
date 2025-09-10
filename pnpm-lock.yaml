@@ -51,8 +51,8 @@ importers:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-jsdoc:
-        specifier: ^55.0.3
-        version: 55.0.3(eslint@9.35.0(jiti@2.5.1))
+        specifier: ^55.1.2
+        version: 55.1.2(eslint@9.35.0(jiti@2.5.1))
       eslint-plugin-perfectionist:
         specifier: ^4.15.0
         version: 4.15.0(eslint@9.35.0(jiti@2.5.1))(typescript@5.9.2)
@@ -81,8 +81,8 @@ importers:
         specifier: ^2.4.1
         version: 2.4.1(eslint@9.35.0(jiti@2.5.1))
       globals:
-        specifier: ^16.3.0
-        version: 16.3.0
+        specifier: ^16.4.0
+        version: 16.4.0
       jsonc-eslint-parser:
         specifier: ^2.4.0
         version: 2.4.0
@@ -1664,8 +1664,8 @@ packages:
     peerDependencies:
       eslint: '>=7.0.0'
 
-  eslint-plugin-jsdoc@55.0.3:
-    resolution: {integrity: sha512-xU2/QZgBXIGFXOzyWsNaSwrcF80Rq2h084GvIU+pkfzwE55xnr+ShEUfVL6+fZ0Jrh0hWGHdk0RiN0axhK1new==}
+  eslint-plugin-jsdoc@55.1.2:
+    resolution: {integrity: sha512-RYvtXEQE2XU2y53swBmhVXxMcpj8LkG6Ups6zre5OK5nYeiIVkh1fPqQNyRar7bWrcQEMAWDHDahYGbOchHb1w==}
     engines: {node: '>=20.11.0'}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
@@ -1979,8 +1979,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@16.3.0:
-    resolution: {integrity: sha512-bqWEnJ1Nt3neqx2q5SFfGS8r/ahumIakg3HcwtNlrVlwXIeNumWn/c7Pn/wKzGhf6SaW6H6uWXLqC30STCMchQ==}
+  globals@16.4.0:
+    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -4146,7 +4146,7 @@ snapshots:
       eslint: 9.35.0(jiti@2.5.1)
       eslint-compat-utils: 0.6.5(eslint@9.35.0(jiti@2.5.1))
       glob: 10.4.5
-      globals: 16.3.0
+      globals: 16.4.0
       ignore: 7.0.5
       import-fresh: 3.3.1
       is-language-code: 3.1.0
@@ -5383,7 +5383,7 @@ snapshots:
     dependencies:
       eslint: 9.35.0(jiti@2.5.1)
 
-  eslint-plugin-jsdoc@55.0.3(eslint@9.35.0(jiti@2.5.1)):
+  eslint-plugin-jsdoc@55.1.2(eslint@9.35.0(jiti@2.5.1)):
     dependencies:
       '@es-joy/jsdoccomment': 0.56.0
       are-docs-informative: 0.0.2
@@ -5463,7 +5463,7 @@ snapshots:
       eslint: 9.35.0(jiti@2.5.1)
       esquery: 1.6.0
       find-up-simple: 1.0.1
-      globals: 16.3.0
+      globals: 16.4.0
       indent-string: 5.0.0
       is-builtin-module: 5.0.0
       jsesc: 3.1.0
@@ -5800,7 +5800,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@16.3.0: {}
+  globals@16.4.0: {}
 
   globby@11.1.0:
     dependencies:
