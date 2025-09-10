@@ -14,7 +14,11 @@ export const typescript = [
       '@typescript-eslint/naming-convention': [
         'error',
 
-        { format: ['strictCamelCase'], selector: 'function' },
+        {
+          format: ['strictCamelCase'],
+          leadingUnderscore: 'allow',
+          selector: 'function',
+        },
         {
           format: ['strictCamelCase'],
           leadingUnderscore: 'require',
@@ -29,6 +33,7 @@ export const typescript = [
         { format: ['StrictPascalCase'], selector: 'typeLike' },
         {
           format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+          leadingUnderscore: 'allow',
           selector: 'variable',
         },
         { format: null, modifiers: ['destructured'], selector: 'variable' },
