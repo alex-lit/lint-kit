@@ -2,9 +2,9 @@
  * Create lint-staged config
  *
  * @param {Record<string, boolean>} plugins Enabled plugins
- * @param {Record<string, any>} config Users config
+ * @param {Record<string, unknown>} config Users config
  *
- * @returns {Record<string, any>} Lint-staged configuration
+ * @returns {Record<string, unknown>} Lint-staged configuration
  */
 const createLintStagedConfig = (plugins = {}, config = {}) => {
   const pluginsList = {
