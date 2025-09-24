@@ -123,7 +123,7 @@ export const vue = [
       'vue/no-useless-template-attributes': ['error'],
       'vue/no-useless-v-bind': ['error'],
       'vue/no-v-for-template-key': 'off',
-      'vue/no-v-html': ['error'],
+      'vue/no-v-html': ['error', { ignorePattern: '^html' }],
       'vue/no-v-model-argument': 'off',
       'vue/no-v-text': ['error'],
       'vue/no-v-text-v-html-on-component': ['error'],
