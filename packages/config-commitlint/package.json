@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "13.0.0",
+  "version": "13.1.0",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
@@ -34,7 +34,7 @@
     "up": "../../scripts/up.sh --local"
   },
   "dependencies": {
-    "@commitlint/cli": "^20.0.0",
+    "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "conventional-changelog-cli": "^5.0.0"
   },
