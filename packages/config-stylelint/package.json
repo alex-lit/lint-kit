@@ -52,7 +52,7 @@
     "stylelint-no-indistinguishable-colors": "^2.3.1",
     "stylelint-no-nested-media": "^0.1.0",
     "stylelint-no-unresolved-module": "^2.4.0",
-    "stylelint-no-unsupported-browser-features": "^8.0.4",
+    "stylelint-no-unsupported-browser-features": "^8.0.5",
     "stylelint-order": "^7.0.0",
     "stylelint-plugin-logical-css": "^1.2.3",
     "stylelint-prettier": "^5.0.3",
