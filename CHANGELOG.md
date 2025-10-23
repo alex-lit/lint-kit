@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v163.2.2
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v5.2.5...v163.2.2)
+
+### 🏡 Chore
+
+- **@alexlit/config-hooks:** Bump version ([29eb1fc](https://github.com/alex-lit/lint-kit/commit/29eb1fc))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v163.2.1
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v120.1.1...v163.2.1)
