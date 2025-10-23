@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "5.2.4",
+  "version": "5.2.5",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.5"
+    "lint-staged": "^16.2.6"
   },
   "engines": {
     "node": ">=18.18"
