@@ -10,7 +10,7 @@ export { tailwindcss } from './plugins/tailwindcss.js';
 export { tanstackQuery } from './plugins/tanstack-query.js';
 export { typescript } from './plugins/typescript.js';
 export { unicorn } from './plugins/unicorn.js';
-// export { unocss } from './plugins/unocss.js';
+export { unocss } from './plugins/unocss.js';
 export { vitest } from './plugins/vitest.js';
 export { vueAccessibility } from './plugins/vue-accessibility.js';
 export { vueI18n } from './plugins/vue-i18n.js';
