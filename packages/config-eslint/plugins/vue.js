@@ -85,6 +85,7 @@ export const vue = [
       'vue/no-deprecated-slot-attribute': ['error'],
       'vue/no-deprecated-slot-scope-attribute': ['error'],
       'vue/no-duplicate-attr-inheritance': ['error'],
+      'vue/no-duplicate-class-names': ['error'],
       'vue/no-empty-component-block': ['error'],
       'vue/no-import-compiler-macros': ['error'],
       'vue/no-irregular-whitespace': ['error'],
