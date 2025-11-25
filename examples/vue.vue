@@ -4,8 +4,10 @@
 </script>
 
 <template>
-  <div class="article-access top-[-5px] left-[-5px] m-5">
+  <div class="article-access left-[-5px] top-[-5px] m-5">
     <div>
+      <div class="foo"></div>
+
       <div></div>
     </div>
   </div>
