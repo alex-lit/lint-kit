@@ -33,10 +33,10 @@
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
     "lint": "cd ../../ && ./scripts/lint.eslint.sh",
-    "ou": "sh ../../scripts/ou.sh --local",
+    "ou": "sh ../../scripts/ou.sh",
     "release": "sh ../../scripts/release.sh",
     "semver": "sh ../../scripts/semver.sh",
-    "up": "sh ../../scripts/up.sh --local"
+    "up": "sh ../../scripts/up.sh"
   },
   "dependencies": {
     "@eslint/js": "^9.39.1",

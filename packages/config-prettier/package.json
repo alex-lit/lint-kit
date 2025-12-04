@@ -29,10 +29,10 @@
     "plugins"
   ],
   "scripts": {
-    "ou": "../../scripts/ou.sh --local",
+    "ou": "../../scripts/ou.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh --local"
+    "up": "../../scripts/up.sh"
   },
   "dependencies": {
     "@prettier/plugin-php": "^0.24.0",

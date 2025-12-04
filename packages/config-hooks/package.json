@@ -29,10 +29,10 @@
     "lint-staged.js"
   ],
   "scripts": {
-    "ou": "../../scripts/ou.sh --local",
+    "ou": "../../scripts/ou.sh",
     "release": "../../scripts/release.sh",
     "semver": "../../scripts/semver.sh",
-    "up": "../../scripts/up.sh --local"
+    "up": "../../scripts/up.sh"
   },
   "dependencies": {
     "husky": "^9.1.7",
