@@ -28,5 +28,5 @@ npm i @alexlit/config-commitlint @alexlit/config-eslint @alexlit/config-hooks @a
 ### Installation
 
 ```sh
-pnpm run i
+npm run i
 ```

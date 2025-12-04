@@ -22,12 +22,12 @@ done
 # Вывод списка для выбора обновляемых зависимостей
 if $local_mode; then
   echo -e "${GREY}Режим проверки: ${WHITE}локальный${WHITE}"
-  pnpm update \
+  npm update \
     --interactive \
     --latest
 else
   echo -e "${GREY}Режим проверки: ${WHITE}глобальный${WHITE}"
-  pnpm update \
+  npm update \
     --interactive \
     --latest \
     --recursive

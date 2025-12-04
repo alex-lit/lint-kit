@@ -22,10 +22,10 @@ done
 # Вывод результатов
 if $local_mode; then
   echo -e "${GREY}Режим проверки: ${WHITE}локальный${WHITE}"
-  pnpm outdated
+  npm outdated
 else
   echo -e "${GREY}Режим проверки: ${WHITE}глобальный${WHITE}"
-  pnpm outdated \
+  npm outdated \
     --recursive
 fi
 

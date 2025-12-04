@@ -39,8 +39,5 @@
   "dependencies": {
     "@linthtml/linthtml": "^0.10.2",
     "@linthtml/linthtml-config-recommended": "^0.2.0"
-  },
-  "engines": {
-    "node": ">=18.18"
   }
 }
