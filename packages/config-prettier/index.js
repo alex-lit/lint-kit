@@ -11,6 +11,7 @@ const DEFAULT_PLUGINS = {
 };
 
 const OPTIONAL_PLUGINS = {
+  jsdoc: false,
   php: false,
   ruby: false,
   sql: false,
