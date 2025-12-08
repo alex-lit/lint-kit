@@ -1,7 +1,6 @@
 import { omit } from 'radash';
 
 const DEFAULT_PLUGINS = {
-  'jsdoc': true,
   'packagejson': true,
   'pug': true,
   'sh': true,
