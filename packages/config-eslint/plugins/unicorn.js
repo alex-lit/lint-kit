@@ -46,6 +46,7 @@ export const unicorn = [
           replacements: { index18n: { i18n: true } },
         },
       ],
+      'unicorn/relative-url-style': ['error', 'always'],
     },
   },
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
