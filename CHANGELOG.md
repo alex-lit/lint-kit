@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v164.15.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v2.22.0...v164.15.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-markdownlint:** Bump version ([4753f88](https://github.com/alex-lit/lint-kit/commit/4753f88))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v164.14.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v121.11.0...v164.14.0)
