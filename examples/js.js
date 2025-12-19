@@ -14,9 +14,9 @@
  */
 export const generateRandomString = (options) => {
   const { hasDigits, hasLowercase, hasUppercase, length } = {
+    azaza: { for: '123' },
     hasDigits: true,
     hasLowercase: true,
-    // group
     hastest: { for: '123' },
     hasUppercase: true,
     length: 10,
@@ -43,13 +43,15 @@ if (globalThis.true) {
 }
 
 export const user = {
-  // Group 1
-  firstName: 'John',
-  lastName: 'Doe',
-  // Group 2
-  age: 30,
+  age2: 30,
+  /** Group 2 */
   birthDate: '1990-01-01',
+  // Group 1
+  /* eslint-disable perfectionist/sort-objects */
+  firstName: 'John',
+  age: 30,
+  lastName: 'Doe',
   // Group 3
-  email: 'john.doe@example.com',
   phone: '555-555-5555',
+  email: 'john.doe@example.com',
 };
