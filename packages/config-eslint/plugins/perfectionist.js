@@ -17,26 +17,11 @@ export const perfectionist = [
       ],
       'perfectionist/sort-object-types': [
         'warn',
-        {
-          newlinesBetween: 'always',
-          partitionByComment: true,
-          type: 'natural',
-        },
+        { newlinesBetween: 0, partitionByComment: false, type: 'natural' },
       ],
       'perfectionist/sort-objects': [
         'warn',
-        {
-          ignorePattern: [
-            'Property',
-            'breakpoints',
-            'endpoints',
-            'plugins',
-            'screens',
-          ],
-          newlinesBetween: 'always',
-          partitionByComment: true,
-          type: 'natural',
-        },
+        { newlinesBetween: 0, partitionByComment: false, type: 'natural' },
       ],
     },
   },
