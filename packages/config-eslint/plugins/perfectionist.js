@@ -15,6 +15,10 @@ export const perfectionist = [
           type: 'natural',
         },
       ],
+      'perfectionist/sort-interfaces': [
+        'warn',
+        { newlinesBetween: 0, partitionByComment: false, type: 'natural' },
+      ],
       'perfectionist/sort-object-types': [
         'warn',
         { newlinesBetween: 0, partitionByComment: false, type: 'natural' },
