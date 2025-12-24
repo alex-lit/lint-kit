@@ -4,6 +4,7 @@ import { FILES } from '../presets/base.js';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
 export const stylistic = [
+  plugin.configs.recommended,
   {
     files: FILES,
     plugins: { '@stylistic': plugin },
@@ -45,8 +46,12 @@ export const stylistic = [
         { blankLine: 'always', next: '*', prev: 'class' },
         { blankLine: 'always', next: '*', prev: 'default' },
         { blankLine: 'always', next: '*', prev: 'directive' },
+        { blankLine: 'always', next: '*', prev: 'enum' },
+        { blankLine: 'always', next: '*', prev: 'export' },
         { blankLine: 'always', next: '*', prev: 'expression' },
         { blankLine: 'always', next: '*', prev: 'iife' },
+        { blankLine: 'always', next: '*', prev: 'import' },
+        { blankLine: 'always', next: '*', prev: 'interface' },
         { blankLine: 'always', next: '*', prev: 'multiline-block-like' },
         { blankLine: 'always', next: '*', prev: 'multiline-const' },
         { blankLine: 'always', next: '*', prev: 'multiline-expression' },
@@ -55,14 +60,17 @@ export const stylistic = [
         { blankLine: 'always', next: '*', prev: 'singleline-const' },
         { blankLine: 'always', next: '*', prev: 'singleline-let' },
         { blankLine: 'always', next: '*', prev: 'singleline-var' },
+        { blankLine: 'always', next: '*', prev: 'type' },
         { blankLine: 'always', next: 'block-like', prev: '*' },
         { blankLine: 'always', next: 'cjs-export', prev: '*' },
         { blankLine: 'always', next: 'cjs-import', prev: '*' },
         { blankLine: 'always', next: 'class', prev: '*' },
         { blankLine: 'always', next: 'enum', prev: '*' },
+        { blankLine: 'always', next: 'export', prev: '*' },
         { blankLine: 'always', next: 'expression', prev: '*' },
         { blankLine: 'always', next: 'function', prev: '*' },
         { blankLine: 'always', next: 'iife', prev: '*' },
+        { blankLine: 'always', next: 'import', prev: '*' },
         { blankLine: 'always', next: 'interface', prev: '*' },
         { blankLine: 'always', next: 'multiline-block-like', prev: '*' },
         { blankLine: 'always', next: 'multiline-const', prev: '*' },
@@ -72,9 +80,6 @@ export const stylistic = [
         { blankLine: 'always', next: 'return', prev: '*' },
         { blankLine: 'always', next: 'switch', prev: '*' },
         { blankLine: 'always', next: 'type', prev: '*' },
-        { blankLine: 'always', next: '*', prev: 'enum' },
-        { blankLine: 'always', next: '*', prev: 'interface' },
-        { blankLine: 'always', next: '*', prev: 'type' },
         // any
         { blankLine: 'any', next: 'expression', prev: 'expression' },
         {
@@ -82,6 +87,8 @@ export const stylistic = [
           next: 'singleline-const',
           prev: 'singleline-const',
         },
+        { blankLine: 'any', next: 'export', prev: 'export' },
+        { blankLine: 'any', next: 'import', prev: 'import' },
         { blankLine: 'any', next: 'singleline-let', prev: 'singleline-let' },
         { blankLine: 'any', next: 'singleline-var', prev: 'singleline-var' },
         // never
