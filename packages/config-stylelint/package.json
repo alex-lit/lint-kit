@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "56.5.0",
+  "version": "56.6.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -53,10 +53,10 @@
     "stylelint-no-nested-media": "^0.1.0",
     "stylelint-no-unresolved-module": "^2.5.2",
     "stylelint-no-unsupported-browser-features": "^8.0.5",
-    "stylelint-order": "^7.0.0",
+    "stylelint-order": "^7.0.1",
     "stylelint-plugin-logical-css": "^1.2.3",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-scss": "^6.13.0",
+    "stylelint-scss": "^6.14.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "stylelint-use-nesting": "^6.0.1"
   }
