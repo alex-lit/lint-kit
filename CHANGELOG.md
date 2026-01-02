@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v166.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v7.1.0...v166.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-npmlint:** Bump version ([4000d45](https://github.com/alex-lit/lint-kit/commit/4000d45))
+- **@alexlit/config-eslint:** Bump version ([a37c89e](https://github.com/alex-lit/lint-kit/commit/a37c89e))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v165.2.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v125.2.1...v165.2.0)
