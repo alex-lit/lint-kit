@@ -37,5 +37,9 @@
   "dependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
