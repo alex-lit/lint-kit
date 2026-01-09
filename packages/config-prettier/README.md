@@ -31,3 +31,7 @@ npm i @alexlit/config-prettier -D
     tailwindcss: false,
   });
   ```
+
+## Issues
+
+- **tailwindcss** conflicts with **jsdoc**
