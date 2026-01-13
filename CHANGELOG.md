@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v167.2.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v21.10.3...v167.2.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-prettier:** Bump version ([48acd4e](https://github.com/alex-lit/lint-kit/commit/48acd4e))
+- **@alexlit/config-eslint:** Bump version ([dc5e1bd](https://github.com/alex-lit/lint-kit/commit/dc5e1bd))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v167.1.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v167.0.0...v167.1.0)
