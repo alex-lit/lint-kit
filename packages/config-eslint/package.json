@@ -11,7 +11,7 @@
     "javascript",
     "typescript"
   ],
-  "homepage": "https://github.com/alex-lit/lint-kit/tree/main/packages/config-eslint#readme",
+  "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-eslint#readme",
   "bugs": {
     "url": "https://github.com/alex-lit/lint-kit/issues"
   },
