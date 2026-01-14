@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "21.10.3",
+  "version": "21.11.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -45,7 +45,7 @@
     "prettier-plugin-packagejson": "^2.5.21",
     "prettier-plugin-sh": "^0.18.0",
     "prettier-plugin-solidity": "^2.2.1",
-    "prettier-plugin-sort-json": "^4.1.1",
+    "prettier-plugin-sort-json": "^4.2.0",
     "prettier-plugin-sql": "^0.19.2",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "radash": "^12.1.1"
