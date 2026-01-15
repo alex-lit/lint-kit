@@ -41,6 +41,8 @@ export const unicorn = [
             ref: true,
             Src: true,
             src: true,
+            Utils: true,
+            utils: true,
           },
           checkFilenames: false,
           replacements: { index18n: { i18n: true } },
