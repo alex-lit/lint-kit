@@ -1,8 +1,9 @@
 import plugin from 'eslint-plugin-vue';
+import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
 /** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
-export const vue = [
+export const vue = defineConfig([
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
     ignores: [
@@ -183,4 +184,4 @@ export const vue = [
     files: ['**/pages/**/*.vue', '**/layouts/**/*.vue'],
     rules: { 'vue/multi-word-component-names': 'off' },
   },
-];
+]);

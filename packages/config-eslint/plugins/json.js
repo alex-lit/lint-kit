@@ -1,34 +1,27 @@
 import plugin from '@eslint/json';
+import { defineConfig } from 'eslint/config';
 
 /** @see [eslint/json](https://github.com/eslint/json) */
-export const json = [
-  // json
+export const json = defineConfig([
   {
+    extends: ['json/recommended'],
     files: ['**/*.json'],
     ignores: ['**/package-lock.json'],
     language: 'json/json',
-    ...plugin.configs.recommended,
-  },
-  {
-    files: ['**/*.json'],
-    ignores: ['**/package.json', '**/package-lock.json'],
-    rules: {
-      'json/sort-keys': 'warn',
-      'json/top-level-interop': 'error',
-    },
+    plugins: { json: plugin },
   },
 
-  // jsonc
   {
+    extends: ['json/recommended'],
     files: ['**/*.jsonc'],
     language: 'json/jsonc',
-    ...plugin.configs.recommended,
+    plugins: { json: plugin },
   },
 
-  // json5
   {
+    extends: ['json/recommended'],
     files: ['**/*.json5'],
     language: 'json/json5',
-    ...plugin.configs.recommended,
+    plugins: { json: plugin },
   },
-];
+]);

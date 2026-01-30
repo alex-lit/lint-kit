@@ -1,10 +1,11 @@
 /* eslint-disable unicorn/no-null */
+import { defineConfig } from 'eslint/config';
 import plugin from 'typescript-eslint';
 
 import { FILES } from '../presets/base.js';
 
 /** @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) */
-export const typescript = [
+export const typescript = defineConfig([
   ...plugin.configs.strict,
   ...plugin.configs.stylistic,
 
@@ -50,4 +51,4 @@ export const typescript = [
       ],
     },
   },
-];
+]);

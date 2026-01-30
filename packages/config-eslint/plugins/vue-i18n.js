@@ -1,7 +1,8 @@
 import plugin from '@intlify/eslint-plugin-vue-i18n';
+import { defineConfig } from 'eslint/config';
 
 /** @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/) */
-export const vueI18n = [
+export const vueI18n = defineConfig([
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
     ignores: [
@@ -18,15 +19,11 @@ export const vueI18n = [
       '@intlify/vue-i18n/key-format-style': [
         'error',
         'snake_case',
-        {
-          allowArray: false,
-        },
+        { allowArray: false },
       ],
       '@intlify/vue-i18n/no-duplicate-keys-in-locale': [
         'error',
-        {
-          ignoreI18nBlock: false,
-        },
+        { ignoreI18nBlock: false },
       ],
       '@intlify/vue-i18n/no-dynamic-keys': 'warn',
       '@intlify/vue-i18n/no-raw-text': 'off',
@@ -42,4 +39,4 @@ export const vueI18n = [
       },
     },
   },
-];
+]);

@@ -1,3 +1,5 @@
+import { defineConfig } from 'eslint/config';
+
 import { javascript } from '../plugins/javascript.js';
 import { jsdoc } from '../plugins/jsdoc.js';
 import { json } from '../plugins/json.js';
@@ -15,7 +17,7 @@ import { vueI18n } from '../plugins/vue-i18n.js';
 import { vue } from '../plugins/vue.js';
 import { base } from './base.js';
 
-export const defaultPreset = [
+export const defaultPreset = defineConfig([
   ...base, // must be first
 
   ...javascript,
@@ -34,4 +36,4 @@ export const defaultPreset = [
   ...vueI18n,
 
   ...prettierConfig, // must be last
-];
+]);

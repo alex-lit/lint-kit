@@ -1,9 +1,10 @@
 import plugin from 'eslint-plugin-sonarjs';
+import { defineConfig } from 'eslint/config';
 
 import { FILES } from '../presets/base.js';
 
-/** @see [eslint-plugin-sonarjs](https://github.com/SonarSource/eslint-plugin-sonarjs) */
-export const sonar = [
+/** @see [eslint-plugin-sonarjs](https://github.com/SonarSource/SonarJS/blob/master/packages/jsts/src/rules/README.md) */
+export const sonar = defineConfig([
   { files: FILES, ...plugin.configs.recommended },
   {
     files: FILES,
@@ -14,4 +15,4 @@ export const sonar = [
       'sonarjs/todo-tag': 'warn',
     },
   },
-];
+]);

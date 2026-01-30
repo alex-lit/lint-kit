@@ -1,10 +1,19 @@
 import plugin from '@stylistic/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 
 import { FILES } from '../presets/base.js';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
-export const stylistic = [
-  plugin.configs.recommended,
+export const stylistic = defineConfig([
+  {
+    ...plugin.configs.recommended,
+    ignores: [
+      ...(plugin.configs.recommended.ignores ?? []),
+      '**/*.json',
+      '**/*.jsonc',
+      '**/*.json5',
+    ],
+  },
   {
     files: FILES,
     plugins: { '@stylistic': plugin },
@@ -99,4 +108,4 @@ export const stylistic = [
       ],
     },
   },
-];
+]);

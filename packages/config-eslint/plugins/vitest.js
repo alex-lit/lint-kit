@@ -1,12 +1,11 @@
 import plugin from 'eslint-plugin-vitest';
+import { defineConfig } from 'eslint/config';
 
 /** @see [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest) */
-export const vitest = [
+export const vitest = defineConfig([
   {
     files: ['*.{test,spec}.{js,ts}'],
-    plugins: {
-      vitest: plugin,
-    },
+    plugins: { vitest: plugin },
     rules: {
       ...plugin.configs.all.rules,
 
@@ -16,4 +15,4 @@ export const vitest = [
       'vitest/require-to-throw-message': 'off',
     },
   },
-];
+]);

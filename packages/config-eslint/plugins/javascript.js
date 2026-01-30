@@ -1,9 +1,10 @@
 import plugin from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 
 import { FILES } from '../presets/base.js';
 
 /** @see [eslint](https://eslint.org) */
-export const javascript = [
+export const javascript = defineConfig([
   { files: FILES, ...plugin.configs.recommended },
   {
     files: FILES,
@@ -38,4 +39,4 @@ export const javascript = [
       'prefer-template': 'warn',
     },
   },
-];
+]);

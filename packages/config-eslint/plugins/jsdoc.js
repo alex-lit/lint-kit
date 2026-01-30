@@ -1,9 +1,10 @@
 import plugin from 'eslint-plugin-jsdoc';
+import { defineConfig } from 'eslint/config';
 
 import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
-export const jsdoc = [
+export const jsdoc = defineConfig([
   { files: FILES, ...plugin.configs['flat/recommended'] },
   {
     files: FILES,
@@ -32,4 +33,4 @@ export const jsdoc = [
       'jsdoc/tag-lines': 'off',
     },
   },
-];
+]);

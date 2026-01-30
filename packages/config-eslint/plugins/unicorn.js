@@ -1,9 +1,10 @@
 import plugin from 'eslint-plugin-unicorn';
+import { defineConfig } from 'eslint/config';
 
 import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
-export const unicorn = [
+export const unicorn = defineConfig([
   { files: FILES, ...plugin.configs['flat/all'] },
   {
     files: FILES,
@@ -53,4 +54,4 @@ export const unicorn = [
   },
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
-];
+]);
