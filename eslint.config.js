@@ -7,16 +7,9 @@ import {
 export default [
   ...defaultPreset,
 
-  {
-    ignores: ['packages/config-eslint/_legacy'],
-  },
+  { ignores: ['packages/config-eslint/_legacy'] },
 
-  {
-    files: ['packages/**'],
-    rules: {
-      'no-restricted-imports': 'off',
-    },
-  },
+  { files: ['packages/**'], rules: { 'no-restricted-imports': 'off' } },
 
   ...tailwindcss,
   ...prettierConfig,
