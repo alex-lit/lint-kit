@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v173.2.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v57.1.1...v173.2.1)
+
+### 🏡 Chore
+
+- **@alexlit/config-stylelint:** Bump version ([1565c5e](https://github.com/alex-lit/lint-kit/commit/1565c5e))
+- Wip ([7fe4311](https://github.com/alex-lit/lint-kit/commit/7fe4311))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v173.2.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v130.2.0...v173.2.0)
