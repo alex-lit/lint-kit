@@ -451,6 +451,7 @@ header {
 }
 
 .ui-button__text {
+  color: rgb(255 255 255);
   position: relative;
 }
 
@@ -463,6 +464,7 @@ header {
   align-self: stretch;
   background-color: var(--ui-button-color--h, transparent);
   border-radius: 4px;
+  color: #fff;
   display: flex;
   flex-shrink: 0;
   inline-size: var(--ui-bitton-suffix-size);
