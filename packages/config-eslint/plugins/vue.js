@@ -180,6 +180,12 @@ export const vue = defineConfig([
       'vue/valid-v-slot': ['error'],
     },
   },
+
+  {
+    files: ['**/*.ts', '**/*.js', '**/*.cjs', '**/*.mjs'],
+    rules: { 'vue/order-in-components': 'off' },
+  },
+
   {
     files: ['**/pages/**/*.vue', '**/layouts/**/*.vue'],
     rules: { 'vue/multi-word-component-names': 'off' },
