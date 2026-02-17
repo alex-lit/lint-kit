@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="article-access left-[-5px] top-[-5px] m-5">
+  <div class="article-access left-[-5px] top-[-5px] m-[20px]">
     <div>
       <div class="foo"></div>
 
