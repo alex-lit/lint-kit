@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v180.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v179.0.0...v180.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/lint-kit:** Bump version ([56aacb7](https://github.com/alex-lit/lint-kit/commit/56aacb7))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v179.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v178.0.0...v179.0.0)
