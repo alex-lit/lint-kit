@@ -1,7 +1,9 @@
-/** @see [stylelint-prettier](https://github.com/prettier/stylelint-prettier) */
+/**
+ * @type {import('stylelint').Config}
+ *
+ * @see [stylelint-prettier](https://github.com/prettier/stylelint-prettier)
+ */
 export default {
   plugins: ['stylelint-prettier'],
-  rules: {
-    'prettier/prettier': true,
-  },
+  rules: { 'prettier/prettier': true },
 };

@@ -14,6 +14,7 @@ const ADDITIONAL_PLUGINS = {
 
 const OPTIONAL_PLUGINS = {
   'a11y': false,
+  'bem': false,
   'gamut': false,
   'logical-css': false,
   'media-use-custom-media': false,

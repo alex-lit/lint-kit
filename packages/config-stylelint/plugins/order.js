@@ -1,4 +1,8 @@
-/** @see [stylelint-order](https://github.com/hudochenkov/stylelint-order) */
+/**
+ * @type {import('stylelint').Config}
+ *
+ * @see [stylelint-order](https://github.com/hudochenkov/stylelint-order)
+ */
 export default {
   plugins: ['stylelint-order'],
   rules: {
