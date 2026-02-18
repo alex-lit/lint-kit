@@ -52,9 +52,9 @@ $test3: blue !default;
   @media (width >= 640px) {
     color: rebeccapurple;
 
-    .ololo {
-      color: rebeccapurple;
-    }
+    // .ololo {
+    //   color: rebeccapurple;
+    // }
   }
 
   &:hover,
@@ -160,7 +160,7 @@ header {
   }
 }
 
-.l__button--3 {
+.l__i3 {
   @extend %sdf;
 
   @include ddf();
@@ -245,7 +245,7 @@ header {
       .test4 {
         .test5 {
           .test6 {
-            @media ($mobile-l) {
+            @media (--mobile) {
             }
           }
         }
@@ -455,7 +455,7 @@ header {
   position: relative;
 }
 
-.ui-button__suffix {
+.uiButton__suffix {
   --ui-bitton-suffix-size: calc(
     calc(var(--ui-button-padding) * 2) + var(--ui-button-icon-size)
   );

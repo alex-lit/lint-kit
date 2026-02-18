@@ -14,7 +14,22 @@
 </template>
 
 <style lang="scss" module>
-  .article-access {
+  .vue {
+    $self: #{&};
+
+    inset-inline-start: 10px;
     position: relative;
+
+    &:hover,
+    &:focus {
+      color: red;
+    }
+
+    &.asd {
+      color: red;
+    }
+
+    &__dsf {
+    }
   }
 </style>
