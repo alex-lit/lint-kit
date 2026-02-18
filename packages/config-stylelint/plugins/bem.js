@@ -16,16 +16,19 @@ export default {
       files: ['**/*.{css,scss,vue}'],
       rules: defineRules({
         '@morev/base/no-selectors-in-at-rules': [true, {}],
-        '@morev/bem/block-variable': [true, { name: 'self' }],
+        '@morev/bem/block-variable': null,
         '@morev/bem/match-file-name': [true, {}],
         '@morev/bem/no-block-properties': [
           true,
-          { ignoreBlocks: [], presets: ['EXTERNAL_GEOMETRY', 'CONTEXT'] },
+          { ignoreBlocks: [], presets: ['EXTERNAL_GEOMETRY'] },
         ],
         '@morev/bem/no-chained-entities': [true, {}],
-        '@morev/bem/no-side-effects': [true, { ignore: [] }],
+        '@morev/bem/no-side-effects': [
+          true,
+          { ignore: ['/^>/', '/^:deep/', '/^:global/'] },
+        ],
         '@morev/bem/selector-pattern': [true, {}],
-        '@morev/sass/no-unused-variables': [true, { ignore: ['self'] }],
+        '@morev/sass/no-unused-variables': [true, { ignore: [] }],
       }),
     },
     {
