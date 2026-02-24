@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "136.0.0",
+  "version": "136.1.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -41,14 +41,14 @@
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.0.1",
-    "@intlify/eslint-plugin-vue-i18n": "^4.1.1",
-    "@stylistic/eslint-plugin": "^5.8.0",
+    "@intlify/eslint-plugin-vue-i18n": "^4.2.0",
+    "@stylistic/eslint-plugin": "^5.9.0",
     "@tanstack/eslint-plugin-query": "^5.91.4",
     "@unocss/eslint-config": "^66.6.0",
     "@vitest/eslint-plugin": "^1.6.9",
-    "eslint": "^10.0.0",
+    "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^62.6.0",
+    "eslint-plugin-jsdoc": "^62.7.0",
     "eslint-plugin-perfectionist": "^5.6.0",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-regexp": "^3.0.0",
@@ -58,9 +58,9 @@
     "eslint-plugin-vue": "^10.8.0",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
     "globals": "^17.3.0",
-    "jsonc-eslint-parser": "^3.0.0",
+    "jsonc-eslint-parser": "^3.1.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.0",
+    "typescript-eslint": "^8.56.1",
     "yaml-eslint-parser": "^2.0.0"
   },
   "publishConfig": {
