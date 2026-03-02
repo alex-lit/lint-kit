@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v182.3.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v59.2.1...v182.3.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-stylelint:** Bump version ([babfcef](https://github.com/alex-lit/lint-kit/commit/babfcef))
+- **@alexlit/config-eslint:** Bump version ([07598dc](https://github.com/alex-lit/lint-kit/commit/07598dc))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v182.2.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v136.1.2...v182.2.0)
