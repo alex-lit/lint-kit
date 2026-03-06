@@ -190,4 +190,9 @@ export const vue = defineConfig([
     files: ['**/pages/**/*.vue', '**/layouts/**/*.vue'],
     rules: { 'vue/multi-word-component-names': 'off' },
   },
+
+  {
+    files: ['**/*.{test,spec}.{js,ts}'],
+    rules: { 'vue/one-component-per-file': 'off' },
+  },
 ]);
