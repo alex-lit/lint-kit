@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/no-null */
 
 const ADDITIONAL_PLUGINS = {
-  // 'color-format': true, // ждет обновления плагина
+  'color-format': true,
   'declaration-block-no-ignored-properties': true,
   'high-performance-animation': true,
   'no-nested-media': true,
