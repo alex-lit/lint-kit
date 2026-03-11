@@ -33,11 +33,7 @@ export default {
     },
     {
       files: ['**/*.{css,scss}', '**/*.*.vue'],
-      rules: defineRules({
-        '@morev/bem/block-variable': null,
-        '@morev/bem/match-file-name': null,
-        '@morev/bem/no-side-effects': null,
-      }),
+      rules: defineRules({ '@morev/bem/match-file-name': null }),
     },
   ],
   plugins: ['@morev/stylelint-plugin'],
