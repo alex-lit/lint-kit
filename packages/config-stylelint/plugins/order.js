@@ -6,6 +6,7 @@
 export default {
   plugins: ['stylelint-order'],
   rules: {
+    'order/custom-properties-alphabetical-order': true,
     'order/order': [
       // SASS variables
       'dollar-variables',
