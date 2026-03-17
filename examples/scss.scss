@@ -21,6 +21,9 @@ $test3: blue !default;
 @use 'sass:color';
 
 .example {
+  --azaza: red;
+  --ololo: 1;
+
   color: rgb(0 0 0);
 
   @screen sm {
@@ -85,19 +88,19 @@ s {
 }
 
 @mixin variables {
+  --ui-button-color: currentColor;
+  --ui-button-color--h: currentColor;
+  --ui-button-color--p: currentColor;
+  --ui-button-font-size: 16px;
   --ui-button-icon-size: calc(
     var(--ui-button-font-size) * var(--ui-button-line-height)
   );
+  --ui-button-line-height: 1.5;
+  --ui-button-padding: 8px;
   --ui-icon-default-background-color: var(
     --ui-button-color,
     var(--ui-color-primary)
   );
-  --ui-button-padding: 8px;
-  --ui-button-font-size: 16px;
-  --ui-button-line-height: 1.5;
-  --ui-button-color: currentColor;
-  --ui-button-color--h: currentColor;
-  --ui-button-color--p: currentColor;
 }
 
 .a {
@@ -360,21 +363,21 @@ header {
 
   &--size {
     &--default {
-      --ui-button-padding: 8px;
       --ui-button-font-size: 16px;
       --ui-button-line-height: 1.5;
+      --ui-button-padding: 8px;
     }
 
     &--large {
-      --ui-button-padding: 16px;
       --ui-button-font-size: 20px;
       --ui-button-line-height: 1.2;
+      --ui-button-padding: 16px;
     }
 
     &--small {
-      --ui-button-padding: 8px;
       --ui-button-font-size: 14px;
       --ui-button-line-height: 1.14;
+      --ui-button-padding: 8px;
     }
   }
 }
@@ -464,7 +467,7 @@ header {
   align-self: stretch;
   background-color: var(--ui-button-color--h, transparent);
   border-radius: 4px;
-  color: #fff;
+  color: rgb(255 255 255);
   display: flex;
   flex-shrink: 0;
   inline-size: var(--ui-bitton-suffix-size);
