@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "60.4.1",
+  "version": "60.5.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -36,12 +36,12 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "^3.4.7",
+    "@double-great/stylelint-a11y": "^3.4.8",
     "@morev/stylelint-plugin": "^0.5.0",
     "postcss": "^8.5.8",
     "postcss-html": "^1.8.1",
     "prettier": "^3.8.1",
-    "stylelint": "17.5.0",
+    "stylelint": "17.6.0",
     "stylelint-color-format": "^1.1.0",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard": "^40.0.0",
