@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "22.2.0",
+  "version": "22.3.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -35,7 +35,7 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@prettier/plugin-php": "^0.24.0",
+    "@prettier/plugin-php": "^0.25.0",
     "@prettier/plugin-pug": "^3.4.2",
     "@prettier/plugin-ruby": "^4.0.4",
     "@prettier/plugin-xml": "^3.4.2",

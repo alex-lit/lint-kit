@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "60.5.0",
+  "version": "60.6.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -55,7 +55,7 @@
     "stylelint-no-unresolved-module": "^2.5.2",
     "stylelint-no-unsupported-browser-features": "^8.1.1",
     "stylelint-order": "^8.1.1",
-    "stylelint-plugin-logical-css": "^2.0.2",
+    "stylelint-plugin-logical-css": "^2.1.0",
     "stylelint-prettier": "^5.0.3",
     "stylelint-scss": "^7.0.0",
     "stylelint-selector-no-empty": "^1.0.9",
