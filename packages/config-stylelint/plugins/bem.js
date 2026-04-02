@@ -15,7 +15,10 @@ export default {
     {
       files: ['**/*.{css,scss,vue}'],
       rules: defineRules({
-        '@morev/base/no-selectors-in-at-rules': [true, {}],
+        '@morev/base/no-selectors-in-at-rules': [
+          true,
+          { ignore: { layer: '*' } },
+        ],
         '@morev/bem/block-variable': null,
         '@morev/bem/match-file-name': [true, {}],
         '@morev/bem/no-block-properties': [
