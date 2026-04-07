@@ -1,5 +1,4 @@
 # Обновляет версию пакета
-# Использование: ./semver.sh --patch|minor|major|premajor|preminor|prepatch|prerelease
 
 source "$(dirname $0)"/../bash.config.sh
 

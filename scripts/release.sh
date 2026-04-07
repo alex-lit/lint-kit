@@ -4,7 +4,7 @@ source "$(dirname $0)"/../bash.config.sh
 
 VERSION=${1:-patch} # patch | minor | major
 
-npm run semver --${VERSION}
+npm run semver -- --${VERSION}
 
 CURRENT_PACKAGE_NAME=$(node -p "require('./package.json').name")
 CURRENT_PACKAGE_VERSION=$(node -p "require('./package.json').version")
