@@ -5,5 +5,11 @@ import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) */
 export const regexp = defineConfig([
-  { files: FILES, ...plugin.configs['flat/recommended'] },
+  {
+    files: FILES,
+    ...plugin.configs['flat/recommended'],
+    settings: {
+      regexp: { allowedCharacterRanges: ['alphanumeric', 'а-я', 'А-Я'] },
+    },
+  },
 ]);
