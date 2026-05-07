@@ -51,4 +51,8 @@ export const typescript = defineConfig([
       ],
     },
   },
+  {
+    files: ['**/*.{fixtures,test,spec}.{js,ts}'],
+    rules: { '@typescript-eslint/no-empty-function': 'off' },
+  },
 ]);

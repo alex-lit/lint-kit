@@ -54,4 +54,11 @@ export const unicorn = defineConfig([
   },
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
+  {
+    files: ['**/*.{fixtures,test,spec}.{js,ts}'],
+    rules: {
+      'unicorn/no-keyword-prefix': 'off',
+      'unicorn/no-useless-undefined': 'off',
+    },
+  },
 ]);
