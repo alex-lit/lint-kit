@@ -14,17 +14,6 @@
   "peerDependencies": {
     "stylelint": ">=8.0.0"
   },
-  "devDependencies": {
-    "eslint-config-stylelint": "^8.1.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.1.0",
-    "np": "^2.20.1",
-    "prettier": "^1.12.1",
-    "standard-version": "^7.1.0",
-    "stylelint": ">=8.0.0",
-    "stylelint-test-rule-tape": "^0.2.0",
-    "xo": "^0.24.0"
-  },
   "keywords": [
     "stylelint",
     "stylelint-plugin",
