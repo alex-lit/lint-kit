@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "60.13.1",
+  "version": "60.13.2",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -26,8 +26,7 @@
   "files": [
     "README.md",
     "index.js",
-    "plugins",
-    "vendor"
+    "plugins"
   ],
   "scripts": {
     "lint": "cd ../../ && ./scripts/lint.stylelint.sh",
@@ -43,7 +42,6 @@
     "postcss-html": "^1.8.1",
     "prettier": "^3.8.3",
     "stylelint": "17.11.0",
-    "stylelint-color-format": "file:./vendor/stylelint-color-format",
     "stylelint-config-recommended-vue": "^1.6.1",
     "stylelint-config-standard": "^40.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
