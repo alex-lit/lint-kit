@@ -58,6 +58,7 @@ export const unicorn = defineConfig([
     files: ['**/*.{fixtures,test,spec}.{js,ts}'],
     rules: {
       'unicorn/no-keyword-prefix': 'off',
+      'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/no-useless-undefined': 'off',
     },
   },
