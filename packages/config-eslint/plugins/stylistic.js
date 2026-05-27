@@ -90,7 +90,7 @@ export const stylistic = defineConfig([
         { blankLine: 'always', next: 'switch', prev: '*' },
         { blankLine: 'always', next: 'type', prev: '*' },
         // any
-        // { blankLine: 'any', next: 'expression', prev: 'expression' },
+        { blankLine: 'any', next: 'expression', prev: 'expression' },
         {
           blankLine: 'any',
           next: 'singleline-const',
