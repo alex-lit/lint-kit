@@ -5,11 +5,10 @@ import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = defineConfig([
-  { files: FILES, ...plugin.configs['flat/all'] },
+  { files: FILES, ...plugin.configs.all },
   {
     files: FILES,
     rules: {
-      'unicorn/better-regex': 'off',
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
@@ -17,7 +16,7 @@ export const unicorn = defineConfig([
       'unicorn/no-array-for-each': 'off',
       'unicorn/no-array-reduce': ['error', { allowSimpleOperations: true }],
       'unicorn/no-empty-file': 'off',
-      'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }],
+      'unicorn/prefer-export-from': ['error', { checkUsedVariables: true }],
       'unicorn/prefer-import-meta-properties': 'warn',
       'unicorn/prefer-module': 'warn',
       'unicorn/prefer-node-protocol': 'warn',
