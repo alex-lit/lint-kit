@@ -142,7 +142,7 @@ const createConfig = (plugins = {}, options = {}) => ({
     'property-no-vendor-prefix': true,
     'rule-empty-line-before': [
       'always',
-      { except: ['first-nested'], ignore: [] },
+      { except: ['after-single-line-comment', 'first-nested'], ignore: [] },
     ],
     'selector-class-pattern': [
       '^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$',
