@@ -5,7 +5,7 @@ import { defineConfig } from 'eslint/config';
 import { FILES } from '../presets/base.js';
 
 const fixes = {
-  // fix  for prettier/vue
+  // fix  for prettier
   'vue/html-self-closing': [
     'error',
     {

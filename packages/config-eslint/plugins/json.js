@@ -1,7 +1,7 @@
 import plugin from '@eslint/json';
 import { defineConfig } from 'eslint/config';
 
-/** @see [eslint/json](https://github.com/eslint/json) */
+/** @see [ESLint/JSON](https://github.com/eslint/json) */
 export const json = defineConfig([
   {
     extends: ['json/recommended'],
