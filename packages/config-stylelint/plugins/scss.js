@@ -69,7 +69,7 @@ export default {
         ignoreFunctions: [
           'format',
           'url',
-          // vue
+          // Vue.js
           'v-bind',
           // tailwind
           'theme',

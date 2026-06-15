@@ -55,3 +55,9 @@ export const user = {
   phone: '555-555-5555',
   email: 'john.doe@example.com',
 };
+
+export function get() {
+  const { age, firstName, lastName } = user;
+
+  return `${firstName} ${lastName} is ${age} years old`;
+}

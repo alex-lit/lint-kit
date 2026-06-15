@@ -1,5 +1,5 @@
 /**
- * @type {import('stylelint').Config}
+ * @type {import('stylelint').Config} *
  *
  * @see [stylelint-selector-no-empty](https://github.com/ssivanatarajan/stylelint-selector-no-empty)
  */
