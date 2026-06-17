@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "142.0.1",
+  "version": "143.0.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -48,13 +48,13 @@
     "@vitest/eslint-plugin": "^1.6.20",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^63.0.4",
+    "eslint-plugin-jsdoc": "^63.0.5",
     "eslint-plugin-perfectionist": "^5.9.1",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-sonarjs": "^4.0.3",
     "eslint-plugin-tailwindcss": "^3.18.3",
-    "eslint-plugin-unicorn": "^66.0.0",
+    "eslint-plugin-unicorn": "^67.0.0",
     "eslint-plugin-vue": "^10.9.2",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
     "globals": "^17.6.0",
