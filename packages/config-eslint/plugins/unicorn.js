@@ -23,7 +23,7 @@ export const unicorn = defineConfig([
       'unicorn/no-unused-properties': 'off', // don't respect local keys
       'unicorn/prefer-dom-node-html-methods': 'off', // Safari not supports setHTML()
       'unicorn/prefer-export-from': ['error', { checkUsedVariables: true }],
-      'unicorn/prefer-https': 'off', // SVG need HTTPS
+      'unicorn/prefer-https': 'off', // SVG need HTTP
       'unicorn/prefer-import-meta-properties': 'warn',
       'unicorn/prefer-iterator-concat': 'off', // ES2026 only
       'unicorn/prefer-module': 'warn',
