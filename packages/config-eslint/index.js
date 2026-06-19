@@ -15,5 +15,6 @@ export { vitest } from './plugins/vitest.js';
 export { vueAccessibility } from './plugins/vue-accessibility.js';
 export { vueI18n } from './plugins/vue-i18n.js';
 export { vue } from './plugins/vue.js';
+export { zod } from './plugins/zod.js';
 
 export { defaultPreset } from './presets/default.js';
