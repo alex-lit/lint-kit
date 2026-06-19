@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v192.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v191.1.0...v192.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/lint-kit:** Bump version ([ad4b00e](https://github.com/alex-lit/lint-kit/commit/ad4b00e))
+- **@alexlit/config-eslint:** Bump version ([bae25f9](https://github.com/alex-lit/lint-kit/commit/bae25f9))
+- **@alexlit/config-eslint:** Bump version ([be6501f](https://github.com/alex-lit/lint-kit/commit/be6501f))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v191.1.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v191.0.1...v191.1.0)

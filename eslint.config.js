@@ -4,6 +4,7 @@ import {
   tailwindcss,
   tanstackQuery,
   vitest,
+  zod,
 } from '@alexlit/config-eslint';
 
 export default [
@@ -15,6 +16,7 @@ export default [
 
   ...tanstackQuery,
   ...vitest,
+  ...zod,
 
   ...tailwindcss,
   ...prettierConfig,
