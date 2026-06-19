@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "144.0.0",
+  "version": "145.0.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -54,7 +54,7 @@
     "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-sonarjs": "^4.1.0",
     "eslint-plugin-tailwindcss": "^3.18.3",
-    "eslint-plugin-unicorn": "^67.0.0",
+    "eslint-plugin-unicorn": "^68.0.0",
     "eslint-plugin-vue": "^10.9.2",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
     "eslint-plugin-zod": "^4.7.0",
