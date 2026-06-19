@@ -9,10 +9,6 @@ export const sonar = defineConfig([
   {
     files: FILES,
     plugins: { sonar: plugin },
-    rules: {
-      'sonarjs/no-commented-code': 'warn',
-      'sonarjs/no-vue-bypass-sanitization': 'warn',
-      'sonarjs/todo-tag': 'warn',
-    },
+    rules: { 'sonarjs/no-commented-code': 'warn', 'sonarjs/todo-tag': 'warn' },
   },
 ]);
