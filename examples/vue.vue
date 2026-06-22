@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="article-access left-[-5px] top-[-5px] m-[20px]">
+  <div class="xxx article-access top-[-5px] left-[-5px] aspect-[16/9]">
     <div>
       <div class="foo"></div>
 

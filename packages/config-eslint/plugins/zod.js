@@ -6,8 +6,8 @@ import { FILES } from '../presets/base.js';
 /** @see [eslint-plugin-zod](https://github.com/marcalexiei/eslint-zod/tree/main/plugins/eslint-plugin-zod) */
 export const zod = defineConfig([
   {
-    files: FILES,
     ...plugin.configs.recommended,
+    files: FILES,
 
     rules: {
       ...plugin.configs.recommended.rules,

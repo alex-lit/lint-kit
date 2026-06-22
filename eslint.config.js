@@ -6,6 +6,7 @@ import {
   vitest,
   zod,
 } from '@alexlit/config-eslint';
+import path from 'node:path';
 
 export default [
   ...defaultPreset,
@@ -18,6 +19,8 @@ export default [
   ...vitest,
   ...zod,
 
-  ...tailwindcss,
+  ...tailwindcss({
+    cssConfigPath: path.resolve(import.meta.dirname, 'examples/css.tailwind.css'),
+  }),
   ...prettierConfig,
 ];

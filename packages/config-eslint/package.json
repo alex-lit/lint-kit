@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "145.0.0",
+  "version": "146.0.1",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -48,12 +48,12 @@
     "@vitest/eslint-plugin": "^1.6.20",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^63.0.6",
+    "eslint-plugin-jsdoc": "^63.0.7",
     "eslint-plugin-perfectionist": "^5.9.1",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-sonarjs": "^4.1.0",
-    "eslint-plugin-tailwindcss": "^3.18.3",
+    "eslint-plugin-tailwindcss": "^4.0.3",
     "eslint-plugin-unicorn": "^68.0.0",
     "eslint-plugin-vue": "^10.9.2",
     "eslint-plugin-vuejs-accessibility": "^2.5.0",
@@ -67,5 +67,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.3.1"
   }
 }
