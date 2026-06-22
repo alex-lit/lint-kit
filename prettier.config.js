@@ -5,5 +5,5 @@ export default createConfig({
   php: true,
   ruby: true,
   sql: true,
-  tailwindcss: false,
+  tailwindcss: true,
 });

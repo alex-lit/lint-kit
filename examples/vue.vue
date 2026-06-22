@@ -1,6 +1,13 @@
 <!-- eslint-disable     vue/multi-word-component-names -->
 <script setup lang="ts">
   //  sdf
+
+  /**
+   * Sd
+   *
+   * @param a
+   */
+  const a = (a) => a + 1;
 </script>
 
 <template>
