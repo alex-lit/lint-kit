@@ -5,11 +5,11 @@ import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = defineConfig([
-  { files: FILES, ...plugin.configs.recommended },
+  { ...plugin.configs.recommended, files: FILES },
   {
     files: FILES,
     rules: {
-      'unicorn/comment-content': 'off', // not stable
+      'unicorn/comment-content': 'off', // optional
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
@@ -37,11 +37,16 @@ export const unicorn = defineConfig([
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
   {
-    files: ['**/*.{fixtures,test,spec}.{js,ts}'],
+    files: ['**/*.{fixtures,schemas,test,spec}.{js,ts}'],
     rules: {
+      'unicorn/max-nested-calls': 'off',
       'unicorn/no-keyword-prefix': 'off',
       'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/no-useless-undefined': 'off',
     },
+  },
+  {
+    files: ['**/temp/**/*.vue'],
+    rules: { 'unicorn/prevent-abbreviations': 'off' },
   },
 ]);
