@@ -20,7 +20,12 @@ export default [
   ...zod,
 
   ...tailwindcss({
-    cssConfigPath: path.resolve(import.meta.dirname, 'examples/css.tailwind.css'),
+    cssConfigPath: path.resolve(
+      import.meta.dirname,
+      'examples/css.tailwind.css',
+    ),
   }),
   ...prettierConfig,
+
+  { rules: { 'unicorn/comment-content': ['warn'] } },
 ];
