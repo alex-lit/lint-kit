@@ -1,6 +1,20 @@
 # Changelog
 
 
+## v193.1.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v193.0.0...v193.1.0)
+
+### 🏡 Chore
+
+- Wip ([a7b0bbe](https://github.com/alex-lit/lint-kit/commit/a7b0bbe))
+- Wip ([a4caf24](https://github.com/alex-lit/lint-kit/commit/a4caf24))
+- **@alexlit/config-eslint:** Bump version ([284f2b5](https://github.com/alex-lit/lint-kit/commit/284f2b5))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v193.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v146.0.1...v193.0.0)
