@@ -13,8 +13,6 @@ export default [
 
   { ignores: ['packages/config-eslint/_legacy'] },
 
-  { files: ['packages/**'], rules: { 'no-restricted-imports': 'off' } },
-
   ...tanstackQuery,
   ...vitest,
   ...zod,
@@ -25,7 +23,14 @@ export default [
       'examples/css.tailwind.css',
     ),
   }),
+
   ...prettierConfig,
 
-  { rules: { 'unicorn/comment-content': ['warn'] } },
+  {
+    files: ['**/*.js'],
+    rules: {
+      'no-restricted-imports': 'off',
+      'unicorn/comment-content': ['warn'],
+    },
+  },
 ];
