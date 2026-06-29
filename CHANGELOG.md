@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v194.2.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v22.5.0...v194.2.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-prettier:** Bump version ([6cc6149](https://github.com/alex-lit/lint-kit/commit/6cc6149))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v194.1.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v60.16.0...v194.1.0)
