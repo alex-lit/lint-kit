@@ -13,6 +13,7 @@ export const javascript = defineConfig([
       'dot-notation': ['error'],
       'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+      'no-duplicate-imports': ['error', { includeExports: false }],
       'no-implicit-coercion': 'error',
       'no-param-reassign': ['error', { props: false }],
       'no-restricted-exports': [

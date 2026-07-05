@@ -37,7 +37,7 @@ export const unicorn = defineConfig([
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
   {
-    files: ['**/*.{api,fixtures,schemas,test,spec}.{js,ts}'],
+    files: ['**/*.{api,endpoints,fixtures,schemas,test,spec}.{js,ts}'],
     rules: {
       'unicorn/max-nested-calls': 'off',
       'unicorn/no-keyword-prefix': 'off',
