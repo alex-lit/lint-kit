@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "149.1.0",
+  "version": "149.2.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -44,8 +44,8 @@
     "@intlify/eslint-plugin-vue-i18n": "^4.5.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@tanstack/eslint-plugin-query": "^5.101.2",
-    "@unocss/eslint-config": "^66.7.4",
-    "@vitest/eslint-plugin": "^1.6.21",
+    "@unocss/eslint-config": "^66.7.5",
+    "@vitest/eslint-plugin": "^1.6.22",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-jsdoc": "^63.0.12",
@@ -62,7 +62,7 @@
     "jsonc-eslint-parser": "^3.1.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.63.0",
-    "yaml-eslint-parser": "^2.0.0"
+    "yaml-eslint-parser": "^2.1.0"
   },
   "publishConfig": {
     "access": "public",
