@@ -20,7 +20,7 @@ export const unicorn = defineConfig([
       'unicorn/no-empty-file': 'off',
       'unicorn/no-for-each': 'off',
       'unicorn/no-this-outside-of-class': 'off', // used in setters/getters
-      // 'unicorn/no-top-level-side-effects': 'off', // Vue.js specific
+      'unicorn/no-top-level-side-effects': 'off', // Vue.js specific
       'unicorn/no-unused-properties': 'off', // don't respect local keys
       'unicorn/prefer-dom-node-html-methods': 'off', // Safari not supports setHTML()
       'unicorn/prefer-export-from': ['error', { checkUsedVariables: true }],
@@ -37,7 +37,7 @@ export const unicorn = defineConfig([
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
   {
-    files: ['**/*.{api,endpoints,fixtures,schemas,service,test,spec}.{js,ts}'],
+    files: ['**/*.{api,endpoints,fixtures,schemas,service,spec,test}.{js,ts}'],
     rules: {
       'unicorn/max-nested-calls': 'off',
       'unicorn/no-keyword-prefix': 'off',
