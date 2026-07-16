@@ -2,6 +2,7 @@ export { javascript } from './plugins/javascript.js';
 export { jsdoc } from './plugins/jsdoc.js';
 export { json } from './plugins/json.js';
 export { perfectionist } from './plugins/perfectionist.js';
+export { pinia } from './plugins/pinia.js';
 export { prettier, prettierConfig } from './plugins/prettier.js';
 export { regexp } from './plugins/regexp.js';
 export { sonar } from './plugins/sonar.js';
