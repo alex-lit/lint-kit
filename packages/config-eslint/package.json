@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "151.0.0",
+  "version": "151.0.1",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -70,6 +70,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "tailwindcss": "^4.3.2"
+    "tailwindcss": "^4.3.3"
   }
 }
