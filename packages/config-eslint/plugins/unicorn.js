@@ -9,7 +9,7 @@ export const unicorn = defineConfig([
   {
     files: FILES,
     rules: {
-      'unicorn/comment-content': 'off', // optional
+      'unicorn/comment-content': ['warn'],
       'unicorn/consistent-function-scoping': [
         'error',
         { checkArrowFunctions: false },
