@@ -18,6 +18,21 @@ export const vue = defineConfig([
     files: ['**/*.vue'],
     languageOptions: { parserOptions: { parser: typescript.parser } },
     rules: {
+      'no-restricted-syntax': [
+        'error',
+        {
+          message:
+            'При вызове useRoute() переменная должна называться строго "$route" (const $route = useRoute()).',
+          selector:
+            'VariableDeclarator[init.callee.name="useRoute"][id.name!="$route"]',
+        },
+        {
+          message:
+            'При вызове useRouter() переменная должна называться строго "$router" (const $router = useRouter()).',
+          selector:
+            'VariableDeclarator[init.callee.name="useRouter"][id.name!="$router"]',
+        },
+      ],
       'vue/attributes-order': ['error', { alphabetical: true }],
       'vue/block-lang': [
         'error',
