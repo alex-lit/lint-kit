@@ -1,9 +1,77 @@
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
+const MEDIA_FEATURES = [
+  '--laptop',
+  '--tablet',
+  '--mobile',
+
+  '--reduce-motion',
+
+  'any-hover',
+  'any-pointer',
+  'aspect-ratio',
+  'color',
+  'color-gamut',
+  'color-index',
+  'device-aspect-ratio',
+  'device-height',
+  'device-width',
+  'display-mode',
+  'dynamic-range',
+  'environment-blending',
+  'forced-colors',
+  'grid',
+  'height',
+  'horizontal-viewport-segments',
+  'hover',
+  'inverted-colors',
+  'monochrome',
+  'nav-controls',
+  'orientation',
+  'overflow-block',
+  'overflow-inline',
+  'pointer',
+  'prefers-color-scheme',
+  'prefers-contrast',
+  'prefers-reduced-data',
+  'prefers-reduced-motion',
+  'prefers-reduced-transparency',
+  'resolution',
+  'scan',
+  'scripting',
+  'update',
+  'vertical-viewport-segments',
+  'video-color-gamut',
+  'video-dynamic-range',
+  'width',
+];
+
+const AT_RULES = [
+  'annotation',
+  'character-variant',
+  'container',
+  'counter-style',
+  'document',
+  'font-face',
+  'font-feature-values',
+  'keyframes',
+  'media',
+  'ornaments',
+  'page',
+  'screen',
+  'starting-style',
+  'styleset',
+  'stylistic',
+  'supports',
+  'swash',
+  'view-transition',
+  'viewport',
+];
+
 function buildAttributeRules() {
   return [
-    ...LETTERS.map((l) => ({
-      selector: new RegExp(String.raw`\[${l}`),
+    ...LETTERS.map((letter) => ({
+      selector: new RegExp(String.raw`\[${letter}`),
       type: 'rule',
     })),
     { selector: /\[/, type: 'rule' },
@@ -12,24 +80,32 @@ function buildAttributeRules() {
 
 function buildLetterRules(prefix) {
   return [
-    ...LETTERS.map((l) => ({
-      selector: new RegExp(`${prefix}${l}`),
+    ...LETTERS.map((letter) => ({
+      selector: new RegExp(`${prefix}${letter}`),
       type: 'rule',
     })),
     { selector: new RegExp(prefix), type: 'rule' },
   ];
 }
 
+function buildMediaFeatureRules() {
+  return MEDIA_FEATURES.map((parameter) => ({
+    name: 'media',
+    parameter,
+    type: 'at-rule',
+  }));
+}
+
 function buildPseudoClassRules() {
   return [
-    ...LETTERS.map((l) => ({ selector: `:${l}`, type: 'rule' })),
+    ...LETTERS.map((letter) => ({ selector: `:${letter}`, type: 'rule' })),
     { selector: ':', type: 'rule' },
   ];
 }
 
 function buildPseudoElementRules() {
   return [
-    ...LETTERS.map((l) => ({ selector: `::${l}`, type: 'rule' })),
+    ...LETTERS.map((letter) => ({ selector: `::${letter}`, type: 'rule' })),
     { selector: '::', type: 'rule' },
   ];
 }
@@ -65,7 +141,11 @@ export default {
       // Declarations
       'declarations',
 
+      // Media features
+      ...buildMediaFeatureRules(),
+
       // At-rules
+      ...AT_RULES.map((name) => ({ name, type: 'at-rule' })),
       'at-rules',
 
       // Pseudo-classes
