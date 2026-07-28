@@ -1,0 +1,44 @@
+.a {
+  @apply sm:block lg:text-lg;
+
+  background-color: green;
+  color: red;
+  font-weight: bold;
+
+  @media (--mobile) {
+    color: red;
+  }
+
+  @media (--laptop) {
+    color: red;
+  }
+
+  @page {
+  }
+
+  @starting-style {
+    color: red;
+  }
+
+  &::after {
+  }
+
+  &::before {
+  }
+
+  .bbb {
+    color: red;
+  }
+
+  .bab {
+  }
+
+  bс 
+  }
+
+  bb {
+  }
+
+  &__ba {
+  }
+}
