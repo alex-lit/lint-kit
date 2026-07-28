@@ -5,11 +5,11 @@
   color: red;
   font-weight: bold;
 
-  @media (--mobile) {
+  @media (--laptop) {
     color: red;
   }
 
-  @media (--laptop) {
+  @media (--mobile) {
     color: red;
   }
 
@@ -18,6 +18,9 @@
 
   @starting-style {
     color: red;
+  }
+
+  @asd {
   }
 
   &::after {
@@ -33,7 +36,7 @@
   .bab {
   }
 
-  bс 
+  bс {
   }
 
   bb {
