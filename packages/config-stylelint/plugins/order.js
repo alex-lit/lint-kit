@@ -257,7 +257,6 @@ export default {
       { selector: /\.v/, type: 'rule' },
       { selector: /\.w/, type: 'rule' },
       { selector: /\.x/, type: 'rule' },
-      { selector: /\.w/, type: 'rule' },
       { selector: /\.z/, type: 'rule' },
       { selector: /\./, type: 'rule' },
 
@@ -476,7 +475,6 @@ export default {
       { selector: /--v/, type: 'rule' },
       { selector: /--w/, type: 'rule' },
       { selector: /--x/, type: 'rule' },
-      { selector: /--w/, type: 'rule' },
       { selector: /--z/, type: 'rule' },
       { selector: /--/, type: 'rule' },
 
@@ -504,7 +502,6 @@ export default {
       { selector: /__v/, type: 'rule' },
       { selector: /__w/, type: 'rule' },
       { selector: /__x/, type: 'rule' },
-      { selector: /__w/, type: 'rule' },
       { selector: /__z/, type: 'rule' },
       { selector: /__/, type: 'rule' },
     ],

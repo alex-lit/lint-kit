@@ -30,7 +30,7 @@ npm i @alexlit/config-stylelint -D
       'no-nested-media': false,
 
       // enable some optional plugins
-      gamut: true,
+      'gamut': true,
       'logical-css': true,
     },
     {
@@ -55,7 +55,7 @@ npm i @alexlit/config-stylelint -D
   npx stylelint-find-new-rules
   ```
 
-## Usefull links
+## Useful links
 
 - [Awesome StyleLint](https://github.com/stylelint/awesome-stylelint)
 - [stylelint-scales](https://github.com/jeddy3/stylelint-scales)
