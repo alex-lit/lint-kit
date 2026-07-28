@@ -148,11 +148,11 @@ export default {
       ...AT_RULES.map((name) => ({ name, type: 'at-rule' })),
       'at-rules',
 
-      // Pseudo-classes
-      ...buildPseudoClassRules(),
-
       // Pseudo-elements
       ...buildPseudoElementRules(),
+
+      // Pseudo-classes
+      ...buildPseudoClassRules(),
 
       // ID selector
       { selector: /#/, type: 'rule' },
