@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "60.19.5",
+  "version": "60.19.6",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -38,7 +38,7 @@
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.5.0",
     "@morev/stylelint-plugin": "^0.6.1",
-    "postcss": "^8.5.23",
+    "postcss": "^8.5.24",
     "postcss-html": "^1.8.1",
     "prettier": "^3.9.6",
     "stylelint": "17.14.1",
