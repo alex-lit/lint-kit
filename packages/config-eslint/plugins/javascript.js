@@ -36,6 +36,14 @@ export const javascript = defineConfig([
           ],
         },
       ],
+      'no-restricted-syntax': [
+        'error',
+        {
+          message:
+            "Не используйте префикс 'handle' для обработчиков событий. Переименуйте метод, заменив 'handle' на 'on' (например, 'onClick' вместо 'handleClick').",
+          selector: 'Identifier[name=/^handle[A-Z]/]',
+        },
+      ],
       'prefer-const': 'warn',
       'prefer-template': 'warn',
     },
