@@ -9,9 +9,10 @@ export const javascript = defineConfig([
   {
     files: FILES,
     rules: {
+      'arrow-body-style': ['error', 'as-needed'],
       'curly': 'error',
       'dot-notation': ['error'],
-      'func-style': ['error', 'declaration', { allowArrowFunctions: true }],
+      'func-style': ['error', 'expression'],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
       'no-duplicate-imports': ['error', { includeExports: false }],
       'no-implicit-coercion': 'error',
@@ -43,6 +44,10 @@ export const javascript = defineConfig([
             "Не используйте префикс 'handle' для обработчиков событий. Переименуйте метод, заменив 'handle' на 'on' (например, 'onClick' вместо 'handleClick').",
           selector: 'Identifier[name=/^handle[A-Z]/]',
         },
+      ],
+      'prefer-arrow-callback': [
+        'error',
+        { allowNamedFunctions: false, allowUnboundThis: false },
       ],
       'prefer-const': 'warn',
       'prefer-template': 'warn',
