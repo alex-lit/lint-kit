@@ -14,6 +14,11 @@ export const unicorn = defineConfig([
         'error',
         { checkArrowFunctions: false },
       ],
+      'unicorn/consistent-function-style': [
+        'error',
+        { default: 'arrow-function' },
+      ],
+      'unicorn/iteration-fallback-style': ['error', 'guard'],
       'unicorn/name-replacements': 'off',
       'unicorn/no-array-reduce': ['error', { allowSimpleOperations: true }],
       'unicorn/no-asterisk-prefix-in-documentation-comments': 'off',
@@ -32,6 +37,7 @@ export const unicorn = defineConfig([
       'unicorn/prefer-temporal': 'off', // ES2026 only
       'unicorn/prefer-type-literal-last': 'off', // perfectionist/sort-intersection-types
       'unicorn/relative-url-style': ['error', 'always'],
+      'unicorn/single-line-block-comment-style': 'off',
     },
   },
   { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
