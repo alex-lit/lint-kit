@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v200.0.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v200.0.0...v200.0.1)
+
+### 🏡 Chore
+
+- Wip ([1dc3ad1f](https://github.com/alex-lit/lint-kit/commit/1dc3ad1f))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v200.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v199.0.0...v200.0.0)
