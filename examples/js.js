@@ -61,3 +61,13 @@ export function get() {
 
   return `${firstName} ${lastName} is ${age} years old`;
 }
+
+export const xx = function () {
+  return 11;
+};
+
+if (options.config) {
+  for (const [key, value] of Object.entries(options.config)) {
+    use(key, value);
+  }
+}
