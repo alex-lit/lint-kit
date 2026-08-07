@@ -44,6 +44,20 @@ export const javascript = defineConfig([
             "Не используйте префикс 'handle' для обработчиков событий. Переименуйте метод, заменив 'handle' на 'on' (например, 'onClick' вместо 'handleClick').",
           selector: 'Identifier[name=/^handle[A-Z]/]',
         },
+        {
+          message:
+            "Использование классического цикла 'for' запрещено. Используйте методы массивов (.forEach, .map и т.д.).",
+          selector: 'ForStatement',
+        },
+        {
+          message:
+            "Цикл 'for...in' запрещен. Используйте Object.keys() или Object.entries().",
+          selector: 'ForInStatement',
+        },
+        {
+          message: "Цикл 'for...of' запрещен. Используйте методы массивов.",
+          selector: 'ForOfStatement',
+        },
       ],
       'prefer-arrow-callback': [
         'error',
