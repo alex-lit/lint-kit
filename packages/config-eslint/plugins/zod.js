@@ -8,7 +8,6 @@ export const zod = defineConfig([
   {
     ...plugin.configs.recommended,
     files: FILES,
-
     rules: {
       ...plugin.configs.recommended.rules,
       'zod/consistent-import': ['error', { syntax: 'named' }],
