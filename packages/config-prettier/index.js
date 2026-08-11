@@ -27,23 +27,29 @@ const PLUGINS = { ...DEFAULT_PLUGINS, ...OPTIONAL_PLUGINS };
  * @returns {import('prettier').Config} Prettier configuration
  */
 const createPluginsConfig = async (plugins = {}) => {
-  let pluginsConfig = { plugins: [] };
-
   const pluginEntries = Object.entries({ ...PLUGINS, ...plugins });
 
-  for (const [name, isActive] of pluginEntries) {
-    if (isActive) {
-      const { default: config } = await import(
-        `@alexlit/config-prettier/plugins/${name}.js`
-      );
+  const configs = await Promise.all(
+    pluginEntries
+      .filter(([, isActive]) => isActive)
+      .map(async ([name]) => {
+        const { default: config } = await import(
+          `@alexlit/config-prettier/plugins/${name}.js`
+        );
 
-      if (config.plugins?.length > 0) {
-        pluginsConfig.plugins.push(...config.plugins);
-      }
+        return config;
+      }),
+  );
 
-      pluginsConfig = { ...pluginsConfig, ...omit(config, ['plugins']) };
+  let pluginsConfig = { plugins: [] };
+
+  configs.forEach((config) => {
+    if (config.plugins?.length > 0) {
+      pluginsConfig.plugins.push(...config.plugins);
     }
-  }
+
+    pluginsConfig = { ...pluginsConfig, ...omit(config, ['plugins']) };
+  });
 
   return pluginsConfig;
 };
