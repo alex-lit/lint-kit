@@ -13,15 +13,15 @@ const hexToRgb = (hex) => {
   const b = number & 255;
 
   if (value.length === 3 || value.length === 6) {
-    return { r, g, b, a: 1 };
+    return { a: 1, b, g, r };
   }
 
-  const a = Number.parseFloat((((number >> 24) & 255) / 255).toFixed(2));
+  const a = Number((((number >> 24) & 255) / 255).toFixed(2));
 
-  return { r, g, b, a };
+  return { a, b, g, r };
 };
 
-const rgbToHsl = ({ r, g, b }) => {
+const rgbToHsl = ({ b, g, r }) => {
   const rN = r / 255;
   const gN = g / 255;
   const bN = b / 255;
@@ -33,24 +33,22 @@ const rgbToHsl = ({ r, g, b }) => {
   const lightness = (max + min) / 2;
 
   if (delta === 0) {
-    return { h: 0, s: 0, l: Math.round(lightness * 100) };
+    return { h: 0, l: Math.round(lightness * 100), s: 0 };
   }
 
-  const saturation = lightness > 0.5
-    ? delta / (2 - max - min)
-    : delta / (max + min);
+  const saturation = delta / (lightness > 0.5 ? 2 - max - min : max + min);
 
   let hue;
 
   switch (max) {
-    case rN: {
-      hue = ((gN - bN) / delta + (gN < bN ? 6 : 0)) / 6;
+    case gN: {
+      hue = ((bN - rN) / delta + 2) / 6;
 
       break;
     }
 
-    case gN: {
-      hue = ((bN - rN) / delta + 2) / 6;
+    case rN: {
+      hue = ((gN - bN) / delta + (gN < bN ? 6 : 0)) / 6;
 
       break;
     }
@@ -62,13 +60,13 @@ const rgbToHsl = ({ r, g, b }) => {
 
   return {
     h: Math.round(hue * 360),
-    s: Math.round(saturation * 100),
     l: Math.round(lightness * 100),
+    s: Math.round(saturation * 100),
   };
 };
 
 const formatColor = (hex, format) => {
-  const { r, g, b, a } = hexToRgb(hex);
+  const { a, b, g, r } = hexToRgb(hex);
 
   if (format === 'rgb' || format === 'rgba') {
     if (a < 1) {
@@ -78,7 +76,7 @@ const formatColor = (hex, format) => {
     return `rgb(${r}, ${g}, ${b})`;
   }
 
-  const { h, s, l } = rgbToHsl({ r, g, b });
+  const { h, l, s } = rgbToHsl({ b, g, r });
 
   if (a < 1) {
     return `hsla(${h}, ${s}%, ${l}%, ${a})`;
@@ -97,11 +95,14 @@ const styleSearch = (source, target, callback) => {
       break;
     }
 
-    callback({ startIndex: index, endIndex: index + target.length });
+    callback({ endIndex: index + target.length, startIndex: index });
 
     startIndex = index + 1;
   }
 };
+
+const replaceHexes = (value, fixTo) =>
+  value.replaceAll(/#[0-9A-Z]+/gi, (hex) => formatColor(hex, fixTo));
 
 const messages = ruleMessages(ruleName, {
   custom: (message) => message,
@@ -112,9 +113,7 @@ const rule = function (actual, options, context) {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, {
       actual,
-      possible: {
-        format: ['rgb', 'rgba', 'hsl', 'hsla'],
-      },
+      possible: { format: ['rgb', 'rgba', 'hsl', 'hsla'] },
     });
 
     if (!validOptions) {
@@ -150,9 +149,10 @@ const rule = function (actual, options, context) {
           return;
         }
 
-        const message = actual && actual.message
-          ? messages.custom(actual.message)
-          : messages.rejected(hexValue);
+        const message =
+          actual && actual.message
+            ? messages.custom(actual.message)
+            : messages.rejected(hexValue);
 
         report({
           endIndex: match.endIndex,
@@ -165,16 +165,9 @@ const rule = function (actual, options, context) {
       });
 
       if (fixPositions.length > 0) {
-        for (const fixPosition of fixPositions) {
-          const hexes = [...decl.value.matchAll(/#[0-9A-Z]+/gi)];
-
-          for (const hexMatch of hexes) {
-            decl.value = decl.value.replace(
-              hexMatch[0],
-              formatColor(hexMatch[0], fixPosition.fixTo),
-            );
-          }
-        }
+        fixPositions.forEach((fixPosition) => {
+          decl.value = replaceHexes(decl.value, fixPosition.fixTo);
+        });
       }
     });
   };

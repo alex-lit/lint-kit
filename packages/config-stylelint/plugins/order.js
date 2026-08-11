@@ -68,47 +68,38 @@ const AT_RULES = [
   'viewport',
 ];
 
-function buildAttributeRules() {
-  return [
-    ...LETTERS.map((letter) => ({
-      selector: new RegExp(String.raw`\[${letter}`),
-      type: 'rule',
-    })),
-    { selector: /\[/, type: 'rule' },
-  ];
-}
+const buildAttributeRules = () => [
+  ...LETTERS.map((letter) => ({
+    selector: new RegExp(String.raw`\[${letter}`),
+    type: 'rule',
+  })),
+  { selector: /\[/, type: 'rule' },
+];
 
-function buildLetterRules(prefix) {
-  return [
-    ...LETTERS.map((letter) => ({
-      selector: new RegExp(`${prefix}${letter}`),
-      type: 'rule',
-    })),
-    { selector: new RegExp(prefix), type: 'rule' },
-  ];
-}
+const buildLetterRules = (prefix) => [
+  ...LETTERS.map((letter) => ({
+    selector: new RegExp(`${prefix}${letter}`),
+    type: 'rule',
+  })),
+  { selector: new RegExp(prefix), type: 'rule' },
+];
 
-function buildMediaFeatureRules() {
-  return MEDIA_FEATURES.map((parameter) => ({
+const buildMediaFeatureRules = () =>
+  MEDIA_FEATURES.map((parameter) => ({
     name: 'media',
     parameter,
     type: 'at-rule',
   }));
-}
 
-function buildPseudoClassRules() {
-  return [
-    ...LETTERS.map((letter) => ({ selector: `:${letter}`, type: 'rule' })),
-    { selector: ':', type: 'rule' },
-  ];
-}
+const buildPseudoClassRules = () => [
+  ...LETTERS.map((letter) => ({ selector: `:${letter}`, type: 'rule' })),
+  { selector: ':', type: 'rule' },
+];
 
-function buildPseudoElementRules() {
-  return [
-    ...LETTERS.map((letter) => ({ selector: `::${letter}`, type: 'rule' })),
-    { selector: '::', type: 'rule' },
-  ];
-}
+const buildPseudoElementRules = () => [
+  ...LETTERS.map((letter) => ({ selector: `::${letter}`, type: 'rule' })),
+  { selector: '::', type: 'rule' },
+];
 
 /**
  * @type {import('stylelint').Config}
