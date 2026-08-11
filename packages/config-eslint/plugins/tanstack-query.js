@@ -4,4 +4,5 @@ import { defineConfig } from 'eslint/config';
 /** @see [@tanstack/query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query) */
 export const tanstackQuery = defineConfig([
   ...plugin.configs['flat/recommended'],
+  { rules: { '@tanstack/query/infinite-query-property-order': 'off' } },
 ]);
