@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "153.0.2",
+  "version": "153.1.0",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -59,7 +59,7 @@
     "eslint-plugin-vue": "^10.10.0",
     "eslint-plugin-vuejs-accessibility": "^2.6.0",
     "eslint-plugin-zod": "^4.9.1",
-    "globals": "^17.9.0",
+    "globals": "^17.10.0",
     "jsonc-eslint-parser": "^3.3.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.67.0",
