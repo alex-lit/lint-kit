@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v201.2.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/v9.4.1...v201.2.1)
+
+### 🏡 Chore
+
+- **@alexlit/config-npmlint:** Bump version ([05534c2c](https://github.com/alex-lit/lint-kit/commit/05534c2c))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v201.2.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/v153.2.0...v201.2.0)
