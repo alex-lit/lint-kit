@@ -42,16 +42,26 @@ done
 
 echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию пакета ${GREEN}${CURRENT_PACKAGE_NAME}${YELLOW}...${WHITE}"
 
-changelogen \
-  --${VERSION} \
-  --no-commit \
-  --release
+# Базовый тег — последний релиз ТОЛЬКО этого пакета (в монорепо git-теги глобальные)
+LAST_PACKAGE_TAG=$(git describe --tags --abbrev=0 --match "${CURRENT_PACKAGE_NAME}@*" 2> /dev/null || true)
 
-if [ $CURRENT_PACKAGE_NAME != $MAIN_PACKAGE ]; then
-  rm CHANGELOG.md
+CHANGELOGEN_ARGS=(--${VERSION} --no-commit --no-tag --no-github)
+if [ -n "${LAST_PACKAGE_TAG}" ]; then
+  CHANGELOGEN_ARGS+=(--from "${LAST_PACKAGE_TAG}")
 fi
+
+# --no-commit --no-tag --no-github: коммит/тег/GitHub release делаем сами и после бампа
+changelogen "${CHANGELOGEN_ARGS[@]}"
+
+NEW_PACKAGE_VERSION=$(node -p "require('./package.json').version")
+
+# CHANGELOG.md оставляем у каждого пакета: он теперь генерируется корректно
+# (--from берётся по тегам именно этого пакета)
 
 git add .
 git commit -m "chore(${CURRENT_PACKAGE_NAME}): bump version"
+
+# Тег создаём ПОСЛЕ коммита бампа, чтобы он указывал на правильный коммит
+git tag -a "${CURRENT_PACKAGE_NAME}@${NEW_PACKAGE_VERSION}" -m "${CURRENT_PACKAGE_NAME}@${NEW_PACKAGE_VERSION}"
 
 SAY_GOODBYE
