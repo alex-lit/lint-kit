@@ -13,9 +13,7 @@ npm i @alexlit/config-commitlint -D
 
 ```js
 // commitlint.config.js
-export default {
-  extends: ['@alexlit/config-commitlint'],
-};
+export default { extends: ['@alexlit/config-commitlint'] };
 ```
 
 ```bash
