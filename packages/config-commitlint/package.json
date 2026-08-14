@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-commitlint",
-  "version": "14.2.4",
+  "version": "14.2.5",
   "private": false,
   "description": "Commitlint config",
   "keywords": [
