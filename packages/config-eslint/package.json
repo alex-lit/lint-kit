@@ -65,11 +65,11 @@
     "typescript-eslint": "^8.67.0",
     "yaml-eslint-parser": "^2.1.0"
   },
+  "devDependencies": {
+    "tailwindcss": "^4.3.3"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "devDependencies": {
-    "tailwindcss": "^4.3.3"
   }
 }
