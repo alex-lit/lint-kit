@@ -28,7 +28,8 @@
     "index.js",
     "plugins/",
     "presets/",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",

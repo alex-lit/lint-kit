@@ -1,5 +1,7 @@
 # Обновляет версию пакета
 
+set -euo pipefail
+
 source "$(dirname $0)"/../bash.config.sh
 
 VERSION=patch
@@ -45,12 +47,13 @@ echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию па
 # Базовый тег — последний релиз ТОЛЬКО этого пакета (в монорепо git-теги глобальные)
 LAST_PACKAGE_TAG=$(git describe --tags --abbrev=0 --match "${CURRENT_PACKAGE_NAME}@*" 2> /dev/null || true)
 
-CHANGELOGEN_ARGS=(--${VERSION} --no-commit --no-tag --no-github)
+# --bump (а не --release): поднимает версию и пишет CHANGELOG.md, но НЕ делает
+# коммит/тег/GitHub release — их делаем сами ниже, ПОСЛЕ коммита бампа
+CHANGELOGEN_ARGS=(--${VERSION} --bump)
 if [ -n "${LAST_PACKAGE_TAG}" ]; then
   CHANGELOGEN_ARGS+=(--from "${LAST_PACKAGE_TAG}")
 fi
 
-# --no-commit --no-tag --no-github: коммит/тег/GitHub release делаем сами и после бампа
 changelogen "${CHANGELOGEN_ARGS[@]}"
 
 NEW_PACKAGE_VERSION=$(node -p "require('./package.json').version")

@@ -1,5 +1,7 @@
 # Релиз пакета (коммит в npm и git)
 
+set -euo pipefail
+
 source "$(dirname $0)"/../bash.config.sh
 
 VERSION=${1:-patch} # patch | minor | major

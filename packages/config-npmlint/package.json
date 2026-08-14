@@ -28,6 +28,7 @@
   "main": "index.json",
   "files": [
     "README.md",
+    "CHANGELOG.md",
     "index.json"
   ],
   "scripts": {
