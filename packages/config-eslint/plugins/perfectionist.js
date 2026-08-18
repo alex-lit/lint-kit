@@ -5,7 +5,7 @@ import { FILES } from '../presets/base.js';
 
 /** @see [eslint-plugin-perfectionist](https://perfectionist.dev) */
 export const perfectionist = defineConfig([
-  { files: FILES, ...plugin.configs['recommended-natural'] },
+  { ...plugin.configs['recommended-natural'], files: FILES },
   {
     files: FILES,
     rules: {
