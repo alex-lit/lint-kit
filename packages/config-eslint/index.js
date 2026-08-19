@@ -1,3 +1,4 @@
+export { deMorgan } from './plugins/de-morgan.js';
 export { javascript } from './plugins/javascript.js';
 export { jsdoc } from './plugins/jsdoc.js';
 export { json } from './plugins/json.js';

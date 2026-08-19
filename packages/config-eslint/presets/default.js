@@ -1,5 +1,6 @@
 import { defineConfig } from 'eslint/config';
 
+import { deMorgan } from '../plugins/de-morgan.js';
 import { javascript } from '../plugins/javascript.js';
 import { jsdoc } from '../plugins/jsdoc.js';
 import { json } from '../plugins/json.js';
@@ -19,6 +20,7 @@ export const defaultPreset = defineConfig([
   ...base, // must be first
 
   ...javascript,
+  ...deMorgan,
   ...jsdoc,
   ...json,
   ...perfectionist,
