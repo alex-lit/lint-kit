@@ -20,20 +20,41 @@ export const javascript = defineConfig([
       'no-restricted-exports': [
         'error',
         {
-          restrictedNamedExports: [
-            'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
-          ],
+          restrictedNamedExports: ['then'],
+          restrictedNamedExportsPattern: '^_',
         },
       ],
       'no-restricted-imports': [
         'error',
         {
           patterns: [
+            // Алиасы
+            { group: ['~/', '~~/'], message: 'Используйте "@" вместо "~".' },
+            // Расширения
             {
-              group: ['.', '..', '*/..'],
-              message: 'Use absolute path instead',
+              message: 'Не указывайте расширения .ts или .js в путях импорта.',
+              regex: String.raw`\.[jt]sx?$`,
             },
-            { group: ['@/', '@@/'], message: 'Use "~" instead of "@"' },
+            // Относительные импорты
+            { group: ['..', '*/..'], message: 'Используйте абсолютный путь.' },
+            {
+              message: 'Не используйте индексный импорт.',
+              regex: String.raw`^\.$`,
+            },
+            {
+              group: ['**/index'],
+              message: 'Не используйте индексный импорт.',
+            },
+            // Внешние локальные ресурсы
+            {
+              group: ['@/**/_*', '@@/**/_*', '~/**/_*', '~~/**/_*'],
+              message: 'Этот локальный ресурс не преднаназначен для импорта.',
+            },
+            // Устаревший функционал
+            {
+              message: 'Это функционал устарел.',
+              regex: '(_deprecated|_legacy)',
+            },
           ],
         },
       ],
