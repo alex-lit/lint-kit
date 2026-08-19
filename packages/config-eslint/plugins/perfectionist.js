@@ -12,7 +12,86 @@ export const perfectionist = defineConfig([
       'perfectionist/sort-imports': [
         'warn',
         {
-          internalPattern: ['^#.*', '^~/.*', '^~~/.*', '^@/.*', '^@@/.*'],
+          customGroups: [
+            // nuxt
+            { elementNamePattern: ['^#app*'], groupName: 'app' },
+            { elementNamePattern: ['^#components*'], groupName: 'components' },
+            { elementNamePattern: ['^#imports*'], groupName: 'imports' },
+            { elementNamePattern: ['^#layers*'], groupName: 'layers' },
+            { elementNamePattern: ['^#server*'], groupName: 'server' },
+            { elementNamePattern: ['^#shared*'], groupName: 'shared' },
+
+            // universal
+            { elementNamePattern: ['^~/.*/api'], groupName: 'universal-api' },
+            {
+              elementNamePattern: ['^~/.*/assets'],
+              groupName: 'universal-assets',
+            },
+            {
+              elementNamePattern: ['^~/.*/components'],
+              groupName: 'universal-components',
+            },
+            {
+              elementNamePattern: ['^~/.*/composables'],
+              groupName: 'universal-composables',
+            },
+            {
+              elementNamePattern: ['^~/.*/constants'],
+              groupName: 'universal-constants',
+            },
+            {
+              elementNamePattern: ['^~/.*/directives'],
+              groupName: 'universal-directives',
+            },
+            {
+              elementNamePattern: ['^~/.*/pages'],
+              groupName: 'universal-pages',
+            },
+            {
+              elementNamePattern: ['^~/.*/plugins'],
+              groupName: 'universal-plugins',
+            },
+            {
+              elementNamePattern: ['^~/.*/stores'],
+              groupName: 'universal-stores',
+            },
+            {
+              elementNamePattern: ['^~/.*/utils'],
+              groupName: 'universal-utils',
+            },
+          ],
+          groups: [
+            'type-import',
+            ['value-builtin', 'value-external'],
+
+            // nuxt
+            'app',
+            'components',
+            'imports',
+            'layers',
+            'server',
+            'shared',
+
+            // universal
+            'universal-api',
+            'universal-assets',
+            'universal-components',
+            'universal-composables',
+            'universal-constants',
+            'universal-directives',
+            'universal-pages',
+            'universal-plugins',
+            'universal-stores',
+            'universal-utils',
+
+            'type-internal',
+            'value-internal',
+            ['type-parent', 'type-sibling', 'type-index'],
+            ['value-parent', 'value-sibling', 'value-index'],
+            'ts-equals-import',
+            'unknown',
+          ],
+          internalPattern: ['^~/.*', '^~~/.*', '^@/.*', '^@@/.*'],
           type: 'natural',
         },
       ],

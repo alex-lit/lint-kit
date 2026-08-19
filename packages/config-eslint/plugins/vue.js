@@ -18,8 +18,26 @@ export const vue = defineConfig([
     files: ['**/*.vue'],
     languageOptions: { parserOptions: { parser: typescript.parser } },
     rules: {
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          custom: { match: true, regex: '^[A-Z][a-zA-Z0-9]+Props$' },
+          format: ['PascalCase'],
+          selector: 'interface',
+        },
+      ],
+      '@typescript-eslint/no-empty-object-type': [
+        'error',
+        { allowWithName: 'Props$' },
+      ],
       'no-restricted-syntax': [
         'error',
+        {
+          message:
+            'Запрещено использовать имя "Props". Используйте именованный формат, например: <ИмяКомпонента>Props.',
+          selector:
+            "TSInterfaceDeclaration[id.name='Props'], TSTypeAliasDeclaration[id.name='Props']",
+        },
         {
           message:
             'При вызове useRoute() переменная должна называться строго "$route" (const $route = useRoute()).',

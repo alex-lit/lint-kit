@@ -14,7 +14,6 @@ export const typescript = defineConfig([
     rules: {
       '@typescript-eslint/naming-convention': [
         'error',
-
         {
           format: ['strictCamelCase'],
           leadingUnderscore: 'allow',
@@ -40,15 +39,6 @@ export const typescript = defineConfig([
         { format: null, modifiers: ['destructured'], selector: 'variable' },
       ],
       '@typescript-eslint/no-explicit-any': 'warn',
-    },
-  },
-  {
-    files: ['**/*.vue'],
-    rules: {
-      '@typescript-eslint/no-empty-object-type': [
-        'error',
-        { allowWithName: 'Props$' },
-      ],
     },
   },
   {
