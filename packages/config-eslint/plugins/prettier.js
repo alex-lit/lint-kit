@@ -18,12 +18,12 @@ const fixes = {
 
 /** @see [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) */
 export const prettier = defineConfig([
-  { files: FILES, ...plugin },
+  { files: FILES, ...plugin, rules: { ...plugin.rules, curly: 'error' } },
   { files: ['**/*.vue'], rules: { ...fixes } },
 ]);
 
 /** @see [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) */
 export const prettierConfig = defineConfig([
-  { files: FILES, ...config },
+  { files: FILES, ...config, rules: { ...config.rules, curly: 'error' } },
   { files: ['**/*.vue'], rules: { ...fixes } },
 ]);
