@@ -52,7 +52,7 @@ export const javascript = defineConfig([
             },
             // Устаревший функционал
             {
-              message: 'Это функционал устарел.',
+              message: 'Этот функционал устарел.',
               regex: '(_deprecated|_legacy)',
             },
           ],

@@ -22,43 +22,37 @@ export const perfectionist = defineConfig([
             { elementNamePattern: ['^#shared*'], groupName: 'shared' },
 
             // universal
-            { elementNamePattern: ['^~/.*/api'], groupName: 'universal-api' },
+            { elementNamePattern: ['^@/api'], groupName: 'universal-api' },
             {
-              elementNamePattern: ['^~/.*/assets'],
+              elementNamePattern: ['^@/assets'],
               groupName: 'universal-assets',
             },
             {
-              elementNamePattern: ['^~/.*/components'],
+              elementNamePattern: ['^@/components'],
               groupName: 'universal-components',
             },
             {
-              elementNamePattern: ['^~/.*/composables'],
+              elementNamePattern: ['^@/composables'],
               groupName: 'universal-composables',
             },
             {
-              elementNamePattern: ['^~/.*/constants'],
+              elementNamePattern: ['^@/constants'],
               groupName: 'universal-constants',
             },
             {
-              elementNamePattern: ['^~/.*/directives'],
+              elementNamePattern: ['^@/directives'],
               groupName: 'universal-directives',
             },
+            { elementNamePattern: ['^@/pages'], groupName: 'universal-pages' },
             {
-              elementNamePattern: ['^~/.*/pages'],
-              groupName: 'universal-pages',
-            },
-            {
-              elementNamePattern: ['^~/.*/plugins'],
+              elementNamePattern: ['^@/plugins'],
               groupName: 'universal-plugins',
             },
             {
-              elementNamePattern: ['^~/.*/stores'],
+              elementNamePattern: ['^@/stores'],
               groupName: 'universal-stores',
             },
-            {
-              elementNamePattern: ['^~/.*/utils'],
-              groupName: 'universal-utils',
-            },
+            { elementNamePattern: ['^@/utils'], groupName: 'universal-utils' },
           ],
           groups: [
             'type-import',
