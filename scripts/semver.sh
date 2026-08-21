@@ -47,19 +47,21 @@ echo -e "${YELLOW}Поднимаю ${GREEN}${VERSION}${YELLOW} версию па
 # Базовый тег — последний релиз ТОЛЬКО этого пакета (в монорепо git-теги глобальные)
 LAST_PACKAGE_TAG=$(git describe --tags --abbrev=0 --match "${CURRENT_PACKAGE_NAME}@*" 2> /dev/null || true)
 
-# --bump (а не --release): поднимает версию и пишет CHANGELOG.md, но НЕ делает
-# коммит/тег/GitHub release — их делаем сами ниже, ПОСЛЕ коммита бампа
+# --bump (а не --release): поднимает версию, но НЕ делает коммит/тег/GitHub
+# release — их делаем сами ниже, ПОСЛЕ коммита бампа
 CHANGELOGEN_ARGS=(--${VERSION} --bump)
 if [ -n "${LAST_PACKAGE_TAG}" ]; then
   CHANGELOGEN_ARGS+=(--from "${LAST_PACKAGE_TAG}")
 fi
 
+# CHANGELOG.md пишем только для корневого пакета, в сабмодулях — без него
+if [ "${CURRENT_PACKAGE_NAME}" != "${MAIN_PACKAGE}" ]; then
+  CHANGELOGEN_ARGS+=(--no-output)
+fi
+
 changelogen "${CHANGELOGEN_ARGS[@]}"
 
 NEW_PACKAGE_VERSION=$(node -p "require('./package.json').version")
-
-# CHANGELOG.md оставляем у каждого пакета: он теперь генерируется корректно
-# (--from берётся по тегам именно этого пакета)
 
 git add .
 git commit -m "chore(${CURRENT_PACKAGE_NAME}): bump version"

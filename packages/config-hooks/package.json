@@ -25,7 +25,6 @@
   "main": "index.js",
   "files": [
     "README.md",
-    "CHANGELOG.md",
     "index.js",
     "lint-staged.js"
   ],
