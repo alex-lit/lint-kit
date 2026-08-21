@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v154.1.2
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/config-eslint@154.1.1...v154.1.2)
+
 ## v154.1.1
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/config-eslint@154.1.0...v154.1.1)

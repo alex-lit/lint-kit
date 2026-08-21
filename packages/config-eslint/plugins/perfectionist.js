@@ -43,6 +43,10 @@ export const perfectionist = defineConfig([
               elementNamePattern: ['^@/directives'],
               groupName: 'universal-directives',
             },
+            {
+              elementNamePattern: ['^@/layouts'],
+              groupName: 'universal-layouts',
+            },
             { elementNamePattern: ['^@/pages'], groupName: 'universal-pages' },
             {
               elementNamePattern: ['^@/plugins'],
@@ -73,6 +77,7 @@ export const perfectionist = defineConfig([
             'universal-composables',
             'universal-constants',
             'universal-directives',
+            'universal-layouts',
             'universal-pages',
             'universal-plugins',
             'universal-stores',
