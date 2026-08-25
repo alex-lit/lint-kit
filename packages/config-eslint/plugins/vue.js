@@ -226,7 +226,12 @@ export const vue = defineConfig([
   },
 
   {
-    files: ['**/pages/**/*.vue', '**/layouts/**/*.vue'],
+    files: [
+      '**/app/*.vue',
+      '**/src/*.vue',
+      '**/layouts/**/*.vue',
+      '**/pages/**/*.vue',
+    ],
     rules: { 'vue/multi-word-component-names': 'off' },
   },
 
