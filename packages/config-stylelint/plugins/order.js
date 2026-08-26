@@ -68,6 +68,8 @@ const AT_RULES = [
   'viewport',
 ];
 
+const DEEP_PSEUDO_CLASSES = ['deep', 'global', 'slotted'];
+
 const buildAttributeRules = () => [
   ...LETTERS.map((letter) => ({
     selector: new RegExp(String.raw`\[${letter}`),
@@ -84,6 +86,15 @@ const buildLetterRules = (prefix) => [
   { selector: new RegExp(prefix), type: 'rule' },
 ];
 
+const buildPseudoClassBemRules = (prefix) =>
+  DEEP_PSEUDO_CLASSES.flatMap((pseudo) => [
+    ...LETTERS.map((letter) => ({
+      selector: new RegExp(String.raw`:${pseudo}\(&${prefix}${letter}`),
+      type: 'rule',
+    })),
+    { selector: new RegExp(String.raw`:${pseudo}\(&${prefix}`), type: 'rule' },
+  ]);
+
 const buildMediaFeatureRules = () =>
   MEDIA_FEATURES.map((parameter) => ({
     name: 'media',
@@ -92,8 +103,11 @@ const buildMediaFeatureRules = () =>
   }));
 
 const buildPseudoClassRules = () => [
-  ...LETTERS.map((letter) => ({ selector: `:${letter}`, type: 'rule' })),
-  { selector: ':', type: 'rule' },
+  ...LETTERS.map((letter) => ({
+    selector: new RegExp(String.raw`:(?!deep\b|slotted\b|global\b)${letter}`),
+    type: 'rule',
+  })),
+  { selector: /:(?!deep\b|slotted\b|global\b)/, type: 'rule' },
 ];
 
 const buildPseudoElementRules = () => [
@@ -144,6 +158,10 @@ export default {
 
       // Pseudo-classes
       ...buildPseudoClassRules(),
+
+      // BEM in pseudo-class functions (:deep, :global, :slotted)
+      ...buildPseudoClassBemRules('--'),
+      ...buildPseudoClassBemRules('__'),
 
       // ID selector
       { selector: /#/, type: 'rule' },
