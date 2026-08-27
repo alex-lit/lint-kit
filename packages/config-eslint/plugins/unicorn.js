@@ -47,6 +47,7 @@ export const unicorn = defineConfig([
     rules: {
       'unicorn/max-nested-calls': 'off',
       'unicorn/no-keyword-prefix': 'off',
+      'unicorn/no-null': 'off',
       'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/no-useless-undefined': 'off',
     },
