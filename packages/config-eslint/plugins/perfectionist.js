@@ -13,13 +13,11 @@ export const perfectionist = defineConfig([
         'warn',
         {
           customGroups: [
-            // nuxt
-            { elementNamePattern: ['^#app*'], groupName: 'app' },
-            { elementNamePattern: ['^#components*'], groupName: 'components' },
-            { elementNamePattern: ['^#imports*'], groupName: 'imports' },
-            { elementNamePattern: ['^#layers*'], groupName: 'layers' },
-            { elementNamePattern: ['^#server*'], groupName: 'server' },
-            { elementNamePattern: ['^#shared*'], groupName: 'shared' },
+            // hash
+            { elementNamePattern: ['^#'], groupName: 'hash' },
+
+            // @@/
+            { elementNamePattern: ['^@@/'], groupName: 'double-at' },
 
             // universal
             { elementNamePattern: ['^@/api'], groupName: 'universal-api' },
@@ -62,13 +60,11 @@ export const perfectionist = defineConfig([
             'type-import',
             ['value-builtin', 'value-external'],
 
-            // nuxt
-            'app',
-            'components',
-            'imports',
-            'layers',
-            'server',
-            'shared',
+            // hash (nuxt)
+            'hash',
+
+            // @@/
+            'double-at',
 
             // universal
             'universal-api',
@@ -90,7 +86,7 @@ export const perfectionist = defineConfig([
             'ts-equals-import',
             'unknown',
           ],
-          internalPattern: ['^~/.*', '^~~/.*', '^@/.*', '^@@/.*'],
+          internalPattern: ['^@@/.*', '^@/.*'],
           type: 'natural',
         },
       ],
