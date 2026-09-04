@@ -67,16 +67,17 @@ export const javascript = defineConfig([
         },
         {
           message:
-            "Использование классического цикла 'for' запрещено. Используйте методы массивов (.forEach, .map и т.д.).",
+            "Используйте методы массивов (.forEach, .map и т.д.) вместо цикла 'for'.",
           selector: 'ForStatement',
         },
         {
           message:
-            "Цикл 'for...in' запрещен. Используйте Object.keys() или Object.entries().",
+            "Используйте методы объектов (.keys, .values и т.д.) вместо цикла 'for...in'.",
           selector: 'ForInStatement',
         },
         {
-          message: "Цикл 'for...of' запрещен. Используйте методы массивов.",
+          message:
+            "Используйте методы массивов(.forEach, .map и т.д.) вместо цикла 'for...of'.",
           selector: 'ForOfStatement',
         },
       ],
