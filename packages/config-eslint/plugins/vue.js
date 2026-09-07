@@ -136,6 +136,7 @@ export const vue = defineConfig([
       'vue/no-restricted-props': ['error'],
       'vue/no-root-v-if': ['error'],
       'vue/no-setup-props-reactivity-loss': ['error'],
+      'vue/no-shadow-native-events': ['error'],
       'vue/no-static-inline-styles': ['error', { allowBinding: true }],
       'vue/no-this-in-before-route-enter': ['error'],
       'vue/no-undef-components': ['error'],
