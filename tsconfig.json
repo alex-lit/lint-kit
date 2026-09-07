@@ -1,17 +1,13 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "lib": ["ESNext", "DOM"],
     "module": "ESNext",
-    "moduleResolution": "Node",
     "noEmit": true,
     "noImplicitAny": false,
-    "paths": {
-      "~/*": ["./*"]
-    },
+    "paths": { "~/*": ["./*"] },
     "resolveJsonModule": true,
     "strict": false,
     "target": "ES2018",
