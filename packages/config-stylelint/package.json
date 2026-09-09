@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "61.2.0",
+  "version": "61.2.1",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -53,7 +53,7 @@
     "stylelint-no-indistinguishable-colors": "^2.3.1",
     "stylelint-no-nested-media": "^0.1.0",
     "stylelint-no-unresolved-module": "^2.5.2",
-    "stylelint-no-unsupported-browser-features": "^8.1.1",
+    "stylelint-no-unsupported-browser-features": "^8.1.2",
     "stylelint-order": "^8.1.1",
     "stylelint-plugin-logical-css": "^2.1.0",
     "stylelint-prettier": "^5.0.3",
