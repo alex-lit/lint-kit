@@ -8,10 +8,10 @@ export const base = defineConfig([
   { files: FILES, languageOptions: { globals: globals.browser } },
   {
     ignores: [
-      '**/.temp',
+      '**/.*/',
+      '**/_deprecated/',
       '**/mockServiceWorker.js',
-      '.histoire',
-      '.nuxt',
+      '.*/',
       'build',
       'dist',
       'docs',
