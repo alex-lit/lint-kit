@@ -1,6 +1,8 @@
 import { omit } from 'radash';
 
 const DEFAULT_PLUGINS = {
+  'jsdoc': true,
+  'mdc': true,
   'packagejson': true,
   'pug': true,
   'sh': true,
@@ -10,7 +12,6 @@ const DEFAULT_PLUGINS = {
 };
 
 const OPTIONAL_PLUGINS = {
-  jsdoc: false,
   php: false,
   ruby: false,
   sql: false,
@@ -41,14 +42,21 @@ const createPluginsConfig = async (plugins = {}) => {
       }),
   );
 
-  let pluginsConfig = { plugins: [] };
+  let pluginsConfig = { overrides: [], plugins: [] };
 
   configs.forEach((config) => {
     if (config.plugins?.length > 0) {
       pluginsConfig.plugins.push(...config.plugins);
     }
 
-    pluginsConfig = { ...pluginsConfig, ...omit(config, ['plugins']) };
+    if (config.overrides?.length > 0) {
+      pluginsConfig.overrides.push(...config.overrides);
+    }
+
+    pluginsConfig = {
+      ...pluginsConfig,
+      ...omit(config, ['plugins', 'overrides']),
+    };
   });
 
   return pluginsConfig;
