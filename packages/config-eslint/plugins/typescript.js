@@ -32,7 +32,7 @@ export const typescript = defineConfig([
         },
         { format: ['StrictPascalCase'], selector: 'typeLike' },
         {
-          format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+          format: ['strictCamelCase', 'PascalCase', 'UPPER_CASE'],
           leadingUnderscore: 'allow',
           selector: 'variable',
         },
