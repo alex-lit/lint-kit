@@ -1,5 +1,9 @@
 # CommitLint Configuration
 
+> **Warning** <br /> This repository is deprecated. Please use
+> [@alexlit/config-hooks](https://github.com/alex-lit/lint-kit/tree/master/packages/config-hooks)
+> instead.
+
 Lines the commit message and also runs the code through the linters and does not
 pass commit if errors are found
 
