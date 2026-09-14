@@ -1,3 +1,1 @@
-export default {
-  extends: ['@alexlit/config-commitlint'],
-};
+export default { extends: ['@alexlit/config-hooks/commitlint'] };
