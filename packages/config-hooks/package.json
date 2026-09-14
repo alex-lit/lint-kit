@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "7.3.1",
+  "version": "8.0.1",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -22,10 +22,10 @@
     "Alexey Litovchenko <alex.lit@outlook.com> (https://github.com/alex-lit)"
   ],
   "type": "module",
-  "main": "index.js",
+  "main": "lint-staged.js",
   "files": [
     "README.md",
-    "index.js",
+    "commitlint.js",
     "lint-staged.js"
   ],
   "scripts": {
@@ -35,6 +35,9 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "conventional-changelog-cli": "^5.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
     "simple-git-hooks": "^2.14.0"

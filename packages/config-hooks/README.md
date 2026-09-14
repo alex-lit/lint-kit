@@ -8,6 +8,13 @@ npm i @alexlit/config-hooks -D
 
 ## Connection
 
+- commitlint
+
+  ```js
+  // commitlint.config.js
+  export default { extends: ['@alexlit/config-hooks/commitlint'] };
+  ```
+
 - lint-staged
 
   ```js
@@ -26,7 +33,7 @@ npm i @alexlit/config-hooks -D
   );
   ```
 
-# Runner examples
+## Runner examples
 
 - simple-git-hooks
 
@@ -57,26 +64,4 @@ npm i @alexlit/config-hooks -D
   
   echo 'npx --no -- commitlint --edit "$1"' > .husky/commit-msg
   echo 'npx --no lint-staged' > .husky/pre-commit
-  ```
-
-- git (native)
-
-  ```json
-  { "scripts": { "prepare": "git config core.hooksPath .githooks" } }
-  ```
-
-  ```sh
-  # 1. Создаем нативную папку и привязываем её к Git
-  mkdir -p .githooks && git config core.hooksPath .githooks
-  
-  # 2. Создаем хук pre-commit
-  echo '#!/bin/sh' > .githooks/pre-commit
-  echo 'npx --no -- lint-staged' >> .githooks/pre-commit
-  
-  # 3. Создаем хук commit-msg
-  echo '#!/bin/sh' > .githooks/commit-msg
-  echo 'npx --no -- commitlint --edit "$1"' >> .githooks/commit-msg
-  
-  # 4. Делаем файлы исполняемыми
-  chmod +x .githooks/pre-commit .githooks/commit-msg
   ```
