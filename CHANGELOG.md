@@ -1,4 +1,16 @@
 
+## v205.1.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@205.0.0...v205.1.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([adb80e18](https://github.com/alex-lit/lint-kit/commit/adb80e18))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v205.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@204.0.2...v205.0.0)
