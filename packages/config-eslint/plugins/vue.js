@@ -67,11 +67,27 @@ export const vue = defineConfig([
         {
           defineExposeLast: true,
           order: [
-            'defineOptions',
-            'defineModel',
+            'definePageMeta', // nuxt
+
             'defineProps',
+            'defineModel',
             'defineEmits',
+            'defineOptions',
             'defineSlots',
+
+            // nuxt (can use props)
+            'createUseAsyncData',
+            'createUseFetch',
+
+            'onPrehydrate',
+            // /nuxt (can use props)
+
+            // nuxi-ui
+            'defineLocale',
+            'defineShortcuts',
+            'extendLocale',
+            'extractShortcuts',
+            // /nuxi-ui
           ],
         },
       ],

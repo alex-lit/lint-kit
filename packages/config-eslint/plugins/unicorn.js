@@ -32,10 +32,12 @@ export const unicorn = defineConfig([
       'unicorn/prefer-https': 'off', // SVG need HTTP
       'unicorn/prefer-import-meta-properties': 'warn',
       'unicorn/prefer-iterator-concat': 'off', // ES2026 only
+      'unicorn/prefer-json-import': 'warn',
       'unicorn/prefer-module': 'warn',
       'unicorn/prefer-node-protocol': 'warn',
       'unicorn/prefer-temporal': 'off', // ES2026 only
       'unicorn/prefer-type-literal-last': 'off', // perfectionist/sort-intersection-types
+      'unicorn/prefer-uint8array-hex': 'warn',
       'unicorn/relative-url-style': ['error', 'always'],
       'unicorn/single-line-block-comment-style': 'off',
     },
