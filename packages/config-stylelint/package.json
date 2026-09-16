@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "61.2.2",
+  "version": "61.3.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@double-great/stylelint-a11y": "^3.5.4",
-    "@morev/stylelint-plugin": "^0.6.1",
+    "@morev/stylelint-plugin": "^0.7.0",
     "postcss": "^8.5.28",
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
@@ -52,12 +52,12 @@
     "stylelint-media-use-custom-media": "^4.1.0",
     "stylelint-no-indistinguishable-colors": "^2.3.1",
     "stylelint-no-nested-media": "^0.1.0",
-    "stylelint-no-unresolved-module": "^2.5.2",
+    "stylelint-no-unresolved-module": "^2.6.0",
     "stylelint-no-unsupported-browser-features": "^8.1.2",
     "stylelint-order": "^8.1.1",
     "stylelint-plugin-logical-css": "^2.1.0",
     "stylelint-prettier": "^5.0.3",
-    "stylelint-scss": "^7.2.0",
+    "stylelint-scss": "^7.3.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "stylelint-use-nesting": "^6.0.2"
   },
