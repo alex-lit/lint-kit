@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "61.3.0",
+  "version": "61.3.1",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -40,7 +40,7 @@
     "@morev/stylelint-plugin": "^0.7.0",
     "postcss": "^8.5.28",
     "postcss-html": "^2.0.0",
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.7",
     "stylelint": "17.15.0",
     "stylelint-config-html": "^2.0.0",
     "stylelint-config-recommended-vue": "^2.0.0",
