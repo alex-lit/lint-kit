@@ -69,20 +69,12 @@ const formatColor = (hex, format) => {
   const { a, b, g, r } = hexToRgb(hex);
 
   if (format === 'rgb' || format === 'rgba') {
-    if (a < 1) {
-      return `rgba(${r}, ${g}, ${b}, ${a})`;
-    }
-
-    return `rgb(${r}, ${g}, ${b})`;
+    return a < 1 ? `rgba(${r}, ${g}, ${b}, ${a})` : `rgb(${r}, ${g}, ${b})`;
   }
 
   const { h, l, s } = rgbToHsl({ b, g, r });
 
-  if (a < 1) {
-    return `hsla(${h}, ${s}%, ${l}%, ${a})`;
-  }
-
-  return `hsl(${h}, ${s}%, ${l}%)`;
+  return a < 1 ? `hsla(${h}, ${s}%, ${l}%, ${a})` : `hsl(${h}, ${s}%, ${l}%)`;
 };
 
 const styleSearch = (source, target, callback) => {
@@ -176,6 +168,7 @@ const rule = function (actual, options, context) {
 rule.ruleName = ruleName;
 rule.messages = messages;
 
+/** @type {import('stylelint').Config} */
 export default {
   plugins: [createPlugin(ruleName, rule)],
   rules: { 'color-format/format': { format: 'rgb' } },

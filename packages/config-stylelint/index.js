@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/no-null */
 
-const ADDITIONAL_PLUGINS = {
+const DEFAULT_PLUGINS = {
   'color-format': true,
   'declaration-block-no-ignored-properties': true,
   'high-performance-animation': true,
@@ -26,7 +26,7 @@ const OPTIONAL_PLUGINS = {
 const CODESTYLE_PLUGINS = { prettier: true };
 
 const PLUGINS = {
-  ...ADDITIONAL_PLUGINS,
+  ...DEFAULT_PLUGINS,
   ...OPTIONAL_PLUGINS,
   ...CODESTYLE_PLUGINS,
 };
