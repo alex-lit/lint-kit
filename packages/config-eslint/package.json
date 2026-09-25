@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "156.2.1",
+  "version": "156.2.2",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [
@@ -50,7 +50,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-de-morgan": "^2.2.0",
     "eslint-plugin-jsdoc": "^64.5.4",
-    "eslint-plugin-perfectionist": "^5.12.0",
+    "eslint-plugin-perfectionist": "^5.12.1",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-regexp": "^3.3.1",
