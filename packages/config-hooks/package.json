@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "8.0.2",
+  "version": "9.0.0",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -38,7 +38,6 @@
     "@commitlint/cli": "^21.2.3",
     "@commitlint/config-conventional": "^21.2.3",
     "conventional-changelog-cli": "^5.0.0",
-    "husky": "^9.1.7",
     "lint-staged": "^17.5.1",
     "simple-git-hooks": "^2.14.0"
   },
