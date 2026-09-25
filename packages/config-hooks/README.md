@@ -35,7 +35,7 @@ npm i @alexlit/config-hooks -D
 
 ## Runner examples
 
-- simple-git-hooks
+- simple-git-hooks (recommended)
 
   ```json
   // package.json
@@ -62,6 +62,6 @@ npm i @alexlit/config-hooks -D
   ```sh
   npx husky init
   
-  echo 'npx --no -- commitlint --edit "$1"' > .husky/commit-msg
-  echo 'npx --no lint-staged' > .husky/pre-commit
+  echo 'npx --no -- commitlint --edit "$1"' >.husky/commit-msg
+  echo 'npx --no lint-staged' >.husky/pre-commit
   ```

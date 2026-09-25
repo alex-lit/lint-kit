@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/lint-kit",
-  "version": "207.2.1",
+  "version": "207.3.0",
   "private": false,
   "description": "Preset of configuration files and dependencies for linting web applications (designed for Vue.js with TypeScript)",
   "keywords": [
@@ -63,10 +63,14 @@
     "lint:npmlint": "time ./scripts/lint.npmlint.sh",
     "lint:stylelint": "time ./scripts/lint.stylelint.sh",
     "ou": "./scripts/ou.sh",
-    "prepare": "husky",
+    "prepare": "simple-git-hooks",
     "release": "./scripts/release.sh",
     "semver": "./scripts/semver.sh",
     "up": "./scripts/up.sh"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit"
   },
   "devDependencies": {
     "changelogen": "^0.6.2"
