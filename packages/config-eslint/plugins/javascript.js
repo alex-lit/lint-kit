@@ -87,6 +87,11 @@ export const javascript = defineConfig([
       ],
       'prefer-const': 'warn',
       'prefer-template': 'warn',
+      'quotes': [
+        'error',
+        'single',
+        { allowTemplateLiterals: false, avoidEscape: true },
+      ],
     },
   },
 ]);
