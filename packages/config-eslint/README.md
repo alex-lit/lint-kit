@@ -117,6 +117,19 @@ export default [
 > `tsconfig.node.json` etc. in a single root if needed). Use it instead of
 > `typescript`, not alongside.
 
+## Formatting: `prettier` vs `prettierConfig`
+
+Both are included, and they are **not** interchangeable.
+
+| Export           | From                     | Effect                                           |
+| ---------------- | ------------------------ | ------------------------------------------------ |
+| `prettierConfig` | `eslint-config-prettier` | only turns off formatting rules that conflict    |
+| `prettier`       | `eslint-plugin-prettier` | additionally runs Prettier itself as a lint rule |
+
+Use `prettierConfig` when Prettier runs as a separate step (editor, `prettier`
+CLI, Husky). Use `prettier` if you want ESLint to report and fix formatting in
+one pass — it is slower and duplicates the formatter.
+
 ## Usefull links
 
 - [Awesome ESLint](https://github.com/dustinspecker/awesome-eslint)

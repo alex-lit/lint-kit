@@ -18,6 +18,7 @@ export const json = defineConfig([
     extends: ['json/recommended'],
     files: ['**/*.jsonc'],
     language: 'json/jsonc',
+    languageOptions: { allowTrailingCommas: true },
     plugins: { json: plugin },
   },
 
@@ -28,7 +29,5 @@ export const json = defineConfig([
     plugins: { json: plugin },
   },
 
-  // YAML has no rules of its own, but the parser validates the syntax and
-  // rejects duplicate keys, which is the most common YAML mistake.
   { files: YAML_FILES, languageOptions: { parser: yamlParser } },
 ]);
