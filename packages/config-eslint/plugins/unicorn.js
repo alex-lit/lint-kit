@@ -65,4 +65,8 @@ export const unicorn = defineConfig([
       'unicorn/no-useless-undefined': 'off',
     },
   },
+  {
+    files: ['**/temp/**/*.vue'],
+    rules: { 'unicorn/name-replacements': 'off' },
+  },
 ]);
