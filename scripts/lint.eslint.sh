@@ -4,7 +4,7 @@ source "$(dirname $0)"/../bash.config.sh
 
 OPTION=${1}
 
-FILES='./**/*{.cjs,.mjs,.js,.jsx,.ts,.tsx,.vue,.json}'
+FILES='./**/*{.cjs,.mjs,.js,.jsx,.ts,.tsx,.vue,.json,.yaml,.yml}'
 
 echo -e "${YELLOW}eslint ${GREY}-> ${CYAN}${FILES}${WHITE}"
 
