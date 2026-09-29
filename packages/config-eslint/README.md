@@ -28,6 +28,7 @@ import {
 
   // plugins
   deMorgan,
+  importX,
   javascript,
   jsdoc,
   json,
@@ -55,11 +56,11 @@ export default [
   ...base, // must be first
 
   ...deMorgan,
+  ...importX,
   ...javascript,
   ...jsdoc,
   ...json,
   ...perfectionist,
-  ...prettierConfig,
   ...regexp,
   ...sonar,
   ...stylistic,

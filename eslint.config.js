@@ -1,6 +1,7 @@
 import {
   base,
   deMorgan,
+  importX,
   javascript,
   jsdoc,
   json,
@@ -26,6 +27,7 @@ export default [
 
   ...javascript,
   ...deMorgan,
+  ...importX,
   ...jsdoc,
   ...json,
   ...perfectionist,

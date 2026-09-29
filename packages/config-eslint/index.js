@@ -1,5 +1,6 @@
 export {
   base,
+  DATA_FILES,
   DTS_FILES,
   FILES,
   IGNORES,
@@ -7,9 +8,11 @@ export {
   TEST_FILES,
   TS_FILES,
   VUE_FILES,
+  YAML_FILES,
 } from './base.js';
 
 export { deMorgan } from './plugins/de-morgan.js';
+export { importX } from './plugins/import-x.js';
 export { javascript } from './plugins/javascript.js';
 export { jsdoc } from './plugins/jsdoc.js';
 export { json } from './plugins/json.js';
@@ -31,3 +34,4 @@ export { vueI18n } from './plugins/vue-i18n.js';
 export { vue } from './plugins/vue.js';
 export { zod } from './plugins/zod.js';
 export { NO_RESTRICTED_SYNTAX } from './rules/restricted-syntax.js';
+export { TS_RULES } from './rules/typescript.js';

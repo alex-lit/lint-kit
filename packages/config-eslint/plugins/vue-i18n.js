@@ -1,16 +1,13 @@
 import plugin from '@intlify/eslint-plugin-vue-i18n';
 import { defineConfig } from 'eslint/config';
 
+import { DATA_FILES } from '../base.js';
+
 /** @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/) */
 export const vueI18n = defineConfig([
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
-    ignores: [
-      ...(config.ignores ?? []),
-      '**/*.json',
-      '**/*.jsonc',
-      '**/*.json5',
-    ],
+    ignores: [...(config.ignores ?? []), ...DATA_FILES],
   })),
 
   {

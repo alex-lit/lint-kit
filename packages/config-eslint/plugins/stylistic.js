@@ -1,18 +1,13 @@
 import plugin from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../base.js';
+import { DATA_FILES, FILES } from '../base.js';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
 export const stylistic = defineConfig([
   {
     ...plugin.configs.recommended,
-    ignores: [
-      ...(plugin.configs.recommended.ignores ?? []),
-      '**/*.json',
-      '**/*.jsonc',
-      '**/*.json5',
-    ],
+    ignores: [...(plugin.configs.recommended.ignores ?? []), ...DATA_FILES],
   },
   {
     files: FILES,

@@ -13,6 +13,17 @@ export const VUE_FILES = ['**/*.vue'];
 /** JSON files */
 export const JSON_FILES = ['**/*.{json,jsonc,json5}'];
 
+/** YAML files */
+export const YAML_FILES = ['**/*.{yaml,yml}'];
+
+/**
+ * Files that hold data rather than code.
+ *
+ * Plugins that ship configs without a `files` key would otherwise apply their
+ * rules to these files, so such blocks have to exclude them explicitly.
+ */
+export const DATA_FILES = [...JSON_FILES, ...YAML_FILES];
+
 /** Test files */
 export const TEST_FILES = [
   '**/*.{test,spec}.{js,cjs,mjs,jsx,ts,tsx,mts,cts,vue}',

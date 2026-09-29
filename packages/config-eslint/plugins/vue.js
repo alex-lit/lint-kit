@@ -2,19 +2,14 @@ import plugin from 'eslint-plugin-vue';
 import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
-import { TEST_FILES, VUE_FILES } from '../base.js';
+import { DATA_FILES, TEST_FILES, VUE_FILES } from '../base.js';
 import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 
 /** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
 export const vue = defineConfig([
   ...plugin.configs['flat/recommended'].map((config) => ({
     ...config,
-    ignores: [
-      ...(config.ignores ?? []),
-      '**/*.json',
-      '**/*.jsonc',
-      '**/*.json5',
-    ],
+    ignores: [...(config.ignores ?? []), ...DATA_FILES],
   })),
 
   {

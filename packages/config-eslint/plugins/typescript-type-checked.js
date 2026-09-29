@@ -1,7 +1,7 @@
 import { defineConfig } from 'eslint/config';
 import plugin from 'typescript-eslint';
 
-import { FILES, TEST_FILES, TS_FILES } from '../base.js';
+import { DATA_FILES, FILES, TEST_FILES, TS_FILES } from '../base.js';
 import { TS_RULES } from '../rules/typescript.js';
 
 /**
@@ -21,8 +21,12 @@ export const typescriptTypeChecked = defineConfig([
 
   // Non type-aware rules — the same scope as the regular `typescript` plugin,
   // so `.js`/`.vue` files keep the TypeScript versions of the rules.
-  ...plugin.configs.strict,
-  ...plugin.configs.stylistic,
+  // `plugin.configs.strict`/`stylistic` contain blocks without a `files` key,
+  // so they would also land on data files that are not JavaScript at all.
+  ...[...plugin.configs.strict, ...plugin.configs.stylistic].map((config) => ({
+    ...config,
+    ignores: [...(config.ignores ?? []), ...DATA_FILES],
+  })),
 
   // Type-aware rules only make sense where the type information is available.
   ...plugin.configs.strictTypeChecked.map((config) => ({
