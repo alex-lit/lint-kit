@@ -2,7 +2,8 @@ import config from 'eslint-config-prettier';
 import plugin from 'eslint-plugin-prettier/recommended';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../base.js';
+import { FILES, VUE_FILES } from '../base.js';
+import { STYLE_RULES } from '../rules/style.js';
 
 const fixes = {
   // fix  for prettier
@@ -18,36 +19,12 @@ const fixes = {
 
 /** @see [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) */
 export const prettier = defineConfig([
-  {
-    files: FILES,
-    ...plugin,
-    rules: {
-      ...plugin.rules,
-      curly: 'error',
-      quotes: [
-        'error',
-        'single',
-        { allowTemplateLiterals: false, avoidEscape: true },
-      ],
-    },
-  },
-  { files: ['**/*.vue'], rules: { ...fixes } },
+  { files: FILES, ...plugin, rules: { ...plugin.rules, ...STYLE_RULES } },
+  { files: VUE_FILES, rules: { ...fixes } },
 ]);
 
 /** @see [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) */
 export const prettierConfig = defineConfig([
-  {
-    files: FILES,
-    ...config,
-    rules: {
-      ...config.rules,
-      curly: 'error',
-      quotes: [
-        'error',
-        'single',
-        { allowTemplateLiterals: false, avoidEscape: true },
-      ],
-    },
-  },
-  { files: ['**/*.vue'], rules: { ...fixes } },
+  { files: FILES, ...config, rules: { ...config.rules, ...STYLE_RULES } },
+  { files: VUE_FILES, rules: { ...fixes } },
 ]);

@@ -11,20 +11,7 @@ export const jsdoc = defineConfig([
     rules: {
       'jsdoc/lines-before-block': 'off',
       'jsdoc/no-undefined-types': 'off',
-      'jsdoc/require-jsdoc': [
-        'warn',
-        {
-          enableFixer: false,
-          require: {
-            ArrowFunctionExpression: false,
-            ClassDeclaration: false,
-            ClassExpression: false,
-            FunctionDeclaration: false,
-            FunctionExpression: false,
-            MethodDefinition: false,
-          },
-        },
-      ],
+      'jsdoc/require-jsdoc': 'off',
       'jsdoc/require-param-description': 'off',
       'jsdoc/require-param-type': 'off',
       'jsdoc/require-returns': 'off',

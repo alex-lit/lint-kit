@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-unicorn';
 import { defineConfig } from 'eslint/config';
 
-import { DTS_FILES, FILES } from '../base.js';
+import { DTS_FILES, FILES, VUE_FILES } from '../base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = defineConfig([
@@ -18,6 +18,10 @@ export const unicorn = defineConfig([
         'error',
         { default: 'arrow-function' },
       ],
+      // Explicit: the default happens to be kebab case, but the intent is
+      // worth pinning down. Applies to `.vue` components too, which is why
+      // `vue/match-component-file-name` is kept in sync with it in `vue.js`.
+      'unicorn/filename-case': ['error', { case: 'kebabCase' }],
       'unicorn/iteration-fallback-style': ['error', 'guard'],
       'unicorn/name-replacements': 'off',
       'unicorn/no-array-reduce': ['error', { allowSimpleOperations: true }],
@@ -45,6 +49,13 @@ export const unicorn = defineConfig([
   { files: ['**/.*'], rules: { 'unicorn/no-null': 'off' } },
   { files: DTS_FILES, rules: { 'unicorn/prefer-export-from': 'off' } },
   {
+    // `null` is part of the type contract in Vue.js SFC:
+    // `ref<Type | null>(null)` is the idiomatic way to declare an initially
+    // empty reactive value. Everywhere else `null` remains an error.
+    files: VUE_FILES,
+    rules: { 'unicorn/no-null': 'off' },
+  },
+  {
     files: ['**/*.{api,endpoints,fixtures,schemas,service,spec,test}.{js,ts}'],
     rules: {
       'unicorn/max-nested-calls': 'off',
@@ -53,9 +64,5 @@ export const unicorn = defineConfig([
       'unicorn/no-object-as-default-parameter': 'off',
       'unicorn/no-useless-undefined': 'off',
     },
-  },
-  {
-    files: ['**/temp/**/*.vue'],
-    rules: { 'unicorn/prevent-abbreviations': 'off' },
   },
 ]);

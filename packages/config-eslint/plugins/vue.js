@@ -48,9 +48,6 @@ export const vue = defineConfig([
             'VariableDeclarator[init.callee.name="useRouter"][id.name!="$router"]',
         },
       ],
-      // Vue.js SFC relies on auto-imports and on the component context, so the
-      // plain ESLint scope check produces false positives.
-      'no-undef': 'off',
       'vue/attributes-order': ['error', { alphabetical: true }],
       'vue/block-lang': [
         'error',
@@ -117,7 +114,14 @@ export const vue = defineConfig([
           svg: 'always',
         },
       ],
-      'vue/match-component-file-name': ['error'],
+      // Keep in sync with `unicorn/filename-case` in `unicorn.js`:
+      // components live in kebab-case files, so the component name is
+      // derived from a kebab-case file name instead of being required to be
+      // PascalCase in the file name itself.
+      'vue/match-component-file-name': [
+        'error',
+        { extensions: ['vue'], shouldMatchCase: false },
+      ],
       'vue/match-component-import-name': ['error'],
       'vue/max-attributes-per-line': ['error', { singleline: 3 }],
       'vue/max-lines-per-block': [

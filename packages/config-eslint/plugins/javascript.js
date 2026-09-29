@@ -1,8 +1,9 @@
 import plugin from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../base.js';
+import { FILES, TEST_FILES } from '../base.js';
 import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
+import { STYLE_RULES } from '../rules/style.js';
 
 /** @see [eslint](https://eslint.org) */
 export const javascript = defineConfig([
@@ -11,10 +12,11 @@ export const javascript = defineConfig([
     files: FILES,
     rules: {
       'arrow-body-style': ['error', 'as-needed'],
-      'curly': 'error',
+      ...STYLE_RULES,
       'dot-notation': ['error'],
-      'func-style': ['error', 'expression'],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+      'no-alert': 'error',
+      'no-console': 'error',
       'no-duplicate-imports': ['error', { includeExports: false }],
       'no-implicit-coercion': 'error',
       'no-param-reassign': ['error', { props: false }],
@@ -66,11 +68,12 @@ export const javascript = defineConfig([
       ],
       'prefer-const': 'warn',
       'prefer-template': 'warn',
-      'quotes': [
-        'error',
-        'single',
-        { allowTemplateLiterals: false, avoidEscape: true },
-      ],
     },
+  },
+
+  {
+    // Tests are allowed to log and to alert
+    files: TEST_FILES,
+    rules: { 'no-alert': 'off', 'no-console': 'off' },
   },
 ]);

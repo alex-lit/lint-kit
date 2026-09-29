@@ -13,7 +13,7 @@ export const perfectionist = defineConfig([
         'warn',
         {
           customGroups: [
-            // hash
+            // hash (nuxt)
             { elementNamePattern: ['^#'], groupName: 'hash' },
 
             // @@/
@@ -81,8 +81,11 @@ export const perfectionist = defineConfig([
 
             'type-internal',
             'value-internal',
-            ['type-parent', 'type-sibling', 'type-index'],
-            ['value-parent', 'value-sibling', 'value-index'],
+            // `parent` and `index` groups are omitted on purpose:
+            // `no-restricted-imports` in `javascript.js` forbids `..`, `.`
+            // and `**/index` imports, so nothing can ever land in them.
+            'type-sibling',
+            'value-sibling',
             'ts-equals-import',
             'unknown',
           ],
