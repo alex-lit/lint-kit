@@ -1,17 +1,42 @@
 import {
-  defaultPreset,
+  base,
+  deMorgan,
+  javascript,
+  jsdoc,
+  json,
+  perfectionist,
   prettierConfig,
+  regexp,
+  sonar,
+  stylistic,
   tailwindcss,
   tanstackQuery,
+  typescript,
+  unicorn,
   vitest,
+  vue,
+  vueAccessibility,
+  vueI18n,
   zod,
 } from '@alexlit/config-eslint';
 import path from 'node:path';
 
 export default [
-  ...defaultPreset,
+  ...base, // must be first
 
-  { ignores: ['packages/config-eslint/_legacy'] },
+  ...javascript,
+  ...deMorgan,
+  ...jsdoc,
+  ...json,
+  ...perfectionist,
+  ...regexp,
+  ...sonar,
+  ...stylistic,
+  ...typescript,
+  ...unicorn,
+  ...vue,
+  ...vueAccessibility,
+  ...vueI18n,
 
   ...tanstackQuery,
   ...vitest,
@@ -24,7 +49,9 @@ export default [
     ),
   }),
 
-  ...prettierConfig,
+  ...prettierConfig, // must be last
+
+  { ignores: ['**/packages/config-eslint/_legacy/**'] },
 
   {
     files: ['**/*.js'],

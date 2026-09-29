@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-pinia';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /** @see [eslint-plugin-pinia](https://github.com/lisilinhart/eslint-plugin-pinia) */
 export const pinia = defineConfig([

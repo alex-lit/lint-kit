@@ -1,10 +1,12 @@
 import plugin from '@vitest/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
+import { TEST_FILES } from '../base.js';
+
 /** @see [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest) */
 export const vitest = defineConfig([
   {
-    files: ['*.{test,spec}.{js,cjs,mjs,ts}'],
+    files: TEST_FILES,
     plugins: { vitest: plugin },
     rules: {
       ...plugin.configs.recommended.rules,

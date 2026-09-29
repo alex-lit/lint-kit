@@ -1,3 +1,14 @@
+export {
+  base,
+  DTS_FILES,
+  FILES,
+  IGNORES,
+  JSON_FILES,
+  TEST_FILES,
+  TS_FILES,
+  VUE_FILES,
+} from './base.js';
+
 export { deMorgan } from './plugins/de-morgan.js';
 export { javascript } from './plugins/javascript.js';
 export { jsdoc } from './plugins/jsdoc.js';
@@ -18,5 +29,4 @@ export { vueAccessibility } from './plugins/vue-accessibility.js';
 export { vueI18n } from './plugins/vue-i18n.js';
 export { vue } from './plugins/vue.js';
 export { zod } from './plugins/zod.js';
-
-export { defaultPreset } from './presets/default.js';
+export { NO_RESTRICTED_SYNTAX } from './rules/restricted-syntax.js';

@@ -1,7 +1,7 @@
 import plugin from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /** @see [@stylistic/eslint-plugin](https://eslint.style/) */
 export const stylistic = defineConfig([

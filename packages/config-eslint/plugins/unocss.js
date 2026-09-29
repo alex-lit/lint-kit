@@ -1,7 +1,7 @@
 import plugin from '@unocss/eslint-config/flat';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /** @see [@unocss/eslint-config](https://unocss.dev/integrations/eslint) */
 export const unocss = defineConfig([

@@ -2,6 +2,9 @@ import plugin from 'eslint-plugin-vue';
 import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
+import { TEST_FILES, VUE_FILES } from '../base.js';
+import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
+
 /** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
 export const vue = defineConfig([
   ...plugin.configs['flat/recommended'].map((config) => ({
@@ -15,7 +18,7 @@ export const vue = defineConfig([
   })),
 
   {
-    files: ['**/*.vue'],
+    files: VUE_FILES,
     languageOptions: { parserOptions: { parser: typescript.parser } },
     rules: {
       '@typescript-eslint/no-empty-object-type': [
@@ -24,6 +27,8 @@ export const vue = defineConfig([
       ],
       'no-restricted-syntax': [
         'error',
+        // Merge the shared list, do not replace it
+        ...NO_RESTRICTED_SYNTAX,
         {
           message:
             'Запрещено использовать имя "Props". Используйте именованный формат, например: <ИмяКомпонента>Props.',
@@ -43,6 +48,9 @@ export const vue = defineConfig([
             'VariableDeclarator[init.callee.name="useRouter"][id.name!="$router"]',
         },
       ],
+      // Vue.js SFC relies on auto-imports and on the component context, so the
+      // plain ESLint scope check produces false positives.
+      'no-undef': 'off',
       'vue/attributes-order': ['error', { alphabetical: true }],
       'vue/block-lang': [
         'error',
@@ -244,8 +252,5 @@ export const vue = defineConfig([
     rules: { 'vue/multi-word-component-names': 'off' },
   },
 
-  {
-    files: ['**/*.{test,spec}.{js,ts}'],
-    rules: { 'vue/one-component-per-file': 'off' },
-  },
+  { files: TEST_FILES, rules: { 'vue/one-component-per-file': 'off' } },
 ]);

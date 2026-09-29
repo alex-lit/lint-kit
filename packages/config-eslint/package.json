@@ -26,8 +26,9 @@
   "main": "./index.js",
   "files": [
     "index.js",
+    "base.js",
     "plugins/",
-    "presets/",
+    "rules/",
     "README.md"
   ],
   "scripts": {

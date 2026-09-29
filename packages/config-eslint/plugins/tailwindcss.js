@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-tailwindcss';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /**
  * @example

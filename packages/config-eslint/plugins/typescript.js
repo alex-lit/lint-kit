@@ -2,7 +2,7 @@
 import { defineConfig } from 'eslint/config';
 import plugin from 'typescript-eslint';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /** @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint) */
 export const typescript = defineConfig([

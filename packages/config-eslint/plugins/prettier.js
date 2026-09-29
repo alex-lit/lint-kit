@@ -2,7 +2,7 @@ import config from 'eslint-config-prettier';
 import plugin from 'eslint-plugin-prettier/recommended';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 const fixes = {
   // fix  for prettier

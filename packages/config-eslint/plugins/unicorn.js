@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-unicorn';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { DTS_FILES, FILES } from '../base.js';
 
 /** @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) */
 export const unicorn = defineConfig([
@@ -42,8 +42,8 @@ export const unicorn = defineConfig([
       'unicorn/single-line-block-comment-style': 'off',
     },
   },
-  { files: ['.*'], rules: { 'unicorn/no-null': 'off' } },
-  { files: ['*.d.ts'], rules: { 'unicorn/prefer-export-from': 'off' } },
+  { files: ['**/.*'], rules: { 'unicorn/no-null': 'off' } },
+  { files: DTS_FILES, rules: { 'unicorn/prefer-export-from': 'off' } },
   {
     files: ['**/*.{api,endpoints,fixtures,schemas,service,spec,test}.{js,ts}'],
     rules: {

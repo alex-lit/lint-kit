@@ -1,7 +1,8 @@
 import plugin from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
+import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 
 /** @see [eslint](https://eslint.org) */
 export const javascript = defineConfig([
@@ -58,29 +59,7 @@ export const javascript = defineConfig([
           ],
         },
       ],
-      'no-restricted-syntax': [
-        'error',
-        {
-          message:
-            "Не используйте префикс 'handle' для обработчиков событий. Переименуйте метод, заменив 'handle' на 'on' (например, 'onClick' вместо 'handleClick').",
-          selector: 'Identifier[name=/^handle[A-Z]/]',
-        },
-        {
-          message:
-            "Используйте методы массивов (.forEach, .map и т.д.) вместо цикла 'for'.",
-          selector: 'ForStatement',
-        },
-        {
-          message:
-            "Используйте методы объектов (.keys, .values и т.д.) вместо цикла 'for...in'.",
-          selector: 'ForInStatement',
-        },
-        {
-          message:
-            "Используйте методы массивов(.forEach, .map и т.д.) вместо цикла 'for...of'.",
-          selector: 'ForOfStatement',
-        },
-      ],
+      'no-restricted-syntax': ['error', ...NO_RESTRICTED_SYNTAX],
       'prefer-arrow-callback': [
         'error',
         { allowNamedFunctions: false, allowUnboundThis: false },

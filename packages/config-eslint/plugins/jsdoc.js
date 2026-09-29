@@ -1,7 +1,7 @@
 import plugin from 'eslint-plugin-jsdoc';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../presets/base.js';
+import { FILES } from '../base.js';
 
 /** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
 export const jsdoc = defineConfig([
