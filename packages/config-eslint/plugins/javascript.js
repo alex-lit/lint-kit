@@ -13,11 +13,13 @@ export const javascript = defineConfig([
     rules: {
       'arrow-body-style': ['error', 'as-needed'],
       ...STYLE_RULES,
+      'default-case-last': 'error',
       'dot-notation': ['error'],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
       'no-alert': 'error',
       'no-console': 'error',
       'no-duplicate-imports': ['error', { includeExports: false }],
+      'no-else-return': 'error',
       'no-implicit-coercion': 'error',
       'no-param-reassign': ['error', { props: false }],
       'no-restricted-exports': [
@@ -26,6 +28,14 @@ export const javascript = defineConfig([
           restrictedNamedExports: ['then'],
           restrictedNamedExportsPattern: '^_',
         },
+      ],
+      'no-restricted-globals': [
+        'error',
+        // `event`, `top` and `parent` are global browser properties.
+        // Reach for `window.event` / `window.top` / `window.parent` instead.
+        { message: 'Use `window.event` instead.', name: 'event' },
+        { message: 'Use `window.parent` instead.', name: 'parent' },
+        { message: 'Use `window.top` instead.', name: 'top' },
       ],
       'no-restricted-imports': [
         'error',
@@ -62,12 +72,14 @@ export const javascript = defineConfig([
         },
       ],
       'no-restricted-syntax': ['error', ...NO_RESTRICTED_SYNTAX],
+      'no-useless-rename': 'error',
       'prefer-arrow-callback': [
         'error',
         { allowNamedFunctions: false, allowUnboundThis: false },
       ],
       'prefer-const': 'warn',
       'prefer-template': 'warn',
+      'require-await': 'error',
     },
   },
 

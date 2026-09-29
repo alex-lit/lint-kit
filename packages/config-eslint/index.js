@@ -21,6 +21,7 @@ export { sonar } from './plugins/sonar.js';
 export { stylistic } from './plugins/stylistic.js';
 export { tailwindcss } from './plugins/tailwindcss.js';
 export { tanstackQuery } from './plugins/tanstack-query.js';
+export { typescriptTypeChecked } from './plugins/typescript-type-checked.js';
 export { typescript } from './plugins/typescript.js';
 export { unicorn } from './plugins/unicorn.js';
 export { unocss } from './plugins/unocss.js';

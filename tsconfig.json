@@ -10,6 +10,7 @@
     "paths": { "~/*": ["./*"] },
     "resolveJsonModule": true,
     "strict": false,
+    "strictNullChecks": true,
     "target": "ES2018",
     "types": []
   },

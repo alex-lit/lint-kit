@@ -87,6 +87,35 @@ export default [
 
 Drop what you do not need.
 
+## Type-aware rules (optional)
+
+Type-aware rules (`no-floating-promises`, `no-misused-promises`,
+`await-thenable`, `no-unsafe-*`, `switch-exhaustiveness-check`,
+`no-unnecessary-condition`, …) require type information, which makes linting
+slower. They are not enabled by default.
+
+To enable them, replace `typescript` with `typescriptTypeChecked`:
+
+```js
+import {
+  base,
+  typescriptTypeChecked,
+  prettierConfig,
+} from '@alexlit/config-eslint';
+
+export default [
+  ...base,
+  // ...other plugins
+  ...typescriptTypeChecked, // instead of ...typescript
+  ...prettierConfig,
+];
+```
+
+> [!NOTE] `typescriptTypeChecked` needs a `tsconfig.json` in your project root
+> (`projectService` is used, so keep both `tsconfig.json` and
+> `tsconfig.node.json` etc. in a single root if needed). Use it instead of
+> `typescript`, not alongside.
+
 ## Usefull links
 
 - [Awesome ESLint](https://github.com/dustinspecker/awesome-eslint)
