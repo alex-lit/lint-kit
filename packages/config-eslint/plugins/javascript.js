@@ -17,8 +17,11 @@ export const javascript = defineConfig([
       'dot-notation': ['error'],
       'grouped-accessor-pairs': ['error', 'getBeforeSet'],
       'no-alert': 'error',
-      'no-console': 'error',
-      'no-duplicate-imports': ['error', { includeExports: false }],
+      'no-console': 'warn',
+      'no-duplicate-imports': [
+        'error',
+        { allowSeparateTypeImports: true, includeExports: false },
+      ],
       'no-else-return': 'error',
       'no-implicit-coercion': 'error',
       'no-param-reassign': ['error', { props: false }],

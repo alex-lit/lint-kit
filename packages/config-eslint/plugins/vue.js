@@ -46,7 +46,7 @@ export const vue = defineConfig([
       'vue/attributes-order': ['error', { alphabetical: true }],
       'vue/block-lang': [
         'error',
-        { script: { lang: 'ts' }, style: { lang: 'scss' }, template: {} },
+        { script: { lang: 'ts' }, style: {}, template: {} },
       ],
       'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
       'vue/component-api-style': ['error', ['script-setup']],
@@ -94,7 +94,7 @@ export const vue = defineConfig([
       'vue/define-props-declaration': ['error'],
       'vue/define-props-destructuring': ['warn', { destructure: 'always' }],
       'vue/dot-notation': ['error'],
-      'vue/enforce-style-attribute': ['error', { allow: ['module'] }],
+      'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
       'vue/eqeqeq': ['error'],
       'vue/html-button-has-type': ['error'],
       'vue/html-comment-content-newline': ['warn'],

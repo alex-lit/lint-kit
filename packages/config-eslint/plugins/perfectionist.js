@@ -81,11 +81,10 @@ export const perfectionist = defineConfig([
 
             'type-internal',
             'value-internal',
-            // `parent` and `index` groups are omitted on purpose:
-            // `no-restricted-imports` in `javascript.js` forbids `..`, `.`
-            // and `**/index` imports, so nothing can ever land in them.
-            'type-sibling',
-            'value-sibling',
+
+            ['type-parent', 'type-sibling', 'type-index'],
+            ['value-parent', 'value-sibling', 'value-index'],
+
             'ts-equals-import',
             'unknown',
           ],

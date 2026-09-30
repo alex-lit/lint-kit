@@ -43,6 +43,7 @@ export const importX = defineConfig([
       'import-x/no-named-as-default-member': 'off',
       'import-x/no-nodejs-modules': 'off',
       'import-x/no-self-import': 'error',
+      'import-x/no-unresolved': 'off', // lots of bugs
       'import-x/no-useless-path-segments': ['error', { noUselessIndex: true }],
       'import-x/unambiguous': 'error',
     },
