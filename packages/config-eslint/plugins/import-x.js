@@ -2,7 +2,7 @@ import plugin from 'eslint-plugin-import-x';
 import { createNodeResolver } from 'eslint-plugin-import-x/node-resolver';
 import { defineConfig } from 'eslint/config';
 
-import { DATA_FILES, FILES, TEST_FILES, VUE_FILES } from '../base.js';
+import { DATA_FILES, FILES, VUE_FILES } from '../base.js';
 
 const EXTENSIONS = [
   '.ts',
@@ -57,15 +57,16 @@ export const importX = defineConfig([
       ],
     },
   },
-  {
-    files: TEST_FILES,
-    rules: {
-      'import-x/no-extraneous-dependencies': [
-        'error',
-        { devDependencies: true },
-      ],
-    },
-  },
+
+  // {
+  //   files: TEST_FILES,
+  //   rules: {
+  //     'import-x/no-extraneous-dependencies': [
+  //       'error',
+  //       { devDependencies: true },
+  //     ],
+  //   },
+  // },
 
   {
     files: VUE_FILES,
