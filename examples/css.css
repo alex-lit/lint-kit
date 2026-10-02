@@ -1,3 +1,5 @@
+@import 'my-imported-styles';
+
 .a {
   @apply sm:block lg:text-lg;
 

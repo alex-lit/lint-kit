@@ -79,7 +79,7 @@ export default {
     'scss/function-quote-no-quoted-strings-inside': true,
     'scss/function-unquote-no-unquoted-strings-inside': true,
     'scss/load-no-partial-leading-underscore': true,
-    'scss/load-partial-extension': 'always',
+    'scss/load-partial-extension': 'never',
     'scss/map-keys-quotes': 'always',
     'scss/no-duplicate-dollar-variables': true,
     'scss/no-duplicate-mixins': true,
