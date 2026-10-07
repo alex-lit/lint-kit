@@ -51,5 +51,11 @@ export const importX = defineConfig([
     },
   },
 
-  { files: VUE_FILES, rules: { 'import-x/unambiguous': 'off' } },
+  {
+    files: VUE_FILES,
+    rules: {
+      'import-x/no-useless-path-segments': 'off',
+      'import-x/unambiguous': 'off',
+    },
+  },
 ]);
