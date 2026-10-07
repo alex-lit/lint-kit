@@ -46,6 +46,7 @@ export const TS_RULES = {
       selector: 'classProperty',
     },
     {
+      filter: { match: false, regex: ':' },
       format: ['strictCamelCase', 'PascalCase', 'UPPER_CASE', 'snake_case'],
       leadingUnderscore: 'allow',
       selector: 'typeProperty',
