@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "160.0.4",
+  "version": "160.0.5",
   "private": false,
   "description": "Sharable ESLint configuration",
   "keywords": [

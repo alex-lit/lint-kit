@@ -36,6 +36,7 @@ export const TS_RULES = {
       selector: 'variable',
     },
     { format: null, modifiers: ['destructured'], selector: 'variable' },
+    { format: null, modifiers: ['destructured'], selector: 'parameter' },
     {
       format: ['strictCamelCase', 'PascalCase', 'UPPER_CASE'],
       selector: 'enumMember',
