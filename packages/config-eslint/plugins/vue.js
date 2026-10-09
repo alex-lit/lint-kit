@@ -92,7 +92,10 @@ export const vue = defineConfig([
         },
       ],
       'vue/define-props-declaration': ['error'],
-      'vue/define-props-destructuring': ['warn', { destructure: 'always' }],
+      'vue/define-props-destructuring': [
+        'warn',
+        { destructure: 'only-when-assigned' },
+      ],
       'vue/dot-notation': ['error'],
       'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
       'vue/eqeqeq': ['error'],
