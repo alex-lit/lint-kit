@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "61.4.1",
+  "version": "61.5.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -36,11 +36,11 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@double-great/stylelint-a11y": "^3.5.4",
+    "@double-great/stylelint-a11y": "^3.8.1",
     "@morev/stylelint-plugin": "^0.7.0",
     "postcss": "^8.5.29",
     "postcss-html": "^2.0.0",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "stylelint": "17.16.0",
     "stylelint-config-html": "^2.0.0",
     "stylelint-config-recommended-vue": "^2.0.0",
@@ -54,7 +54,7 @@
     "stylelint-no-nested-media": "^0.1.0",
     "stylelint-no-unresolved-module": "^2.6.0",
     "stylelint-no-unsupported-browser-features": "^8.1.2",
-    "stylelint-order": "^8.1.1",
+    "stylelint-order": "^8.1.2",
     "stylelint-plugin-logical-css": "^2.1.0",
     "stylelint-prettier": "^5.0.3",
     "stylelint-scss": "^7.3.0",
