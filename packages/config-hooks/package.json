@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "9.1.0",
+  "version": "9.1.1",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -35,8 +35,8 @@
     "up": "../../scripts/up.sh"
   },
   "dependencies": {
-    "@commitlint/cli": "^21.2.3",
-    "@commitlint/config-conventional": "^21.2.3",
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "conventional-changelog-cli": "^5.0.0",
     "lint-staged": "^17.6.0",
     "simple-git-hooks": "^2.14.0"
