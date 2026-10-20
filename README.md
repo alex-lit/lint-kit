@@ -1,7 +1,10 @@
 # Lint Kit
 
-Единый пресет-конфиг для Vue + TypeScript проектов, устанавливается одной
-зависимостью и объединяет настройки для всех нужных линтеров.
+[![npm version](https://img.shields.io/npm/v/@alexlit/lint-kit.svg)](https://www.npmjs.com/package/@alexlit/lint-kit)
+[![license](https://img.shields.io/npm/l/@alexlit/lint-kit.svg)](LICENSE)
+
+Набор пакетов с конфигурациями для линтинга и форматирования кода Vue +
+TypeScript проектов.
 
 ## Пакеты
 
@@ -17,6 +20,17 @@
 
 ## Установка
 
+Рекомендуется устанавливать необходимые пакеты по отдельности - так вы
+подключаете только те линтеры, которые необходимы и сможете управлять их
+версиями.
+
+Инструкции по настройке каждого пакета приведены в его README (см. ссылки в
+разделе [«Пакеты»](#пакеты)).
+
 ```bash
+# установка необходимого пакета
+npm install --save-dev @alexlit/config-<PACKAGE_NAME>
+
+# или все сразу одной командой
 npm install --save-dev @alexlit/lint-kit
 ```
