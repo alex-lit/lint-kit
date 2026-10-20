@@ -3,7 +3,7 @@
 const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 
 /**
- * Фабрика конфига плагина SCSS.
+ * Настраивает линтинг SCSS.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

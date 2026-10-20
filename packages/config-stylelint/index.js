@@ -18,10 +18,7 @@ import { selectorNoEmpty } from './plugins/selector-no-empty.js';
 import { useNesting } from './plugins/use-nesting.js';
 import { vue } from './plugins/vue.js';
 
-/**
- * Фабрики конфигов плагинов. Дефолтных плагинов нет — подключайте нужные явно в
- * `defineConfig`.
- */
+/** Плагины. Дефолтных плагинов нет — подключайте нужные явно в `defineConfig`. */
 const plugins = {
   a11y,
   bem,

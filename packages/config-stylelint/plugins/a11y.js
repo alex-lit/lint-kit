@@ -1,7 +1,7 @@
 /* eslint-disable unicorn/no-null */
 
 /**
- * Фабрика конфига плагина доступности.
+ * Проверяет типичные ошибки доступности.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

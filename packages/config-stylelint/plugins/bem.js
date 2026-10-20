@@ -6,7 +6,7 @@ const defineRules = createDefineRules({
 });
 
 /**
- * Фабрика конфига методологии БЭМ.
+ * Настраивает линтинг по методологии БЭМ.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

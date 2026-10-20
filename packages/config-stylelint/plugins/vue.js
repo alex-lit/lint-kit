@@ -1,5 +1,5 @@
 /**
- * Фабрика конфига поддержки Vue.js SFC.
+ * Подключает поддержку Vue.js SFC.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

@@ -169,7 +169,7 @@ rule.ruleName = ruleName;
 rule.messages = messages;
 
 /**
- * Фабрика конфига кастомного правила нормализации формата цветов.
+ * Нормализует формат цветов (hex → rgb/hsl).
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

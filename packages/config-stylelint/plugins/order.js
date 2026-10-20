@@ -116,7 +116,7 @@ const buildPseudoElementRules = () => [
 ];
 
 /**
- * Фабрика конфига плагина сортировки свойств и селекторов.
+ * Настраивает порядок свойств и селекторов.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)

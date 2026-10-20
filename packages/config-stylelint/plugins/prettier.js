@@ -1,5 +1,5 @@
 /**
- * Фабрика конфига интеграции с Prettier.
+ * Интегрирует Prettier.
  *
  * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)
