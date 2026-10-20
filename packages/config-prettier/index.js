@@ -13,7 +13,7 @@ import { xml } from './plugins/xml.js';
 
 /**
  * Фабрики плагинов. Каждый плагин подключается явно: передайте
- * `plugins.<name>()` в `createConfig`
+ * `plugins.<name>()` в `defineConfig`
  */
 export const plugins = {
   jsdoc,
@@ -36,7 +36,7 @@ export const plugins = {
  * Плагинов по умолчанию нет — подключайте нужные явно:
  *
  * ```js
- * createConfig(
+ * defineConfig(
  *   [
  *     plugins.php(),
  *     plugins.tailwindcss({ tailwindFunctions: ['cn', 'tw'] }),
@@ -52,7 +52,7 @@ export const plugins = {
  *
  * @returns {import('prettier').Config} Конфигурация Prettier
  */
-export const createConfig = (pluginConfigs = [], options = {}) => {
+export const defineConfig = (pluginConfigs = [], options = {}) => {
   const config = {
     bracketSameLine: false,
     endOfLine: 'lf',

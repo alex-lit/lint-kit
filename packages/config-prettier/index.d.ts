@@ -12,7 +12,7 @@ export interface JsdocOptions {
 
 /**
  * Plugin factories. Every plugin is connected explicitly: pass
- * `plugins.<name>()` to `createConfig`
+ * `plugins.<name>()` to `defineConfig`
  */
 export interface Plugins {
   /** @see prettier-plugin-jsdoc */
@@ -78,7 +78,7 @@ export declare const plugins: Plugins;
  * There are no default plugins — connect the required ones explicitly:
  *
  * ```js
- * createConfig([plugins.php(), plugins.tailwindcss()], {
+ * defineConfig([plugins.php(), plugins.tailwindcss()], {
  *   printWidth: 100,
  * });
  * ```
@@ -86,7 +86,7 @@ export declare const plugins: Plugins;
  * @param pluginConfigs Plugin configs, e.g. `[plugins.php()]`
  * @param options Base prettier options (highest precedence)
  */
-export declare function createConfig(
+export declare function defineConfig(
   pluginConfigs?: Config[],
   options?: Config,
 ): Config;

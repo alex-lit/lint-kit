@@ -13,9 +13,9 @@ npm i @alexlit/config-prettier -D
 
 ```js
 // prettier.config.js
-import { createConfig, plugins } from '@alexlit/config-prettier';
+import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default createConfig([
+export default defineConfig([
   plugins.jsdoc(),
   plugins.mdc(),
   plugins.packageJson(),
@@ -38,9 +38,9 @@ export default createConfig([
 
 ```js
 // prettier.config.js
-import { createConfig, plugins } from '@alexlit/config-prettier';
+import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default createConfig([
+export default defineConfig([
   plugins.sortJson({ jsonRecursiveSort: false }),
   plugins.tailwindcss({ tailwindFunctions: ['cn', 'cva'] }),
 ]);
@@ -52,9 +52,9 @@ export default createConfig([
 
 ```js
 // prettier.config.js
-import { createConfig, plugins } from '@alexlit/config-prettier';
+import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default createConfig([plugins.php()], {
+export default defineConfig([plugins.php()], {
   printWidth: 100,
   singleQuote: false,
 });
@@ -83,10 +83,10 @@ v24 — breaking-релиз: плагинов по умолчанию больш
 
 | v23                            | v24                                           |
 | ------------------------------ | --------------------------------------------- |
-| `createConfig()`               | перечислите нужные плагины явно               |
-| `createConfig({ php: true })`  | `createConfig([plugins.php()])`               |
-| `createConfig({ sql: false })` | просто не добавляйте `plugins.sql()` в список |
-| `createConfig({}, options)`    | `createConfig([...], options)`                |
+| `defineConfig()`               | перечислите нужные плагины явно               |
+| `defineConfig({ php: true })`  | `defineConfig([plugins.php()])`               |
+| `defineConfig({ sql: false })` | просто не добавляйте `plugins.sql()` в список |
+| `defineConfig({}, options)`    | `defineConfig([...], options)`                |
 
 Плагины, включённые по умолчанию в v23: `jsdoc`, `mdc`, `packagejson`, `pug`,
 `sh`, `solidity`, `sort-json`, `xml`.
