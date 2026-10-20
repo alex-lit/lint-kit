@@ -6,11 +6,16 @@ const defineRules = createDefineRules({
 });
 
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига методологии БЭМ.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [@morev/stylelint-plugin](https://morevm.github.io/stylelint-plugin/)
  */
-export default {
+export const bem = (options = {}) => ({
   overrides: [
     {
       files: ['**/*.{css,scss,vue}'],
@@ -40,4 +45,6 @@ export default {
     },
   ],
   plugins: ['@morev/stylelint-plugin'],
-};
+
+  ...options,
+});

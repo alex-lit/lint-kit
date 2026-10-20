@@ -1,10 +1,19 @@
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина, проверяющего поддержку CSS-функций целевыми
+ * браузерами.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features)
  */
-export default {
+export const noUnsupportedBrowserFeatures = (options = {}) => ({
   plugins: ['stylelint-no-unsupported-browser-features'],
+
+  ...options,
+
   rules: {
     'plugin/no-unsupported-browser-features': [
       true,
@@ -14,5 +23,6 @@ export default {
         severity: 'warning',
       },
     ],
+    ...options.rules,
   },
-};
+});

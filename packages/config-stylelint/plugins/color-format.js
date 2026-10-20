@@ -168,8 +168,18 @@ const rule = function (actual, options, context) {
 rule.ruleName = ruleName;
 rule.messages = messages;
 
-/** @type {import('stylelint').Config} */
-export default {
+/**
+ * Фабрика конфига кастомного правила нормализации формата цветов.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
+ */
+export const colorFormat = (options = {}) => ({
   plugins: [createPlugin(ruleName, rule)],
-  rules: { 'color-format/format': { format: 'rgb' } },
-};
+
+  ...options,
+
+  rules: { 'color-format/format': { format: 'rgb' }, ...options.rules },
+});

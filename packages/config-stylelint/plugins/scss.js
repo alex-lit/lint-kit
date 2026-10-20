@@ -3,13 +3,21 @@
 const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина SCSS.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
  */
-export default {
+export const scss = (options = {}) => ({
   extends: ['stylelint-config-standard-scss'],
   plugins: ['stylelint-scss'],
+
+  ...options,
+
   rules: {
     'scss/at-each-key-value-single-line': true,
     'scss/at-else-if-parentheses-space-before': 'always',
@@ -92,5 +100,7 @@ export default {
       true,
       { ignoreKeywords: [] },
     ],
+
+    ...options.rules,
   },
-};
+});

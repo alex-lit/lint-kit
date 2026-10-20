@@ -1,9 +1,20 @@
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина, требующего использования CSS-вложенности.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-use-nesting](https://github.com/csstools/stylelint-use-nesting)
  */
-export default {
+export const useNesting = (options = {}) => ({
   plugins: ['stylelint-use-nesting'],
-  rules: { 'csstools/use-nesting': ['always', { except: [], syntax: 'scss' }] },
-};
+
+  ...options,
+
+  rules: {
+    'csstools/use-nesting': ['always', { except: [], syntax: 'scss' }],
+    ...options.rules,
+  },
+});

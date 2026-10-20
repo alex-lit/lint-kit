@@ -1,9 +1,17 @@
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина проверки цветового охвата (gamut).
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-gamut](https://github.com/fpetrakov/stylelint-gamut)
  */
-export default {
+export const gamut = (options = {}) => ({
   plugins: ['stylelint-gamut'],
-  rules: { 'gamut/color-no-out-gamut-range': true },
-};
+
+  ...options,
+
+  rules: { 'gamut/color-no-out-gamut-range': true, ...options.rules },
+});

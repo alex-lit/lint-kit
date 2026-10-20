@@ -116,12 +116,20 @@ const buildPseudoElementRules = () => [
 ];
 
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина сортировки свойств и селекторов.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-order](https://github.com/hudochenkov/stylelint-order)
  */
-export default {
+export const order = (options = {}) => ({
   plugins: ['stylelint-order'],
+
+  ...options,
+
   rules: {
     'order/custom-properties-alphabetical-order': true,
     'order/order': [
@@ -190,5 +198,7 @@ export default {
       ...buildLetterRules('__'),
     ],
     'order/properties-alphabetical-order': true,
+
+    ...options.rules,
   },
-};
+});

@@ -1,10 +1,18 @@
 /**
- * @type {import('stylelint').Config}
+ * Фабрика конфига плагина, проверяющего разрешение импортов.
+ *
+ * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ *   поверх значений по умолчанию (shallow merge)
+ *
+ * @returns {import('stylelint').Config}
  *
  * @see [stylelint-no-unresolved-module](https://github.com/niksy/stylelint-no-unresolved-module)
  */
-export default {
+export const noUnresolvedModule = (options = {}) => ({
   plugins: ['stylelint-no-unresolved-module'],
+
+  ...options,
+
   rules: {
     'plugin/no-unresolved-module': {
       alias: { '~assets': 'assets', '~public': 'public', '~static': 'static' },
@@ -19,5 +27,6 @@ export default {
         'static',
       ],
     },
+    ...options.rules,
   },
-};
+});
