@@ -1,5 +1,11 @@
-/** @see [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) */
-export default {
+/**
+ * @param {Partial<import('prettier').Config>} [options] Plugin options
+ *
+ * @returns {import('prettier').Config} Plugin config
+ *
+ * @see [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
+ */
+export const tailwindcss = (options = {}) => ({
   plugins: ['prettier-plugin-tailwindcss'],
   tailwindFunctions: [
     'classnames',
@@ -11,4 +17,5 @@ export default {
     'tw',
     'twMerge',
   ],
-};
+  ...options,
+});

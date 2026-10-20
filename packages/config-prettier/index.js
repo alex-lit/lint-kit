@@ -1,87 +1,62 @@
-import { omit } from 'radash';
-
-const DEFAULT_PLUGINS = {
-  'jsdoc': true,
-  'mdc': true,
-  'packagejson': true,
-  'pug': true,
-  'sh': true,
-  'solidity': true,
-  'sort-json': true,
-  'xml': true,
-};
-
-const OPTIONAL_PLUGINS = {
-  php: false,
-  ruby: false,
-  sql: false,
-  tailwindcss: false,
-};
-
-const PLUGINS = { ...DEFAULT_PLUGINS, ...OPTIONAL_PLUGINS };
+import { jsdoc } from './plugins/jsdoc.js';
+import { mdc } from './plugins/mdc.js';
+import { packageJson } from './plugins/packagejson.js';
+import { php } from './plugins/php.js';
+import { pug } from './plugins/pug.js';
+import { ruby } from './plugins/ruby.js';
+import { sh } from './plugins/sh.js';
+import { solidity } from './plugins/solidity.js';
+import { sortJson } from './plugins/sort-json.js';
+import { sql } from './plugins/sql.js';
+import { tailwindcss } from './plugins/tailwindcss.js';
+import { xml } from './plugins/xml.js';
 
 /**
- * Create plugins config list
- *
- * @param {PLUGINS} plugins Enabled/disabled plugins list
- *
- * @returns {import('prettier').Config} Prettier configuration
+ * Фабрики плагинов. Каждый плагин подключается явно: передайте
+ * `plugins.<name>()` в `createConfig`
  */
-const createPluginsConfig = async (plugins = {}) => {
-  const pluginEntries = Object.entries({ ...PLUGINS, ...plugins });
-
-  const configs = await Promise.all(
-    pluginEntries
-      .filter(([, isActive]) => isActive)
-      .map(async ([name]) => {
-        const { default: config } = await import(
-          `@alexlit/config-prettier/plugins/${name}.js`
-        );
-
-        return config;
-      }),
-  );
-
-  let pluginsConfig = { overrides: [], plugins: [] };
-
-  configs.forEach((config) => {
-    if (config.plugins?.length > 0) {
-      pluginsConfig.plugins.push(...config.plugins);
-    }
-
-    if (config.overrides?.length > 0) {
-      pluginsConfig.overrides.push(...config.overrides);
-    }
-
-    pluginsConfig = {
-      ...pluginsConfig,
-      ...omit(config, ['plugins', 'overrides']),
-    };
-  });
-
-  return pluginsConfig;
+export const plugins = {
+  jsdoc,
+  mdc,
+  packageJson,
+  php,
+  pug,
+  ruby,
+  sh,
+  solidity,
+  sortJson,
+  sql,
+  tailwindcss,
+  xml,
 };
 
 /**
- * Create prettier config
+ * Создать конфигурацию Prettier
  *
- * @param {PLUGINS} plugins
- * @param {import('prettier').Config} options Prettier options
+ * Плагинов по умолчанию нет — подключайте нужные явно:
  *
- * @returns {import('prettier').Config} Prettier configuration
+ * ```js
+ * createConfig(
+ *   [
+ *     plugins.php(),
+ *     plugins.tailwindcss({ tailwindFunctions: ['cn', 'tw'] }),
+ *   ],
+ *   { printWidth: 100 },
+ * );
+ * ```
+ *
+ * @param {import('prettier').Config[]} pluginConfigs Конфиги плагинов, напр.
+ *   `[plugins.php()]`
+ * @param {import('prettier').Config} options Базовые опции Prettier (наивысший
+ *   приоритет)
+ *
+ * @returns {import('prettier').Config} Конфигурация Prettier
  */
-export const createConfig = async (plugins = {}, options = {}) => {
-  const pluginsConfig = await createPluginsConfig(plugins);
-
-  return {
+export const createConfig = (pluginConfigs = [], options = {}) => {
+  const config = {
     bracketSameLine: false,
     endOfLine: 'lf',
     objectWrap: 'collapse',
-    overrides: [
-      ...(pluginsConfig.overrides ?? []),
-      ...(options.overrides ?? []),
-    ],
-    plugins: [...(pluginsConfig.plugins ?? []), ...(options.plugins ?? [])],
     proseWrap: 'always',
     quoteProps: 'consistent',
     singleAttributePerLine: true,
@@ -90,7 +65,18 @@ export const createConfig = async (plugins = {}, options = {}) => {
     trailingComma: 'all',
     vueIndentScriptAndStyle: true,
 
-    ...omit(pluginsConfig, ['plugins']),
-    ...omit(options, ['plugins']),
+    // конфиги плагинов перекрывают базовые опции, а пользовательские опции
+    // имеют наивысший приоритет
+    ...Object.assign({}, ...pluginConfigs, options),
+  };
+
+  const sources = [...pluginConfigs, options];
+
+  return {
+    ...config,
+
+    // `overrides` и `plugins` конкатенируются, а не заменяются
+    overrides: sources.flatMap((source) => source.overrides ?? []),
+    plugins: [...new Set(sources.flatMap((source) => source.plugins ?? []))],
   };
 };

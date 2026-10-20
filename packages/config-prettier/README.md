@@ -1,37 +1,96 @@
 # Prettier Configuration
 
-## Installation
+## Установка
 
 ```sh
 npm i @alexlit/config-prettier -D
 ```
 
-## Connection
+## Подключение
 
-- Default
-  ([see plugins enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-prettier/index.js#L5))
+Плагинов по умолчанию нет — подключайте нужные явно, вызывая соответствующие
+фабрики:
 
-  ```js
-  // prettier.config.js
-  import { createConfig } from '@alexlit/config-prettier';
+```js
+// prettier.config.js
+import { createConfig, plugins } from '@alexlit/config-prettier';
 
-  export default createConfig();
-  ```
+export default createConfig([
+  plugins.jsdoc(),
+  plugins.mdc(),
+  plugins.packageJson(),
+  plugins.php(),
+  plugins.pug(),
+  plugins.ruby(),
+  plugins.sh(),
+  plugins.sortJson(),
+  plugins.solidity(),
+  plugins.sql(),
+  plugins.tailwindcss(),
+  plugins.xml(),
+]);
+```
 
-- Custom
+### Опции плагина
 
-  ```js
-  // prettier.config.js
-  import { createConfig } from '@alexlit/config-prettier';
+Каждая фабрика принимает опции — они накладываются поверх значений по умолчанию
+(shallow merge):
 
-  export default createConfig({
-    php: true,
-    ruby: true,
-    sql: false,
-    tailwindcss: false,
-  });
-  ```
+```js
+// prettier.config.js
+import { createConfig, plugins } from '@alexlit/config-prettier';
 
-## Issues
+export default createConfig([
+  plugins.sortJson({ jsonRecursiveSort: false }),
+  plugins.tailwindcss({ tailwindFunctions: ['cn', 'cva'] }),
+]);
+```
 
-- **tailwindcss** conflicts with **jsdoc**
+### Опции Prettier
+
+Второй аргумент задаёт базовые опции Prettier — он имеет наивысший приоритет:
+
+```js
+// prettier.config.js
+import { createConfig, plugins } from '@alexlit/config-prettier';
+
+export default createConfig([plugins.php()], {
+  printWidth: 100,
+  singleQuote: false,
+});
+```
+
+### Доступные фабрики
+
+| Фабрика                 | Плагин                                            |
+| ----------------------- | ------------------------------------------------- |
+| `plugins.jsdoc()`       | `prettier-plugin-jsdoc`                           |
+| `plugins.mdc()`         | `prettier-plugin-mdc`                             |
+| `plugins.packageJson()` | `prettier-plugin-packagejson`                     |
+| `plugins.php()`         | `@prettier/plugin-php`                            |
+| `plugins.pug()`         | `@prettier/plugin-pug`                            |
+| `plugins.ruby()`        | `@prettier/plugin-ruby` + `prettier-plugin-eruby` |
+| `plugins.sh()`          | `prettier-plugin-sh`                              |
+| `plugins.sortJson()`    | `prettier-plugin-sort-json`                       |
+| `plugins.solidity()`    | `prettier-plugin-solidity`                        |
+| `plugins.sql()`         | `prettier-plugin-sql`                             |
+| `plugins.tailwindcss()` | `prettier-plugin-tailwindcss`                     |
+| `plugins.xml()`         | `@prettier/plugin-xml`                            |
+
+## Миграция с v23
+
+v24 — breaking-релиз: плагинов по умолчанию больше нет, всё подключается явно.
+
+| v23                            | v24                                           |
+| ------------------------------ | --------------------------------------------- |
+| `createConfig()`               | перечислите нужные плагины явно               |
+| `createConfig({ php: true })`  | `createConfig([plugins.php()])`               |
+| `createConfig({ sql: false })` | просто не добавляйте `plugins.sql()` в список |
+| `createConfig({}, options)`    | `createConfig([...], options)`                |
+
+Плагины, включённые по умолчанию в v23: `jsdoc`, `mdc`, `packagejson`, `pug`,
+`sh`, `solidity`, `sort-json`, `xml`.
+
+## Известные проблемы
+
+- **tailwindcss** ранее конфликтовал с **jsdoc**

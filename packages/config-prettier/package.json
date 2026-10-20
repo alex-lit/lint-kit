@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "23.3.0",
+  "version": "24.0.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
@@ -23,8 +23,10 @@
   ],
   "type": "module",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
     "README.md",
+    "index.d.ts",
     "index.js",
     "plugins"
   ],
@@ -48,8 +50,7 @@
     "prettier-plugin-solidity": "^2.4.1",
     "prettier-plugin-sort-json": "^4.2.0",
     "prettier-plugin-sql": "^0.20.0",
-    "prettier-plugin-tailwindcss": "^0.8.1",
-    "radash": "^12.1.1"
+    "prettier-plugin-tailwindcss": "^0.8.1"
   },
   "publishConfig": {
     "access": "public",
