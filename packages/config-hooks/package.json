@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-hooks",
-  "version": "9.1.1",
+  "version": "10.0.0",
   "private": false,
   "description": "Hooks config",
   "keywords": [
@@ -23,9 +23,11 @@
   ],
   "type": "module",
   "main": "lint-staged.js",
+  "types": "index.d.ts",
   "files": [
     "README.md",
     "commitlint.js",
+    "index.d.ts",
     "lint-staged.js"
   ],
   "scripts": {

@@ -1,12 +1,14 @@
 /**
- * Create lint-staged config
+ * Создать конфигурацию lint-staged.
  *
- * @param {Record<string, boolean>} plugins Enabled plugins
- * @param {Record<string, unknown>} config Users config
+ * @param {Record<string, boolean>} [plugins] — включение и выключение линтеров
+ *   (по умолчанию включены все)
+ * @param {Record<string, unknown>} [config] — свои правила по паттернам:
+ *   дополняют или переопределяют карту по умолчанию
  *
- * @returns {Record<string, unknown>} Lint-staged configuration
+ * @returns {Record<string, unknown>} Карта «паттерн файла → команды»
  */
-const createLintStagedConfig = (plugins = {}, config = {}) => {
+const defineConfig = (plugins = {}, config = {}) => {
   const pluginsList = {
     eslint: true,
     htmllint: true,
@@ -83,4 +85,4 @@ const createLintStagedConfig = (plugins = {}, config = {}) => {
   };
 };
 
-export { createLintStagedConfig };
+export { defineConfig };
