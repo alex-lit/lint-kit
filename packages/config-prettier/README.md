@@ -1,5 +1,8 @@
 # Prettier Configuration
 
+[![npm version](https://img.shields.io/npm/v/@alexlit/config-prettier.svg)](https://www.npmjs.com/package/@alexlit/config-prettier)
+[![license](https://img.shields.io/npm/l/@alexlit/config-prettier.svg)](LICENSE)
+
 Готовая конфигурация [Prettier](https://prettier.io/) с плагинами для
 форматирования языков и форматов, которых Prettier не поддерживает из коробки
 (PHP, SQL, шаблоны, shell-скрипты и т.д.), а также расширений для сортировки
