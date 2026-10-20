@@ -1,5 +1,8 @@
 # Stylelint Configuration
 
+[![npm version](https://img.shields.io/npm/v/@alexlit/config-stylelint.svg)](https://www.npmjs.com/package/@alexlit/config-stylelint)
+[![license](https://img.shields.io/npm/l/@alexlit/config-stylelint.svg)](LICENSE)
+
 Готовая конфигурация [Stylelint](https://stylelint.io/) для проверки CSS, SCSS и
 Vue-файлов: настроенные правила из популярных stylelint-плагинов — порядок и
 синтаксис свойств, доступность, БЭМ, поддержка SCSS и т.д. Вместо того чтобы
