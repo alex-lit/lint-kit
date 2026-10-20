@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Нормализует JSDoc-комментарии
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [prettier-plugin-jsdoc](https://github.com/hosseinmd/prettier-plugin-jsdoc)
  */

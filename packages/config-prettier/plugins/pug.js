@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Форматирует Pug-шаблоны с сортировкой атрибутов и одинарными кавычками
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [plugin-pug](https://github.com/prettier/plugin-pug)
  */

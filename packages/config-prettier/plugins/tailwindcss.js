@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Сортирует утилитарные классы Tailwind CSS по каноническому порядку
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
  */

@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Форматирует контракты Solidity
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [prettier-plugin-solidity](https://github.com/prettier-solidity/prettier-plugin-solidity)
  */

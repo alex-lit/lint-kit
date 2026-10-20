@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Форматирует SQL-запросы
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [prettier-plugin-sql](https://github.com/un-ts/prettier/tree/master/packages/sql)
  */

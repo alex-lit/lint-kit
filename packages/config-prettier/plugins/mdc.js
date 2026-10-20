@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Форматирует MDC-документы (Nuxt Content)
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [prettier-plugin-mdc](https://github.com/so1ve/prettier-plugin-mdc)
  */

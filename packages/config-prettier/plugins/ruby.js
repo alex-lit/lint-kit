@@ -1,7 +1,9 @@
 /**
- * @param {Partial<import('prettier').Config>} [options] Plugin options
+ * Форматирует Ruby и ERB файлы
  *
- * @returns {import('prettier').Config} Plugin config
+ * @param {Partial<import('prettier').Config>} [options]
+ *
+ * @returns {import('prettier').Config}
  *
  * @see [plugin-ruby](https://github.com/prettier/plugin-ruby)
  * @see [prettier-plugin-eruby](https://github.com/ippachi/prettier-plugin-eruby)
