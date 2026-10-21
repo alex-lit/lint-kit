@@ -1,3 +1,3 @@
-import { createConfig } from '@alexlit/config-htmllint';
+import { defineConfig } from '@alexlit/config-htmllint';
 
-export default createConfig();
+export default defineConfig();

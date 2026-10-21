@@ -73,6 +73,7 @@
     "commit-msg": "npx commitlint --edit"
   },
   "devDependencies": {
-    "changelogen": "^0.6.2"
+    "changelogen": "^0.6.2",
+    "radash": "^12.1.1"
   }
 }

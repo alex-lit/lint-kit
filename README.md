@@ -1,7 +1,8 @@
-# Lint Kit
+[![version](https://npmx.dev/api/registry/badge/version/@alexlit/lint-kit)](https://www.npmjs.com/package/@alexlit/lint-kit)
+[![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/lint-kit)](https://npmx.dev/package/@alexlit/lint-kit)
+[![license](https://npmx.dev/api/registry/badge/license/@alexlit/lint-kit)](LICENSE)
 
-[![npm version](https://img.shields.io/npm/v/@alexlit/lint-kit.svg)](https://www.npmjs.com/package/@alexlit/lint-kit)
-[![license](https://img.shields.io/npm/l/@alexlit/lint-kit.svg)](LICENSE)
+# Lint Kit
 
 Набор пакетов с конфигурациями для линтинга и форматирования кода Vue +
 TypeScript проектов.

@@ -1,3 +1,3 @@
-import { createLintStagedConfig } from '@alexlit/config-hooks';
+import { defineConfig } from '@alexlit/config-hooks';
 
-export default createLintStagedConfig();
+export default defineConfig();
