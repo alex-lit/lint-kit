@@ -3,7 +3,7 @@
 /**
  * Shared TypeScript rules.
  *
- * `format: null` disables the format check for destructured variables — their
+ * `format: null` disables the format check for destructured variables - their
  * names may be arbitrary.
  */
 export const TS_RULES = {

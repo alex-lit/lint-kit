@@ -18,7 +18,7 @@ import { selectorNoEmpty } from './plugins/selector-no-empty.js';
 import { useNesting } from './plugins/use-nesting.js';
 import { vue } from './plugins/vue.js';
 
-/** Плагины. Дефолтных плагинов нет — подключайте нужные явно в `defineConfig`. */
+/** Плагины. Дефолтных плагинов нет - подключайте нужные явно в `defineConfig`. */
 const plugins = {
   a11y,
   bem,
@@ -142,11 +142,11 @@ const BASE_RULES = {
  *
  * Приоритет (от низкого к высокому): база → конфиги плагинов по порядку →
  * `options`. `extends`, `ignoreFiles`, `overrides` и `plugins` конкатенируются
- * (дубли `plugins` убираются), `rules` — shallow merge.
+ * (дубли `plugins` убираются), `rules` - shallow merge.
  *
- * @param {import('stylelint').Config[]} [pluginConfigs] — конфиги плагинов
+ * @param {import('stylelint').Config[]} [pluginConfigs] - Конфиги плагинов
  *   (например, `[plugins.scss(), plugins.vue()]`)
- * @param {import('stylelint').Config} [options] — базовые опции Stylelint,
+ * @param {import('stylelint').Config} [options] - Базовые опции Stylelint,
  *   наивысший приоритет
  *
  * @returns {import('stylelint').Config}

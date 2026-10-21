@@ -1,9 +1,9 @@
 /**
  * Создать конфигурацию lint-staged.
  *
- * @param {Record<string, boolean>} [plugins] — включение и выключение линтеров
+ * @param {Record<string, boolean>} [plugins] - Включение и выключение линтеров
  *   (по умолчанию включены все)
- * @param {Record<string, unknown>} [config] — свои правила по паттернам:
+ * @param {Record<string, unknown>} [config] - Свои правила по паттернам:
  *   дополняют или переопределяют карту по умолчанию
  *
  * @returns {Record<string, unknown>} Карта «паттерн файла → команды»

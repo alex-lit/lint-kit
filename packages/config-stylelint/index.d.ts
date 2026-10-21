@@ -1,13 +1,13 @@
 import type { Config } from 'stylelint';
 
 /**
- * Опции фабрики плагина — частичный конфиг Stylelint, накладываемый поверх
+ * Опции фабрики плагина - частичный конфиг Stylelint, накладываемый поверх
  * значений по умолчанию.
  */
 type PluginOptions = Partial<Config>;
 
 /**
- * Пространство имён фабрик конфигов плагинов. Дефолтных плагинов нет —
+ * Пространство имён фабрик конфигов плагинов. Дефолтных плагинов нет -
  * подключайте нужные явно.
  */
 interface Plugins {
@@ -39,10 +39,10 @@ declare const plugins: Plugins;
  *
  * Приоритет (от низкого к высокому): база → конфиги плагинов по порядку →
  * `options`. `extends`, `ignoreFiles`, `overrides` и `plugins` конкатенируются
- * (дубли `plugins` убираются), `rules` — shallow merge.
+ * (дубли `plugins` убираются), `rules` - shallow merge.
  *
- * @param pluginConfigs — конфиги плагинов (например, `[plugins.scss()]`)
- * @param options — базовые опции Stylelint, наивысший приоритет
+ * @param pluginConfigs - Конфиги плагинов (например, `[plugins.scss()]`)
+ * @param options - Базовые опции Stylelint, наивысший приоритет
  */
 declare function defineConfig(
   pluginConfigs?: Config[],

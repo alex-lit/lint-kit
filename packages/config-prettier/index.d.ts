@@ -75,7 +75,7 @@ export declare const plugins: Plugins;
 /**
  * Create prettier config
  *
- * There are no default plugins — connect the required ones explicitly:
+ * There are no default plugins - connect the required ones explicitly:
  *
  * ```js
  * defineConfig([plugins.php(), plugins.tailwindcss()], {

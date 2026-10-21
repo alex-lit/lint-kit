@@ -4,7 +4,7 @@
 
 # HTMLLint Configuration
 
-Готовая конфигурация [linthtml](https://github.com/linthtml/linthtml) — линтера
+Готовая конфигурация [linthtml](https://github.com/linthtml/linthtml) - линтера
 HTML-разметки. Пакет объединяет рекомендованный базовый конфиг
 `@linthtml/linthtml-config-recommended` с дополнительными правилами (в том числе
 проверками доступности и стиля разметки), чтобы подключить линтер одной строкой
@@ -30,8 +30,8 @@ export default defineConfig();
 
 ## Настройка
 
-Аргумент `options` накладывается поверх значений по умолчанию: `rules` — shallow
-merge, `extends` и `ignoreFiles` — конкатенация.
+Аргумент `options` накладывается поверх значений по умолчанию: `rules` - shallow
+merge, `extends` и `ignoreFiles` - конкатенация.
 
 ```js
 // linthtml.config.js
@@ -46,7 +46,7 @@ export default defineConfig({
 
 ## Миграция v1 → v2
 
-v2 — breaking-релиз: функция переименована для консистентности с остальными
+v2 - breaking-релиз: функция переименована для консистентности с остальными
 пакетами `@alexlit/config-*`.
 
 | v1                   | v2                   |
@@ -54,7 +54,7 @@ v2 — breaking-релиз: функция переименована для к�
 | `createConfig()`     | `defineConfig()`     |
 | `createConfig(opts)` | `defineConfig(opts)` |
 
-Аргументы и их поведение не изменились — достаточно заменить имя функции.
+Аргументы и их поведение не изменились - достаточно заменить имя функции.
 
 ## Расширение для VSCode
 

@@ -7,8 +7,8 @@ type LintStagedRules = Record<string, string | string[]>;
 /**
  * Создать конфигурацию lint-staged.
  *
- * @param plugins — включение и выключение линтеров
- * @param config — свои правила по паттернам: дополняют или переопределяют карту
+ * @param plugins - Включение и выключение линтеров
+ * @param config - Свои правила по паттернам: дополняют или переопределяют карту
  *   по умолчанию
  */
 declare function defineConfig(

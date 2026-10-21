@@ -1,7 +1,7 @@
 /**
  * Проверяет цвета на выход за пределы цветового охвата (gamut).
  *
- * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)
  *
  * @returns {import('stylelint').Config}

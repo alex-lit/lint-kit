@@ -1,7 +1,7 @@
 /**
  * Подключает поддержку Vue.js SFC.
  *
- * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)
  *
  * @returns {import('stylelint').Config}

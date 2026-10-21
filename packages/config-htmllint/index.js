@@ -4,9 +4,9 @@
  * База (расширяется рекомендованным конфигом):
  * `@linthtml/linthtml-config-recommended` плюс дефолтные опции линтера и
  * правила ниже. Всё, что передано в `options`, накладывается поверх базы;
- * `extends` и `ignoreFiles` конкатенируются, `rules` — shallow merge.
+ * `extends` и `ignoreFiles` конкатенируются, `rules` - shallow merge.
  *
- * @param {import('@linthtml/linthtml').Config} [options] — опции linthtml,
+ * @param {import('@linthtml/linthtml').Config} [options] - Опции linthtml,
  *   накладываемые поверх значений по умолчанию
  *
  * @returns {import('@linthtml/linthtml').Config}

@@ -132,7 +132,7 @@ Both are included, and they are **not** interchangeable.
 
 Use `prettierConfig` when Prettier runs as a separate step (editor, `prettier`
 CLI, Husky). Use `prettier` if you want ESLint to report and fix formatting in
-one pass — it is slower and duplicates the formatter.
+one pass - it is slower and duplicates the formatter.
 
 ## Usefull links
 

@@ -5,7 +5,7 @@ const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 /**
  * Настраивает линтинг SCSS.
  *
- * @param {Partial<import('stylelint').Config>} [options] — опции, накладываемые
+ * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
  *   поверх значений по умолчанию (shallow merge)
  *
  * @returns {import('stylelint').Config}

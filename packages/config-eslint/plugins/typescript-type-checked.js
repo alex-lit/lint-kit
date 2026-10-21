@@ -19,7 +19,7 @@ export const typescriptTypeChecked = defineConfig([
   // (`import.meta`, top-level await) breaks.
   { ...plugin.configs.base, files: FILES },
 
-  // Non type-aware rules — the same scope as the regular `typescript` plugin,
+  // Non type-aware rules - the same scope as the regular `typescript` plugin,
   // so `.js`/`.vue` files keep the TypeScript versions of the rules.
   // `plugin.configs.strict`/`stylistic` contain blocks without a `files` key,
   // so they would also land on data files that are not JavaScript at all.
