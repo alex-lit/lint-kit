@@ -1,7 +1,8 @@
-# Prettier Configuration
+[![npm version](https://npmx.dev/api/registry/badge/version/@alexlit/config-prettier)](https://www.npmjs.com/package/@alexlit/config-prettier)
+[![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-prettier)](https://npmx.dev/package/@alexlit/config-prettier)
+[![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-prettier)](LICENSE)
 
-[![npm version](https://img.shields.io/npm/v/@alexlit/config-prettier.svg)](https://www.npmjs.com/package/@alexlit/config-prettier)
-[![license](https://img.shields.io/npm/l/@alexlit/config-prettier.svg)](LICENSE)
+# Prettier Configuration
 
 Готовая конфигурация [Prettier](https://prettier.io/) с плагинами для
 форматирования языков и форматов, которых Prettier не поддерживает из коробки

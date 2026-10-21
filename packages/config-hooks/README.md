@@ -1,8 +1,8 @@
-# Hooks Configuration
-
-[![npm version](https://img.shields.io/npm/v/@alexlit/config-hooks.svg)](https://www.npmjs.com/package/@alexlit/config-hooks)
+[![npm version](https://npmx.dev/api/registry/badge/version/@alexlit/config-hooks)](https://www.npmjs.com/package/@alexlit/config-hooks)
 [![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-hooks)](https://npmx.dev/package/@alexlit/config-hooks)
-[![license](https://img.shields.io/npm/l/@alexlit/config-hooks.svg)](LICENSE)
+[![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-hooks)](LICENSE)
+
+# Hooks Configuration
 
 Готовые конфигурации для git-хуков проекта — три инструмента, которые вместе
 следят за качеством коммитов:
