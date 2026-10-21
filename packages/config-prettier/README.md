@@ -1,4 +1,4 @@
-[![npm version](https://npmx.dev/api/registry/badge/version/@alexlit/config-prettier)](https://www.npmjs.com/package/@alexlit/config-prettier)
+[![version](https://npmx.dev/api/registry/badge/version/@alexlit/config-prettier)](https://www.npmjs.com/package/@alexlit/config-prettier)
 [![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-prettier)](https://npmx.dev/package/@alexlit/config-prettier)
 [![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-prettier)](LICENSE)
 

@@ -1,4 +1,4 @@
-[![npm version](https://npmx.dev/api/registry/badge/version/@alexlit/config-hooks)](https://www.npmjs.com/package/@alexlit/config-hooks)
+[![version](https://npmx.dev/api/registry/badge/version/@alexlit/config-hooks)](https://www.npmjs.com/package/@alexlit/config-hooks)
 [![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-hooks)](https://npmx.dev/package/@alexlit/config-hooks)
 [![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-hooks)](LICENSE)
 
