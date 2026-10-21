@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-npmlint",
-  "version": "10.1.0",
+  "version": "10.1.1",
   "private": false,
   "description": "npmlint config",
   "keywords": [
@@ -8,8 +8,8 @@
     "json",
     "lint",
     "npm",
-    "package",
-    "npmlint"
+    "npm-package-json-lint",
+    "package"
   ],
   "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-npmlint#readme",
   "bugs": {
