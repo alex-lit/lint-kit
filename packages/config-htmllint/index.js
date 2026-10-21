@@ -1,26 +1,34 @@
 /**
- * Create linthtml config
+ * Создать конфигурацию linthtml.
  *
- * @param options LintHTML options
+ * База (расширяется рекомендованным конфигом):
+ * `@linthtml/linthtml-config-recommended` плюс дефолтные опции линтера и
+ * правила ниже. Всё, что передано в `options`, накладывается поверх базы;
+ * `extends` и `ignoreFiles` конкатенируются, `rules` — shallow merge.
+ *
+ * @param {import('@linthtml/linthtml').Config} [options] — опции linthtml,
+ *   накладываемые поверх значений по умолчанию
+ *
+ * @returns {import('@linthtml/linthtml').Config}
  *
  * @see [linthtml](https://github.com/linthtml/linthtml)
  */
-export const createConfig = (options = {}) => ({
+export const defineConfig = (options = {}) => ({
   'attr-name-ignore-regex': false,
   'id-class-ignore-regex': false,
   'line-max-len-ignore-regex': false,
-  maxerr: false,
+  'maxerr': false,
   'raw-ignore-regex': false,
   'spec-char-escape': false,
   'text-ignore-regex': false,
   ...options,
-  extends: [
+  'extends': [
     '@linthtml/linthtml-config-recommended',
 
     ...(options.extends ?? []),
   ],
-  ignoreFiles: [...(options.rules ?? [])],
-  rules: {
+  'ignoreFiles': [...(options.ignoreFiles ?? [])],
+  'rules': {
     'attr-order': [true, ['id', 'class']],
     'attr-quote-style': [true, 'double'],
     'button-req-content': true,

@@ -1,38 +1,66 @@
+[![npm version](https://img.shields.io/npm/v/@alexlit/config-htmllint.svg)](https://www.npmjs.com/package/@alexlit/config-htmllint)
+[![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-htmllint)](https://npmx.dev/package/@alexlit/config-htmllint)
+[![license](https://img.shields.io/npm/l/@alexlit/config-htmllint.svg)](LICENSE)
+
 # HTMLLint Configuration
 
-## Installation
+Готовая конфигурация [linthtml](https://github.com/linthtml/linthtml) — линтера
+HTML-разметки. Пакет объединяет рекомендованный базовый конфиг
+`@linthtml/linthtml-config-recommended` с дополнительными правилами (в том числе
+проверками доступности и стиля разметки), чтобы подключить линтер одной строкой
+и не держать сотни строк настроек в каждом проекте.
+
+## Установка
 
 ```sh
 npm i @alexlit/config-htmllint -D
 ```
 
-## Connection
+## Быстрый старт
 
-- Default
-  ([see rules enabled by default](https://github.com/alex-lit/lint-kit/blob/master/packages/config-htmllint/index.js))
+```js
+// linthtml.config.js
+import { defineConfig } from '@alexlit/config-htmllint';
 
-  ```js
-  // linthtml.config.js
-  import { createConfig } from '@alexlit/config-htmllint';
+export default defineConfig();
+```
 
-  export default createConfig();
-  ```
+Готово: подключены рекомендованный конфиг, правила пакета и дефолтные опции
+линтера.
 
-- Custom
+## Настройка
 
-  ```js
-  // linthtml.config.js
-  import { createConfig } from '@alexlit/config-htmllint';
+Аргумент `options` накладывается поверх значений по умолчанию: `rules` — shallow
+merge, `extends` и `ignoreFiles` — конкатенация.
 
-  export default createConfig({
-    'attr-name-ignore-regex': false,
+```js
+// linthtml.config.js
+import { defineConfig } from '@alexlit/config-htmllint';
 
-    rules: {
-      'indent-width': [true, 4],
-    },
-  });
-  ```
+export default defineConfig({
+  'line-max-len-ignore-regex': false,
 
-## VSCode extention
+  'rules': { 'indent-width': [true, 4], 'title-max-len': [true, 60] },
+});
+```
+
+## Миграция v1 → v2
+
+v2 — breaking-релиз: функция переименована для консистентности с остальными
+пакетами `@alexlit/config-*`.
+
+| v1                   | v2                   |
+| -------------------- | -------------------- |
+| `createConfig()`     | `defineConfig()`     |
+| `createConfig(opts)` | `defineConfig(opts)` |
+
+Аргументы и их поведение не изменились — достаточно заменить имя функции.
+
+## Расширение для VSCode
 
 [vscode-linthtml](https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-linthtml)
+
+## Полезные ссылки
+
+- [linthtml](https://github.com/linthtml/linthtml)
+- [linthtml-config-recommended](https://github.com/linthtml/linthtml-config-recommended)
