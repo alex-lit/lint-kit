@@ -1,15 +1,25 @@
 import plugin from 'eslint-plugin-regexp';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../base.js';
+import { createPlugin, FILES } from '../base.js';
 
-/** @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp) */
-export const regexp = defineConfig([
-  {
-    files: FILES,
-    ...plugin.configs['flat/recommended'],
-    settings: {
-      regexp: { allowedCharacterRanges: ['alphanumeric', 'а-я', 'А-Я'] },
+/**
+ * Правила для регулярных выражений.
+ *
+ * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
+ *
+ * @returns {import('eslint').Linter.Config[]}
+ *
+ * @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp)
+ */
+export const regexp = createPlugin(() =>
+  defineConfig([
+    {
+      files: FILES,
+      ...plugin.configs['flat/recommended'],
+      settings: {
+        regexp: { allowedCharacterRanges: ['alphanumeric', 'а-я', 'А-Я'] },
+      },
     },
-  },
-]);
+  ]),
+);

@@ -1,14 +1,15 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "161.4.0",
+  "version": "162.0.0",
   "private": false,
-  "description": "Sharable ESLint configuration",
+  "description": "eslint config",
   "keywords": [
+    "code-quality",
+    "config",
     "eslint",
     "eslint-config",
-    "lint",
-    "code-quality",
     "javascript",
+    "lint",
     "typescript"
   ],
   "homepage": "https://github.com/alex-lit/lint-kit/tree/master/packages/config-eslint#readme",
@@ -23,21 +24,23 @@
   "license": "MIT",
   "author": "Alexey Litovchenko <alex.lit@outlook.com> (https://github.com/alex-lit)",
   "type": "module",
-  "main": "./index.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "index.js",
+    "README.md",
     "base.js",
+    "index.d.ts",
+    "index.js",
     "plugins/",
-    "rules/",
-    "README.md"
+    "rules/"
   ],
   "scripts": {
     "inspect": "npx @eslint/config-inspector@latest",
     "lint": "cd ../../ && ./scripts/lint.eslint.sh",
-    "ou": "sh ../../scripts/ou.sh",
-    "release": "sh ../../scripts/release.sh",
-    "semver": "sh ../../scripts/semver.sh",
-    "up": "sh ../../scripts/up.sh"
+    "ou": "../../scripts/ou.sh",
+    "release": "../../scripts/release.sh",
+    "semver": "../../scripts/semver.sh",
+    "up": "../../scripts/up.sh"
   },
   "dependencies": {
     "@eslint/js": "^10.0.1",

@@ -2,257 +2,273 @@ import plugin from 'eslint-plugin-vue';
 import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
-import { DATA_FILES, TEST_FILES, VUE_FILES } from '../base.js';
+import { createPlugin, DATA_FILES, TEST_FILES, VUE_FILES } from '../base.js';
 import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 
-/** @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/) */
-export const vue = defineConfig([
-  ...plugin.configs['flat/recommended'].map((config) => ({
-    ...config,
-    ignores: [...(config.ignores ?? []), ...DATA_FILES],
-  })),
+/**
+ * Правила для Vue.js.
+ *
+ * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
+ *
+ * @returns {import('eslint').Linter.Config[]}
+ *
+ * @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
+ */
+export const vue = createPlugin(() =>
+  defineConfig([
+    ...plugin.configs['flat/recommended'].map((config) => ({
+      ...config,
+      ignores: [...(config.ignores ?? []), ...DATA_FILES],
+    })),
 
-  {
-    files: VUE_FILES,
-    languageOptions: { parserOptions: { parser: typescript.parser } },
-    rules: {
-      '@typescript-eslint/no-empty-object-type': [
-        'error',
-        { allowWithName: 'Props$' },
-      ],
-      'no-restricted-syntax': [
-        'error',
-        // Merge the shared list, do not replace it
-        ...NO_RESTRICTED_SYNTAX,
-        {
-          message:
-            'Запрещено использовать имя "Props". Используйте именованный формат, например: <ИмяКомпонента>Props.',
-          selector:
-            "TSInterfaceDeclaration[id.name='Props'], TSTypeAliasDeclaration[id.name='Props']",
-        },
-        {
-          message:
-            'При вызове useRoute() переменная должна называться строго "$route" (const $route = useRoute()).',
-          selector:
-            'VariableDeclarator[init.callee.name="useRoute"][id.name!="$route"]',
-        },
-        {
-          message:
-            'При вызове useRouter() переменная должна называться строго "$router" (const $router = useRouter()).',
-          selector:
-            'VariableDeclarator[init.callee.name="useRouter"][id.name!="$router"]',
-        },
-      ],
-      'vue/attributes-order': ['error', { alphabetical: true }],
-      'vue/block-lang': [
-        'error',
-        { script: { lang: 'ts' }, style: {}, template: {} },
-      ],
-      'vue/block-order': ['error', { order: ['script', 'template', 'style'] }],
-      'vue/component-api-style': ['error', ['script-setup']],
-      'vue/component-definition-name-casing': ['error', 'PascalCase'],
-      'vue/component-name-in-template-casing': [
-        'error',
-        'PascalCase',
-        {
-          ignores: [String.raw`/^[A-Z][a-zA-Z]*\.[A-Z][a-zA-Z]*$/`],
-          registeredComponentsOnly: false,
-        },
-      ],
-      'vue/component-options-name-casing': ['error', 'PascalCase'],
-      'vue/custom-event-name-casing': ['error', 'camelCase', { ignores: [] }],
-      'vue/define-emits-declaration': ['error'],
-      'vue/define-macros-order': [
-        'error',
-        {
-          defineExposeLast: true,
-          order: [
-            'definePageMeta', // nuxt
+    {
+      files: VUE_FILES,
+      languageOptions: { parserOptions: { parser: typescript.parser } },
+      rules: {
+        '@typescript-eslint/no-empty-object-type': [
+          'error',
+          { allowWithName: 'Props$' },
+        ],
+        'no-restricted-syntax': [
+          'error',
+          // Merge the shared list, do not replace it
+          ...NO_RESTRICTED_SYNTAX,
+          {
+            message:
+              'Запрещено использовать имя "Props". Используйте именованный формат, например: <ИмяКомпонента>Props.',
+            selector:
+              "TSInterfaceDeclaration[id.name='Props'], TSTypeAliasDeclaration[id.name='Props']",
+          },
+          {
+            message:
+              'При вызове useRoute() переменная должна называться строго "$route" (const $route = useRoute()).',
+            selector:
+              'VariableDeclarator[init.callee.name="useRoute"][id.name!="$route"]',
+          },
+          {
+            message:
+              'При вызове useRouter() переменная должна называться строго "$router" (const $router = useRouter()).',
+            selector:
+              'VariableDeclarator[init.callee.name="useRouter"][id.name!="$router"]',
+          },
+        ],
+        'vue/attributes-order': ['error', { alphabetical: true }],
+        'vue/block-lang': [
+          'error',
+          { script: { lang: 'ts' }, style: {}, template: {} },
+        ],
+        'vue/block-order': [
+          'error',
+          { order: ['script', 'template', 'style'] },
+        ],
+        'vue/component-api-style': ['error', ['script-setup']],
+        'vue/component-definition-name-casing': ['error', 'PascalCase'],
+        'vue/component-name-in-template-casing': [
+          'error',
+          'PascalCase',
+          {
+            ignores: [String.raw`/^[A-Z][a-zA-Z]*\.[A-Z][a-zA-Z]*$/`],
+            registeredComponentsOnly: false,
+          },
+        ],
+        'vue/component-options-name-casing': ['error', 'PascalCase'],
+        'vue/custom-event-name-casing': ['error', 'camelCase', { ignores: [] }],
+        'vue/define-emits-declaration': ['error'],
+        'vue/define-macros-order': [
+          'error',
+          {
+            defineExposeLast: true,
+            order: [
+              'definePageMeta', // nuxt
 
-            'defineProps',
-            'defineModel',
-            'defineEmits',
-            'defineOptions',
-            'defineSlots',
+              'defineProps',
+              'defineModel',
+              'defineEmits',
+              'defineOptions',
+              'defineSlots',
 
-            // nuxt (can use props)
-            'createUseAsyncData',
-            'createUseFetch',
+              // nuxt (can use props)
+              'createUseAsyncData',
+              'createUseFetch',
 
-            'onPrehydrate',
-            // /nuxt (can use props)
+              'onPrehydrate',
+              // /nuxt (can use props)
 
-            // nuxi-ui
-            'defineLocale',
-            'defineShortcuts',
-            'extendLocale',
-            'extractShortcuts',
-            // /nuxi-ui
-          ],
-        },
-      ],
-      'vue/define-props-declaration': ['error'],
-      'vue/define-props-destructuring': [
-        'warn',
-        { destructure: 'only-when-assigned' },
-      ],
-      'vue/dot-notation': ['error'],
-      'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
-      'vue/eqeqeq': ['error'],
-      'vue/html-button-has-type': ['error'],
-      'vue/html-comment-content-newline': ['warn'],
-      'vue/html-comment-content-spacing': ['warn'],
-      'vue/html-comment-indent': ['warn'],
-      'vue/html-end-tags': ['error'],
-      'vue/html-self-closing': [
-        'error',
-        {
-          html: { component: 'always', normal: 'never', void: 'always' },
-          math: 'always',
-          svg: 'always',
-        },
-      ],
-      // Keep in sync with `unicorn/filename-case` in `unicorn.js`:
-      // components live in kebab-case files, so the component name is
-      // derived from a kebab-case file name instead of being required to be
-      // PascalCase in the file name itself.
-      'vue/match-component-file-name': [
-        'error',
-        { extensions: ['vue'], shouldMatchCase: false },
-      ],
-      'vue/match-component-import-name': ['error'],
-      'vue/max-attributes-per-line': ['error', { singleline: 3 }],
-      'vue/max-lines-per-block': [
-        'warn',
-        { script: 500, skipBlankLines: true, style: 500, template: 500 },
-      ],
-      'vue/new-line-between-multi-line-property': 'off',
-      'vue/next-tick-style': ['error', 'promise'],
-      'vue/no-child-content': ['error'],
-      'vue/no-console': ['error'],
-      'vue/no-custom-modifiers-on-v-model': 'off',
-      'vue/no-deprecated-delete-set': ['error'],
-      'vue/no-deprecated-model-definition': ['error'],
-      'vue/no-deprecated-scope-attribute': ['error'],
-      'vue/no-deprecated-slot-attribute': ['error'],
-      'vue/no-deprecated-slot-scope-attribute': ['error'],
-      'vue/no-duplicate-attr-inheritance': ['error'],
-      'vue/no-duplicate-class-names': ['error'],
-      'vue/no-empty-component-block': ['error'],
-      'vue/no-import-compiler-macros': ['error'],
-      'vue/no-irregular-whitespace': ['error'],
-      'vue/no-loss-of-precision': ['error'],
-      'vue/no-multiple-objects-in-class': ['error'],
-      'vue/no-multiple-template-root': 'off',
-      'vue/no-negated-condition': ['error'],
-      'vue/no-negated-v-if-condition': ['error'],
-      'vue/no-parsing-error': ['error'],
-      'vue/no-potential-component-option-typo': ['error'],
-      'vue/no-ref-object-reactivity-loss': ['error'],
-      'vue/no-required-prop-with-default': ['error', { autofix: true }],
-      'vue/no-reserved-component-names': [
-        'error',
-        {
-          disallowVue3BuiltInComponents: true,
-          disallowVueBuiltInComponents: true,
-        },
-      ],
-      'vue/no-restricted-component-names': ['error'],
-      'vue/no-restricted-component-options': ['error'],
-      'vue/no-restricted-props': ['error'],
-      'vue/no-root-v-if': ['error'],
-      'vue/no-setup-props-reactivity-loss': ['error'],
-      'vue/no-shadow-native-events': ['error'],
-      'vue/no-static-inline-styles': ['error', { allowBinding: true }],
-      'vue/no-this-in-before-route-enter': ['error'],
-      'vue/no-undef-components': ['error'],
-      'vue/no-undef-directives': ['error'],
-      'vue/no-unsupported-features': ['error'],
-      'vue/no-unused-components': ['error'],
-      'vue/no-unused-emit-declarations': ['error'],
-      'vue/no-unused-properties': [
-        'error',
-        { groups: ['inject', 'props', 'asyncData', 'computed', 'methods'] },
-      ],
-      'vue/no-unused-refs': ['error'],
-      'vue/no-use-computed-property-like-method': ['error'],
-      'vue/no-use-v-else-with-v-for': ['warn'],
-      'vue/no-use-v-if-with-v-for': ['warn', { allowUsingIterationVar: true }],
-      'vue/no-useless-mustaches': ['error'],
-      'vue/no-useless-template-attributes': ['error'],
-      'vue/no-useless-v-bind': ['error'],
-      'vue/no-v-for-template-key': 'off',
-      'vue/no-v-html': ['error', { ignorePattern: '^html' }],
-      'vue/no-v-model-argument': 'off',
-      'vue/no-v-text': ['error'],
-      'vue/no-v-text-v-html-on-component': ['error'],
-      'vue/object-shorthand': ['error'],
-      'vue/order-in-components': 'off',
-      'vue/padding-line-between-blocks': ['error'],
-      'vue/padding-line-between-tags': [
-        'error',
-        [{ blankLine: 'always', next: '*', prev: '*' }],
-      ],
-      'vue/padding-lines-in-component-definition': [
-        'error',
-        { groupSingleLineProperties: true },
-      ],
-      'vue/prefer-define-options': ['error'],
-      'vue/prefer-prop-type-boolean-first': ['error'],
-      'vue/prefer-separate-static-class': ['error'],
-      'vue/prefer-single-event-payload': ['error'],
-      'vue/prefer-true-attribute-shorthand': ['error'],
-      'vue/prefer-use-template-ref': ['error'],
-      'vue/prefer-v-model': ['error'],
-      'vue/quote-props': ['error', 'as-needed'],
-      'vue/require-direct-export': 'off',
-      'vue/require-explicit-slots': ['warn'],
-      'vue/require-macro-variable-name': [
-        'error',
-        {
-          defineEmits: '$emit',
-          defineProps: '$props',
-          defineSlots: '$slots',
-          useAttrs: '$attrs',
-          useSlots: '$slots',
-        },
-      ],
-      'vue/require-typed-object-prop': ['error'],
-      'vue/require-typed-ref': ['error'],
-      'vue/slot-name-casing': ['error', 'kebab-case'],
-      'vue/sort-keys': 'off',
-      'vue/static-class-names-order': ['warn'],
-      'vue/this-in-template': ['error', 'never'],
-      'vue/v-bind-style': [
-        'error',
-        'shorthand',
-        { sameNameShorthand: 'always' },
-      ],
-      'vue/v-for-delimiter-style': ['error'],
-      'vue/v-if-else-key': ['error'],
-      'vue/v-on-event-hyphenation': ['error'],
-      'vue/v-on-handler-style': ['error', 'inline-function'],
-      'vue/valid-define-options': ['error'],
-      'vue/valid-next-tick': ['error'],
-      'vue/valid-v-bind-sync': ['error'],
-      'vue/valid-v-slot': ['error'],
+              // nuxi-ui
+              'defineLocale',
+              'defineShortcuts',
+              'extendLocale',
+              'extractShortcuts',
+              // /nuxi-ui
+            ],
+          },
+        ],
+        'vue/define-props-declaration': ['error'],
+        'vue/define-props-destructuring': [
+          'warn',
+          { destructure: 'only-when-assigned' },
+        ],
+        'vue/dot-notation': ['error'],
+        'vue/enforce-style-attribute': ['error', { allow: ['scoped'] }],
+        'vue/eqeqeq': ['error'],
+        'vue/html-button-has-type': ['error'],
+        'vue/html-comment-content-newline': ['warn'],
+        'vue/html-comment-content-spacing': ['warn'],
+        'vue/html-comment-indent': ['warn'],
+        'vue/html-end-tags': ['error'],
+        'vue/html-self-closing': [
+          'error',
+          {
+            html: { component: 'always', normal: 'never', void: 'always' },
+            math: 'always',
+            svg: 'always',
+          },
+        ],
+        // Keep in sync with `unicorn/filename-case` in `unicorn.js`:
+        // components live in kebab-case files, so the component name is
+        // derived from a kebab-case file name instead of being required to be
+        // PascalCase in the file name itself.
+        'vue/match-component-file-name': [
+          'error',
+          { extensions: ['vue'], shouldMatchCase: false },
+        ],
+        'vue/match-component-import-name': ['error'],
+        'vue/max-attributes-per-line': ['error', { singleline: 3 }],
+        'vue/max-lines-per-block': [
+          'warn',
+          { script: 500, skipBlankLines: true, style: 500, template: 500 },
+        ],
+        'vue/new-line-between-multi-line-property': 'off',
+        'vue/next-tick-style': ['error', 'promise'],
+        'vue/no-child-content': ['error'],
+        'vue/no-console': ['error'],
+        'vue/no-custom-modifiers-on-v-model': 'off',
+        'vue/no-deprecated-delete-set': ['error'],
+        'vue/no-deprecated-model-definition': ['error'],
+        'vue/no-deprecated-scope-attribute': ['error'],
+        'vue/no-deprecated-slot-attribute': ['error'],
+        'vue/no-deprecated-slot-scope-attribute': ['error'],
+        'vue/no-duplicate-attr-inheritance': ['error'],
+        'vue/no-duplicate-class-names': ['error'],
+        'vue/no-empty-component-block': ['error'],
+        'vue/no-import-compiler-macros': ['error'],
+        'vue/no-irregular-whitespace': ['error'],
+        'vue/no-loss-of-precision': ['error'],
+        'vue/no-multiple-objects-in-class': ['error'],
+        'vue/no-multiple-template-root': 'off',
+        'vue/no-negated-condition': ['error'],
+        'vue/no-negated-v-if-condition': ['error'],
+        'vue/no-parsing-error': ['error'],
+        'vue/no-potential-component-option-typo': ['error'],
+        'vue/no-ref-object-reactivity-loss': ['error'],
+        'vue/no-required-prop-with-default': ['error', { autofix: true }],
+        'vue/no-reserved-component-names': [
+          'error',
+          {
+            disallowVue3BuiltInComponents: true,
+            disallowVueBuiltInComponents: true,
+          },
+        ],
+        'vue/no-restricted-component-names': ['error'],
+        'vue/no-restricted-component-options': ['error'],
+        'vue/no-restricted-props': ['error'],
+        'vue/no-root-v-if': ['error'],
+        'vue/no-setup-props-reactivity-loss': ['error'],
+        'vue/no-shadow-native-events': ['error'],
+        'vue/no-static-inline-styles': ['error', { allowBinding: true }],
+        'vue/no-this-in-before-route-enter': ['error'],
+        'vue/no-undef-components': ['error'],
+        'vue/no-undef-directives': ['error'],
+        'vue/no-unsupported-features': ['error'],
+        'vue/no-unused-components': ['error'],
+        'vue/no-unused-emit-declarations': ['error'],
+        'vue/no-unused-properties': [
+          'error',
+          { groups: ['inject', 'props', 'asyncData', 'computed', 'methods'] },
+        ],
+        'vue/no-unused-refs': ['error'],
+        'vue/no-use-computed-property-like-method': ['error'],
+        'vue/no-use-v-else-with-v-for': ['warn'],
+        'vue/no-use-v-if-with-v-for': [
+          'warn',
+          { allowUsingIterationVar: true },
+        ],
+        'vue/no-useless-mustaches': ['error'],
+        'vue/no-useless-template-attributes': ['error'],
+        'vue/no-useless-v-bind': ['error'],
+        'vue/no-v-for-template-key': 'off',
+        'vue/no-v-html': ['error', { ignorePattern: '^html' }],
+        'vue/no-v-model-argument': 'off',
+        'vue/no-v-text': ['error'],
+        'vue/no-v-text-v-html-on-component': ['error'],
+        'vue/object-shorthand': ['error'],
+        'vue/order-in-components': 'off',
+        'vue/padding-line-between-blocks': ['error'],
+        'vue/padding-line-between-tags': [
+          'error',
+          [{ blankLine: 'always', next: '*', prev: '*' }],
+        ],
+        'vue/padding-lines-in-component-definition': [
+          'error',
+          { groupSingleLineProperties: true },
+        ],
+        'vue/prefer-define-options': ['error'],
+        'vue/prefer-prop-type-boolean-first': ['error'],
+        'vue/prefer-separate-static-class': ['error'],
+        'vue/prefer-single-event-payload': ['error'],
+        'vue/prefer-true-attribute-shorthand': ['error'],
+        'vue/prefer-use-template-ref': ['error'],
+        'vue/prefer-v-model': ['error'],
+        'vue/quote-props': ['error', 'as-needed'],
+        'vue/require-direct-export': 'off',
+        'vue/require-explicit-slots': ['warn'],
+        'vue/require-macro-variable-name': [
+          'error',
+          {
+            defineEmits: '$emit',
+            defineProps: '$props',
+            defineSlots: '$slots',
+            useAttrs: '$attrs',
+            useSlots: '$slots',
+          },
+        ],
+        'vue/require-typed-object-prop': ['error'],
+        'vue/require-typed-ref': ['error'],
+        'vue/slot-name-casing': ['error', 'kebab-case'],
+        'vue/sort-keys': 'off',
+        'vue/static-class-names-order': ['warn'],
+        'vue/this-in-template': ['error', 'never'],
+        'vue/v-bind-style': [
+          'error',
+          'shorthand',
+          { sameNameShorthand: 'always' },
+        ],
+        'vue/v-for-delimiter-style': ['error'],
+        'vue/v-if-else-key': ['error'],
+        'vue/v-on-event-hyphenation': ['error'],
+        'vue/v-on-handler-style': ['error', 'inline-function'],
+        'vue/valid-define-options': ['error'],
+        'vue/valid-next-tick': ['error'],
+        'vue/valid-v-bind-sync': ['error'],
+        'vue/valid-v-slot': ['error'],
+      },
     },
-  },
 
-  {
-    files: ['**/*.ts', '**/*.js', '**/*.cjs', '**/*.mjs'],
-    rules: { 'vue/order-in-components': 'off' },
-  },
+    {
+      files: ['**/*.ts', '**/*.js', '**/*.cjs', '**/*.mjs'],
+      rules: { 'vue/order-in-components': 'off' },
+    },
 
-  {
-    files: [
-      '**/app/*.vue',
-      '**/src/*.vue',
-      '**/layouts/**/*.vue',
-      '**/pages/**/*.vue',
-    ],
-    rules: { 'vue/multi-word-component-names': 'off' },
-  },
+    {
+      files: [
+        '**/app/*.vue',
+        '**/src/*.vue',
+        '**/layouts/**/*.vue',
+        '**/pages/**/*.vue',
+      ],
+      rules: { 'vue/multi-word-component-names': 'off' },
+    },
 
-  { files: TEST_FILES, rules: { 'vue/one-component-per-file': 'off' } },
-]);
+    { files: TEST_FILES, rules: { 'vue/one-component-per-file': 'off' } },
+  ]),
+);

@@ -49,12 +49,13 @@ export const IGNORES = [
  * Base config.
  *
  * Provides the file scope, the shared ignore patterns and the global variables.
- * Include it first, then the plugins you actually need.
+ * It is added automatically by `defineConfig`, so you never spread it
+ * yourself.
  *
  * @example
- *   import { base, javascript, unicorn } from '@alexlit/config-eslint';
+ *   import { defineConfig, plugins } from '@alexlit/config-eslint';
  *
- *   export default [...base, ...javascript, ...unicorn];
+ *   export default defineConfig([plugins.javascript(), plugins.unicorn()]);
  */
 export const base = defineConfig([
   { files: FILES, languageOptions: { globals: globals.browser } },
@@ -66,3 +67,23 @@ export const base = defineConfig([
 
   { ignores: IGNORES },
 ]);
+
+/**
+ * Создать фабрику плагина.
+ *
+ * Фабрика возвращает набор flat-конфигов плагина. Переданные опции добавляются
+ * последним блоком и перекрывают правила плагина.
+ *
+ * @param {() => import('eslint').Linter.Config[]} build Конфиги плагина
+ *
+ * @returns {(
+ *   options?: import('eslint').Linter.Config,
+ * ) => import('eslint').Linter.Config[]}
+ */
+export const createPlugin =
+  (build) =>
+  (options = {}) => {
+    const configs = build();
+
+    return Object.keys(options).length > 0 ? [...configs, options] : configs;
+  };

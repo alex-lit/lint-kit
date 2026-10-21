@@ -1,23 +1,33 @@
 import plugin from 'eslint-plugin-jsdoc';
 import { defineConfig } from 'eslint/config';
 
-import { FILES } from '../base.js';
+import { createPlugin, FILES } from '../base.js';
 
-/** @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc) */
-export const jsdoc = defineConfig([
-  { files: FILES, ...plugin.configs['flat/recommended'] },
-  {
-    files: FILES,
-    rules: {
-      'jsdoc/lines-before-block': 'off',
-      'jsdoc/no-undefined-types': 'off',
-      'jsdoc/require-jsdoc': 'off',
-      'jsdoc/require-param-description': 'off',
-      'jsdoc/require-param-type': 'off',
-      'jsdoc/require-returns': 'off',
-      'jsdoc/require-returns-description': 'off',
-      'jsdoc/require-returns-type': 'off',
-      'jsdoc/tag-lines': 'off',
+/**
+ * Правила для JSDoc-комментариев.
+ *
+ * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
+ *
+ * @returns {import('eslint').Linter.Config[]}
+ *
+ * @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
+ */
+export const jsdoc = createPlugin(() =>
+  defineConfig([
+    { files: FILES, ...plugin.configs['flat/recommended'] },
+    {
+      files: FILES,
+      rules: {
+        'jsdoc/lines-before-block': 'off',
+        'jsdoc/no-undefined-types': 'off',
+        'jsdoc/require-jsdoc': 'off',
+        'jsdoc/require-param-description': 'off',
+        'jsdoc/require-param-type': 'off',
+        'jsdoc/require-returns': 'off',
+        'jsdoc/require-returns-description': 'off',
+        'jsdoc/require-returns-type': 'off',
+        'jsdoc/tag-lines': 'off',
+      },
     },
-  },
-]);
+  ]),
+);

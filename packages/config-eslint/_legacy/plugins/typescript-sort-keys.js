@@ -1,5 +1,0 @@
-module.exports = {
-  extends: ['plugin:typescript-sort-keys/recommended'],
-
-  plugins: ['typescript-sort-keys'],
-};

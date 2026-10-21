@@ -4,136 +4,228 @@
 
 # ESLint Configuration
 
-> [!WARNING]  
-> For **eslint version < 9** use
-> [@alexlit/config-eslint@90](https://www.npmjs.com/package/@alexlit/config-eslint?activeTab=versions)
-> or lower.
+Готовая конфигурация [ESLint](https://eslint.org/) в формате flat config:
+настроенные правила для JavaScript, TypeScript, Vue.js, JSON, YAML, импортов,
+Prettier и не только - всё, что обычно приходится настраивать вручную. Вместо
+того чтобы подключать и настраивать каждый плагин по отдельности, соберите
+конфигурацию из готовых модулей.
 
-There are no presets: `base` only provides the shared file scope, ignore
-patterns and globals. Every plugin is enabled explicitly, so you pay only for
-what you use.
+Плагины модульные: по умолчанию ничего не включено - вы сами перечисляете нужные
+в `defineConfig`.
 
-## Installation
+## Установка
 
 ```sh
 npm i @alexlit/config-eslint -D
 ```
 
-## Connection
-
-Always start with `base` (it must be first) and finish with `prettierConfig` (it
-must be last, it disables the formatting rules).
+## Быстрый старт
 
 ```js
 // eslint.config.js
-import {
-  // foundation
-  base,
+import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-  // plugins
-  deMorgan,
-  importX,
-  javascript,
-  jsdoc,
-  json,
-  perfectionist,
-  prettierConfig,
-  regexp,
-  sonar,
-  stylistic,
-  typescript,
-  unicorn,
-
-  // framework plugins
-  pinia,
-  tailwindcss,
-  tanstackQuery,
-  unocss,
-  vitest,
-  vue,
-  vueAccessibility,
-  vueI18n,
-  zod,
-} from '@alexlit/config-eslint';
-
-export default [
-  ...base, // must be first
-
-  ...deMorgan,
-  ...importX,
-  ...javascript,
-  ...jsdoc,
-  ...json,
-  ...perfectionist,
-  ...regexp,
-  ...sonar,
-  ...stylistic,
-  ...typescript,
-  ...unicorn,
-
-  ...pinia,
-  ...tanstackQuery,
-  ...unocss,
-  ...vitest,
-  ...vue,
-  ...vueAccessibility,
-  ...vueI18n,
-  ...zod,
-
-  // `tailwindcss` is the only plugin exported as a factory, because it needs a path to your CSS entrypoint
-  ...tailwindcss({ cssConfigPath: './src/assets/css/main.css' }),
-
-  ...prettierConfig, // must be last
-
-  // Custom rules example
-  // { files: ['**/*.js'], rules: { 'no-console': 'off' } },
-];
+export default defineConfig([
+  plugins.javascript(),
+  plugins.typescript(),
+  plugins.unicorn(),
+  plugins.prettierConfig(),
+]);
 ```
 
-Drop what you do not need.
+Каждый вызов `plugins.*()` - отдельный плагин. Добавьте только то, что нужно
+проекту; полный список - в разделе [Плагины](#плагины).
 
-## Type-aware rules (optional)
+Базовые настройки (`base`) добавляются автоматически и всегда идут первыми:
+набор файлов, общие игнорируемые пути, глобальные переменные браузера и Node.js,
+а также запрет неиспользуемых директив `eslint-disable`.
 
-Type-aware rules (`no-floating-promises`, `no-misused-promises`,
-`await-thenable`, `no-unsafe-*`, `switch-exhaustiveness-check`,
-`no-unnecessary-condition`, …) require type information, which makes linting
-slower. They are not enabled by default.
+`plugins.prettierConfig()` должен быть последним - он отключает правила,
+конфликтующие с Prettier.
 
-To enable them, replace `typescript` with `typescriptTypeChecked`:
+Больше плагинов - просто допишите их в массив:
 
 ```js
-import {
-  base,
-  typescriptTypeChecked,
-  prettierConfig,
-} from '@alexlit/config-eslint';
+// eslint.config.js
+import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default [
-  ...base,
-  // ...other plugins
-  ...typescriptTypeChecked, // instead of ...typescript
-  ...prettierConfig,
-];
+export default defineConfig([
+  // базовые
+  plugins.javascript(),
+  plugins.deMorgan(),
+  plugins.importX(),
+  plugins.jsdoc(),
+  plugins.json(),
+  plugins.perfectionist(),
+  plugins.regexp(),
+  plugins.sonar(),
+  plugins.stylistic(),
+  plugins.typescript(),
+  plugins.unicorn(),
+
+  // проектные
+  plugins.pinia(),
+  plugins.tanstackQuery(),
+  plugins.unocss(),
+  plugins.vitest(),
+  plugins.vue(),
+  plugins.vueAccessibility(),
+  plugins.vueI18n(),
+  plugins.zod(),
+
+  // стилистика
+  plugins.prettierConfig(),
+]);
 ```
 
-> [!NOTE] `typescriptTypeChecked` needs a `tsconfig.json` in your project root
-> (`projectService` is used, so keep both `tsconfig.json` and
-> `tsconfig.node.json` etc. in a single root if needed). Use it instead of
-> `typescript`, not alongside.
+## Настройка
 
-## Formatting: `prettier` vs `prettierConfig`
+### Правила конкретного плагина
 
-Both are included, and they are **not** interchangeable.
+Чтобы переопределить правила одного плагина, передайте объект в его вызов. Опции
+добавляются последним блоком и перекрывают правила плагина:
 
-| Export           | From                     | Effect                                           |
-| ---------------- | ------------------------ | ------------------------------------------------ |
-| `prettierConfig` | `eslint-config-prettier` | only turns off formatting rules that conflict    |
-| `prettier`       | `eslint-plugin-prettier` | additionally runs Prettier itself as a lint rule |
+```js
+// eslint.config.js
+import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-Use `prettierConfig` when Prettier runs as a separate step (editor, `prettier`
-CLI, Husky). Use `prettier` if you want ESLint to report and fix formatting in
-one pass - it is slower and duplicates the formatter.
+export default defineConfig([
+  plugins.javascript({ rules: { 'no-console': 'off' } }),
+  plugins.perfectionist({ rules: { 'perfectionist/sort-imports': 'off' } }),
+]);
+```
 
-## Usefull links
+### Общие настройки
+
+Второй аргумент `defineConfig` - общие flat-опции ESLint: собственные правила,
+файлы для игнора, настройки и т.д. Он перебивает настройки всех плагинов:
+
+```js
+// eslint.config.js
+import { defineConfig, plugins } from '@alexlit/config-eslint';
+
+export default defineConfig([plugins.javascript()], {
+  ignores: ['fixtures/**'],
+  rules: { 'no-console': 'off' },
+});
+```
+
+### Особые опции
+
+У `plugins.tailwindcss()` есть собственная опция `cssConfigPath` - путь к
+CSS-файлу с конфигурацией Tailwind CSS:
+
+```js
+// eslint.config.js
+import path from 'node:path';
+
+import { defineConfig, plugins } from '@alexlit/config-eslint';
+
+export default defineConfig([
+  plugins.tailwindcss({
+    cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+  }),
+]);
+```
+
+## Плагины
+
+| Плагин                            | Что делает                                    | Пакет                               |
+| --------------------------------- | --------------------------------------------- | ----------------------------------- |
+| `plugins.deMorgan()`              | Упрощает логические выражения                 | `eslint-plugin-de-morgan`           |
+| `plugins.importX()`               | Проверяет импорты и модули                    | `eslint-plugin-import-x`            |
+| `plugins.javascript()`            | Базовые правила JavaScript                    | `@eslint/js`                        |
+| `plugins.jsdoc()`                 | Проверяет JSDoc-комментарии                   | `eslint-plugin-jsdoc`               |
+| `plugins.json()`                  | Проверяет JSON, JSONC, JSON5 и YAML           | `@eslint/json`                      |
+| `plugins.perfectionist()`         | Сортирует импорты, объекты, интерфейсы и типы | `eslint-plugin-perfectionist`       |
+| `plugins.pinia()`                 | Проверяет Pinia-хранилища                     | `eslint-plugin-pinia`               |
+| `plugins.prettier()`              | Форматирует код самим Prettier                | `eslint-plugin-prettier`            |
+| `plugins.prettierConfig()`        | Отключает правила, конфликтующие с Prettier   | `eslint-config-prettier`            |
+| `plugins.regexp()`                | Проверяет регулярные выражения                | `eslint-plugin-regexp`              |
+| `plugins.sonar()`                 | Проверяет код по правилам SonarJS             | `eslint-plugin-sonarjs`             |
+| `plugins.stylistic()`             | Проверяет форматирование и стиль кода         | `@stylistic/eslint-plugin`          |
+| `plugins.tailwindcss()`           | Проверяет классы Tailwind CSS                 | `eslint-plugin-tailwindcss`         |
+| `plugins.tanstackQuery()`         | Проверяет TanStack Query                      | `@tanstack/eslint-plugin-query`     |
+| `plugins.typescript()`            | Проверяет TypeScript без анализа типов        | `typescript-eslint`                 |
+| `plugins.typescriptTypeChecked()` | Проверяет TypeScript с анализом типов         | `typescript-eslint`                 |
+| `plugins.unicorn()`               | Проверяет код по правилам unicorn             | `eslint-plugin-unicorn`             |
+| `plugins.unocss()`                | Проверяет UnoCSS                              | `@unocss/eslint-config`             |
+| `plugins.vitest()`                | Проверяет тесты Vitest                        | `@vitest/eslint-plugin`             |
+| `plugins.vue()`                   | Проверяет Vue.js-компоненты                   | `eslint-plugin-vue`                 |
+| `plugins.vueAccessibility()`      | Проверяет доступность Vue.js-компонентов      | `eslint-plugin-vuejs-accessibility` |
+| `plugins.vueI18n()`               | Проверяет Vue.js I18n                         | `@intlify/eslint-plugin-vue-i18n`   |
+| `plugins.zod()`                   | Проверяет Zod-схемы                           | `eslint-plugin-zod`                 |
+
+## Type-aware правила
+
+Type-aware правила (`no-floating-promises`, `no-misused-promises`,
+`await-thenable`, `no-unsafe-*`, `switch-exhaustiveness-check`,
+`no-unnecessary-condition`, …) требуют информации о типах, из-за чего линтинг
+замедляется. По умолчанию они не включены.
+
+Чтобы их включить, замените `plugins.typescript()` на
+`plugins.typescriptTypeChecked()`:
+
+```js
+// eslint.config.js
+import { defineConfig, plugins } from '@alexlit/config-eslint';
+
+export default defineConfig([
+  plugins.javascript(),
+  plugins.typescriptTypeChecked(), // вместо plugins.typescript()
+  plugins.prettierConfig(),
+]);
+```
+
+> [!NOTE]
+>
+> `plugins.typescriptTypeChecked()` требует `tsconfig.json` в корне проекта
+> (используется `projectService`, поэтому держите `tsconfig.json` и
+> `tsconfig.node.json` в одном корне, если нужно). Используйте его вместо
+> `plugins.typescript()`, а не вместе с ним.
+
+## Prettier или prettierConfig
+
+Оба варианта доступны, и они **не взаимозаменяемы**.
+
+| Плагин                     | Пакет                    | Что делает                                                       |
+| -------------------------- | ------------------------ | ---------------------------------------------------------------- |
+| `plugins.prettierConfig()` | `eslint-config-prettier` | Только отключает форматирующие правила, конфликтующие с Prettier |
+| `plugins.prettier()`       | `eslint-plugin-prettier` | Дополнительно запускает сам Prettier как правило ESLint          |
+
+Используйте `plugins.prettierConfig()`, если Prettier запускается отдельным
+шагом (редактор, CLI `prettier`, Husky). Используйте `plugins.prettier()`, если
+хотите, чтобы ESLint сам сообщал о форматировании и исправлял его за один
+проход - это медленнее и дублирует форматтер.
+
+## Миграция с v161
+
+v162 - breaking-релиз: плагины по умолчанию больше нет, всё подключается явно, а
+каждый плагин стал фабрикой.
+
+| v161                          | v162                                               |
+| ----------------------------- | -------------------------------------------------- |
+| `import { base } from ...`    | `import { defineConfig, plugins } from ...`        |
+| `[...base, ...javascript]`    | `defineConfig([plugins.javascript()])`             |
+| `...javascript`               | `plugins.javascript()`                             |
+| `...prettierConfig`           | `plugins.prettierConfig()` (последним)             |
+| `...tailwindcss({ ... })`     | `plugins.tailwindcss({ ... })`                     |
+| `{ files: [...], rules: {} }` | `defineConfig([...], { files: [...], rules: {} })` |
+
+Плоские экспорты плагинов (`javascript`, `unicorn`, `vue` и другие) удалены -
+используйте `plugins.<name>()`. Базовые настройки (`base`) добавляются
+автоматически, разворачивать их вручную больше не нужно.
+
+## Разработка
+
+- Просмотр итоговой конфигурации:
+
+  ```sh
+  npm run inspect
+  ```
+
+## Полезные ссылки
 
 - [Awesome ESLint](https://github.com/dustinspecker/awesome-eslint)
+- [ESLint - Documentation](https://eslint.org/docs/latest/)
+- [ESLint - Configure Flat Config](https://eslint.org/docs/latest/use/configure/configuration-files)
