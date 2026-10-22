@@ -1,18 +1,16 @@
 import plugin from 'eslint-plugin-perfectionist';
 import { defineConfig } from 'eslint/config';
 
-import { createPlugin, FILES } from '../base.js';
+import { FILES } from '../base.js';
 
 /**
  * Правила сортировки импортов, объектов, интерфейсов и типов.
- *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-perfectionist](https://perfectionist.dev)
  */
-export const perfectionist = createPlugin(() =>
+export const perfectionist = () =>
   defineConfig([
     { ...plugin.configs['recommended-natural'], files: FILES },
     {
@@ -121,5 +119,4 @@ export const perfectionist = createPlugin(() =>
         ],
       },
     },
-  ]),
-);
+  ]);

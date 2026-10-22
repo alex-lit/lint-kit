@@ -2,18 +2,16 @@ import plugin from '@eslint/json';
 import { defineConfig } from 'eslint/config';
 import * as yamlParser from 'yaml-eslint-parser';
 
-import { createPlugin, YAML_FILES } from '../base.js';
+import { YAML_FILES } from '../base.js';
 
 /**
  * Правила для JSON, JSONC, JSON5 и YAML-файлов.
- *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [ESLint/JSON](https://github.com/eslint/json)
  */
-export const json = createPlugin(() =>
+export const json = () =>
   defineConfig([
     {
       extends: ['json/recommended'],
@@ -39,5 +37,4 @@ export const json = createPlugin(() =>
     },
 
     { files: YAML_FILES, languageOptions: { parser: yamlParser } },
-  ]),
-);
+  ]);

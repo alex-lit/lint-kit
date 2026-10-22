@@ -25,8 +25,8 @@ import { vue } from './plugins/vue.js';
 import { zod } from './plugins/zod.js';
 
 /**
- * Фабрики плагинов. Каждый плагин подключается явно: передайте
- * `plugins.<name>()` в `defineConfig`
+ * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который нужно
+ * развернуть через spread: `...plugins.<name>()`.
  */
 export const plugins = {
   deMorgan,
@@ -58,26 +58,24 @@ export const plugins = {
  * Создать конфигурацию ESLint
  *
  * Базовые настройки (`base`) добавляются автоматически и всегда идут первыми.
- * Дальше идут конфиги плагинов в том порядке, в котором вы их перечислили, а
- * последним - общие опции, которые перекрывают правила плагинов.
+ * Разворачивайте вызовы плагинов через spread-оператор, а переопределения
+ * добавляйте прямо в массив.
  *
  * @example
  *   import { defineConfig, plugins } from '@alexlit/config-eslint';
  *
- *   export default defineConfig(
- *     [plugins.javascript(), plugins.unicorn(), plugins.prettierConfig()],
+ *   export default defineConfig([
+ *     ...plugins.javascript(),
+ *     ...plugins.unicorn(),
+ *     ...plugins.prettierConfig(), // последним
  *     { rules: { 'no-console': 'off' } },
- *   );
+ *   ]);
  *
- * @param {import('eslint').Linter.Config[][]} [pluginConfigs] - Конфиги
- *   плагинов, напр. `[plugins.javascript()]`
- * @param {import('eslint').Linter.Config} [options] - Общие flat-опции,
- *   наивысший приоритет
+ * @param {import('eslint').Linter.Config[]} [configs] - Массив flat-конфигов
  *
  * @returns {import('eslint').Linter.Config[]}
  */
-export const defineConfig = (pluginConfigs = [], options = {}) =>
-  defineFlatConfig([base, pluginConfigs, options]);
+export const defineConfig = (configs = []) => defineFlatConfig([base, configs]);
 
 export {
   base,

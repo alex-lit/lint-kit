@@ -37,6 +37,7 @@ export const IGNORES = [
   '**/.*',
   '**/.*/**',
   '**/_deprecated/**',
+  '**/_legacy/**',
   '**/build/**',
   '**/dist/**',
   '**/docs/**',
@@ -67,23 +68,3 @@ export const base = defineConfig([
 
   { ignores: IGNORES },
 ]);
-
-/**
- * Создать фабрику плагина.
- *
- * Фабрика возвращает набор flat-конфигов плагина. Переданные опции добавляются
- * последним блоком и перекрывают правила плагина.
- *
- * @param {() => import('eslint').Linter.Config[]} build Конфиги плагина
- *
- * @returns {(
- *   options?: import('eslint').Linter.Config,
- * ) => import('eslint').Linter.Config[]}
- */
-export const createPlugin =
-  (build) =>
-  (options = {}) => {
-    const configs = build();
-
-    return Object.keys(options).length > 0 ? [...configs, options] : configs;
-  };

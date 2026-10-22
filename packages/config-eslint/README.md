@@ -15,7 +15,7 @@ Prettier и не только - всё, что обычно приходится
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-eslint -D
 ```
 
@@ -26,24 +26,23 @@ npm i @alexlit/config-eslint -D
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
 export default defineConfig([
-  plugins.javascript(),
-  plugins.typescript(),
-  plugins.unicorn(),
-  plugins.prettierConfig(),
+  ...plugins.javascript(),
+  ...plugins.typescript(),
+  ...plugins.unicorn(),
+  ...plugins.prettierConfig(),
 ]);
 ```
 
-Каждый вызов `plugins.*()` - отдельный плагин. Добавьте только то, что нужно
-проекту; полный список - в разделе [Плагины](#плагины).
+Каждый плагин возвращает массив блоков конфигурации, поэтому его нужно
+развернуть оператором spread (`...`). Добавьте только то, что нужно проекту;
+полный список - в разделе [Плагины](#плагины).
 
-Базовые настройки (`base`) добавляются автоматически и всегда идут первыми:
-набор файлов, общие игнорируемые пути, глобальные переменные браузера и Node.js,
-а также запрет неиспользуемых директив `eslint-disable`.
+> [!NOTE]
+>
+> `plugins.prettierConfig()` должен быть последним - он отключает правила,
+> конфликтующие с Prettier.
 
-`plugins.prettierConfig()` должен быть последним - он отключает правила,
-конфликтующие с Prettier.
-
-Больше плагинов - просто допишите их в массив:
+Больше плагинов - просто допишите их в массив. Пример:
 
 ```js
 // eslint.config.js
@@ -51,80 +50,33 @@ import { defineConfig, plugins } from '@alexlit/config-eslint';
 
 export default defineConfig([
   // базовые
-  plugins.javascript(),
-  plugins.deMorgan(),
-  plugins.importX(),
-  plugins.jsdoc(),
-  plugins.json(),
-  plugins.perfectionist(),
-  plugins.regexp(),
-  plugins.sonar(),
-  plugins.stylistic(),
-  plugins.typescript(),
-  plugins.unicorn(),
+  ...plugins.deMorgan(),
+  ...plugins.importX(),
+  ...plugins.javascript(),
+  ...plugins.jsdoc(),
+  ...plugins.json(),
+  ...plugins.perfectionist(),
+  ...plugins.regexp(),
+  ...plugins.sonar(),
+  ...plugins.stylistic(),
+  ...plugins.typescript(),
+  ...plugins.unicorn(),
 
   // проектные
-  plugins.pinia(),
-  plugins.tanstackQuery(),
-  plugins.unocss(),
-  plugins.vitest(),
-  plugins.vue(),
-  plugins.vueAccessibility(),
-  plugins.vueI18n(),
-  plugins.zod(),
+  ...plugins.pinia(),
+  ...plugins.tanstackQuery(),
+  ...plugins.unocss(),
+  ...plugins.vitest(),
+  ...plugins.vue(),
+  ...plugins.vueAccessibility(),
+  ...plugins.vueI18n(),
+  ...plugins.zod(),
+
+  // дополнительные правила
+  { ignores: ['fixtures/**'], rules: { 'no-console': 'off' } },
 
   // стилистика
-  plugins.prettierConfig(),
-]);
-```
-
-## Настройка
-
-### Правила конкретного плагина
-
-Чтобы переопределить правила одного плагина, передайте объект в его вызов. Опции
-добавляются последним блоком и перекрывают правила плагина:
-
-```js
-// eslint.config.js
-import { defineConfig, plugins } from '@alexlit/config-eslint';
-
-export default defineConfig([
-  plugins.javascript({ rules: { 'no-console': 'off' } }),
-  plugins.perfectionist({ rules: { 'perfectionist/sort-imports': 'off' } }),
-]);
-```
-
-### Общие настройки
-
-Второй аргумент `defineConfig` - общие flat-опции ESLint: собственные правила,
-файлы для игнора, настройки и т.д. Он перебивает настройки всех плагинов:
-
-```js
-// eslint.config.js
-import { defineConfig, plugins } from '@alexlit/config-eslint';
-
-export default defineConfig([plugins.javascript()], {
-  ignores: ['fixtures/**'],
-  rules: { 'no-console': 'off' },
-});
-```
-
-### Особые опции
-
-У `plugins.tailwindcss()` есть собственная опция `cssConfigPath` - путь к
-CSS-файлу с конфигурацией Tailwind CSS:
-
-```js
-// eslint.config.js
-import path from 'node:path';
-
-import { defineConfig, plugins } from '@alexlit/config-eslint';
-
-export default defineConfig([
-  plugins.tailwindcss({
-    cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
-  }),
+  ...plugins.prettierConfig(),
 ]);
 ```
 
@@ -156,6 +108,26 @@ export default defineConfig([
 | `plugins.vueI18n()`               | Проверяет Vue.js I18n                         | `@intlify/eslint-plugin-vue-i18n`   |
 | `plugins.zod()`                   | Проверяет Zod-схемы                           | `eslint-plugin-zod`                 |
 
+## Настройки Tailwind CSS
+
+У `plugins.tailwindcss()` есть собственные настройки плагина - путь к CSS-файлу
+с конфигурацией Tailwind CSS (`cssConfigPath`):
+
+```js
+// eslint.config.js
+import path from 'node:path';
+
+import { defineConfig, plugins } from '@alexlit/config-eslint';
+
+export default defineConfig([
+  ...plugins.tailwindcss({
+    cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+  }),
+]);
+```
+
+По умолчанию используется путь `./styles/tailwind.css`.
+
 ## Type-aware правила
 
 Type-aware правила (`no-floating-promises`, `no-misused-promises`,
@@ -171,9 +143,9 @@ Type-aware правила (`no-floating-promises`, `no-misused-promises`,
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
 export default defineConfig([
-  plugins.javascript(),
-  plugins.typescriptTypeChecked(), // вместо plugins.typescript()
-  plugins.prettierConfig(),
+  ...plugins.javascript(),
+  ...plugins.typescriptTypeChecked(), // вместо plugins.typescript()
+  ...plugins.prettierConfig(),
 ]);
 ```
 
@@ -198,31 +170,13 @@ export default defineConfig([
 хотите, чтобы ESLint сам сообщал о форматировании и исправлял его за один
 проход - это медленнее и дублирует форматтер.
 
-## Миграция с v161
-
-v162 - breaking-релиз: плагины по умолчанию больше нет, всё подключается явно, а
-каждый плагин стал фабрикой.
-
-| v161                          | v162                                               |
-| ----------------------------- | -------------------------------------------------- |
-| `import { base } from ...`    | `import { defineConfig, plugins } from ...`        |
-| `[...base, ...javascript]`    | `defineConfig([plugins.javascript()])`             |
-| `...javascript`               | `plugins.javascript()`                             |
-| `...prettierConfig`           | `plugins.prettierConfig()` (последним)             |
-| `...tailwindcss({ ... })`     | `plugins.tailwindcss({ ... })`                     |
-| `{ files: [...], rules: {} }` | `defineConfig([...], { files: [...], rules: {} })` |
-
-Плоские экспорты плагинов (`javascript`, `unicorn`, `vue` и другие) удалены -
-используйте `plugins.<name>()`. Базовые настройки (`base`) добавляются
-автоматически, разворачивать их вручную больше не нужно.
-
 ## Разработка
 
-- Просмотр итоговой конфигурации:
+Просмотр итоговой конфигурации:
 
-  ```sh
-  npm run inspect
-  ```
+```bash
+npm run inspect
+```
 
 ## Полезные ссылки
 

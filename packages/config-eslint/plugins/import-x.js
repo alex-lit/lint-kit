@@ -3,7 +3,7 @@ import { createNodeResolver } from 'eslint-plugin-import-x/node-resolver';
 import { defineConfig } from 'eslint/config';
 import vueParser from 'vue-eslint-parser';
 
-import { createPlugin, DATA_FILES, FILES, VUE_FILES } from '../base.js';
+import { DATA_FILES, FILES, VUE_FILES } from '../base.js';
 
 const EXTENSIONS = [
   '.ts',
@@ -21,13 +21,11 @@ const EXTENSIONS = [
 /**
  * Правила для импортов и модулей.
  *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
- *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
  */
-export const importX = createPlugin(() =>
+export const importX = () =>
   defineConfig([
     { ...plugin.flatConfigs.recommended, files: FILES, ignores: DATA_FILES },
 
@@ -73,5 +71,4 @@ export const importX = createPlugin(() =>
         'import-x/unambiguous': 'off',
       },
     },
-  ]),
-);
+  ]);

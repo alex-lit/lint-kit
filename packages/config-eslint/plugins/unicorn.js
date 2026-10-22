@@ -1,18 +1,16 @@
 import plugin from 'eslint-plugin-unicorn';
 import { defineConfig } from 'eslint/config';
 
-import { createPlugin, DTS_FILES, FILES, VUE_FILES } from '../base.js';
+import { DTS_FILES, FILES, VUE_FILES } from '../base.js';
 
 /**
  * Правила unicorn.
- *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
  */
-export const unicorn = createPlugin(() =>
+export const unicorn = () =>
   defineConfig([
     { ...plugin.configs.recommended, files: FILES },
     {
@@ -80,5 +78,4 @@ export const unicorn = createPlugin(() =>
       files: ['**/temp/**/*.vue'],
       rules: { 'unicorn/name-replacements': 'off' },
     },
-  ]),
-);
+  ]);

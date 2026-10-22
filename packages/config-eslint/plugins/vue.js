@@ -2,19 +2,17 @@ import plugin from 'eslint-plugin-vue';
 import { defineConfig } from 'eslint/config';
 import typescript from 'typescript-eslint';
 
-import { createPlugin, DATA_FILES, TEST_FILES, VUE_FILES } from '../base.js';
+import { DATA_FILES, TEST_FILES, VUE_FILES } from '../base.js';
 import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 
 /**
  * Правила для Vue.js.
  *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
- *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
  */
-export const vue = createPlugin(() =>
+export const vue = () =>
   defineConfig([
     ...plugin.configs['flat/recommended'].map((config) => ({
       ...config,
@@ -270,5 +268,4 @@ export const vue = createPlugin(() =>
     },
 
     { files: TEST_FILES, rules: { 'vue/one-component-per-file': 'off' } },
-  ]),
-);
+  ]);

@@ -8,27 +8,26 @@ const DEFAULT_CSS_CONFIG_PATH = './styles/tailwind.css';
 /**
  * Правила для Tailwind CSS.
  *
- * Опция `cssConfigPath` - путь к CSS-файлу с Tailwind-конфигурацией. Остальные
- * опции - произвольные flat-опции ESLint, они добавляются отдельным блоком.
- *
  * @example
  *   import path from 'node:path';
+ *   import { defineConfig, plugins } from '@alexlit/config-eslint';
  *
- *   plugins.tailwindcss({
- *     cssConfigPath: path.resolve(import.meta.dirname, 'src/tailwind.css'),
- *   });
+ *   export default defineConfig([
+ *     plugins.tailwindcss({
+ *       cssConfigPath: path.resolve(import.meta.dirname, 'src/styles.css'),
+ *     }),
+ *   ]);
  *
- * @param {import('eslint').Linter.Config & { cssConfigPath?: string }} [options]
- *   - Дополнительные flat-опции
+ * @param {import('eslint-plugin-tailwindcss').PluginSettings} [settings] -
+ *   Настройки плагина `tailwindcss`. По умолчанию `cssConfigPath` равен
+ *   `./styles/tailwind.css`.
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
  */
-export const tailwindcss = (options = {}) => {
-  const { cssConfigPath, ...flat } = options;
-
-  return defineConfig([
+export const tailwindcss = (settings = {}) =>
+  defineConfig([
     {
       files: FILES,
       plugins: { tailwindcss: plugin },
@@ -39,13 +38,7 @@ export const tailwindcss = (options = {}) => {
       },
       settings: {
         /** @type {import('eslint-plugin-tailwindcss').PluginSettings} */
-        tailwindcss: {
-          cssConfigPath: DEFAULT_CSS_CONFIG_PATH,
-          ...(cssConfigPath !== undefined && { cssConfigPath }),
-        },
+        tailwindcss: { cssConfigPath: DEFAULT_CSS_CONFIG_PATH, ...settings },
       },
     },
-
-    ...(Object.keys(flat).length > 0 ? [flat] : []),
   ]);
-};

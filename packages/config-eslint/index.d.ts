@@ -4,62 +4,56 @@ import type { Linter } from 'eslint';
 export type Config = Linter.Config;
 
 /**
- * Опции плагина или общие опции - произвольные flat-опции ESLint (`files`,
- * `ignores`, `rules`, `settings`, `languageOptions` и т.д.).
- */
-export type Options = Linter.Config;
-
-/**
- * Фабрики плагинов. Каждый плагин подключается явно: передайте
- * `plugins.<name>()` в `defineConfig`.
+ * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который нужно
+ * развернуть через spread-оператор: `...plugins.<name>()`.
  */
 export interface Plugins {
   /** @see eslint-plugin-de-morgan */
-  deMorgan(options?: Options): Config[];
+  deMorgan(): Config[];
   /** @see eslint-plugin-import-x */
-  importX(options?: Options): Config[];
+  importX(): Config[];
   /** @see eslint */
-  javascript(options?: Options): Config[];
+  javascript(): Config[];
   /** @see eslint-plugin-jsdoc */
-  jsdoc(options?: Options): Config[];
+  jsdoc(): Config[];
   /** @see ESLint/JSON */
-  json(options?: Options): Config[];
+  json(): Config[];
   /** @see eslint-plugin-perfectionist */
-  perfectionist(options?: Options): Config[];
+  perfectionist(): Config[];
   /** @see eslint-plugin-pinia */
-  pinia(options?: Options): Config[];
+  pinia(): Config[];
   /** @see eslint-plugin-prettier */
-  prettier(options?: Options): Config[];
+  prettier(): Config[];
   /** @see eslint-config-prettier */
-  prettierConfig(options?: Options): Config[];
+  prettierConfig(): Config[];
   /** @see eslint-plugin-regexp */
-  regexp(options?: Options): Config[];
+  regexp(): Config[];
   /** @see eslint-plugin-sonarjs */
-  sonar(options?: Options): Config[];
+  sonar(): Config[];
   /** @see @stylistic/eslint-plugin */
-  stylistic(options?: Options): Config[];
+  stylistic(): Config[];
   /** @see eslint-plugin-tailwindcss */
-  tailwindcss(options?: Options & TailwindcssOptions): Config[];
+  tailwindcss(settings?: TailwindcssSettings): Config[];
   /** @see @tanstack/query */
-  tanstackQuery(options?: Options): Config[];
+  tanstackQuery(): Config[];
   /** @see typescript-eslint */
-  typescript(options?: Options): Config[];
+  typescript(): Config[];
   /** @see typescript-eslint */
-  typescriptTypeChecked(options?: Options): Config[];
+  typescriptTypeChecked(): Config[];
   /** @see eslint-plugin-unicorn */
-  unicorn(options?: Options): Config[];
+  unicorn(): Config[];
   /** @see @unocss/eslint-config */
-  unocss(options?: Options): Config[];
+  unocss(): Config[];
   /** @see eslint-plugin-vitest */
-  vitest(options?: Options): Config[];
+  vitest(): Config[];
   /** @see eslint-plugin-vue */
-  vue(options?: Options): Config[];
+  vue(): Config[];
   /** @see eslint-plugin-vuejs-accessibility */
-  vueAccessibility(options?: Options): Config[];
+  vueAccessibility(): Config[];
   /** @see eslint-plugin-vue-i18n */
-  vueI18n(options?: Options): Config[];
+  vueI18n(): Config[];
   /** @see eslint-plugin-zod */
-  zod(options?: Options): Config[];
+  zod(): Config[];
 }
 
 /** Ограничение синтаксиса - сообщение об ошибке и селектор AST. */
@@ -68,8 +62,9 @@ export interface RestrictedSyntax {
   selector: string;
 }
 
-/** Опции Tailwind CSS. */
-export interface TailwindcssOptions {
+/** Настройки eslint-plugin-tailwindcss. */
+export interface TailwindcssSettings {
+  [key: string]: unknown;
   /** Путь к CSS-файлу с Tailwind-конфигурацией */
   cssConfigPath?: string;
 }
@@ -99,13 +94,19 @@ export declare const YAML_FILES: string[];
  * Создать конфигурацию ESLint.
  *
  * Базовые настройки (`base`) добавляются автоматически и всегда идут первыми.
- * Дальше идут конфиги плагинов в том порядке, в котором вы их перечислили, а
- * последним - общие опции, которые перекрывают правила плагинов.
+ * Разворачивайте вызовы плагинов через spread-оператор, а переопределения
+ * добавляйте прямо в массив.
  *
- * @param pluginConfigs - Конфиги плагинов, напр. `[plugins.javascript()]`
- * @param options - Общие flat-опции, наивысший приоритет
+ * @example
+ *   import { defineConfig, plugins } from '@alexlit/config-eslint';
+ *
+ *   export default defineConfig([
+ *     ...plugins.javascript(),
+ *     ...plugins.unicorn(),
+ *     ...plugins.prettierConfig(),
+ *     { rules: { 'no-console': 'off' } },
+ *   ]);
+ *
+ * @param configs - Массив flat-конфигов
  */
-export declare function defineConfig(
-  pluginConfigs?: Config[][],
-  options?: Options,
-): Config[];
+export declare function defineConfig(configs?: Config[]): Config[];

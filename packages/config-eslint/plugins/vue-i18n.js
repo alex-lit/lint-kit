@@ -1,18 +1,16 @@
 import plugin from '@intlify/eslint-plugin-vue-i18n';
 import { defineConfig } from 'eslint/config';
 
-import { createPlugin, DATA_FILES, VUE_FILES } from '../base.js';
+import { DATA_FILES, VUE_FILES } from '../base.js';
 
 /**
  * Правила для Vue.js I18n.
- *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/)
  */
-export const vueI18n = createPlugin(() =>
+export const vueI18n = () =>
   defineConfig([
     ...plugin.configs['flat/recommended'].map((config) => ({
       ...config,
@@ -45,5 +43,4 @@ export const vueI18n = createPlugin(() =>
         },
       },
     },
-  ]),
-);
+  ]);

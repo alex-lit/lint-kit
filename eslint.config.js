@@ -1,65 +1,32 @@
-import {
-  base,
-  deMorgan,
-  importX,
-  javascript,
-  jsdoc,
-  json,
-  perfectionist,
-  prettierConfig,
-  regexp,
-  sonar,
-  stylistic,
-  tailwindcss,
-  tanstackQuery,
-  typescriptTypeChecked,
-  unicorn,
-  vitest,
-  vue,
-  vueAccessibility,
-  vueI18n,
-  zod,
-} from '@alexlit/config-eslint';
+import { defineConfig, plugins } from '@alexlit/config-eslint';
 import path from 'node:path';
 
-export default [
-  ...base, // must be first
-
-  ...javascript,
-  ...deMorgan,
-  ...importX,
-  ...jsdoc,
-  ...json,
-  ...perfectionist,
-  ...regexp,
-  ...sonar,
-  ...stylistic,
-  ...typescriptTypeChecked,
-  ...unicorn,
-  ...vue,
-  ...vueAccessibility,
-  ...vueI18n,
-
-  ...tanstackQuery,
-  ...vitest,
-  ...zod,
-
-  ...tailwindcss({
+export default defineConfig([
+  ...plugins.javascript(),
+  ...plugins.deMorgan(),
+  ...plugins.importX(),
+  ...plugins.jsdoc(),
+  ...plugins.json(),
+  ...plugins.perfectionist(),
+  ...plugins.regexp(),
+  ...plugins.sonar(),
+  ...plugins.stylistic(),
+  ...plugins.typescriptTypeChecked(),
+  ...plugins.unicorn(),
+  ...plugins.vue(),
+  ...plugins.vueAccessibility(),
+  ...plugins.vueI18n(),
+  ...plugins.tanstackQuery(),
+  ...plugins.vitest(),
+  ...plugins.zod(),
+  ...plugins.tailwindcss({
     cssConfigPath: path.resolve(
       import.meta.dirname,
       'examples/css.tailwind.css',
     ),
   }),
 
-  ...prettierConfig, // must be last
+  { files: ['**/*.js'], rules: { 'no-restricted-imports': 'off' } },
 
-  { ignores: ['**/packages/config-eslint/_legacy/**'] },
-
-  {
-    files: ['**/*.js'],
-    rules: {
-      'no-restricted-imports': 'off',
-      'unicorn/comment-content': ['warn'],
-    },
-  },
-];
+  ...plugins.prettierConfig(),
+]);

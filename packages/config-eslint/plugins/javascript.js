@@ -1,20 +1,18 @@
 import plugin from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 
-import { createPlugin, FILES, TEST_FILES } from '../base.js';
+import { FILES, TEST_FILES } from '../base.js';
 import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 import { STYLE_RULES } from '../rules/style.js';
 
 /**
  * Базовые правила JavaScript.
  *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
- *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint](https://eslint.org)
  */
-export const javascript = createPlugin(() =>
+export const javascript = () =>
   defineConfig([
     { files: FILES, ...plugin.configs.recommended },
     {
@@ -104,5 +102,4 @@ export const javascript = createPlugin(() =>
       files: TEST_FILES,
       rules: { 'no-alert': 'off', 'no-console': 'off' },
     },
-  ]),
-);
+  ]);

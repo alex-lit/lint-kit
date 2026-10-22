@@ -1,18 +1,16 @@
 import plugin from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
-import { createPlugin, DATA_FILES, FILES } from '../base.js';
+import { DATA_FILES, FILES } from '../base.js';
 
 /**
  * Правила форматирования и стиля кода.
- *
- * @param {import('eslint').Linter.Config} [options] - Дополнительные flat-опции
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [@stylistic/eslint-plugin](https://eslint.style/)
  */
-export const stylistic = createPlugin(() =>
+export const stylistic = () =>
   defineConfig([
     {
       ...plugin.configs.recommended,
@@ -112,5 +110,4 @@ export const stylistic = createPlugin(() =>
         ],
       },
     },
-  ]),
-);
+  ]);
