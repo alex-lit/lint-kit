@@ -12,7 +12,7 @@ HTML-разметки. Пакет объединяет рекомендован�
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-htmllint -D
 ```
 

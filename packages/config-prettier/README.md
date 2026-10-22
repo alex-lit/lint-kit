@@ -15,7 +15,7 @@ JSON и утилит Tailwind CSS. Вместо того чтобы подклю
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-prettier -D
 ```
 

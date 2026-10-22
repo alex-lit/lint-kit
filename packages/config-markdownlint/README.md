@@ -16,7 +16,7 @@ Markdown-файлов. Пакет подключается одной строк
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-markdownlint -D
 ```
 

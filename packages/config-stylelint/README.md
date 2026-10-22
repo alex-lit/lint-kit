@@ -15,7 +15,7 @@ Vue-файлов: настроенные правила из популярны�
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-stylelint -D
 ```
 
@@ -138,7 +138,7 @@ v62 - breaking-релиз: проверок по умолчанию больше
 
 - Проверка актуальности правил:
 
-  ```sh
+  ```bash
   npx stylelint-find-new-rules
   ```
 

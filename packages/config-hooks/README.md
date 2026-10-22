@@ -16,7 +16,7 @@
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-hooks -D
 ```
 
@@ -60,7 +60,7 @@ markdownlint). Ниже - [настройка](#настройка-lint-staged).
 }
 ```
 
-```sh
+```bash
 git config --unset core.hooksPath || true
 rm -rf .git/hooks/*
 npx simple-git-hooks

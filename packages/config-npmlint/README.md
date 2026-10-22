@@ -17,7 +17,7 @@
 
 ## Установка
 
-```sh
+```bash
 npm i @alexlit/config-npmlint -D
 ```
 
