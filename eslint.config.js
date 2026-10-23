@@ -20,10 +20,14 @@ export default defineConfig([
   ...plugins.vitest(),
   ...plugins.zod(),
   ...plugins.tailwindcss({
-    cssConfigPath: path.resolve(
-      import.meta.dirname,
-      'examples/css.tailwind.css',
-    ),
+    settings: {
+      tailwindcss: {
+        cssConfigPath: path.resolve(
+          import.meta.dirname,
+          'examples/css.tailwind.css',
+        ),
+      },
+    },
   }),
 
   { files: ['**/*.js'], rules: { 'no-restricted-imports': 'off' } },
