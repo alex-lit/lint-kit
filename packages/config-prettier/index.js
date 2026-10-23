@@ -10,6 +10,20 @@ import { sortJson } from './plugins/sort-json.js';
 import { sql } from './plugins/sql.js';
 import { tailwindcss } from './plugins/tailwindcss.js';
 import { xml } from './plugins/xml.js';
+import { mergeConfigs } from './utils/merge-configs.js';
+
+const DEFAULTS = {
+  bracketSameLine: false,
+  endOfLine: 'lf',
+  objectWrap: 'collapse',
+  proseWrap: 'always',
+  quoteProps: 'consistent',
+  singleAttributePerLine: true,
+  singleQuote: true,
+  tabWidth: 2,
+  trailingComma: 'all',
+  vueIndentScriptAndStyle: true,
+};
 
 /**
  * Фабрики плагинов. Каждый плагин подключается явно: передайте
@@ -45,6 +59,10 @@ export const plugins = {
  * );
  * ```
  *
+ * Базовые опции заменяются опциями плагинов и `options`. Коллекции `overrides`
+ * и `plugins` дополняются, `plugins` дедуплицируются, более поздние `overrides`
+ * выигрывают.
+ *
  * @param {import('prettier').Config[]} pluginConfigs Конфиги плагинов, напр.
  *   `[plugins.php()]`
  * @param {import('prettier').Config} options Базовые опции Prettier (наивысший
@@ -52,31 +70,5 @@ export const plugins = {
  *
  * @returns {import('prettier').Config} Конфигурация Prettier
  */
-export const defineConfig = (pluginConfigs = [], options = {}) => {
-  const config = {
-    bracketSameLine: false,
-    endOfLine: 'lf',
-    objectWrap: 'collapse',
-    proseWrap: 'always',
-    quoteProps: 'consistent',
-    singleAttributePerLine: true,
-    singleQuote: true,
-    tabWidth: 2,
-    trailingComma: 'all',
-    vueIndentScriptAndStyle: true,
-
-    // конфиги плагинов перекрывают базовые опции, а пользовательские опции
-    // имеют наивысший приоритет
-    ...Object.assign({}, ...pluginConfigs, options),
-  };
-
-  const sources = [...pluginConfigs, options];
-
-  return {
-    ...config,
-
-    // `overrides` и `plugins` конкатенируются, а не заменяются
-    overrides: sources.flatMap((source) => source.overrides ?? []),
-    plugins: [...new Set(sources.flatMap((source) => source.plugins ?? []))],
-  };
-};
+export const defineConfig = (pluginConfigs = [], options = {}) =>
+  mergeConfigs(DEFAULTS, ...pluginConfigs, options);

@@ -12,7 +12,11 @@ export interface JsdocOptions {
 
 /**
  * Plugin factories. Every plugin is connected explicitly: pass
- * `plugins.<name>()` to `defineConfig`
+ * `plugins.<name>()` to `defineConfig`.
+ *
+ * Collection options (`overrides`, `plugins`) are appended to the defaults:
+ * `plugins` are deduplicated and later `overrides` win. Other options replace
+ * default values.
  */
 export interface Plugins {
   /** @see prettier-plugin-jsdoc */
@@ -82,6 +86,10 @@ export declare const plugins: Plugins;
  *   printWidth: 100,
  * });
  * ```
+ *
+ * Base options are replaced by plugin options and `options`. Collection options
+ * (`overrides`, `plugins`) are appended: `plugins` are deduplicated and later
+ * `overrides` win.
  *
  * @param pluginConfigs Plugin configs, e.g. `[plugins.php()]`
  * @param options Base prettier options (highest precedence)
