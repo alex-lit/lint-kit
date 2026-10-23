@@ -6,11 +6,13 @@ import { DTS_FILES, FILES, VUE_FILES } from '../base.js';
 /**
  * Правила unicorn.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn)
  */
-export const unicorn = () =>
+export const unicorn = (config = []) =>
   defineConfig([
     { ...plugin.configs.recommended, files: FILES },
     {
@@ -78,4 +80,6 @@ export const unicorn = () =>
       files: ['**/temp/**/*.vue'],
       rules: { 'unicorn/name-replacements': 'off' },
     },
+
+    config,
   ]);

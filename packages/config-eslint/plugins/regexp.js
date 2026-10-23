@@ -6,11 +6,13 @@ import { FILES } from '../base.js';
 /**
  * Правила для регулярных выражений.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-regexp](https://github.com/ota-meshi/eslint-plugin-regexp)
  */
-export const regexp = () =>
+export const regexp = (config = []) =>
   defineConfig([
     {
       files: FILES,
@@ -19,4 +21,6 @@ export const regexp = () =>
         regexp: { allowedCharacterRanges: ['alphanumeric', 'а-я', 'А-Я'] },
       },
     },
+
+    config,
   ]);

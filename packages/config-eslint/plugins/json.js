@@ -7,11 +7,13 @@ import { YAML_FILES } from '../base.js';
 /**
  * Правила для JSON, JSONC, JSON5 и YAML-файлов.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [ESLint/JSON](https://github.com/eslint/json)
  */
-export const json = () =>
+export const json = (config = []) =>
   defineConfig([
     {
       extends: ['json/recommended'],
@@ -37,4 +39,6 @@ export const json = () =>
     },
 
     { files: YAML_FILES, languageOptions: { parser: yamlParser } },
+
+    config,
   ]);

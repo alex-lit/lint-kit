@@ -11,11 +11,13 @@ import { TS_RULES } from '../rules/typescript.js';
  * which makes linting slower. Use it instead of `typescript`, not alongside
  * it.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint)
  */
-export const typescriptTypeChecked = () =>
+export const typescriptTypeChecked = (config = []) =>
   defineConfig([
     // The parser is needed for every JS/TS/Vue file, not only for TypeScript ones,
     // otherwise `.js` files fall back to the default parser and modern syntax
@@ -52,4 +54,6 @@ export const typescriptTypeChecked = () =>
       files: TEST_FILES,
       rules: { '@typescript-eslint/no-empty-function': 'off' },
     },
+
+    config,
   ]);

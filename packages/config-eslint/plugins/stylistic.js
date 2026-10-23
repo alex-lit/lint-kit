@@ -6,11 +6,13 @@ import { DATA_FILES, FILES } from '../base.js';
 /**
  * Правила форматирования и стиля кода.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [@stylistic/eslint-plugin](https://eslint.style/)
  */
-export const stylistic = () =>
+export const stylistic = (config = []) =>
   defineConfig([
     {
       ...plugin.configs.recommended,
@@ -110,4 +112,6 @@ export const stylistic = () =>
         ],
       },
     },
+
+    config,
   ]);

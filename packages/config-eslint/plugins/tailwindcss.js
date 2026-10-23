@@ -10,25 +10,24 @@ const recommended = plugin.configs.recommended;
 /**
  * Правила для Tailwind CSS.
  *
- * @example
- *   import path from 'node:path';
- *   import { defineConfig, plugins } from '@alexlit/config-eslint';
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *   Например, чтобы переопределить путь к CSS-файлу Tailwind:
  *
- *   export default defineConfig([
- *     plugins.tailwindcss({
- *       cssConfigPath: path.resolve(import.meta.dirname, 'src/styles.css'),
- *     }),
- *   ]);
- *
- * @param {import('eslint-plugin-tailwindcss').PluginSettings} [settings] -
- *   Настройки плагина `tailwindcss`. По умолчанию `cssConfigPath` равен
- *   `./styles/tailwind.css`.
+ *   ```js
+ *   plugins.tailwindcss({
+ *     settings: {
+ *       tailwindcss: {
+ *         cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+ *       },
+ *     },
+ *   });
+ *   ```
  *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
  */
-export const tailwindcss = (settings = {}) =>
+export const tailwindcss = (config = []) =>
   defineConfig([
     {
       ...recommended,
@@ -40,12 +39,9 @@ export const tailwindcss = (settings = {}) =>
       },
       settings: {
         ...recommended.settings,
-        /** @type {import('eslint-plugin-tailwindcss').PluginSettings} */
-        tailwindcss: {
-          ...recommended.settings?.tailwindcss,
-          cssConfigPath: DEFAULT_CSS_CONFIG_PATH,
-          ...settings,
-        },
+        tailwindcss: { cssConfigPath: DEFAULT_CSS_CONFIG_PATH },
       },
     },
+
+    config,
   ]);

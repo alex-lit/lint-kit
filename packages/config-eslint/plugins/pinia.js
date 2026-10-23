@@ -6,11 +6,13 @@ import { FILES } from '../base.js';
 /**
  * Правила для Pinia-хранилищ.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-pinia](https://github.com/lisilinhart/eslint-plugin-pinia)
  */
-export const pinia = () =>
+export const pinia = (config = []) =>
   defineConfig([
     {
       ...plugin.configs['recommended-flat'],
@@ -20,4 +22,6 @@ export const pinia = () =>
         'pinia/prefer-single-store-per-file': 'error',
       },
     },
+
+    config,
   ]);

@@ -27,6 +27,9 @@ import { zod } from './plugins/zod.js';
 /**
  * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который нужно
  * развернуть через spread: `...plugins.<name>()`.
+ *
+ * Любая фабрика принимает необязательный конфиг, который добавляется после
+ * предустановленных блоков и переопределяет их.
  */
 export const plugins = {
   deMorgan,
@@ -66,9 +69,9 @@ export const plugins = {
  *
  *   export default defineConfig([
  *     ...plugins.javascript(),
- *     ...plugins.unicorn(),
- *     ...plugins.prettierConfig(), // последним
+ *     ...plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
  *     { rules: { 'no-console': 'off' } },
+ *     ...plugins.prettierConfig(), // последним
  *   ]);
  *
  * @param {import('eslint').Linter.Config[]} [configs] - Массив flat-конфигов

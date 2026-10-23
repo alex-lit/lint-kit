@@ -6,11 +6,13 @@ import { DATA_FILES, VUE_FILES } from '../base.js';
 /**
  * Правила для Vue.js I18n.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-vue-i18n](https://eslint-plugin-vue-i18n.intlify.dev/)
  */
-export const vueI18n = () =>
+export const vueI18n = (config = []) =>
   defineConfig([
     ...plugin.configs['flat/recommended'].map((config) =>
       config.files
@@ -44,4 +46,6 @@ export const vueI18n = () =>
         },
       },
     },
+
+    config,
   ]);

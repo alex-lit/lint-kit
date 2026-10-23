@@ -6,11 +6,13 @@ import { FILES } from '../base.js';
 /**
  * Правила SonarJS.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-sonarjs](https://github.com/SonarSource/SonarJS/blob/master/packages/jsts/src/rules/README.md)
  */
-export const sonar = () =>
+export const sonar = (config = []) =>
   defineConfig([
     {
       files: FILES,
@@ -22,4 +24,6 @@ export const sonar = () =>
         'sonarjs/unused-import': 'off', // @typescript-eslint/no-unused-vars
       },
     },
+
+    config,
   ]);

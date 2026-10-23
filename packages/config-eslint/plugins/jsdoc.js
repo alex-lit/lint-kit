@@ -6,11 +6,13 @@ import { FILES } from '../base.js';
 /**
  * Правила для JSDoc-комментариев.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-jsdoc](https://github.com/gajus/eslint-plugin-jsdoc)
  */
-export const jsdoc = () =>
+export const jsdoc = (config = []) =>
   defineConfig([
     { files: FILES, ...plugin.configs['flat/recommended'] },
     {
@@ -27,4 +29,6 @@ export const jsdoc = () =>
         'jsdoc/tag-lines': 'off',
       },
     },
+
+    config,
   ]);

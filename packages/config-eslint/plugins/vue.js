@@ -8,11 +8,13 @@ import { NO_RESTRICTED_SYNTAX } from '../rules/restricted-syntax.js';
 /**
  * Правила для Vue.js.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-vue](https://eslint.vuejs.org/rules/)
  */
-export const vue = () =>
+export const vue = (config = []) =>
   defineConfig([
     ...plugin.configs['flat/recommended'].map((config) => ({
       ...config,
@@ -268,4 +270,6 @@ export const vue = () =>
     },
 
     { files: TEST_FILES, rules: { 'vue/one-component-per-file': 'off' } },
+
+    config,
   ]);

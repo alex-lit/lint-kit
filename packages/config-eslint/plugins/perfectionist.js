@@ -6,11 +6,13 @@ import { FILES } from '../base.js';
 /**
  * Правила сортировки импортов, объектов, интерфейсов и типов.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-perfectionist](https://perfectionist.dev)
  */
-export const perfectionist = () =>
+export const perfectionist = (config = []) =>
   defineConfig([
     { ...plugin.configs['recommended-natural'], files: FILES },
     {
@@ -119,4 +121,6 @@ export const perfectionist = () =>
         ],
       },
     },
+
+    config,
   ]);

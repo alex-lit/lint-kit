@@ -6,11 +6,13 @@ import { DATA_FILES } from '../base.js';
 /**
  * Правила для TanStack Query.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [@tanstack/query](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query)
  */
-export const tanstackQuery = () =>
+export const tanstackQuery = (config = []) =>
   defineConfig([
     // The shipped config has no `files` key, so it would also cover data files.
     ...plugin.configs['flat/recommended'].map((config) => ({
@@ -18,4 +20,6 @@ export const tanstackQuery = () =>
       ignores: [...(config.ignores ?? []), ...DATA_FILES],
     })),
     { rules: { '@tanstack/query/infinite-query-property-order': 'off' } },
+
+    config,
   ]);

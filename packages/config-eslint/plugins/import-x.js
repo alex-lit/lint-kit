@@ -21,11 +21,13 @@ const EXTENSIONS = [
 /**
  * Правила для импортов и модулей.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-import-x](https://github.com/un-ts/eslint-plugin-import-x)
  */
-export const importX = () =>
+export const importX = (config = []) =>
   defineConfig([
     { ...plugin.flatConfigs.recommended, files: FILES, ignores: DATA_FILES },
 
@@ -71,4 +73,6 @@ export const importX = () =>
         'import-x/unambiguous': 'off',
       },
     },
+
+    config,
   ]);

@@ -4,69 +4,71 @@ import type { Linter } from 'eslint';
 export type Config = Linter.Config;
 
 /**
+ * Дополнительный flat-конфиг, который добавляется после предустановленного.
+ * Можно передать как один блок, так и массив блоков.
+ */
+export type PluginConfig = Config | Config[];
+
+/**
  * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который нужно
  * развернуть через spread-оператор: `...plugins.<name>()`.
+ *
+ * Любая фабрика принимает необязательный конфиг, который добавляется после
+ * предустановленных блоков и переопределяет их.
  */
 export interface Plugins {
   /** @see eslint-plugin-de-morgan */
-  deMorgan(): Config[];
+  deMorgan(config?: PluginConfig): Config[];
   /** @see eslint-plugin-import-x */
-  importX(): Config[];
+  importX(config?: PluginConfig): Config[];
   /** @see eslint */
-  javascript(): Config[];
+  javascript(config?: PluginConfig): Config[];
   /** @see eslint-plugin-jsdoc */
-  jsdoc(): Config[];
+  jsdoc(config?: PluginConfig): Config[];
   /** @see ESLint/JSON */
-  json(): Config[];
+  json(config?: PluginConfig): Config[];
   /** @see eslint-plugin-perfectionist */
-  perfectionist(): Config[];
+  perfectionist(config?: PluginConfig): Config[];
   /** @see eslint-plugin-pinia */
-  pinia(): Config[];
+  pinia(config?: PluginConfig): Config[];
   /** @see eslint-plugin-prettier */
-  prettier(): Config[];
+  prettier(config?: PluginConfig): Config[];
   /** @see eslint-config-prettier */
-  prettierConfig(): Config[];
+  prettierConfig(config?: PluginConfig): Config[];
   /** @see eslint-plugin-regexp */
-  regexp(): Config[];
+  regexp(config?: PluginConfig): Config[];
   /** @see eslint-plugin-sonarjs */
-  sonar(): Config[];
+  sonar(config?: PluginConfig): Config[];
   /** @see @stylistic/eslint-plugin */
-  stylistic(): Config[];
+  stylistic(config?: PluginConfig): Config[];
   /** @see eslint-plugin-tailwindcss */
-  tailwindcss(settings?: TailwindcssSettings): Config[];
+  tailwindcss(config?: PluginConfig): Config[];
   /** @see @tanstack/query */
-  tanstackQuery(): Config[];
+  tanstackQuery(config?: PluginConfig): Config[];
   /** @see typescript-eslint */
-  typescript(): Config[];
+  typescript(config?: PluginConfig): Config[];
   /** @see typescript-eslint */
-  typescriptTypeChecked(): Config[];
+  typescriptTypeChecked(config?: PluginConfig): Config[];
   /** @see eslint-plugin-unicorn */
-  unicorn(): Config[];
+  unicorn(config?: PluginConfig): Config[];
   /** @see @unocss/eslint-config */
-  unocss(): Config[];
+  unocss(config?: PluginConfig): Config[];
   /** @see eslint-plugin-vitest */
-  vitest(): Config[];
+  vitest(config?: PluginConfig): Config[];
   /** @see eslint-plugin-vue */
-  vue(): Config[];
+  vue(config?: PluginConfig): Config[];
   /** @see eslint-plugin-vuejs-accessibility */
-  vueAccessibility(): Config[];
+  vueAccessibility(config?: PluginConfig): Config[];
   /** @see eslint-plugin-vue-i18n */
-  vueI18n(): Config[];
+  vueI18n(config?: PluginConfig): Config[];
   /** @see eslint-plugin-zod */
-  zod(): Config[];
+  zod(config?: PluginConfig): Config[];
 }
 
 /** Ограничение синтаксиса - сообщение об ошибке и селектор AST. */
 export interface RestrictedSyntax {
   message: string;
   selector: string;
-}
-
-/** Настройки eslint-plugin-tailwindcss. */
-export interface TailwindcssSettings {
-  [key: string]: unknown;
-  /** Путь к CSS-файлу с Tailwind-конфигурацией */
-  cssConfigPath?: string;
 }
 
 /** Пространство имён фабрик плагинов. */
@@ -102,8 +104,8 @@ export declare const YAML_FILES: string[];
  *
  *   export default defineConfig([
  *     ...plugins.javascript(),
- *     ...plugins.unicorn(),
- *     ...plugins.prettierConfig(),
+ *     ...plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
+ *     ...plugins.prettierConfig(), // последним
  *     { rules: { 'no-console': 'off' } },
  *   ]);
  *

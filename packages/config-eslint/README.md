@@ -108,10 +108,33 @@ export default defineConfig([
 | `plugins.vueI18n()`               | Проверяет Vue.js I18n                         | [`@intlify/eslint-plugin-vue-i18n`](https://vue-i18n.intlify.dev/)                                              |
 | `plugins.zod()`                   | Проверяет Zod-схемы                           | [`eslint-plugin-zod`](https://github.com/marcalexiei/eslint-zod/tree/main/plugins/eslint-plugin-zod)            |
 
+## Свой конфиг
+
+Любая фабрика принимает необязательный flat-конфиг, который добавляется после
+предустановленного. Это позволяет точечно переопределять правила, `settings`,
+`files` и другие опции, не отказываясь от пресета:
+
+```js
+// eslint.config.js
+import { defineConfig, plugins } from '@alexlit/config-eslint';
+
+export default defineConfig([
+  ...plugins.javascript(),
+  ...plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
+  ...plugins.vue([
+    { files: ['**/*.vue'], rules: { 'vue/max-lines-per-block': 'off' } },
+  ]),
+]);
+```
+
+Можно передать как один объект, так и массив блоков. Так как конфиг добавляется
+последним, он имеет более высокий приоритет, чем настройки пресета.
+
 ## Настройки Tailwind CSS
 
-У `plugins.tailwindcss()` есть собственные настройки плагина - путь к CSS-файлу
-с конфигурацией Tailwind CSS (`cssConfigPath`):
+По умолчанию `plugins.tailwindcss()` использует путь `./styles/tailwind.css`.
+Чтобы указать другой CSS-файл с конфигурацией Tailwind CSS, передайте обычный
+flat-конфиг с настройками плагина:
 
 ```js
 // eslint.config.js
@@ -121,12 +144,14 @@ import { defineConfig, plugins } from '@alexlit/config-eslint';
 
 export default defineConfig([
   ...plugins.tailwindcss({
-    cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+    settings: {
+      tailwindcss: {
+        cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+      },
+    },
   }),
 ]);
 ```
-
-По умолчанию используется путь `./styles/tailwind.css`.
 
 ## Type-aware правила
 

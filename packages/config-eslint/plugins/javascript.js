@@ -8,11 +8,13 @@ import { STYLE_RULES } from '../rules/style.js';
 /**
  * Базовые правила JavaScript.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint](https://eslint.org)
  */
-export const javascript = () =>
+export const javascript = (config = []) =>
   defineConfig([
     { files: FILES, ...plugin.configs.recommended },
     {
@@ -102,4 +104,6 @@ export const javascript = () =>
       files: TEST_FILES,
       rules: { 'no-alert': 'off', 'no-console': 'off' },
     },
+
+    config,
   ]);

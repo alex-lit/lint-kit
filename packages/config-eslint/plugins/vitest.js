@@ -6,11 +6,13 @@ import { TEST_FILES } from '../base.js';
 /**
  * Правила для тестов Vitest.
  *
+ * @param {import('eslint').Linter.Config | import('eslint').Linter.Config[]} [config]
+ *
  * @returns {import('eslint').Linter.Config[]}
  *
  * @see [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest)
  */
-export const vitest = () =>
+export const vitest = (config = []) =>
   defineConfig([
     {
       files: TEST_FILES,
@@ -24,4 +26,6 @@ export const vitest = () =>
         'vitest/require-to-throw-message': 'off',
       },
     },
+
+    config,
   ]);
