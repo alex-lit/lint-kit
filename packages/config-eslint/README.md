@@ -82,31 +82,31 @@ export default defineConfig([
 
 ## Плагины
 
-| Плагин                            | Что делает                                    | Пакет                               |
-| --------------------------------- | --------------------------------------------- | ----------------------------------- |
-| `plugins.deMorgan()`              | Упрощает логические выражения                 | `eslint-plugin-de-morgan`           |
-| `plugins.importX()`               | Проверяет импорты и модули                    | `eslint-plugin-import-x`            |
-| `plugins.javascript()`            | Базовые правила JavaScript                    | `@eslint/js`                        |
-| `plugins.jsdoc()`                 | Проверяет JSDoc-комментарии                   | `eslint-plugin-jsdoc`               |
-| `plugins.json()`                  | Проверяет JSON, JSONC, JSON5 и YAML           | `@eslint/json`                      |
-| `plugins.perfectionist()`         | Сортирует импорты, объекты, интерфейсы и типы | `eslint-plugin-perfectionist`       |
-| `plugins.pinia()`                 | Проверяет Pinia-хранилища                     | `eslint-plugin-pinia`               |
-| `plugins.prettier()`              | Форматирует код самим Prettier                | `eslint-plugin-prettier`            |
-| `plugins.prettierConfig()`        | Отключает правила, конфликтующие с Prettier   | `eslint-config-prettier`            |
-| `plugins.regexp()`                | Проверяет регулярные выражения                | `eslint-plugin-regexp`              |
-| `plugins.sonar()`                 | Проверяет код по правилам SonarJS             | `eslint-plugin-sonarjs`             |
-| `plugins.stylistic()`             | Проверяет форматирование и стиль кода         | `@stylistic/eslint-plugin`          |
-| `plugins.tailwindcss()`           | Проверяет классы Tailwind CSS                 | `eslint-plugin-tailwindcss`         |
-| `plugins.tanstackQuery()`         | Проверяет TanStack Query                      | `@tanstack/eslint-plugin-query`     |
-| `plugins.typescript()`            | Проверяет TypeScript без анализа типов        | `typescript-eslint`                 |
-| `plugins.typescriptTypeChecked()` | Проверяет TypeScript с анализом типов         | `typescript-eslint`                 |
-| `plugins.unicorn()`               | Проверяет код по правилам unicorn             | `eslint-plugin-unicorn`             |
-| `plugins.unocss()`                | Проверяет UnoCSS                              | `@unocss/eslint-config`             |
-| `plugins.vitest()`                | Проверяет тесты Vitest                        | `@vitest/eslint-plugin`             |
-| `plugins.vue()`                   | Проверяет Vue.js-компоненты                   | `eslint-plugin-vue`                 |
-| `plugins.vueAccessibility()`      | Проверяет доступность Vue.js-компонентов      | `eslint-plugin-vuejs-accessibility` |
-| `plugins.vueI18n()`               | Проверяет Vue.js I18n                         | `@intlify/eslint-plugin-vue-i18n`   |
-| `plugins.zod()`                   | Проверяет Zod-схемы                           | `eslint-plugin-zod`                 |
+| Плагин                            | Что делает                                    | Пакет                                                                                                           |
+| --------------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `plugins.deMorgan()`              | Упрощает логические выражения                 | [`eslint-plugin-de-morgan`](https://github.com/azat-io/eslint-plugin-de-morgan)                                 |
+| `plugins.importX()`               | Проверяет импорты и модули                    | [`eslint-plugin-import-x`](https://github.com/un-ts/eslint-plugin-import-x)                                     |
+| `plugins.javascript()`            | Базовые правила JavaScript                    | [`@eslint/js`](https://eslint.org/)                                                                             |
+| `plugins.jsdoc()`                 | Проверяет JSDoc-комментарии                   | [`eslint-plugin-jsdoc`](https://github.com/gajus/eslint-plugin-jsdoc)                                           |
+| `plugins.json()`                  | Проверяет JSON, JSONC, JSON5 и YAML           | [`@eslint/json`](https://github.com/eslint/json)                                                                |
+| `plugins.perfectionist()`         | Сортирует импорты, объекты, интерфейсы и типы | [`eslint-plugin-perfectionist`](https://perfectionist.dev)                                                      |
+| `plugins.pinia()`                 | Проверяет Pinia-хранилища                     | [`eslint-plugin-pinia`](https://github.com/lisilinhart/eslint-plugin-pinia)                                     |
+| `plugins.prettier()`              | Форматирует код самим Prettier                | [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier)                                  |
+| `plugins.prettierConfig()`        | Отключает правила, конфликтующие с Prettier   | [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)                                  |
+| `plugins.regexp()`                | Проверяет регулярные выражения                | [`eslint-plugin-regexp`](https://github.com/ota-meshi/eslint-plugin-regexp)                                     |
+| `plugins.sonar()`                 | Проверяет код по правилам SonarJS             | [`eslint-plugin-sonarjs`](https://github.com/SonarSource/SonarJS/blob/master/packages/jsts/src/rules/README.md) |
+| `plugins.stylistic()`             | Проверяет форматирование и стиль кода         | [`@stylistic/eslint-plugin`](https://eslint.style/)                                                             |
+| `plugins.tailwindcss()`           | Проверяет классы Tailwind CSS                 | [`eslint-plugin-tailwindcss`](https://github.com/francoismassart/eslint-plugin-tailwindcss)                     |
+| `plugins.tanstackQuery()`         | Проверяет TanStack Query                      | [`@tanstack/eslint-plugin-query`](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query)            |
+| `plugins.typescript()`            | Проверяет TypeScript без анализа типов        | [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)                                   |
+| `plugins.typescriptTypeChecked()` | Проверяет TypeScript с анализом типов         | [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)                                   |
+| `plugins.unicorn()`               | Проверяет код по правилам unicorn             | [`eslint-plugin-unicorn`](https://github.com/sindresorhus/eslint-plugin-unicorn)                                |
+| `plugins.unocss()`                | Проверяет UnoCSS                              | [`@unocss/eslint-config`](https://unocss.dev/integrations/eslint)                                               |
+| `plugins.vitest()`                | Проверяет тесты Vitest                        | [`@vitest/eslint-plugin`](https://github.com/veritem/eslint-plugin-vitest)                                      |
+| `plugins.vue()`                   | Проверяет Vue.js-компоненты                   | [`eslint-plugin-vue`](https://eslint.vuejs.org/rules/)                                                          |
+| `plugins.vueAccessibility()`      | Проверяет доступность Vue.js-компонентов      | [`eslint-plugin-vuejs-accessibility`](https://vue-a11y.github.io/eslint-plugin-vuejs-accessibility/)            |
+| `plugins.vueI18n()`               | Проверяет Vue.js I18n                         | [`@intlify/eslint-plugin-vue-i18n`](https://vue-i18n.intlify.dev/)                                              |
+| `plugins.zod()`                   | Проверяет Zod-схемы                           | [`eslint-plugin-zod`](https://github.com/marcalexiei/eslint-zod/tree/main/plugins/eslint-plugin-zod)            |
 
 ## Настройки Tailwind CSS
 

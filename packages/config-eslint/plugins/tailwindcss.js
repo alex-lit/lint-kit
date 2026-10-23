@@ -5,6 +5,8 @@ import { FILES } from '../base.js';
 
 const DEFAULT_CSS_CONFIG_PATH = './styles/tailwind.css';
 
+const recommended = plugin.configs.recommended;
+
 /**
  * Правила для Tailwind CSS.
  *
@@ -29,16 +31,21 @@ const DEFAULT_CSS_CONFIG_PATH = './styles/tailwind.css';
 export const tailwindcss = (settings = {}) =>
   defineConfig([
     {
+      ...recommended,
       files: FILES,
-      plugins: { tailwindcss: plugin },
       rules: {
-        ...plugin.configs.recommended.rules,
+        ...recommended.rules,
         'tailwindcss/no-custom-classname': 'off',
         'vue/static-class-names-order': 'off',
       },
       settings: {
+        ...recommended.settings,
         /** @type {import('eslint-plugin-tailwindcss').PluginSettings} */
-        tailwindcss: { cssConfigPath: DEFAULT_CSS_CONFIG_PATH, ...settings },
+        tailwindcss: {
+          ...recommended.settings?.tailwindcss,
+          cssConfigPath: DEFAULT_CSS_CONFIG_PATH,
+          ...settings,
+        },
       },
     },
   ]);

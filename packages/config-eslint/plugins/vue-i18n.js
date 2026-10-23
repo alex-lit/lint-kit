@@ -12,10 +12,11 @@ import { DATA_FILES, VUE_FILES } from '../base.js';
  */
 export const vueI18n = () =>
   defineConfig([
-    ...plugin.configs['flat/recommended'].map((config) => ({
-      ...config,
-      ignores: [...(config.ignores ?? []), ...DATA_FILES],
-    })),
+    ...plugin.configs['flat/recommended'].map((config) =>
+      config.files
+        ? config
+        : { ...config, ignores: [...(config.ignores ?? []), ...DATA_FILES] },
+    ),
 
     {
       files: VUE_FILES,

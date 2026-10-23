@@ -56,7 +56,10 @@ export const IGNORES = [
  * @example
  *   import { defineConfig, plugins } from '@alexlit/config-eslint';
  *
- *   export default defineConfig([plugins.javascript(), plugins.unicorn()]);
+ *   export default defineConfig([
+ *     ...plugins.javascript(),
+ *     ...plugins.unicorn(),
+ *   ]);
  */
 export const base = defineConfig([
   { files: FILES, languageOptions: { globals: globals.browser } },
