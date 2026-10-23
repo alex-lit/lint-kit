@@ -1,3 +1,5 @@
+import { mergeConfigs } from '../utils/merge-configs.js';
+
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 const MEDIA_FEATURES = [
@@ -115,21 +117,8 @@ const buildPseudoElementRules = () => [
   { selector: '::', type: 'rule' },
 ];
 
-/**
- * Настраивает порядок свойств и селекторов.
- *
- * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
- *   поверх значений по умолчанию (shallow merge)
- *
- * @returns {import('stylelint').Config}
- *
- * @see [stylelint-order](https://github.com/hudochenkov/stylelint-order)
- */
-export const order = (options = {}) => ({
+const DEFAULTS = {
   plugins: ['stylelint-order'],
-
-  ...options,
-
   rules: {
     'order/custom-properties-alphabetical-order': true,
     'order/order': [
@@ -198,7 +187,16 @@ export const order = (options = {}) => ({
       ...buildLetterRules('__'),
     ],
     'order/properties-alphabetical-order': true,
-
-    ...options.rules,
   },
-});
+};
+
+/**
+ * Настраивает порядок свойств и селекторов.
+ *
+ * @param {Partial<import('stylelint').Config>} [options]
+ *
+ * @returns {import('stylelint').Config}
+ *
+ * @see [stylelint-order](https://github.com/hudochenkov/stylelint-order)
+ */
+export const order = (options = {}) => mergeConfigs(DEFAULTS, options);

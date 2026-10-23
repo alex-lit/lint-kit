@@ -28,6 +28,7 @@ import { defineConfig, plugins } from '@alexlit/config-stylelint';
 export default defineConfig([
   plugins.scss(),
   plugins.vue(),
+
   plugins.prettier(),
 ]);
 ```
@@ -42,22 +43,23 @@ export default defineConfig([
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
 export default defineConfig([
+  plugins.a11y(),
+  plugins.bem(),
   plugins.colorFormat(),
   plugins.declarationBlockNoIgnoredProperties(),
+  plugins.gamut(),
   plugins.highPerformanceAnimation(),
+  plugins.logicalCss(),
+  plugins.mediaUseCustomMedia(),
   plugins.noNestedMedia(),
+  plugins.noUnresolvedModule(),
+  plugins.noUnsupportedBrowserFeatures(),
   plugins.order(),
   plugins.scss(),
   plugins.selectorNoEmpty(),
   plugins.useNesting(),
   plugins.vue(),
-  plugins.a11y(),
-  plugins.bem(),
-  plugins.gamut(),
-  plugins.logicalCss(),
-  plugins.mediaUseCustomMedia(),
-  plugins.noUnresolvedModule(),
-  plugins.noUnsupportedBrowserFeatures(),
+
   plugins.prettier(),
 ]);
 ```
@@ -80,6 +82,40 @@ export default defineConfig([
 ]);
 ```
 
+`rules` мержатся поверхностно: настройка одноимённого правила из опций заменяет
+дефолтную целиком.
+
+### Правила для отдельных файлов
+
+Чтобы применить правила только к части файлов, используйте `overrides` в опциях
+проверки. Пользовательские overrides добавляются после дефолтных, поэтому
+выигрывают у них:
+
+```js
+// stylelint.config.js
+import { defineConfig, plugins } from '@alexlit/config-stylelint';
+
+export default defineConfig([
+  plugins.useNesting({
+    overrides: [
+      { files: ['**/*.vue'], rules: { 'csstools/use-nesting': 'never' } },
+    ],
+  }),
+]);
+```
+
+`files` обязателен: Stylelint падает с ошибкой, если в override его нет.
+
+### Приоритет настроек
+
+Внутри одной проверки: дефолты → `options.rules` → `options.overrides` (для
+подходящих файлов). Между проверками и вторым аргументом `defineConfig`
+действует тот же порядок: база → проверки по порядку → `options`.
+
+Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`) дополняются,
+`plugins` дедуплицируются. Остальные поля, например `customSyntax`, заменяются
+значениями из опций.
+
 ### Общие настройки Stylelint
 
 Второй аргумент `defineConfig` - общие опции: собственные правила, файлы для
@@ -97,26 +133,41 @@ export default defineConfig([plugins.scss(), plugins.vue()], {
 
 ## Проверки
 
-| Проверка                                        | Что делает                                           | Плагин                                              |
-| ----------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- |
-| `plugins.a11y()`                                | Проверяет типичные ошибки доступности                | `@double-great/stylelint-a11y`                      |
-| `plugins.bem()`                                 | Настраивает линтинг по методологии БЭМ               | `@morev/stylelint-plugin`                           |
-| `plugins.colorFormat()`                         | Нормализует формат цветов (hex → rgb/hsl)            | встроенное правило `color-format/format`            |
-| `plugins.declarationBlockNoIgnoredProperties()` | Запрещает бесполезные свойства в блоке объявлений    | `stylelint-declaration-block-no-ignored-properties` |
-| `plugins.gamut()`                               | Проверяет цвета на выход за пределы цветового охвата | `stylelint-gamut`                                   |
-| `plugins.highPerformanceAnimation()`            | Запрещает анимации, нагружающие рендеринг            | `stylelint-high-performance-animation`              |
-| `plugins.logicalCss()`                          | Проверяет использование логических CSS-свойств       | `stylelint-plugin-logical-css`                      |
-| `plugins.mediaUseCustomMedia()`                 | Требует использования кастомных медиа-запросов       | `stylelint-media-use-custom-media`                  |
-| `plugins.noIndistinguishableColors()`           | Запрещает неразличимые цвета                         | `stylelint-no-indistinguishable-colors`             |
-| `plugins.noNestedMedia()`                       | Запрещает вложенные медиа-запросы                    | `stylelint-no-nested-media`                         |
-| `plugins.noUnresolvedModule()`                  | Проверяет разрешение импортов                        | `stylelint-no-unresolved-module`                    |
-| `plugins.noUnsupportedBrowserFeatures()`        | Проверяет поддержку CSS-функций целевыми браузерами  | `stylelint-no-unsupported-browser-features`         |
-| `plugins.order()`                               | Настраивает порядок свойств и селекторов             | `stylelint-order`                                   |
-| `plugins.prettier()`                            | Интегрирует Prettier                                 | `stylelint-prettier`                                |
-| `plugins.scss()`                                | Настраивает линтинг SCSS                             | `stylelint-scss`                                    |
-| `plugins.selectorNoEmpty()`                     | Запрещает пустые селекторы                           | `stylelint-selector-no-empty`                       |
-| `plugins.useNesting()`                          | Требует использования CSS-вложенности                | `stylelint-use-nesting`                             |
-| `plugins.vue()`                                 | Подключает поддержку Vue.js SFC                      | `stylelint-config-recommended-vue`                  |
+| Проверка                                        | Что делает                                           | Плагин                                                                                                                                  |
+| ----------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `plugins.a11y()`                                | Проверяет типичные ошибки доступности                | [`@double-great/stylelint-a11y`](https://github.com/double-great/stylelint-a11y)                                                        |
+| `plugins.bem()`                                 | Настраивает линтинг по методологии БЭМ               | [`@morev/stylelint-plugin`](https://morevm.github.io/stylelint-plugin/)                                                                 |
+| `plugins.colorFormat()`                         | Нормализует формат цветов (hex → rgb/hsl)            | встроенное правило `color-format/format`                                                                                                |
+| `plugins.declarationBlockNoIgnoredProperties()` | Запрещает бесполезные свойства в блоке объявлений    | [`stylelint-declaration-block-no-ignored-properties`](https://github.com/kristerkari/stylelint-declaration-block-no-ignored-properties) |
+| `plugins.gamut()`                               | Проверяет цвета на выход за пределы цветового охвата | [`stylelint-gamut`](https://github.com/fpetrakov/stylelint-gamut)                                                                       |
+| `plugins.highPerformanceAnimation()`            | Запрещает анимации, нагружающие рендеринг            | [`stylelint-high-performance-animation`](https://github.com/kristerkari/stylelint-high-performance-animation)                           |
+| `plugins.logicalCss()`                          | Проверяет использование логических CSS-свойств       | [`stylelint-plugin-logical-css`](https://github.com/yuschick/stylelint-plugin-logical-css)                                              |
+| `plugins.mediaUseCustomMedia()`                 | Требует использования кастомных медиа-запросов       | [`stylelint-media-use-custom-media`](https://github.com/csstools/stylelint-media-use-custom-media)                                      |
+| `plugins.noIndistinguishableColors()`           | Запрещает неразличимые цвета                         | [`stylelint-no-indistinguishable-colors`](https://github.com/ierhyna/stylelint-no-indistinguishable-colors)                             |
+| `plugins.noNestedMedia()`                       | Запрещает вложенные медиа-запросы                    | [`stylelint-no-nested-media`](https://github.com/dkrnl/stylelint-no-nested-media)                                                       |
+| `plugins.noUnresolvedModule()`                  | Проверяет разрешение импортов                        | [`stylelint-no-unresolved-module`](https://github.com/niksy/stylelint-no-unresolved-module)                                             |
+| `plugins.noUnsupportedBrowserFeatures()`        | Проверяет поддержку CSS-функций целевыми браузерами  | [`stylelint-no-unsupported-browser-features`](https://github.com/ismay/stylelint-no-unsupported-browser-features)                       |
+| `plugins.order()`                               | Настраивает порядок свойств и селекторов             | [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)                                                                     |
+| `plugins.prettier()`                            | Интегрирует Prettier                                 | [`stylelint-prettier`](https://github.com/prettier/stylelint-prettier)                                                                  |
+| `plugins.scss()`                                | Настраивает линтинг SCSS                             | [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss)                                                                       |
+| `plugins.selectorNoEmpty()`                     | Запрещает пустые селекторы                           | [`stylelint-selector-no-empty`](https://github.com/ssivanatarajan/stylelint-selector-no-empty)                                          |
+| `plugins.useNesting()`                          | Требует использования CSS-вложенности                | [`stylelint-use-nesting`](https://github.com/csstools/stylelint-use-nesting)                                                            |
+| `plugins.vue()`                                 | Подключает поддержку Vue.js SFC                      | [`stylelint-config-recommended-vue`](https://github.com/ota-meshi/stylelint-config-recommended-vue)                                     |
+
+## Миграция с v63
+
+v64 - major-релиз: коллекции в опциях проверок теперь дополняют дефолты, а не
+заменяют их.
+
+| Было                                                      | Стало                                                               |
+| --------------------------------------------------------- | ------------------------------------------------------------------- |
+| `plugins.scss({ extends: ['custom'] })` заменял дефолтный | `extends` дополняется, `custom` применяется после дефолтного        |
+| `plugins.useNesting({ plugins: ['custom'] })` заменял     | `plugins` дополняется, дубли убираются                              |
+| `plugins.bem({ overrides: [...] })` заменял дефолтные     | overrides дополняются, пользовательские применяются после дефолтных |
+
+Отключить конкретное дефолтное правило можно через `rules: { 'rule': null }`.
+Общие настройки, которые должны перебивать всё, передавайте вторым аргументом
+`defineConfig`.
 
 ## Миграция с v61
 

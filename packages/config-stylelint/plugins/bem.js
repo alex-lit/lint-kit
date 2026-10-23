@@ -1,21 +1,13 @@
 /* eslint-disable unicorn/no-null */
 import { createDefineRules } from '@morev/stylelint-plugin';
 
+import { mergeConfigs } from '../utils/merge-configs.js';
+
 const defineRules = createDefineRules({
   separators: { element: '__', modifier: '--', modifierValue: '--' },
 });
 
-/**
- * Настраивает линтинг по методологии БЭМ.
- *
- * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
- *   поверх значений по умолчанию (shallow merge)
- *
- * @returns {import('stylelint').Config}
- *
- * @see [@morev/stylelint-plugin](https://morevm.github.io/stylelint-plugin/)
- */
-export const bem = (options = {}) => ({
+const DEFAULTS = {
   overrides: [
     {
       files: ['**/*.{css,scss,vue}'],
@@ -45,6 +37,15 @@ export const bem = (options = {}) => ({
     },
   ],
   plugins: ['@morev/stylelint-plugin'],
+};
 
-  ...options,
-});
+/**
+ * Настраивает линтинг по методологии БЭМ.
+ *
+ * @param {Partial<import('stylelint').Config>} [options]
+ *
+ * @returns {import('stylelint').Config}
+ *
+ * @see [@morev/stylelint-plugin](https://morevm.github.io/stylelint-plugin/)
+ */
+export const bem = (options = {}) => mergeConfigs(DEFAULTS, options);

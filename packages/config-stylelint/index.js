@@ -17,6 +17,7 @@ import { scss } from './plugins/scss.js';
 import { selectorNoEmpty } from './plugins/selector-no-empty.js';
 import { useNesting } from './plugins/use-nesting.js';
 import { vue } from './plugins/vue.js';
+import { mergeConfigs } from './utils/merge-configs.js';
 
 /** Плагины. Дефолтных плагинов нет - подключайте нужные явно в `defineConfig`. */
 const plugins = {
@@ -141,8 +142,8 @@ const BASE_RULES = {
  * Создать конфиг Stylelint.
  *
  * Приоритет (от низкого к высокому): база → конфиги плагинов по порядку →
- * `options`. `extends`, `ignoreFiles`, `overrides` и `plugins` конкатенируются
- * (дубли `plugins` убираются), `rules` - shallow merge.
+ * `options`. Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`)
+ * конкатенируются (дубли `plugins` убираются), `rules` - shallow merge.
  *
  * @param {import('stylelint').Config[]} [pluginConfigs] - Конфиги плагинов
  *   (например, `[plugins.scss(), plugins.vue()]`)
@@ -167,16 +168,7 @@ const defineConfig = (pluginConfigs = [], options = {}) => {
     rules: BASE_RULES,
   };
 
-  const sources = [baseConfig, ...pluginConfigs, options];
-
-  return {
-    ...Object.assign({}, ...sources),
-    extends: sources.flatMap((source) => source.extends ?? []),
-    ignoreFiles: sources.flatMap((source) => source.ignoreFiles ?? []),
-    overrides: sources.flatMap((source) => source.overrides ?? []),
-    plugins: [...new Set(sources.flatMap((source) => source.plugins ?? []))],
-    rules: Object.assign({}, ...sources.map((source) => source.rules ?? {})),
-  };
+  return mergeConfigs(baseConfig, ...pluginConfigs, options);
 };
 
 export { defineConfig, plugins };

@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "63.0.1",
+  "version": "64.0.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -28,7 +28,8 @@
     "README.md",
     "index.js",
     "index.d.ts",
-    "plugins"
+    "plugins",
+    "utils"
   ],
   "scripts": {
     "lint": "cd ../../ && ./scripts/lint.stylelint.sh",

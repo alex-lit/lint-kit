@@ -1,18 +1,7 @@
-/**
- * Проверяет поддержку CSS-функций целевыми браузерами.
- *
- * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
- *   поверх значений по умолчанию (shallow merge)
- *
- * @returns {import('stylelint').Config}
- *
- * @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features)
- */
-export const noUnsupportedBrowserFeatures = (options = {}) => ({
+import { mergeConfigs } from '../utils/merge-configs.js';
+
+const DEFAULTS = {
   plugins: ['stylelint-no-unsupported-browser-features'],
-
-  ...options,
-
   rules: {
     'plugin/no-unsupported-browser-features': [
       true,
@@ -22,6 +11,17 @@ export const noUnsupportedBrowserFeatures = (options = {}) => ({
         severity: 'warning',
       },
     ],
-    ...options.rules,
   },
-});
+};
+
+/**
+ * Проверяет поддержку CSS-функций целевыми браузерами.
+ *
+ * @param {Partial<import('stylelint').Config>} [options]
+ *
+ * @returns {import('stylelint').Config}
+ *
+ * @see [stylelint-no-unsupported-browser-features](https://github.com/ismay/stylelint-no-unsupported-browser-features)
+ */
+export const noUnsupportedBrowserFeatures = (options = {}) =>
+  mergeConfigs(DEFAULTS, options);

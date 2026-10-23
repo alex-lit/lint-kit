@@ -1,23 +1,11 @@
 /* eslint-disable unicorn/no-null */
+import { mergeConfigs } from '../utils/merge-configs.js';
 
 const KEBAB_CASE_PATTERN = '^[a-z]+([a-z0-9-]+[a-z0-9]+)?$';
 
-/**
- * Настраивает линтинг SCSS.
- *
- * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
- *   поверх значений по умолчанию (shallow merge)
- *
- * @returns {import('stylelint').Config}
- *
- * @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
- */
-export const scss = (options = {}) => ({
+const DEFAULTS = {
   extends: ['stylelint-config-standard-scss'],
   plugins: ['stylelint-scss'],
-
-  ...options,
-
   rules: {
     'scss/at-each-key-value-single-line': true,
     'scss/at-else-if-parentheses-space-before': 'always',
@@ -100,7 +88,16 @@ export const scss = (options = {}) => ({
       true,
       { ignoreKeywords: [] },
     ],
-
-    ...options.rules,
   },
-});
+};
+
+/**
+ * Настраивает линтинг SCSS.
+ *
+ * @param {Partial<import('stylelint').Config>} [options]
+ *
+ * @returns {import('stylelint').Config}
+ *
+ * @see [stylelint-scss](https://github.com/kristerkari/stylelint-scss)
+ */
+export const scss = (options = {}) => mergeConfigs(DEFAULTS, options);

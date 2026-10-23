@@ -1,5 +1,7 @@
 import stylelint from 'stylelint';
 
+import { mergeConfigs } from '../utils/merge-configs.js';
+
 const { createPlugin } = stylelint;
 const { report, ruleMessages, validateOptions } = stylelint.utils;
 
@@ -168,18 +170,18 @@ const rule = function (actual, options, context) {
 rule.ruleName = ruleName;
 rule.messages = messages;
 
+const DEFAULTS = {
+  plugins: [createPlugin(ruleName, rule)],
+  rules: { 'color-format/format': { format: 'rgb' } },
+};
+
 /**
  * Нормализует формат цветов (hex → rgb/hsl).
  *
  * @param {Partial<import('stylelint').Config>} [options] - Опции, накладываемые
- *   поверх значений по умолчанию (shallow merge)
+ *   поверх значений по умолчанию. Коллекции (`extends`, `ignoreFiles`,
+ *   `overrides`, `plugins`) дополняются, `rules` мержатся поверхностно
  *
  * @returns {import('stylelint').Config}
  */
-export const colorFormat = (options = {}) => ({
-  plugins: [createPlugin(ruleName, rule)],
-
-  ...options,
-
-  rules: { 'color-format/format': { format: 'rgb' }, ...options.rules },
-});
+export const colorFormat = (options = {}) => mergeConfigs(DEFAULTS, options);

@@ -3,6 +3,10 @@ import type { Config } from 'stylelint';
 /**
  * Опции фабрики плагина - частичный конфиг Stylelint, накладываемый поверх
  * значений по умолчанию.
+ *
+ * Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`) дополняют
+ * значения по умолчанию, `rules` мержатся поверхностно, остальные поля
+ * заменяются. Для каждого элемента `overrides` обязателен `files`.
  */
 type PluginOptions = Partial<Config>;
 
