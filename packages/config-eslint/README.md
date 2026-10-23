@@ -1,8 +1,8 @@
+# ESLint Configuration
+
 [![version](https://npmx.dev/api/registry/badge/version/@alexlit/config-eslint)](https://www.npmjs.com/package/@alexlit/config-eslint)
 [![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-eslint)](https://npmx.dev/package/@alexlit/config-eslint)
 [![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-eslint)](LICENSE)
-
-# ESLint Configuration
 
 Готовая конфигурация [ESLint](https://eslint.org/) в формате flat config:
 настроенные правила для JavaScript, TypeScript, Vue.js, JSON, YAML, импортов,

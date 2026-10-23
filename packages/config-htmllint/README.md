@@ -1,8 +1,8 @@
+# HTMLLint Configuration
+
 [![version](https://npmx.dev/api/registry/badge/version/@alexlit/config-htmllint)](https://www.npmjs.com/package/@alexlit/config-htmllint)
 [![downloads](https://npmx.dev/api/registry/badge/downloads/@alexlit/config-htmllint)](https://npmx.dev/package/@alexlit/config-htmllint)
 [![license](https://npmx.dev/api/registry/badge/license/@alexlit/config-htmllint)](LICENSE)
-
-# HTMLLint Configuration
 
 Готовая конфигурация [linthtml](https://github.com/linthtml/linthtml) - линтера
 HTML-разметки. Пакет объединяет рекомендованный базовый конфиг
