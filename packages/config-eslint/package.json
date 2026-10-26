@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "163.1.0",
+  "version": "164.0.0",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -61,10 +61,10 @@
     "eslint-plugin-regexp": "^3.3.1",
     "eslint-plugin-sonarjs": "^4.2.2",
     "eslint-plugin-tailwindcss": "^4.4.0",
-    "eslint-plugin-unicorn": "^78.0.0",
+    "eslint-plugin-unicorn": "^79.0.0",
     "eslint-plugin-vue": "^10.11.1",
     "eslint-plugin-vuejs-accessibility": "^2.6.3",
-    "eslint-plugin-zod": "^5.2.1",
+    "eslint-plugin-zod": "^5.2.2",
     "globals": "^17.13.0",
     "jsonc-eslint-parser": "^3.3.0",
     "typescript": "^6.0.3",
