@@ -1,4 +1,21 @@
 
+## v217.0.1
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@217.0.0...v217.0.1)
+
+### 🏡 Chore
+
+- Wip ([c04b9064](https://github.com/alex-lit/lint-kit/commit/c04b9064))
+- **@alexlit/config-stylelint:** Bump version ([0f62f0ce](https://github.com/alex-lit/lint-kit/commit/0f62f0ce))
+- **@alexlit/config-eslint:** Bump version ([03546ce1](https://github.com/alex-lit/lint-kit/commit/03546ce1))
+- **@alexlit/config-prettier:** Bump version ([80a4ca94](https://github.com/alex-lit/lint-kit/commit/80a4ca94))
+- **@alexlit/config-prettier:** Bump version ([78263e31](https://github.com/alex-lit/lint-kit/commit/78263e31))
+- **@alexlit/config-eslint:** Bump version ([d040ffcd](https://github.com/alex-lit/lint-kit/commit/d040ffcd))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v217.0.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@216.1.0...v217.0.0)
