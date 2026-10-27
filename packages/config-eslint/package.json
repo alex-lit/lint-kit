@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "164.0.0",
+  "version": "164.1.0",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -35,7 +35,8 @@
     "rules/"
   ],
   "scripts": {
-    "inspect": "npx @eslint/config-inspector@latest",
+    "inspect": "npx @eslint/config-inspector@latest --no-open",
+    "inspect:build": "npx @eslint/config-inspector@latest build",
     "lint": "cd ../../ && ./scripts/lint.eslint.sh",
     "ou": "../../scripts/ou.sh",
     "release": "../../scripts/release.sh",
@@ -47,8 +48,8 @@
     "@eslint/json": "^2.1.1",
     "@intlify/eslint-plugin-vue-i18n": "^4.5.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@tanstack/eslint-plugin-query": "^5.104.5",
-    "@unocss/eslint-config": "^66.11.0",
+    "@tanstack/eslint-plugin-query": "^5.105.0",
+    "@unocss/eslint-config": "^66.12.0",
     "@vitest/eslint-plugin": "^1.6.28",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
@@ -62,13 +63,13 @@
     "eslint-plugin-sonarjs": "^4.2.2",
     "eslint-plugin-tailwindcss": "^4.4.0",
     "eslint-plugin-unicorn": "^79.0.0",
-    "eslint-plugin-vue": "^10.11.1",
+    "eslint-plugin-vue": "^10.12.0",
     "eslint-plugin-vuejs-accessibility": "^2.6.3",
     "eslint-plugin-zod": "^5.2.2",
     "globals": "^17.13.0",
     "jsonc-eslint-parser": "^3.3.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.0",
+    "typescript-eslint": "^8.72.1",
     "vue-eslint-parser": "^10.4.1",
     "yaml-eslint-parser": "^2.1.0"
   },

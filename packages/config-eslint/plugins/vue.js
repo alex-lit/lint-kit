@@ -142,6 +142,7 @@ export const vue = (config = []) =>
         'vue/next-tick-style': ['error', 'promise'],
         'vue/no-child-content': ['error'],
         'vue/no-console': ['error'],
+        'vue/no-content-outside-block': ['error'],
         'vue/no-custom-modifiers-on-v-model': 'off',
         'vue/no-deprecated-delete-set': ['error'],
         'vue/no-deprecated-model-definition': ['error'],
@@ -160,6 +161,7 @@ export const vue = (config = []) =>
         'vue/no-negated-v-if-condition': ['error'],
         'vue/no-parsing-error': ['error'],
         'vue/no-potential-component-option-typo': ['error'],
+        'vue/no-props-shadow': ['error'],
         'vue/no-ref-object-reactivity-loss': ['error'],
         'vue/no-required-prop-with-default': ['error', { autofix: true }],
         'vue/no-reserved-component-names': [
