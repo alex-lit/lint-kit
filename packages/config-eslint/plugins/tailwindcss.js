@@ -34,6 +34,7 @@ export const tailwindcss = (config = []) =>
       files: FILES,
       rules: {
         ...recommended.rules,
+        'tailwindcss/no-arbitrary-value': 'warn',
         'tailwindcss/no-custom-classname': 'off',
         'vue/static-class-names-order': 'off',
       },
