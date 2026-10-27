@@ -2,6 +2,7 @@ import { mergeConfigs } from '../utils/merge-configs.js';
 
 const DEFAULTS = {
   plugins: ['prettier-plugin-tailwindcss'],
+  tailwindAttributes: ['ui', ':ui', 'class', 'className'],
   tailwindFunctions: [
     'classnames',
     'clsx',

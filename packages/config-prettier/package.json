@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-prettier",
-  "version": "25.0.0",
+  "version": "25.1.0",
   "private": false,
   "description": "prettier config",
   "keywords": [
