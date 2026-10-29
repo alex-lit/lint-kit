@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "164.1.1",
+  "version": "164.1.2",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -59,7 +59,7 @@
     "eslint-plugin-perfectionist": "^5.13.0",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-prettier": "^5.5.7",
-    "eslint-plugin-regexp": "^3.3.1",
+    "eslint-plugin-regexp": "^3.3.2",
     "eslint-plugin-sonarjs": "^4.2.2",
     "eslint-plugin-tailwindcss": "^4.4.0",
     "eslint-plugin-unicorn": "^79.0.0",
