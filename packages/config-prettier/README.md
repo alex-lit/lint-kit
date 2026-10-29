@@ -28,7 +28,7 @@ import { defineConfig, plugins } from '@alexlit/config-prettier';
 export default defineConfig([plugins.packageJson(), plugins.xml()]);
 ```
 
-## Пример скриптов для package.json (опционально)
+## Пример скриптов для package.json
 
 ```json
 { "scripts": { "lint:format": "prettier . --check --write" } }

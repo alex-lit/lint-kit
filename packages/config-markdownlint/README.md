@@ -27,7 +27,7 @@ npm i @alexlit/config-markdownlint -D
 { "extends": "@alexlit/config-markdownlint" }
 ```
 
-## Пример скриптов для package.json (опционально)
+## Пример скриптов для package.json
 
 ```json
 {

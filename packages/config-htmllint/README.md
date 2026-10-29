@@ -25,7 +25,7 @@ import { defineConfig } from '@alexlit/config-htmllint';
 export default defineConfig();
 ```
 
-## Пример скриптов для package.json (опционально)
+## Пример скриптов для package.json
 
 ```json
 { "scripts": { "lint:html": "linthtml '**/*.html'" } }

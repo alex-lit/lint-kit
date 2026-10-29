@@ -28,7 +28,7 @@ npm i @alexlit/config-npmlint -D
 { "extends": "@alexlit/config-npmlint" }
 ```
 
-## Пример скриптов для package.json (опционально)
+## Пример скриптов для package.json
 
 ```json
 {
