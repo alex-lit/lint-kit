@@ -25,6 +25,12 @@ import { defineConfig } from '@alexlit/config-htmllint';
 export default defineConfig();
 ```
 
+## Пример скриптов для package.json (опционально)
+
+```json
+{ "scripts": { "lint:html": "linthtml '**/*.html'" } }
+```
+
 Готово: подключены рекомендованный конфиг, правила пакета и дефолтные опции
 линтера.
 

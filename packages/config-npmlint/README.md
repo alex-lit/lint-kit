@@ -28,6 +28,16 @@ npm i @alexlit/config-npmlint -D
 { "extends": "@alexlit/config-npmlint" }
 ```
 
+## Пример скриптов для package.json (опционально)
+
+```json
+{
+  "scripts": {
+    "lint:lockfile": "lockfile-lint --type npm --path package-lock.json && npmPkgJsonLint ."
+  }
+}
+```
+
 Готово: линтер работает с набором правил пакета.
 
 ## Настройка

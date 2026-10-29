@@ -33,6 +33,12 @@ export default defineConfig([
 ]);
 ```
 
+## Пример скриптов для package.json (опционально)
+
+```json
+{ "scripts": { "lint:es": "eslint . --fix" } }
+```
+
 > [!NOTE]
 >
 > `plugins.javascript()` включает строгие правила для импортов: запрещает

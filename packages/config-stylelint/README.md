@@ -33,6 +33,16 @@ export default defineConfig([
 ]);
 ```
 
+## Пример скриптов для package.json (опционально)
+
+```json
+{
+  "scripts": {
+    "lint:css": "stylelint '**/*.{css,scss,sass,pcss,vue}' --fix --ignore-path .gitignore"
+  }
+}
+```
+
 Каждый вызов `plugins.*()` - отдельная проверка. Добавьте только то, что нужно
 проекту; полный список - в разделе [Проверки](#проверки).
 

@@ -27,6 +27,16 @@ npm i @alexlit/config-markdownlint -D
 { "extends": "@alexlit/config-markdownlint" }
 ```
 
+## Пример скриптов для package.json (опционально)
+
+```json
+{
+  "scripts": {
+    "lint:md": "markdownlint '**/*.md' --fix --ignore-path .gitignore"
+  }
+}
+```
+
 Готово: линтер работает с набором правил пакета.
 
 ## Настройка
