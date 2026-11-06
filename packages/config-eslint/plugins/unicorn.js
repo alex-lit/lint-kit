@@ -62,7 +62,10 @@ export const unicorn = (config = []) =>
       // `ref<Type | null>(null)` is the idiomatic way to declare an initially
       // empty reactive value. Everywhere else `null` remains an error.
       files: VUE_FILES,
-      rules: { 'unicorn/no-null': 'off' },
+      rules: {
+        'unicorn/no-null': 'off',
+        'unicorn/no-useless-undefined': 'off',
+      },
     },
     {
       files: [
