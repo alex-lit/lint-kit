@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-stylelint",
-  "version": "64.1.3",
+  "version": "64.2.0",
   "private": false,
   "description": "Stylelint config",
   "keywords": [
@@ -50,7 +50,7 @@
     "stylelint-config-standard": "^40.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^3.0.0",
-    "stylelint-gamut": "^2.0.1",
+    "stylelint-gamut": "^2.0.2",
     "stylelint-high-performance-animation": "^2.0.0",
     "stylelint-media-use-custom-media": "^4.1.0",
     "stylelint-no-indistinguishable-colors": "^2.3.1",
@@ -59,7 +59,7 @@
     "stylelint-no-unsupported-browser-features": "^8.1.2",
     "stylelint-order": "^8.1.3",
     "stylelint-plugin-logical-css": "^2.1.0",
-    "stylelint-prettier": "^5.0.3",
+    "stylelint-prettier": "^5.1.0",
     "stylelint-scss": "^7.4.0",
     "stylelint-selector-no-empty": "^1.0.9",
     "stylelint-use-nesting": "^6.0.2"

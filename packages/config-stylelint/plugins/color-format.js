@@ -103,7 +103,7 @@ const messages = ruleMessages(ruleName, {
   rejected: (hex) => `Unexpected hex color "${hex}"`,
 });
 
-const rule = function (actual, options, context) {
+const rule = function (actual) {
   return (root, result) => {
     const validOptions = validateOptions(result, ruleName, {
       actual,
@@ -116,7 +116,6 @@ const rule = function (actual, options, context) {
 
     root.walkDecls((decl) => {
       const declString = decl.toString();
-      const fixPositions = [];
 
       styleSearch(declString, '#', (match) => {
         if (!/[:,\s]/.test(declString[match.startIndex - 1])) {
@@ -133,16 +132,6 @@ const rule = function (actual, options, context) {
 
         const hexValue = hexMatch[0];
 
-        if (context && context.fix) {
-          fixPositions.unshift({
-            fixTo: actual.format,
-            hexValue,
-            startIndex: match.startIndex,
-          });
-
-          return;
-        }
-
         const message =
           actual && actual.message
             ? messages.custom(actual.message)
@@ -150,6 +139,9 @@ const rule = function (actual, options, context) {
 
         report({
           endIndex: match.endIndex,
+          fix: () => {
+            decl.value = replaceHexes(decl.value, actual.format);
+          },
           index: match.startIndex,
           message,
           node: decl,
@@ -157,18 +149,13 @@ const rule = function (actual, options, context) {
           ruleName,
         });
       });
-
-      if (fixPositions.length > 0) {
-        fixPositions.forEach((fixPosition) => {
-          decl.value = replaceHexes(decl.value, fixPosition.fixTo);
-        });
-      }
     });
   };
 };
 
 rule.ruleName = ruleName;
 rule.messages = messages;
+rule.meta = { fixable: true };
 
 const DEFAULTS = {
   plugins: [createPlugin(ruleName, rule)],
