@@ -64,7 +64,7 @@ export const IGNORES = [
 export const base = defineConfig([
   { files: FILES, languageOptions: { globals: globals.browser } },
 
-  // Node.js globals for commonjs/esm files
+  // Глобальные объекты Node.js для commonjs/esm-файлов
   { files: ['**/*.{cjs,mjs}'], languageOptions: { globals: globals.node } },
 
   { linterOptions: { reportUnusedDisableDirectives: 'error' } },

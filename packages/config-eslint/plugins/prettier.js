@@ -6,7 +6,7 @@ import { FILES, VUE_FILES } from '../base.js';
 import { STYLE_RULES } from '../rules/style.js';
 
 const fixes = {
-  // fix  for prettier
+  // Исправление для Prettier
   'vue/html-self-closing': [
     'error',
     {

@@ -122,57 +122,57 @@ const DEFAULTS = {
   rules: {
     'order/custom-properties-alphabetical-order': true,
     'order/order': [
-      // SASS variables
+      // Переменные SASS
       'dollar-variables',
 
-      // LESS variables
+      // Переменные LESS
       'at-variables',
 
-      // SASS extends
+      // SASS-расширения (extend)
       { name: 'extend', type: 'at-rule' },
 
-      // SASS includes
+      // SASS-директивы include
       { hasBlock: false, name: 'include', type: 'at-rule' },
 
-      // Tailwind applies
+      // Директивы @apply Tailwind
       { name: 'apply', type: 'at-rule' },
 
-      // CSS custom properties
+      // CSS-кастомные свойства
       'custom-properties',
 
-      // Declarations
+      // Объявления
       'declarations',
 
-      // Media features
+      // Медиавыражения
       ...buildMediaFeatureRules(),
 
-      // At-rules
+      // At-правила
       ...AT_RULES.map((name) => ({ name, type: 'at-rule' })),
       'at-rules',
 
-      // Pseudo-elements
+      // Псевдоэлементы
       ...buildPseudoElementRules(),
 
-      // Pseudo-classes
+      // Псевдоклассы
       ...buildPseudoClassRules(),
 
-      // BEM in pseudo-class functions (:deep, :global, :slotted)
+      // BEM в функциях псевдоклассов (:deep, :global, :slotted)
       ...buildPseudoClassBemRules('--'),
       ...buildPseudoClassBemRules('__'),
 
-      // ID selector
+      // Селектор по ID
       { selector: /#/, type: 'rule' },
 
-      // Selector list
+      // Список селекторов
       { selector: ',', type: 'rule' },
 
-      // Class selectors
+      // Селекторы классов
       ...buildLetterRules(String.raw`\.`),
 
-      // Attribute selectors
+      // Селекторы атрибутов
       ...buildAttributeRules(),
 
-      // Combinators
+      // Комбинаторы
       { selector: /\*/, type: 'rule' },
       { selector: /\+/, type: 'rule' },
       { selector: />/, type: 'rule' },
@@ -180,10 +180,10 @@ const DEFAULTS = {
       { selector: /~/, type: 'rule' },
       'rules',
 
-      // BEM modifier
+      // BEM-модификатор
       ...buildLetterRules('--'),
 
-      // BEM element
+      // BEM-элемент
       ...buildLetterRules('__'),
     ],
     'order/properties-alphabetical-order': true,

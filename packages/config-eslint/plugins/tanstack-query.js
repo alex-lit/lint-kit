@@ -14,7 +14,8 @@ import { DATA_FILES } from '../base.js';
  */
 export const tanstackQuery = (config = []) =>
   defineConfig([
-    // The shipped config has no `files` key, so it would also cover data files.
+    // В поставляемой конфигурации нет ключа `files`, поэтому она также
+    // затрагивала бы data-файлы.
     ...plugin.configs['flat/recommended'].map((config) => ({
       ...config,
       ignores: [...(config.ignores ?? []), ...DATA_FILES],

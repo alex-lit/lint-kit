@@ -76,7 +76,7 @@ const BASE_RULES = {
     },
   ],
   'font-family-name-quotes': 'always-unless-keyword',
-  'function-no-unknown': null, // delegate to scss/function-no-unknown
+  'function-no-unknown': null, // делегируем правилу scss/function-no-unknown
   'function-url-quotes': 'always',
   'function-url-scheme-disallowed-list': ['/^data/', 'ftp', '/^http/'],
   'hue-degree-notation': 'angle',

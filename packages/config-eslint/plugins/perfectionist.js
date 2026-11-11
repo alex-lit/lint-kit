@@ -22,13 +22,13 @@ export const perfectionist = (config = []) =>
           'warn',
           {
             customGroups: [
-              // hash (nuxt)
+              // Хеш (Nuxt)
               { elementNamePattern: ['^#'], groupName: 'hash' },
 
               // @@/
               { elementNamePattern: ['^@@/'], groupName: 'double-at' },
 
-              // universal
+              // Универсальные
               { elementNamePattern: ['^@/api'], groupName: 'universal-api' },
               {
                 elementNamePattern: ['^@/assets'],
@@ -75,13 +75,13 @@ export const perfectionist = (config = []) =>
               'type-import',
               ['value-builtin', 'value-external'],
 
-              // hash (nuxt)
+              // Хеш (Nuxt)
               'hash',
 
               // @@/
               'double-at',
 
-              // universal
+              // Универсальные
               'universal-api',
               'universal-assets',
               'universal-components',

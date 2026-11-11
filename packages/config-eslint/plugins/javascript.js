@@ -43,8 +43,8 @@ export const javascript = (config = []) =>
         ],
         'no-restricted-globals': [
           'error',
-          // `event`, `top` and `parent` are global browser properties.
-          // Reach for `window.event` / `window.top` / `window.parent` instead.
+          // `event`, `top` и `parent` - глобальные свойства браузера.
+          // Используйте `window.event` / `window.top` / `window.parent`.
           { message: 'Use `window.event` instead.', name: 'event' },
           { message: 'Use `window.parent` instead.', name: 'parent' },
           { message: 'Use `window.top` instead.', name: 'top' },
@@ -100,7 +100,7 @@ export const javascript = (config = []) =>
     },
 
     {
-      // Tests are allowed to log and to alert
+      // В тестах разрешено использовать console и alert
       files: TEST_FILES,
       rules: { 'no-alert': 'off', 'no-console': 'off' },
     },

@@ -31,7 +31,7 @@ export const vue = (config = []) =>
         ],
         'no-restricted-syntax': [
           'error',
-          // Merge the shared list, do not replace it
+          // Объединяем общий список, а не заменяем его
           ...NO_RESTRICTED_SYNTAX,
           {
             message:
@@ -87,12 +87,12 @@ export const vue = (config = []) =>
               'defineOptions',
               'defineSlots',
 
-              // nuxt (can use props)
+              // Nuxt (могут использоваться props)
               'createUseAsyncData',
               'createUseFetch',
 
               'onPrehydrate',
-              // /nuxt (can use props)
+              // /Nuxt (могут использоваться props)
 
               // nuxi-ui
               'defineLocale',
@@ -124,10 +124,10 @@ export const vue = (config = []) =>
             svg: 'always',
           },
         ],
-        // Keep in sync with `unicorn/filename-case` in `unicorn.js`:
-        // components live in kebab-case files, so the component name is
-        // derived from a kebab-case file name instead of being required to be
-        // PascalCase in the file name itself.
+        // Синхронизировано с `unicorn/filename-case` в `unicorn.js`:
+        // компоненты лежат в kebab-case-файлах, поэтому имя компонента
+        // выводится из имени kebab-case-файла, а не требуется
+        // PascalCase в самом имени файла.
         'vue/match-component-file-name': [
           'error',
           { extensions: ['vue'], shouldMatchCase: false },
