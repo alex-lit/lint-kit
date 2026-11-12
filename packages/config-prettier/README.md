@@ -56,6 +56,7 @@ export default defineConfig([
   plugins.sql(),
   plugins.tailwindcss(),
   plugins.xml(),
+  // plugins.yuku(), // экспериментальный парсер JS/TS, см. раздел Yuku
 ]);
 ```
 
@@ -131,20 +132,46 @@ export default defineConfig([
 
 ## Плагины
 
-| Плагин                  | Что делает                                      | Пакет                                                                                                                                            |
-| ----------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `plugins.jsdoc()`       | Нормализует JSDoc-комментарии                   | [`prettier-plugin-jsdoc`](https://github.com/hosseinmd/prettier-plugin-jsdoc)                                                                    |
-| `plugins.mdc()`         | Форматирует MDC-документы (Nuxt Content)        | [`prettier-plugin-mdc`](https://github.com/so1ve/prettier-plugin-mdc)                                                                            |
-| `plugins.packageJson()` | Сортирует ключи в package.json                  | [`prettier-plugin-packagejson`](https://github.com/matzkoh/prettier-plugin-packagejson)                                                          |
-| `plugins.php()`         | Форматирует PHP-файлы                           | [`@prettier/plugin-php`](https://github.com/prettier/plugin-php)                                                                                 |
-| `plugins.pug()`         | Форматирует Pug-шаблоны с сортировкой атрибутов | [`@prettier/plugin-pug`](https://github.com/prettier/plugin-pug)                                                                                 |
-| `plugins.ruby()`        | Форматирует Ruby и ERB файлы                    | [`@prettier/plugin-ruby`](https://github.com/prettier/plugin-ruby) + [`prettier-plugin-eruby`](https://github.com/ippachi/prettier-plugin-eruby) |
-| `plugins.sh()`          | Форматирует shell-скрипты                       | [`prettier-plugin-sh`](https://github.com/astorije/prettier-plugin-sh)                                                                           |
-| `plugins.sortJson()`    | Рекурсивно сортирует ключи JSON-объектов        | [`prettier-plugin-sort-json`](https://github.com/Gudahtt/prettier-plugin-sort-json)                                                              |
-| `plugins.solidity()`    | Форматирует контракты Solidity                  | [`prettier-plugin-solidity`](https://github.com/prettier-solidity/prettier-plugin-solidity)                                                      |
-| `plugins.sql()`         | Форматирует SQL-запросы                         | [`prettier-plugin-sql`](https://github.com/un-ts/prettier/tree/master/packages/sql)                                                              |
-| `plugins.tailwindcss()` | Сортирует утилитарные классы Tailwind CSS       | [`prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                                                     |
-| `plugins.xml()`         | Форматирует XML-файлы                           | [`@prettier/plugin-xml`](https://github.com/prettier/plugin-xml)                                                                                 |
+| Плагин                  | Что делает                                      | Пакет                                                                                                                                                      |
+| ----------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `plugins.jsdoc()`       | Нормализует JSDoc-комментарии                   | [`prettier-plugin-jsdoc`](https://github.com/hosseinmd/prettier-plugin-jsdoc)                                                                              |
+| `plugins.mdc()`         | Форматирует MDC-документы (Nuxt Content)        | [`prettier-plugin-mdc`](https://github.com/so1ve/prettier-plugin-mdc)                                                                                      |
+| `plugins.packageJson()` | Сортирует ключи в package.json                  | [`prettier-plugin-packagejson`](https://github.com/matzkoh/prettier-plugin-packagejson)                                                                    |
+| `plugins.php()`         | Форматирует PHP-файлы                           | [`@prettier/plugin-php`](https://github.com/prettier/plugin-php)                                                                                           |
+| `plugins.pug()`         | Форматирует Pug-шаблоны с сортировкой атрибутов | [`@prettier/plugin-pug`](https://github.com/prettier/plugin-pug)                                                                                           |
+| `plugins.ruby()`        | Форматирует Ruby и ERB файлы                    | [`@prettier/plugin-ruby`](https://github.com/prettier/plugin-ruby) + [`@4az/prettier-plugin-html-erb`](https://github.com/Nilkee/prettier-plugin-html-erb) |
+| `plugins.sh()`          | Форматирует shell-скрипты                       | [`prettier-plugin-sh`](https://github.com/astorije/prettier-plugin-sh)                                                                                     |
+| `plugins.sortJson()`    | Рекурсивно сортирует ключи JSON-объектов        | [`prettier-plugin-sort-json`](https://github.com/Gudahtt/prettier-plugin-sort-json)                                                                        |
+| `plugins.solidity()`    | Форматирует контракты Solidity                  | [`prettier-plugin-solidity`](https://github.com/prettier-solidity/prettier-plugin-solidity)                                                                |
+| `plugins.sql()`         | Форматирует SQL-запросы                         | [`prettier-plugin-sql`](https://github.com/un-ts/prettier/tree/master/packages/sql)                                                                        |
+| `plugins.tailwindcss()` | Сортирует утилитарные классы Tailwind CSS       | [`prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                                                               |
+| `plugins.xml()`         | Форматирует XML-файлы                           | [`@prettier/plugin-xml`](https://github.com/prettier/plugin-xml)                                                                                           |
+| `plugins.yuku()`        | Форматирует JS/TS экспериментальным парсером    | [`@prettier/plugin-yuku`](https://github.com/prettier/prettier/tree/main/packages/plugin-yuku)                                                             |
+
+### Yuku
+
+`plugins.yuku()` включает экспериментальные парсеры `yuku` и `yuku-ts` для
+JavaScript и TypeScript. Плагин пока не стабилен, требует Prettier >= 3.6 и
+нативные бинарники `yuku`. Для JS/TS под Yuku не загружаются
+`prettier-plugin-jsdoc` и `prettier-plugin-tailwindcss`, поэтому JSDoc и
+сортировка Tailwind-классов для этих файлов не работают.
+
+В корневом конфиге репозитория Yuku не включён. Костыли с `overrides` и
+`plugins` внутри них описаны в `plugins/yuku.js`: когда плагин стабилизируется,
+их можно будет упростить.
+
+## Миграция с v25
+
+ERB-плагин заменён: `prettier-plugin-eruby` удалён, вместо него используется
+`@4az/prettier-plugin-html-erb`.
+
+| v25                     | После обновления                |
+| ----------------------- | ------------------------------- |
+| `prettier-plugin-eruby` | `@4az/prettier-plugin-html-erb` |
+| `parser: 'eruby-parse'` | `parser: 'erb-template'`        |
+
+`plugins.ruby()` остаётся: `.rb` и `.html.erb` форматируются как раньше. Для ERB
+нужны установленные Ruby-гемы `prettier_print` и `syntax_tree`.
 
 ## Миграция с v24
 
@@ -175,4 +202,8 @@ v24 - breaking-релиз: плагинов по умолчанию больше
 
 ## Известные проблемы
 
-- **tailwindcss** ранее конфликтовал с **jsdoc**
+- **tailwindcss** ранее конфликтовал с **jsdoc**.
+- **yuku** экспериментальный: требует Prettier >= 3.6, тянет нативные бинарники
+  и заменяет парсеры Babel/TypeScript. Для JS/TS под Yuku не работают
+  `prettier-plugin-jsdoc` и сортировка Tailwind.
+- **ERB** требует установленных Ruby-гемов `prettier_print` и `syntax_tree`.

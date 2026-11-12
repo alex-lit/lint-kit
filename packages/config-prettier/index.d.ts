@@ -43,6 +43,8 @@ export interface Plugins {
   tailwindcss(options?: Config & TailwindcssOptions): Config;
   /** @see plugin-xml */
   xml(options?: Config & XmlOptions): Config;
+  /** @see @prettier/plugin-yuku */
+  yuku(options?: Config): Config;
 }
 
 /** Options of [plugin-pug](https://github.com/prettier/plugin-pug) */

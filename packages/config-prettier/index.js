@@ -10,6 +10,7 @@ import { sortJson } from './plugins/sort-json.js';
 import { sql } from './plugins/sql.js';
 import { tailwindcss } from './plugins/tailwindcss.js';
 import { xml } from './plugins/xml.js';
+import { yuku } from './plugins/yuku.js';
 import { mergeConfigs } from './utils/merge-configs.js';
 
 const DEFAULTS = {
@@ -42,6 +43,7 @@ export const plugins = {
   sql,
   tailwindcss,
   xml,
+  yuku,
 };
 
 /**
