@@ -70,11 +70,11 @@ npx simple-git-hooks
 
 ## Настройка lint-staged
 
-У `defineConfig(plugins?, config?)` два необязательных аргумента.
+У `defineConfig` один необязательный аргумент - объект с настройками.
 
 ### Линтеры
 
-Первый аргумент - включает и выключает линтеры (по умолчанию включены все):
+Свойство `plugins` включает и выключает линтеры (по умолчанию включены все):
 
 | Линтер         | Команда                                             | Файлы                                                     |
 | -------------- | --------------------------------------------------- | --------------------------------------------------------- |
@@ -91,28 +91,36 @@ npx simple-git-hooks
 
 ```js
 // stylelint и htmllint выключены
-export default defineConfig({ stylelint: false, htmllint: false });
+export default defineConfig({ plugins: { stylelint: false, htmllint: false } });
 ```
 
 ### Свои правила
 
-Второй аргумент - дополняет или переопределяет карту по паттернам:
+Свойство `config` дополняет или переопределяет карту по паттернам:
 
 ```js
 // lint-staged.config.js
 import { defineConfig } from '@alexlit/config-hooks';
 
-export default defineConfig(
-  // 1. линтеры
-  { stylelint: false },
+export default defineConfig({
+  plugins: { stylelint: false },
 
-  // 2. правила по паттернам
-  {
+  config: {
     '*.css': [], // пустой массив - отключить правило для css
     '*.yaml': ['echo "Hello, .yaml!"'], // своя команда
   },
-);
+});
 ```
+
+## Миграция v10 → v11
+
+v11 - breaking-релиз: два позиционных аргумента заменены одним объектом.
+
+| v10                             | v11                                 |
+| ------------------------------- | ----------------------------------- |
+| `defineConfig()`                | `defineConfig()`                    |
+| `defineConfig(plugins)`         | `defineConfig({ plugins })`         |
+| `defineConfig(plugins, config)` | `defineConfig({ plugins, config })` |
 
 ## Миграция v9 → v10
 

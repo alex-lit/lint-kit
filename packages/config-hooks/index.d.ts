@@ -7,13 +7,15 @@ type LintStagedRules = Record<string, string | string[]>;
 /**
  * Создать конфигурацию lint-staged.
  *
- * @param plugins - Включение и выключение линтеров
- * @param config - Свои правила по паттернам: дополняют или переопределяют карту
- *   по умолчанию
+ * @param options - Настройки конфигурации
+ * @param options.config - Свои правила по паттернам: дополняют или
+ *   переопределяют карту по умолчанию
+ * @param options.plugins - Включение и выключение линтеров (по умолчанию
+ *   включены все)
  */
-declare function defineConfig(
-  plugins?: LintersFlags,
-  config?: LintStagedRules,
-): LintStagedRules;
+declare function defineConfig(options?: {
+  config?: LintStagedRules;
+  plugins?: LintersFlags;
+}): LintStagedRules;
 
 export { defineConfig };

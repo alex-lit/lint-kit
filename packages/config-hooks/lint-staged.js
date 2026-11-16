@@ -1,14 +1,15 @@
 /**
  * Создать конфигурацию lint-staged.
  *
- * @param {Record<string, boolean>} [plugins] - Включение и выключение линтеров
- *   (по умолчанию включены все)
- * @param {Record<string, unknown>} [config] - Свои правила по паттернам:
- *   дополняют или переопределяют карту по умолчанию
+ * @param {object} [options] - Настройки конфигурации
+ * @param {Record<string, unknown>} [options.config] - Свои правила по
+ *   паттернам: дополняют или переопределяют карту по умолчанию
+ * @param {Record<string, boolean>} [options.plugins] - Включение и выключение
+ *   линтеров (по умолчанию включены все)
  *
  * @returns {Record<string, unknown>} Карта «паттерн файла → команды»
  */
-const defineConfig = (plugins = {}, config = {}) => {
+const defineConfig = ({ config = {}, plugins = {} } = {}) => {
   const pluginsList = {
     eslint: true,
     htmllint: true,
