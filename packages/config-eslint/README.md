@@ -25,12 +25,14 @@ npm i @alexlit/config-eslint -D
 // eslint.config.js
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default defineConfig([
-  ...plugins.javascript(),
-  ...plugins.typescript(),
-  ...plugins.unicorn(),
-  ...plugins.prettierConfig(),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.javascript(),
+    plugins.typescript(),
+    plugins.unicorn(),
+    plugins.prettierConfig(),
+  ],
+});
 ```
 
 ## Пример скриптов для package.json
@@ -45,14 +47,16 @@ export default defineConfig([
 > относительные импорты вида `..`/`.` , индексные импорты, расширения
 > `.ts`/`.js` в путях и алиасы `~` в пользу `@`.
 
-Каждый плагин возвращает массив блоков конфигурации, поэтому его нужно
-развернуть оператором spread (`...`). Добавьте только то, что нужно проекту;
-полный список - в разделе [Плагины](#плагины).
+Каждый плагин возвращает массив блоков конфигурации. Передавайте фабрики прямо в
+массив `plugins` - spread не нужен, вложенные массивы разворачиваются
+автоматически. Добавьте только то, что нужно проекту; полный список - в разделе
+[Плагины](#плагины).
 
 > [!NOTE]
 >
-> `plugins.prettierConfig()` должен быть последним - он отключает правила,
-> конфликтующие с Prettier.
+> `plugins.prettierConfig()` должен быть последним среди пресетов - он отключает
+> правила, конфликтующие с Prettier. Ваши настройки из `options` применяются
+> после него и перебивают всё, поэтому не включайте туда форматирующие правила.
 
 Больше плагинов - просто допишите их в массив. Пример:
 
@@ -60,36 +64,38 @@ export default defineConfig([
 // eslint.config.js
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default defineConfig([
-  // базовые
-  ...plugins.deMorgan(),
-  ...plugins.importX(),
-  ...plugins.javascript(),
-  ...plugins.jsdoc(),
-  ...plugins.json(),
-  ...plugins.perfectionist(),
-  ...plugins.regexp(),
-  ...plugins.sonar(),
-  ...plugins.stylistic(),
-  ...plugins.typescript(),
-  ...plugins.unicorn(),
+export default defineConfig({
+  plugins: [
+    // базовые
+    plugins.deMorgan(),
+    plugins.importX(),
+    plugins.javascript(),
+    plugins.jsdoc(),
+    plugins.json(),
+    plugins.perfectionist(),
+    plugins.regexp(),
+    plugins.sonar(),
+    plugins.stylistic(),
+    plugins.typescript(),
+    plugins.unicorn(),
 
-  // проектные
-  ...plugins.pinia(),
-  ...plugins.tanstackQuery(),
-  ...plugins.unocss(),
-  ...plugins.vitest(),
-  ...plugins.vue(),
-  ...plugins.vueAccessibility(),
-  ...plugins.vueI18n(),
-  ...plugins.zod(),
+    // проектные
+    plugins.pinia(),
+    plugins.tanstackQuery(),
+    plugins.unocss(),
+    plugins.vitest(),
+    plugins.vue(),
+    plugins.vueAccessibility(),
+    plugins.vueI18n(),
+    plugins.zod(),
+
+    // стилистика
+    plugins.prettierConfig(),
+  ],
 
   // дополнительные правила
-  { ignores: ['fixtures/**'], rules: { 'no-console': 'off' } },
-
-  // стилистика
-  ...plugins.prettierConfig(),
-]);
+  options: { ignores: ['fixtures/**'], rules: { 'no-console': 'off' } },
+});
 ```
 
 ## Плагины
@@ -130,13 +136,15 @@ export default defineConfig([
 // eslint.config.js
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default defineConfig([
-  ...plugins.javascript(),
-  ...plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
-  ...plugins.vue([
-    { files: ['**/*.vue'], rules: { 'vue/max-lines-per-block': 'off' } },
-  ]),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.javascript(),
+    plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
+    plugins.vue([
+      { files: ['**/*.vue'], rules: { 'vue/max-lines-per-block': 'off' } },
+    ]),
+  ],
+});
 ```
 
 Можно передать как один объект, так и массив блоков. Так как конфиг добавляется
@@ -154,15 +162,17 @@ import path from 'node:path';
 
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default defineConfig([
-  ...plugins.tailwindcss({
-    settings: {
-      tailwindcss: {
-        cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+export default defineConfig({
+  plugins: [
+    plugins.tailwindcss({
+      settings: {
+        tailwindcss: {
+          cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+        },
       },
-    },
-  }),
-]);
+    }),
+  ],
+});
 ```
 
 ## Type-aware правила
@@ -179,11 +189,13 @@ Type-aware правила (`no-floating-promises`, `no-misused-promises`,
 // eslint.config.js
 import { defineConfig, plugins } from '@alexlit/config-eslint';
 
-export default defineConfig([
-  ...plugins.javascript(),
-  ...plugins.typescriptTypeChecked(), // вместо plugins.typescript()
-  ...plugins.prettierConfig(),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.javascript(),
+    plugins.typescriptTypeChecked(), // вместо plugins.typescript()
+    plugins.prettierConfig(),
+  ],
+});
 ```
 
 > [!NOTE]
@@ -218,6 +230,18 @@ npm run inspect
 # Сборка статичной версии инспектора
 npm run inspect:build
 ```
+
+## Миграция с v164
+
+v165 - breaking-релиз: `defineConfig` принимает один объект вместо массива.
+
+| v164                    | v165                                 |
+| ----------------------- | ------------------------------------ |
+| `defineConfig()`        | `defineConfig()`                     |
+| `defineConfig(configs)` | `defineConfig({ plugins: configs })` |
+
+Свои блоки конфигурации, которые раньше лежали в массиве, перенесите в
+`options`. Spread (`...`) для фабрик больше не нужен.
 
 ## Полезные ссылки
 

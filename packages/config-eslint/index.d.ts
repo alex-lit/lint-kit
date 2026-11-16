@@ -10,8 +10,8 @@ export type Config = Linter.Config;
 export type PluginConfig = Config | Config[];
 
 /**
- * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который нужно
- * развернуть через spread-оператор: `...plugins.<name>()`.
+ * Фабрики плагинов. Каждый вызов возвращает массив flat-конфигов, который
+ * передаётся в `plugins` без spread: `plugins.<name>()`.
  *
  * Любая фабрика принимает необязательный конфиг, который добавляется после
  * предустановленных блоков и переопределяет их.
@@ -96,19 +96,27 @@ export declare const YAML_FILES: string[];
  * Создать конфигурацию ESLint.
  *
  * Базовые настройки (`base`) добавляются автоматически и всегда идут первыми.
- * Разворачивайте вызовы плагинов через spread-оператор, а переопределения
- * добавляйте прямо в массив.
+ * Фабрики плагинов передавайте в `plugins` без spread: вложенные массивы
+ * разворачиваются автоматически. Свои flat-конфиги добавляйте в `options` - они
+ * применяются последними и имеют наивысший приоритет.
  *
  * @example
  *   import { defineConfig, plugins } from '@alexlit/config-eslint';
  *
- *   export default defineConfig([
- *     ...plugins.javascript(),
- *     ...plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
- *     ...plugins.prettierConfig(), // последним
- *     { rules: { 'no-console': 'off' } },
- *   ]);
+ *   export default defineConfig({
+ *     plugins: [
+ *       plugins.javascript(),
+ *       plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
+ *       plugins.prettierConfig(), // последним среди пресетов
+ *     ],
+ *     options: { rules: { 'no-console': 'off' } },
+ *   });
  *
- * @param configs - Массив flat-конфигов
+ * @param config - Настройки конфигурации
+ * @param config.options - Ваши flat-конфиги, применяются последними
+ * @param config.plugins - Конфиги фабрик плагинов
  */
-export declare function defineConfig(configs?: Config[]): Config[];
+export declare function defineConfig(config?: {
+  options?: PluginConfig;
+  plugins?: PluginConfig[];
+}): Config[];
