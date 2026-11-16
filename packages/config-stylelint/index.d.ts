@@ -45,12 +45,13 @@ declare const plugins: Plugins;
  * `options`. `extends`, `ignoreFiles`, `overrides` и `plugins` конкатенируются
  * (дубли `plugins` убираются), `rules` - shallow merge.
  *
- * @param pluginConfigs - Конфиги плагинов (например, `[plugins.scss()]`)
- * @param options - Базовые опции Stylelint, наивысший приоритет
+ * @param config - Настройки конфигурации
+ * @param config.options - Базовые опции Stylelint, наивысший приоритет
+ * @param config.plugins - Конфиги плагинов (например, `[plugins.scss()]`)
  */
-declare function defineConfig(
-  pluginConfigs?: Config[],
-  options?: Config,
-): Config;
+declare function defineConfig(config?: {
+  options?: Config;
+  plugins?: Config[];
+}): Config;
 
 export { defineConfig, plugins };

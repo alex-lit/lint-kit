@@ -145,14 +145,15 @@ const BASE_RULES = {
  * `options`. Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`)
  * конкатенируются (дубли `plugins` убираются), `rules` - shallow merge.
  *
- * @param {import('stylelint').Config[]} [pluginConfigs] - Конфиги плагинов
+ * @param {object} [config] - Настройки конфигурации
+ * @param {import('stylelint').Config} [config.options] - Базовые опции
+ *   Stylelint, наивысший приоритет
+ * @param {import('stylelint').Config[]} [config.plugins] - Конфиги плагинов
  *   (например, `[plugins.scss(), plugins.vue()]`)
- * @param {import('stylelint').Config} [options] - Базовые опции Stylelint,
- *   наивысший приоритет
  *
  * @returns {import('stylelint').Config}
  */
-const defineConfig = (pluginConfigs = [], options = {}) => {
+const defineConfig = ({ options = {}, plugins = [] } = {}) => {
   const baseConfig = {
     extends: ['stylelint-config-standard'],
     ignoreFiles: [
@@ -168,7 +169,7 @@ const defineConfig = (pluginConfigs = [], options = {}) => {
     rules: BASE_RULES,
   };
 
-  return mergeConfigs(baseConfig, ...pluginConfigs, options);
+  return mergeConfigs(baseConfig, ...plugins, options);
 };
 
 export { defineConfig, plugins };

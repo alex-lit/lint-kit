@@ -25,12 +25,9 @@ npm i @alexlit/config-stylelint -D
 // stylelint.config.js
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
-export default defineConfig([
-  plugins.scss(),
-  plugins.vue(),
-
-  plugins.prettier(),
-]);
+export default defineConfig({
+  plugins: [plugins.scss(), plugins.vue(), plugins.prettier()],
+});
 ```
 
 ## Пример скриптов для package.json
@@ -52,26 +49,28 @@ export default defineConfig([
 // stylelint.config.js
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
-export default defineConfig([
-  plugins.a11y(),
-  plugins.bem(),
-  plugins.colorFormat(),
-  plugins.declarationBlockNoIgnoredProperties(),
-  plugins.gamut(),
-  plugins.highPerformanceAnimation(),
-  plugins.logicalCss(),
-  plugins.mediaUseCustomMedia(),
-  plugins.noNestedMedia(),
-  plugins.noUnresolvedModule(),
-  plugins.noUnsupportedBrowserFeatures(),
-  plugins.order(),
-  plugins.scss(),
-  plugins.selectorNoEmpty(),
-  plugins.useNesting(),
-  plugins.vue(),
+export default defineConfig({
+  plugins: [
+    plugins.a11y(),
+    plugins.bem(),
+    plugins.colorFormat(),
+    plugins.declarationBlockNoIgnoredProperties(),
+    plugins.gamut(),
+    plugins.highPerformanceAnimation(),
+    plugins.logicalCss(),
+    plugins.mediaUseCustomMedia(),
+    plugins.noNestedMedia(),
+    plugins.noUnresolvedModule(),
+    plugins.noUnsupportedBrowserFeatures(),
+    plugins.order(),
+    plugins.scss(),
+    plugins.selectorNoEmpty(),
+    plugins.useNesting(),
+    plugins.vue(),
 
-  plugins.prettier(),
-]);
+    plugins.prettier(),
+  ],
+});
 ```
 
 ## Настройка
@@ -84,12 +83,14 @@ export default defineConfig([
 // stylelint.config.js
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
-export default defineConfig([
-  plugins.useNesting({ rules: { 'csstools/use-nesting': 'never' } }),
-  plugins.noUnresolvedModule({
-    rules: { 'plugin/no-unresolved-module': { alias: { '~': 'src' } } },
-  }),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.useNesting({ rules: { 'csstools/use-nesting': 'never' } }),
+    plugins.noUnresolvedModule({
+      rules: { 'plugin/no-unresolved-module': { alias: { '~': 'src' } } },
+    }),
+  ],
+});
 ```
 
 `rules` мержатся поверхностно: настройка одноимённого правила из опций заменяет
@@ -105,13 +106,15 @@ export default defineConfig([
 // stylelint.config.js
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
-export default defineConfig([
-  plugins.useNesting({
-    overrides: [
-      { files: ['**/*.vue'], rules: { 'csstools/use-nesting': 'never' } },
-    ],
-  }),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.useNesting({
+      overrides: [
+        { files: ['**/*.vue'], rules: { 'csstools/use-nesting': 'never' } },
+      ],
+    }),
+  ],
+});
 ```
 
 `files` обязателен: Stylelint падает с ошибкой, если в override его нет.
@@ -119,25 +122,25 @@ export default defineConfig([
 ### Приоритет настроек
 
 Внутри одной проверки: дефолты → `options.rules` → `options.overrides` (для
-подходящих файлов). Между проверками и вторым аргументом `defineConfig`
-действует тот же порядок: база → проверки по порядку → `options`.
+подходящих файлов). Между проверками и `options` из `defineConfig` действует тот
+же порядок: база → проверки по порядку → `options`.
 
-Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`) дополняются,
-`plugins` дедуплицируются. Остальные поля, например `customSyntax`, заменяются
-значениями из опций.
+Коллекции внутри опций (`extends`, `ignoreFiles`, `overrides`, `plugins`)
+дополняются, `plugins` дедуплицируются. Остальные поля, например `customSyntax`,
+заменяются значениями из опций.
 
 ### Общие настройки Stylelint
 
-Второй аргумент `defineConfig` - общие опции: собственные правила, файлы для
-игнора и т.д. Он перебивает настройки всех проверок:
+Свойство `options` - общие опции: собственные правила, файлы для игнора и т.д.
+Они перебивают настройки всех проверок:
 
 ```js
 // stylelint.config.js
 import { defineConfig, plugins } from '@alexlit/config-stylelint';
 
-export default defineConfig([plugins.scss(), plugins.vue()], {
-  ignoreFiles: ['fixtures/**'],
-  rules: { 'max-nesting-depth': 3 },
+export default defineConfig({
+  plugins: [plugins.scss(), plugins.vue()],
+  options: { ignoreFiles: ['fixtures/**'], rules: { 'max-nesting-depth': 3 } },
 });
 ```
 
@@ -164,6 +167,16 @@ export default defineConfig([plugins.scss(), plugins.vue()], {
 | `plugins.useNesting()`                          | Требует использования CSS-вложенности                | [`stylelint-use-nesting`](https://github.com/csstools/stylelint-use-nesting)                                                            |
 | `plugins.vue()`                                 | Подключает поддержку Vue.js SFC                      | [`stylelint-config-recommended-vue`](https://github.com/ota-meshi/stylelint-config-recommended-vue)                                     |
 
+## Миграция с v65
+
+v66 - breaking-релиз: позиционные аргументы заменены одним объектом.
+
+| v65                                    | v66                                  |
+| -------------------------------------- | ------------------------------------ |
+| `defineConfig()`                       | `defineConfig()`                     |
+| `defineConfig(pluginConfigs)`          | `defineConfig({ plugins })`          |
+| `defineConfig(pluginConfigs, options)` | `defineConfig({ plugins, options })` |
+
 ## Миграция с v63
 
 v64 - major-релиз: коллекции в опциях проверок теперь дополняют дефолты, а не
@@ -176,7 +189,7 @@ v64 - major-релиз: коллекции в опциях проверок те
 | `plugins.bem({ overrides: [...] })` заменял дефолтные     | overrides дополняются, пользовательские применяются после дефолтных |
 
 Отключить конкретное дефолтное правило можно через `rules: { 'rule': null }`.
-Общие настройки, которые должны перебивать всё, передавайте вторым аргументом
+Общие настройки, которые должны перебивать всё, передавайте в `options` внутри
 `defineConfig`.
 
 ## Миграция с v61
