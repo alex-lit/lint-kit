@@ -25,7 +25,9 @@ npm i @alexlit/config-prettier -D
 // prettier.config.js
 import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default defineConfig([plugins.packageJson(), plugins.xml()]);
+export default defineConfig({
+  plugins: [plugins.packageJson(), plugins.xml()],
+});
 ```
 
 ## Пример скриптов для package.json
@@ -43,21 +45,23 @@ export default defineConfig([plugins.packageJson(), plugins.xml()]);
 // prettier.config.js
 import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default defineConfig([
-  plugins.jsdoc(),
-  plugins.mdc(),
-  plugins.packageJson(),
-  plugins.php(),
-  plugins.pug(),
-  plugins.ruby(),
-  plugins.sh(),
-  plugins.sortJson(),
-  plugins.solidity(),
-  plugins.sql(),
-  plugins.tailwindcss(),
-  plugins.xml(),
-  // plugins.yuku(), // экспериментальный парсер JS/TS, см. раздел Yuku
-]);
+export default defineConfig({
+  plugins: [
+    plugins.jsdoc(),
+    plugins.mdc(),
+    plugins.packageJson(),
+    plugins.php(),
+    plugins.pug(),
+    plugins.ruby(),
+    plugins.sh(),
+    plugins.sortJson(),
+    plugins.solidity(),
+    plugins.sql(),
+    plugins.tailwindcss(),
+    plugins.xml(),
+    // plugins.yuku(), // экспериментальный парсер JS/TS, см. раздел Yuku
+  ],
+});
 ```
 
 ## Настройка
@@ -70,10 +74,12 @@ export default defineConfig([
 // prettier.config.js
 import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default defineConfig([
-  plugins.sortJson({ jsonRecursiveSort: false }),
-  plugins.tailwindcss({ tailwindFunctions: ['cn', 'cva'] }),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.sortJson({ jsonRecursiveSort: false }),
+    plugins.tailwindcss({ tailwindFunctions: ['cn', 'cva'] }),
+  ],
+});
 ```
 
 Скалярные опции заменяют значения плагина, а `plugins` и `overrides` дополняют
@@ -82,16 +88,16 @@ export default defineConfig([
 
 ### Общие настройки Prettier
 
-Второй аргумент `defineConfig` - общие опции Prettier. Он перебивает настройки
-всех плагинов:
+Свойство `options` - общие опции Prettier. Они перебивают настройки всех
+плагинов:
 
 ```js
 // prettier.config.js
 import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default defineConfig([plugins.php()], {
-  printWidth: 100,
-  singleQuote: false,
+export default defineConfig({
+  plugins: [plugins.php()],
+  options: { printWidth: 100, singleQuote: false },
 });
 ```
 
@@ -100,12 +106,12 @@ export default defineConfig([plugins.php()], {
 Настройки применяются в таком порядке:
 
 1. Базовые опции пакета.
-2. Конфиги плагинов в порядке массива `defineConfig`.
-3. Второй аргумент `defineConfig`.
+2. Конфиги плагинов в порядке массива `plugins`.
+3. Опции из `options`.
 
-Скалярные опции перекрывают друг друга. Коллекции `plugins` и `overrides`
-дополняются, а не заменяются. `plugins` дедуплицируются, поэтому один и тот же
-плагин можно безопасно указать несколько раз.
+Скалярные опции перекрывают друг друга. Коллекции `plugins` и `overrides` в
+конфигах плагинов дополняются, а не заменяются. `plugins` дедуплицируются,
+поэтому один и тот же плагин можно безопасно указать несколько раз.
 
 Для `overrides` более позднее правило выигрывает: пользовательские overrides
 идут после дефолтных и перекрывают их при совпадении `files`.
@@ -119,11 +125,13 @@ export default defineConfig([plugins.php()], {
 // prettier.config.js
 import { defineConfig, plugins } from '@alexlit/config-prettier';
 
-export default defineConfig([
-  plugins.mdc({
-    overrides: [{ files: ['docs/**/*.md'], options: { parser: 'markdown' } }],
-  }),
-]);
+export default defineConfig({
+  plugins: [
+    plugins.mdc({
+      overrides: [{ files: ['docs/**/*.md'], options: { parser: 'markdown' } }],
+    }),
+  ],
+});
 ```
 
 Пустой массив `overrides: []` не отключает дефолтные правила. Чтобы
@@ -159,6 +167,16 @@ JavaScript и TypeScript. Плагин пока не стабилен, треб�
 В корневом конфиге репозитория Yuku не включён. Костыли с `overrides` и
 `plugins` внутри них описаны в `plugins/yuku.js`: когда плагин стабилизируется,
 их можно будет упростить.
+
+## Миграция с v26
+
+v27 - breaking-релиз: позиционные аргументы заменены одним объектом.
+
+| v26                                    | v27                                  |
+| -------------------------------------- | ------------------------------------ |
+| `defineConfig()`                       | `defineConfig()`                     |
+| `defineConfig(pluginConfigs)`          | `defineConfig({ plugins })`          |
+| `defineConfig(pluginConfigs, options)` | `defineConfig({ plugins, options })` |
 
 ## Миграция с v25
 

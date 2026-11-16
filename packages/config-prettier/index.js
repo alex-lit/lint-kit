@@ -52,25 +52,26 @@ export const plugins = {
  * Плагинов по умолчанию нет - подключайте нужные явно:
  *
  * ```js
- * defineConfig(
- *   [
+ * defineConfig({
+ *   plugins: [
  *     plugins.php(),
  *     plugins.tailwindcss({ tailwindFunctions: ['cn', 'tw'] }),
  *   ],
- *   { printWidth: 100 },
- * );
+ *   options: { printWidth: 100 },
+ * });
  * ```
  *
  * Базовые опции заменяются опциями плагинов и `options`. Коллекции `overrides`
- * и `plugins` дополняются, `plugins` дедуплицируются, более поздние `overrides`
- * выигрывают.
+ * и `plugins` в опциях дополняются, `plugins` дедуплицируются, более поздние
+ * `overrides` выигрывают.
  *
- * @param {import('prettier').Config[]} pluginConfigs Конфиги плагинов, напр.
- *   `[plugins.php()]`
- * @param {import('prettier').Config} options Базовые опции Prettier (наивысший
- *   приоритет)
+ * @param {object} [config] - Настройки конфигурации
+ * @param {import('prettier').Config} [config.options] - Базовые опции Prettier
+ *   (наивысший приоритет)
+ * @param {import('prettier').Config[]} [config.plugins] - Конфиги плагинов,
+ *   напр. `[plugins.php()]`
  *
  * @returns {import('prettier').Config} Конфигурация Prettier
  */
-export const defineConfig = (pluginConfigs = [], options = {}) =>
-  mergeConfigs(DEFAULTS, ...pluginConfigs, options);
+export const defineConfig = ({ options = {}, plugins = [] } = {}) =>
+  mergeConfigs(DEFAULTS, ...plugins, options);

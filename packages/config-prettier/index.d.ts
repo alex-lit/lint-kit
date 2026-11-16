@@ -84,8 +84,9 @@ export declare const plugins: Plugins;
  * There are no default plugins - connect the required ones explicitly:
  *
  * ```js
- * defineConfig([plugins.php(), plugins.tailwindcss()], {
- *   printWidth: 100,
+ * defineConfig({
+ *   plugins: [plugins.php(), plugins.tailwindcss()],
+ *   options: { printWidth: 100 },
  * });
  * ```
  *
@@ -93,10 +94,11 @@ export declare const plugins: Plugins;
  * (`overrides`, `plugins`) are appended: `plugins` are deduplicated and later
  * `overrides` win.
  *
- * @param pluginConfigs Plugin configs, e.g. `[plugins.php()]`
- * @param options Base prettier options (highest precedence)
+ * @param config - Configuration options
+ * @param config.options - Base prettier options (highest precedence)
+ * @param config.plugins - Plugin configs, e.g. `[plugins.php()]`
  */
-export declare function defineConfig(
-  pluginConfigs?: Config[],
-  options?: Config,
-): Config;
+export declare function defineConfig(config?: {
+  options?: Config;
+  plugins?: Config[];
+}): Config;
