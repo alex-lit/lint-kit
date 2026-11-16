@@ -49,6 +49,9 @@ export const stylistic = (config = []) =>
             beforeLineComment: false,
           },
         ],
+        // Новое в @stylistic 6 правило конфликтует с Prettier:
+        // eslint-config-prettier 10.1.8 его ещё не отключает
+        '@stylistic/list-style': 'off',
         '@stylistic/padding-line-between-statements': [
           'warn',
           // always
