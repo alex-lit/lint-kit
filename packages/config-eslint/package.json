@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "166.2.0",
+  "version": "166.2.1",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -55,7 +55,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-de-morgan": "^2.3.0",
     "eslint-plugin-import-x": "^4.18.1",
-    "eslint-plugin-jsdoc": "^65.4.11",
+    "eslint-plugin-jsdoc": "^65.4.12",
     "eslint-plugin-perfectionist": "^5.14.0",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-prettier": "^5.5.7",

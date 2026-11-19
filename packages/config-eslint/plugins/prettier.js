@@ -6,7 +6,7 @@ import { FILES, VUE_FILES } from '../base.js';
 import { STYLE_RULES } from '../rules/style.js';
 
 const fixes = {
-  // Исправление для Prettier
+  'tailwindcss/classnames-order': 'off',
   'vue/html-self-closing': [
     'error',
     {
