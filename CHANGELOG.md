@@ -1,4 +1,16 @@
 
+## v221.4.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@221.3.0...v221.4.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([ccf48794](https://github.com/alex-lit/lint-kit/commit/ccf48794))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v221.3.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@221.2.1...v221.3.0)
