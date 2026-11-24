@@ -58,7 +58,9 @@ export default defineConfig({
     plugins.solidity(),
     plugins.sql(),
     plugins.tailwindcss(),
+    plugins.classnames(),
     plugins.xml(),
+    plugins.merge(),
     // plugins.yuku(), // экспериментальный парсер JS/TS, см. раздел Yuku
   ],
 });
@@ -112,6 +114,8 @@ export default defineConfig({
 Скалярные опции перекрывают друг друга. Коллекции `plugins` и `overrides` в
 конфигах плагинов дополняются, а не заменяются. `plugins` дедуплицируются,
 поэтому один и тот же плагин можно безопасно указать несколько раз.
+`prettier-plugin-merge` всегда перемещается в конец списка, потому что он должен
+применяться после остальных плагинов.
 
 Для `overrides` более позднее правило выигрывает: пользовательские overrides
 идут после дефолтных и перекрывают их при совпадении `files`.
@@ -140,21 +144,80 @@ export default defineConfig({
 
 ## Плагины
 
-| Плагин                  | Что делает                                      | Пакет                                                                                                                                                      |
-| ----------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `plugins.jsdoc()`       | Нормализует JSDoc-комментарии                   | [`prettier-plugin-jsdoc`](https://github.com/hosseinmd/prettier-plugin-jsdoc)                                                                              |
-| `plugins.mdc()`         | Форматирует MDC-документы (Nuxt Content)        | [`prettier-plugin-mdc`](https://github.com/so1ve/prettier-plugin-mdc)                                                                                      |
-| `plugins.packageJson()` | Сортирует ключи в package.json                  | [`prettier-plugin-packagejson`](https://github.com/matzkoh/prettier-plugin-packagejson)                                                                    |
-| `plugins.php()`         | Форматирует PHP-файлы                           | [`@prettier/plugin-php`](https://github.com/prettier/plugin-php)                                                                                           |
-| `plugins.pug()`         | Форматирует Pug-шаблоны с сортировкой атрибутов | [`@prettier/plugin-pug`](https://github.com/prettier/plugin-pug)                                                                                           |
-| `plugins.ruby()`        | Форматирует Ruby и ERB файлы                    | [`@prettier/plugin-ruby`](https://github.com/prettier/plugin-ruby) + [`@4az/prettier-plugin-html-erb`](https://github.com/Nilkee/prettier-plugin-html-erb) |
-| `plugins.sh()`          | Форматирует shell-скрипты                       | [`prettier-plugin-sh`](https://github.com/astorije/prettier-plugin-sh)                                                                                     |
-| `plugins.sortJson()`    | Рекурсивно сортирует ключи JSON-объектов        | [`prettier-plugin-sort-json`](https://github.com/Gudahtt/prettier-plugin-sort-json)                                                                        |
-| `plugins.solidity()`    | Форматирует контракты Solidity                  | [`prettier-plugin-solidity`](https://github.com/prettier-solidity/prettier-plugin-solidity)                                                                |
-| `plugins.sql()`         | Форматирует SQL-запросы                         | [`prettier-plugin-sql`](https://github.com/un-ts/prettier/tree/master/packages/sql)                                                                        |
-| `plugins.tailwindcss()` | Сортирует утилитарные классы Tailwind CSS       | [`prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                                                               |
-| `plugins.xml()`         | Форматирует XML-файлы                           | [`@prettier/plugin-xml`](https://github.com/prettier/plugin-xml)                                                                                           |
-| `plugins.yuku()`        | Форматирует JS/TS экспериментальным парсером    | [`@prettier/plugin-yuku`](https://github.com/prettier/prettier/tree/main/packages/plugin-yuku)                                                             |
+| Плагин                  | Что делает                                       | Пакет                                                                                                                                                      |
+| ----------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `plugins.classnames()`  | Переносит длинные списки классов по `printWidth` | [`prettier-plugin-classnames`](https://github.com/ony3000/prettier-plugin-classnames)                                                                      |
+| `plugins.jsdoc()`       | Нормализует JSDoc-комментарии                    | [`prettier-plugin-jsdoc`](https://github.com/hosseinmd/prettier-plugin-jsdoc)                                                                              |
+| `plugins.mdc()`         | Форматирует MDC-документы (Nuxt Content)         | [`prettier-plugin-mdc`](https://github.com/so1ve/prettier-plugin-mdc)                                                                                      |
+| `plugins.merge()`       | Применяет Prettier-плагины последовательно       | [`prettier-plugin-merge`](https://github.com/ony3000/prettier-plugin-merge)                                                                                |
+| `plugins.packageJson()` | Сортирует ключи в package.json                   | [`prettier-plugin-packagejson`](https://github.com/matzkoh/prettier-plugin-packagejson)                                                                    |
+| `plugins.php()`         | Форматирует PHP-файлы                            | [`@prettier/plugin-php`](https://github.com/prettier/plugin-php)                                                                                           |
+| `plugins.pug()`         | Форматирует Pug-шаблоны с сортировкой атрибутов  | [`@prettier/plugin-pug`](https://github.com/prettier/plugin-pug)                                                                                           |
+| `plugins.ruby()`        | Форматирует Ruby и ERB файлы                     | [`@prettier/plugin-ruby`](https://github.com/prettier/plugin-ruby) + [`@4az/prettier-plugin-html-erb`](https://github.com/Nilkee/prettier-plugin-html-erb) |
+| `plugins.sh()`          | Форматирует shell-скрипты                        | [`prettier-plugin-sh`](https://github.com/astorije/prettier-plugin-sh)                                                                                     |
+| `plugins.sortJson()`    | Рекурсивно сортирует ключи JSON-объектов         | [`prettier-plugin-sort-json`](https://github.com/Gudahtt/prettier-plugin-sort-json)                                                                        |
+| `plugins.solidity()`    | Форматирует контракты Solidity                   | [`prettier-plugin-solidity`](https://github.com/prettier-solidity/prettier-plugin-solidity)                                                                |
+| `plugins.sql()`         | Форматирует SQL-запросы                          | [`prettier-plugin-sql`](https://github.com/un-ts/prettier/tree/master/packages/sql)                                                                        |
+| `plugins.tailwindcss()` | Сортирует утилитарные классы Tailwind CSS        | [`prettier-plugin-tailwindcss`](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)                                                               |
+| `plugins.xml()`         | Форматирует XML-файлы                            | [`@prettier/plugin-xml`](https://github.com/prettier/plugin-xml)                                                                                           |
+| `plugins.yuku()`        | Форматирует JS/TS экспериментальным парсером     | [`@prettier/plugin-yuku`](https://github.com/prettier/prettier/tree/main/packages/plugin-yuku)                                                             |
+
+### Class names и Tailwind CSS
+
+`plugins.classnames()` переносит длинные списки классов по `printWidth`. Чтобы
+сортировка Tailwind и переносы работали вместе, подключите `plugins.merge()`
+последним:
+
+```js
+export default defineConfig({
+  plugins: [plugins.tailwindcss(), plugins.classnames(), plugins.merge()],
+});
+```
+
+Порядок важен: `plugins.tailwindcss()` должен идти до `plugins.classnames()`.
+`plugins.merge()` можно ставить в любом месте, `defineConfig` переместит его в
+конец. Без `merge` Prettier использует только один плагин из тех, что умеют
+форматировать язык: пропадут либо переносы классов, либо сортировка Tailwind, а
+также перестанет работать JSDoc.
+
+Функции, внутри которых переносятся классы, задаются через `customFunctions`. По
+умолчанию используется экспортируемая константа `TAILWIND_FUNCTIONS`:
+`classnames`, `clsx`, `cn`, `ctl`, `cva`, `tv`, `tw`, `twMerge`.
+
+Списки функций и атрибутов экспортируются из пакета. Их можно расширить, не
+копируя значения:
+
+```js
+import {
+  TAILWIND_FUNCTIONS,
+  defineConfig,
+  plugins,
+} from '@alexlit/config-prettier';
+
+const classFunctions = [...TAILWIND_FUNCTIONS, 'myClassHelper'];
+
+export default defineConfig({
+  plugins: [
+    plugins.tailwindcss({ tailwindFunctions: classFunctions }),
+    plugins.classnames({ customFunctions: classFunctions }),
+    plugins.merge(),
+  ],
+});
+```
+
+`TAILWIND_ATTRIBUTES` содержит только кастомные атрибуты: `ui` и `:ui`. `class`,
+`className`, `:class` и `v-bind:class` плагины обрабатывают автоматически.
+
+Ограничения:
+
+- плагин может преобразовать `:class="'...'"` в шаблонный литерал с обратными
+  кавычками;
+- Markdown и MDX не поддерживаются. Если в блоках кода появляется нежелательное
+  форматирование, добавьте override, который отключает
+  `prettier-plugin-classnames`, сохранив нужные для Markdown плагины;
+- `prettier-plugin-merge` не поддерживает форматирование выделенного диапазона и
+  может конфликтовать с `prettierd`;
+- форматирование с `merge` медленнее: плагины применяются последовательно.
 
 ### Yuku
 
@@ -221,6 +284,16 @@ v24 - breaking-релиз: плагинов по умолчанию больше
 ## Известные проблемы
 
 - **tailwindcss** ранее конфликтовал с **jsdoc**.
+- **classnames** и **tailwindcss** конфликтуют без `merge`: Prettier использует
+  только последний плагин, поэтому пропадают либо переносы классов, либо
+  сортировка Tailwind. Порядок должен быть `tailwindcss`, затем `classnames`,
+  `merge` - последним.
+- **merge** не поддерживает форматирование выделенного диапазона (range
+  formatting), может конфликтовать с `prettierd` и замедляет форматирование,
+  потому что плагины применяются последовательно.
+- **classnames** может менять синтаксис: `:class="'...'"` превращается в
+  шаблонный литерал с обратными кавычками. Markdown и MDX плагин не
+  поддерживает.
 - **yuku** экспериментальный: требует Prettier >= 3.6, тянет нативные бинарники
   и заменяет парсеры Babel/TypeScript. Для JS/TS под Yuku не работают
   `prettier-plugin-jsdoc` и сортировка Tailwind.

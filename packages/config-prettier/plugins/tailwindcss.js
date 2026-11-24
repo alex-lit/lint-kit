@@ -1,18 +1,10 @@
 import { mergeConfigs } from '../utils/merge-configs.js';
+import { TAILWIND_ATTRIBUTES, TAILWIND_FUNCTIONS } from '../utils/tailwind.js';
 
 const DEFAULTS = {
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindAttributes: ['ui', ':ui', 'class', 'className'],
-  tailwindFunctions: [
-    'classnames',
-    'clsx',
-    'cn',
-    'ctl',
-    'cva',
-    'tv',
-    'tw',
-    'twMerge',
-  ],
+  tailwindAttributes: TAILWIND_ATTRIBUTES,
+  tailwindFunctions: TAILWIND_FUNCTIONS,
 };
 
 /**
