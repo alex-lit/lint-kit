@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "166.3.0",
+  "version": "166.4.0",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -48,14 +48,14 @@
     "@eslint/json": "^2.1.1",
     "@intlify/eslint-plugin-vue-i18n": "^4.5.1",
     "@stylistic/eslint-plugin": "^6.0.1",
-    "@tanstack/eslint-plugin-query": "^5.108.3",
+    "@tanstack/eslint-plugin-query": "^5.108.4",
     "@unocss/eslint-config": "^66.13.0",
     "@vitest/eslint-plugin": "^1.6.28",
     "eslint": "^10.15.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-de-morgan": "^2.3.0",
     "eslint-plugin-import-x": "^4.18.1",
-    "eslint-plugin-jsdoc": "^65.5.2",
+    "eslint-plugin-jsdoc": "^65.5.3",
     "eslint-plugin-perfectionist": "^5.14.0",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-prettier": "^5.5.7",
@@ -69,7 +69,7 @@
     "globals": "^17.14.0",
     "jsonc-eslint-parser": "^3.3.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.73.0",
+    "typescript-eslint": "^8.74.0",
     "vue-eslint-parser": "^10.4.2",
     "yaml-eslint-parser": "^2.1.0"
   },
