@@ -1,4 +1,16 @@
 
+## v222.0.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@221.4.0...v222.0.0)
+
+### 🏡 Chore
+
+- **@alexlit/config-prettier:** Bump version ([7071f2ae](https://github.com/alex-lit/lint-kit/commit/7071f2ae))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v221.4.0
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@221.3.0...v221.4.0)
