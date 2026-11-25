@@ -1,38 +1,38 @@
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 
-/** All source files covered by the shareable config */
+/** Все исходные файлы, которые покрывает общий конфиг */
 export const FILES = ['**/*.{js,mjs,cjs,jsx,ts,tsx,mts,cts,vue}'];
 
-/** TypeScript source files */
+/** Исходные файлы TypeScript */
 export const TS_FILES = ['**/*.{ts,tsx,mts,cts}'];
 
-/** Vue.js single-file components */
+/** Однофайловые компоненты Vue.js */
 export const VUE_FILES = ['**/*.vue'];
 
-/** JSON files */
+/** Файлы JSON */
 export const JSON_FILES = ['**/*.{json,jsonc,json5}'];
 
-/** YAML files */
+/** Файлы YAML */
 export const YAML_FILES = ['**/*.{yaml,yml}'];
 
 /**
- * Files that hold data rather than code.
+ * Файлы с данными, а не с кодом.
  *
- * Plugins that ship configs without a `files` key would otherwise apply their
- * rules to these files, so such blocks have to exclude them explicitly.
+ * Плагины, которые поставляют конфиги без ключа `files`, иначе применили бы
+ * свои правила к этим файлам, поэтому такие блоки должны явно их исключать.
  */
 export const DATA_FILES = [...JSON_FILES, ...YAML_FILES];
 
-/** Test files */
+/** Тестовые файлы */
 export const TEST_FILES = [
   '**/*.{test,spec}.{js,cjs,mjs,jsx,ts,tsx,mts,cts,vue}',
 ];
 
-/** Type declaration files */
+/** Файлы деклараций типов */
 export const DTS_FILES = ['**/*.d.{ts,mts,cts}'];
 
-/** Never linted */
+/** Исключены из линтинга */
 export const IGNORES = [
   '**/.*',
   '**/.*/**',
@@ -47,11 +47,11 @@ export const IGNORES = [
 ];
 
 /**
- * Base config.
+ * Базовый конфиг.
  *
- * Provides the file scope, the shared ignore patterns and the global variables.
- * It is added automatically by `defineConfig`, so you never spread it
- * yourself.
+ * Задаёт область файлов, общие шаблоны игнорирования и глобальные переменные.
+ * Добавляется автоматически из `defineConfig`, поэтому вручную его
+ * разворачивать не нужно.
  *
  * @example
  *   import { defineConfig, plugins } from '@alexlit/config-eslint';

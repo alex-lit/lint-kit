@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/no-null */
 
 /**
- * Shared TypeScript rules.
+ * Общие правила TypeScript.
  *
- * `format: null` disables the format check for destructured variables - their
- * names may be arbitrary.
+ * `format: null` отключает проверку формата для деструктурированных переменных:
+ * их имена могут быть произвольными.
  */
 export const TS_RULES = {
   '@typescript-eslint/consistent-type-imports': [

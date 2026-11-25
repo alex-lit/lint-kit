@@ -31,17 +31,21 @@ export interface Plugins {
   perfectionist(config?: PluginConfig): Config[];
   /** @see eslint-plugin-pinia */
   pinia(config?: PluginConfig): Config[];
-  /** @see eslint-plugin-prettier */
+  /**
+   * Отключает правила ESLint, конфликтующие с Prettier.
+   *
+   * Сам Prettier не запускает.
+   *
+   * @see eslint-config-prettier
+   */
   prettier(config?: PluginConfig): Config[];
-  /** @see eslint-config-prettier */
-  prettierConfig(config?: PluginConfig): Config[];
   /** @see eslint-plugin-regexp */
   regexp(config?: PluginConfig): Config[];
   /** @see eslint-plugin-sonarjs */
   sonar(config?: PluginConfig): Config[];
   /** @see @stylistic/eslint-plugin */
   stylistic(config?: PluginConfig): Config[];
-  /** @see eslint-plugin-tailwindcss */
+  /** @see eslint-plugin-better-tailwindcss */
   tailwindcss(config?: PluginConfig): Config[];
   /** @see @tanstack/query */
   tanstackQuery(config?: PluginConfig): Config[];
@@ -107,7 +111,7 @@ export declare const YAML_FILES: string[];
  *     plugins: [
  *       plugins.javascript(),
  *       plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
- *       plugins.prettierConfig(), // последним среди пресетов
+ *       plugins.prettier(), // последним среди пресетов
  *     ],
  *     options: { rules: { 'no-console': 'off' } },
  *   });

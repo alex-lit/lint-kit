@@ -1,8 +1,8 @@
 /**
- * Shared restricted syntax rules.
+ * Общие правила ограничения синтаксиса.
  *
- * Keep it in a standalone module so that plugins which extend the list (e.g.
- * `vue.js`) merge it instead of silently replacing it.
+ * Вынесены в отдельный модуль, чтобы плагины, которые расширяют список
+ * (например, `vue.js`), дополняли его, а не заменяли целиком.
  */
 export const NO_RESTRICTED_SYNTAX = [
   {

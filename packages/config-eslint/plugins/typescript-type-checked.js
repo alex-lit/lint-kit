@@ -5,7 +5,7 @@ import { DATA_FILES, FILES, TEST_FILES, TS_FILES } from '../base.js';
 import { TS_RULES } from '../rules/typescript.js';
 
 /**
- * Type-aware правила TypeScript.
+ * Правила TypeScript с анализом типов.
  *
  * Включается вручную: требует `tsconfig.json` в проекте и информацию о типах,
  * из-за чего линтинг работает медленнее. Используйте его вместо `typescript`, а
@@ -27,7 +27,7 @@ export const typescriptTypeChecked = (config = []) =>
     // Правила без анализа типов - та же область, что и у обычного плагина `typescript`,
     // поэтому `.js`/`.vue`-файлы сохраняют TypeScript-версии правил.
     // `plugin.configs.strict`/`stylistic` содержат блоки без ключа `files`,
-    // поэтому они также применялись бы к data-файлам, которые вообще не JavaScript.
+    // поэтому они также применялись бы к файлам с данными, которые вообще не JavaScript.
     ...[...plugin.configs.strict, ...plugin.configs.stylistic].map(
       (config) => ({
         ...config,

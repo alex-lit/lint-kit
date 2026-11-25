@@ -30,7 +30,7 @@ export default defineConfig({
     plugins.javascript(),
     plugins.typescript(),
     plugins.unicorn(),
-    plugins.prettierConfig(),
+    plugins.prettier(),
   ],
 });
 ```
@@ -54,7 +54,7 @@ export default defineConfig({
 
 > [!NOTE]
 >
-> `plugins.prettierConfig()` должен быть последним среди пресетов - он отключает
+> `plugins.prettier()` должен быть последним среди пресетов - он отключает
 > правила, конфликтующие с Prettier. Ваши настройки из `options` применяются
 > после него и перебивают всё, поэтому не включайте туда форматирующие правила.
 
@@ -90,7 +90,7 @@ export default defineConfig({
     plugins.zod(),
 
     // стилистика
-    plugins.prettierConfig(),
+    plugins.prettier(),
   ],
 
   // дополнительные правила
@@ -109,12 +109,11 @@ export default defineConfig({
 | `plugins.json()`                  | Проверяет JSON, JSONC, JSON5 и YAML           | [`@eslint/json`](https://github.com/eslint/json)                                                                |
 | `plugins.perfectionist()`         | Сортирует импорты, объекты, интерфейсы и типы | [`eslint-plugin-perfectionist`](https://perfectionist.dev)                                                      |
 | `plugins.pinia()`                 | Проверяет Pinia-хранилища                     | [`eslint-plugin-pinia`](https://github.com/lisilinhart/eslint-plugin-pinia)                                     |
-| `plugins.prettier()`              | Форматирует код самим Prettier                | [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier)                                  |
-| `plugins.prettierConfig()`        | Отключает правила, конфликтующие с Prettier   | [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)                                  |
+| `plugins.prettier()`              | Отключает правила, конфликтующие с Prettier   | [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)                                  |
 | `plugins.regexp()`                | Проверяет регулярные выражения                | [`eslint-plugin-regexp`](https://github.com/ota-meshi/eslint-plugin-regexp)                                     |
 | `plugins.sonar()`                 | Проверяет код по правилам SonarJS             | [`eslint-plugin-sonarjs`](https://github.com/SonarSource/SonarJS/blob/master/packages/jsts/src/rules/README.md) |
 | `plugins.stylistic()`             | Проверяет форматирование и стиль кода         | [`@stylistic/eslint-plugin`](https://eslint.style/)                                                             |
-| `plugins.tailwindcss()`           | Проверяет классы Tailwind CSS                 | [`eslint-plugin-tailwindcss`](https://github.com/francoismassart/eslint-plugin-tailwindcss)                     |
+| `plugins.tailwindcss()`           | Проверяет и форматирует классы Tailwind CSS   | [`eslint-plugin-better-tailwindcss`](https://github.com/schoero/eslint-plugin-better-tailwindcss)               |
 | `plugins.tanstackQuery()`         | Проверяет TanStack Query                      | [`@tanstack/eslint-plugin-query`](https://tanstack.com/query/latest/docs/eslint/eslint-plugin-query)            |
 | `plugins.typescript()`            | Проверяет TypeScript без анализа типов        | [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)                                   |
 | `plugins.typescriptTypeChecked()` | Проверяет TypeScript с анализом типов         | [`typescript-eslint`](https://github.com/typescript-eslint/typescript-eslint)                                   |
@@ -166,8 +165,8 @@ export default defineConfig({
   plugins: [
     plugins.tailwindcss({
       settings: {
-        tailwindcss: {
-          cssConfigPath: path.resolve(import.meta.dirname, 'src/main.css'),
+        'better-tailwindcss': {
+          entryPoint: path.resolve(import.meta.dirname, 'src/main.css'),
         },
       },
     }),
@@ -175,12 +174,54 @@ export default defineConfig({
 });
 ```
 
-## Type-aware правила
+### Форматирование классов
 
-Type-aware правила (`no-floating-promises`, `no-misused-promises`,
-`await-thenable`, `no-unsafe-*`, `switch-exhaustiveness-check`,
-`no-unnecessary-condition`, …) требуют информации о типах, из-за чего линтинг
-замедляется. По умолчанию они не включены.
+`plugins.tailwindcss()` сортирует классы и переносит их по вариантам. Для Vue
+статический `class` преобразуется в `:class` с шаблонным литералом, чтобы
+Prettier не схлопывал переносы обратно.
+
+`plugins.tailwindcss()` из `@alexlit/config-prettier` сортирует только `@apply`
+в CSS/SCSS/LESS и не конфликтует с ESLint-форматированием разметки.
+
+Атрибуты `ui` и `:ui` из Nuxt UI добавлены в `selectors`, включая объектные
+значения `:ui`.
+
+`no-unknown-classes` по умолчанию выключен: Nuxt UI и кастомные классы дают
+ложные срабатывания. Включить его можно через переданный конфиг:
+
+```js
+plugins.tailwindcss({
+  rules: { 'better-tailwindcss/no-unknown-classes': 'warn' },
+}),
+```
+
+Для Vue отключаются `vue/no-useless-v-bind`, `vue/prefer-separate-static-class`
+и `vue/static-class-names-order`: они конфликтуют с преобразованием `class` в
+`:class` и переносами классов.
+
+### Миграция с `eslint-plugin-tailwindcss`
+
+| Старое правило                                   | Новое правило                                              |
+| ------------------------------------------------ | ---------------------------------------------------------- |
+| `tailwindcss/classnames-order`                   | `better-tailwindcss/enforce-consistent-class-order`        |
+| `tailwindcss/enforces-canonical-classname`       | `better-tailwindcss/enforce-canonical-classes`             |
+| `tailwindcss/enforces-negative-arbitrary-values` | нет прямого аналога                                        |
+| `tailwindcss/enforces-shorthand`                 | `better-tailwindcss/enforce-shorthand-classes`             |
+| `tailwindcss/important-modifier-suffix`          | `better-tailwindcss/enforce-consistent-important-position` |
+| `tailwindcss/no-arbitrary-value`                 | `better-tailwindcss/no-restricted-classes`                 |
+| `tailwindcss/no-contradicting-classname`         | `better-tailwindcss/no-conflicting-classes`                |
+| `tailwindcss/no-custom-classname`                | `better-tailwindcss/no-unknown-classes`                    |
+| `tailwindcss/no-unnecessary-arbitrary-value`     | `better-tailwindcss/enforce-canonical-classes`             |
+
+Настройка `settings.tailwindcss.cssConfigPath` заменена на
+`settings['better-tailwindcss'].entryPoint`.
+
+## Правила с анализом типов
+
+Правила (`no-floating-promises`, `no-misused-promises`, `await-thenable`,
+`no-unsafe-*`, `switch-exhaustiveness-check`, `no-unnecessary-condition`, …)
+требуют информации о типах, из-за чего линтинг замедляется. По умолчанию они не
+включены.
 
 Чтобы их включить, замените `plugins.typescript()` на
 `plugins.typescriptTypeChecked()`:
@@ -193,7 +234,7 @@ export default defineConfig({
   plugins: [
     plugins.javascript(),
     plugins.typescriptTypeChecked(), // вместо plugins.typescript()
-    plugins.prettierConfig(),
+    plugins.prettier(),
   ],
 });
 ```
@@ -205,19 +246,17 @@ export default defineConfig({
 > `tsconfig.node.json` в одном корне, если нужно). Используйте его вместо
 > `plugins.typescript()`, а не вместе с ним.
 
-## Prettier или prettierConfig
+## Prettier
 
-Оба варианта доступны, и они **не взаимозаменяемы**.
+`plugins.prettier()` отключает правила ESLint, конфликтующие с Prettier. Сам
+Prettier он **не запускает**.
 
-| Плагин                     | Пакет                    | Что делает                                                       |
-| -------------------------- | ------------------------ | ---------------------------------------------------------------- |
-| `plugins.prettierConfig()` | `eslint-config-prettier` | Только отключает форматирующие правила, конфликтующие с Prettier |
-| `plugins.prettier()`       | `eslint-plugin-prettier` | Дополнительно запускает сам Prettier как правило ESLint          |
+Prettier запускайте отдельным шагом: через редактор, `prettier --check`,
+`prettier --write` или lint-staged. `eslint-plugin-prettier` в пакет не входит.
 
-Используйте `plugins.prettierConfig()`, если Prettier запускается отдельным
-шагом (редактор, CLI `prettier`, Husky). Используйте `plugins.prettier()`, если
-хотите, чтобы ESLint сам сообщал о форматировании и исправлял его за один
-проход - это медленнее и дублирует форматтер.
+`plugins.prettier()` должен быть последним среди пресетов: он отключает правила,
+которые уже покрывает Prettier. Ваши настройки из `options` применяются после
+него и перебивают всё, поэтому не включайте туда форматирующие правила.
 
 ## Разработка
 

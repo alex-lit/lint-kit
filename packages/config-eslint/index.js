@@ -8,7 +8,7 @@ import { jsdoc } from './plugins/jsdoc.js';
 import { json } from './plugins/json.js';
 import { perfectionist } from './plugins/perfectionist.js';
 import { pinia } from './plugins/pinia.js';
-import { prettier, prettierConfig } from './plugins/prettier.js';
+import { prettier } from './plugins/prettier.js';
 import { regexp } from './plugins/regexp.js';
 import { sonar } from './plugins/sonar.js';
 import { stylistic } from './plugins/stylistic.js';
@@ -40,7 +40,6 @@ export const plugins = {
   perfectionist,
   pinia,
   prettier,
-  prettierConfig,
   regexp,
   sonar,
   stylistic,
@@ -78,7 +77,7 @@ export const plugins = {
  *     plugins: [
  *       plugins.javascript(),
  *       plugins.unicorn({ rules: { 'unicorn/no-null': 'off' } }),
- *       plugins.prettierConfig(), // последним среди пресетов
+ *       plugins.prettier(), // последним среди пресетов
  *     ],
  *     options: { rules: { 'no-console': 'off' } },
  *   });

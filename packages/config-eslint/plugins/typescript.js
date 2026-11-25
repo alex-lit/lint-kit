@@ -16,7 +16,7 @@ import { TS_RULES } from '../rules/typescript.js';
 export const typescript = (config = []) =>
   defineConfig([
     // `plugin.configs.strict`/`stylistic` содержат блоки без ключа `files`,
-    // поэтому они также применялись бы к data-файлам, которые вообще не JavaScript.
+    // поэтому они также применялись бы к файлам с данными, которые вообще не JavaScript.
     ...[...plugin.configs.strict, ...plugin.configs.stylistic].map(
       (config) => ({
         ...config,
