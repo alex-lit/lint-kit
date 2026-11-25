@@ -1,4 +1,4 @@
-# Launch HTML linter
+# Запускает линтер HTML
 
 source "$(dirname $0)"/../bash.config.sh
 

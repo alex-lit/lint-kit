@@ -23,14 +23,14 @@ export default defineConfig({
     plugins.zod(),
     plugins.tailwindcss({
       settings: {
-        tailwindcss: {
-          cssConfigPath: path.resolve(
+        'better-tailwindcss': {
+          entryPoint: path.resolve(
             import.meta.dirname,
             'examples/css.tailwind.css',
           ),
         },
       },
     }),
-    plugins.prettierConfig(),
+    plugins.prettier(),
   ],
 });

@@ -12,13 +12,8 @@ export default defineConfig({
     plugins.sortJson(),
     plugins.solidity(),
     plugins.sql(),
-    plugins.xml(),
     plugins.tailwindcss(),
-    plugins.classnames(),
-    plugins.merge(),
-    // Yuku пока не включаем: парсеры `yuku`/`yuku-ts` экспериментальные.
-    // Костыли с overrides и plugins внутри них описаны в plugins/yuku.js.
-    // Когда плагин станет стабильным и подружатся jsdoc/tailwind, включить:
-    // plugins.yuku(),
+    plugins.xml(),
+    // plugins.yuku(), // экспериментальный парсер JS/TS, см. раздел Yuku
   ],
 });

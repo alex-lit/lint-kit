@@ -1,4 +1,4 @@
-# Launch styles linter
+# Запускает линтер стилей
 
 source "$(dirname $0)"/../bash.config.sh
 

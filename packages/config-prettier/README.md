@@ -77,7 +77,7 @@ import { defineConfig, plugins } from '@alexlit/config-prettier';
 export default defineConfig({
   plugins: [
     plugins.sortJson({ jsonRecursiveSort: false }),
-    plugins.tailwindcss({ tailwindFunctions: ['cn', 'cva'] }),
+    plugins.xml({ xmlWhitespaceSensitivity: 'preserve' }),
   ],
 });
 ```

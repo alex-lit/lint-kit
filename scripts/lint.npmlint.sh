@@ -1,4 +1,4 @@
-# Launch NPM linter
+# Запускает линтер NPM
 
 source "$(dirname $0)"/../bash.config.sh
 

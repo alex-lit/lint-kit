@@ -9,9 +9,8 @@ import { mergeConfigs } from '../utils/merge-configs.js';
  * 2. `plugins` продублированы внутри каждого override, как в официальном README.
  *    Prettier применяет override через `Object.assign`, поэтому `plugins` из
  *    override заменяют верхнеуровневый список для подходящих файлов. Это
- *    отключает `prettier-plugin-jsdoc` и `prettier-plugin-tailwindcss` для
- *    JS/TS под Yuku, что сейчас желательно: они не умеют работать с
- *    `yuku`/`yuku-ts`.
+ *    отключает `prettier-plugin-jsdoc` для JS/TS под Yuku, что сейчас
+ *    желательно: он не умеет работать с `yuku`/`yuku-ts`.
  *
  * Когда Yuku станет стабильным и плагины научатся с ним дружить, эти
  * override-костыли можно будет упростить до обычного верхнеуровневого `plugins:
@@ -34,8 +33,8 @@ const DEFAULTS = {
  * Форматирует JavaScript и TypeScript экспериментальным парсером Yuku
  *
  * Заменяет стандартные парсеры Babel/TypeScript, поэтому для JS/TS не
- * загружаются `prettier-plugin-jsdoc` и `prettier-plugin-tailwindcss`. Плагин
- * пока экспериментальный: требует Prettier >= 3.6 и нативные бинарники `yuku`.
+ * загружается `prettier-plugin-jsdoc`. Плагин пока экспериментальный: требует
+ * Prettier >= 3.6 и нативные бинарники `yuku`.
  *
  * @param {Partial<import('prettier').Config>} [options] - Опции, накладываемые
  *   поверх значений по умолчанию. Коллекции (`overrides`, `plugins`)

@@ -11,8 +11,32 @@
 </script>
 
 <template>
-  <div class="xxx article-access top-[-5px] left-[-5px] aspect-[16/9]">
-    <div>
+  <div
+    class="article-access xxx top-[-5px] left-[-5px] aspect-video"
+    :ui="{
+      ololo: `
+        xxxx top-[-5px] aspect-video text-black underline
+        before:block before:w-2
+        hover:font-bold hover:text-black/70
+        focus:font-bold focus:text-black/70
+      `,
+    }"
+  >
+    <div
+      :class="`
+        xxxx top-[-5px] aspect-video text-black underline
+        not-autofill:not-open:
+        before:block before:w-2
+        hover:font-bold hover:text-black/70
+        focus:font-bold focus:text-black/70
+      `"
+      :ui="`
+        sssaspect-video yyyy xxxx top-[-5px] aspect-video text-black underline
+        before:block before:w-2
+        hover:font-bold hover:text-black/70
+        focus:font-bold focus:text-black/70
+      `"
+    >
       <div class="foo"></div>
 
       <div></div>
@@ -22,7 +46,7 @@
 
 <style lang="scss" module>
   .vue {
-    $self: #{&};
+    @apply xxxx top-[-5px] aspect-video text-black underline before:block before:w-2 hover:font-bold hover:text-black/70 focus:font-bold focus:text-black/70;
 
     inset-inline-start: 10px;
     position: relative;

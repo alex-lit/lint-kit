@@ -1,4 +1,4 @@
-# Launch linter for .md files
+# Запускает линтер Markdown-файлов
 
 source "$(dirname $0)"/../bash.config.sh
 

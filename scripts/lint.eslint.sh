@@ -1,4 +1,4 @@
-# Launch scripts linter
+# Запускает линтер JavaScript
 
 source "$(dirname $0)"/../bash.config.sh
 

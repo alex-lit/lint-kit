@@ -1,7 +1,7 @@
 import type { Config } from 'prettier';
 
 /**
- * Options of
+ * Опции
  * [prettier-plugin-jsdoc](https://github.com/hosseinmd/prettier-plugin-jsdoc)
  */
 export interface JsdocOptions {
@@ -11,12 +11,12 @@ export interface JsdocOptions {
 }
 
 /**
- * Plugin factories. Every plugin is connected explicitly: pass
- * `plugins.<name>()` to `defineConfig`.
+ * Фабрики плагинов. Каждый плагин подключается явно: передайте
+ * `plugins.<name>()` в `defineConfig`.
  *
- * Collection options (`overrides`, `plugins`) are appended to the defaults:
- * `plugins` are deduplicated and later `overrides` win. Other options replace
- * default values.
+ * Коллекции `overrides` и `plugins` дополняются: `plugins` дедуплицируются,
+ * более поздние `overrides` выигрывают. Остальные поля заменяют значения по
+ * умолчанию.
  */
 export interface Plugins {
   /** @see prettier-plugin-jsdoc */
@@ -47,7 +47,7 @@ export interface Plugins {
   yuku(options?: Config): Config;
 }
 
-/** Options of [plugin-pug](https://github.com/prettier/plugin-pug) */
+/** Опции [plugin-pug](https://github.com/prettier/plugin-pug) */
 export interface PugOptions {
   pugCommentPreserveSpaces?: string;
   pugSingleQuote?: boolean;
@@ -56,14 +56,14 @@ export interface PugOptions {
 }
 
 /**
- * Options of
+ * Опции
  * [prettier-plugin-sort-json](https://github.com/Gudahtt/prettier-plugin-sort-json)
  */
 export interface SortJsonOptions {
   jsonRecursiveSort?: boolean;
 }
 
-/** Options of [plugin-xml](https://github.com/prettier/plugin-xml) */
+/** Опции [plugin-xml](https://github.com/prettier/plugin-xml) */
 export interface XmlOptions {
   xmlWhitespaceSensitivity?: 'ignore' | 'preserve' | 'strict';
 }
@@ -71,9 +71,9 @@ export interface XmlOptions {
 export declare const plugins: Plugins;
 
 /**
- * Create prettier config
+ * Создать конфигурацию Prettier
  *
- * There are no default plugins - connect the required ones explicitly:
+ * Плагинов по умолчанию нет - подключайте нужные явно:
  *
  * ```js
  * defineConfig({
@@ -82,13 +82,13 @@ export declare const plugins: Plugins;
  * });
  * ```
  *
- * Base options are replaced by plugin options and `options`. Collection options
- * (`overrides`, `plugins`) are appended: `plugins` are deduplicated and later
- * `overrides` win.
+ * Базовые опции заменяются опциями плагинов и `options`. Коллекции `overrides`
+ * и `plugins` дополняются: `plugins` дедуплицируются, более поздние `overrides`
+ * выигрывают.
  *
- * @param config - Configuration options
- * @param config.options - Base prettier options (highest precedence)
- * @param config.plugins - Plugin configs, e.g. `[plugins.php()]`
+ * @param config - Настройки конфигурации
+ * @param config.options - Базовые опции Prettier (наивысший приоритет)
+ * @param config.plugins - Конфиги плагинов, например `[plugins.php()]`
  */
 export declare function defineConfig(config?: {
   options?: Config;

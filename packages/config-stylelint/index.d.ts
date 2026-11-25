@@ -43,7 +43,7 @@ declare const plugins: Plugins;
  *
  * Приоритет (от низкого к высокому): база → конфиги плагинов по порядку →
  * `options`. `extends`, `ignoreFiles`, `overrides` и `plugins` конкатенируются
- * (дубли `plugins` убираются), `rules` - shallow merge.
+ * (дубли `plugins` убираются), `rules` - поверхностное слияние.
  *
  * @param config - Настройки конфигурации
  * @param config.options - Базовые опции Stylelint, наивысший приоритет

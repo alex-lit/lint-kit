@@ -143,7 +143,8 @@ const BASE_RULES = {
  *
  * Приоритет (от низкого к высокому): база → конфиги плагинов по порядку →
  * `options`. Коллекции (`extends`, `ignoreFiles`, `overrides`, `plugins`)
- * конкатенируются (дубли `plugins` убираются), `rules` - shallow merge.
+ * конкатенируются (дубли `plugins` убираются), `rules` - поверхностное
+ * слияние.
  *
  * @param {object} [config] - Настройки конфигурации
  * @param {import('stylelint').Config} [config.options] - Базовые опции
