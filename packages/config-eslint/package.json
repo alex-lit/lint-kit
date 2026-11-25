@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "167.0.0",
+  "version": "167.0.1",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -56,7 +56,7 @@
     "eslint-plugin-better-tailwindcss": "^4.11.0",
     "eslint-plugin-de-morgan": "^2.3.0",
     "eslint-plugin-import-x": "^4.18.1",
-    "eslint-plugin-jsdoc": "^65.5.4",
+    "eslint-plugin-jsdoc": "^65.5.5",
     "eslint-plugin-perfectionist": "^5.14.0",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-regexp": "^3.3.3",
