@@ -2,18 +2,6 @@ import type { Config } from 'prettier';
 
 /**
  * Options of
- * [prettier-plugin-classnames](https://github.com/ony3000/prettier-plugin-classnames)
- */
-export interface ClassnamesOptions {
-  classnamesPrintWidth?: number;
-  customAttributes?: readonly string[];
-  customFunctions?: readonly string[];
-  endingPosition?: 'absolute' | 'relative';
-  syntaxTransformation?: boolean;
-}
-
-/**
- * Options of
  * [prettier-plugin-jsdoc](https://github.com/hosseinmd/prettier-plugin-jsdoc)
  */
 export interface JsdocOptions {
@@ -31,14 +19,10 @@ export interface JsdocOptions {
  * default values.
  */
 export interface Plugins {
-  /** @see prettier-plugin-classnames */
-  classnames(options?: ClassnamesOptions & Config): Config;
   /** @see prettier-plugin-jsdoc */
   jsdoc(options?: Config & JsdocOptions): Config;
   /** @see prettier-plugin-mdc */
   mdc(options?: Config): Config;
-  /** @see prettier-plugin-merge */
-  merge(options?: Config): Config;
   /** @see prettier-plugin-packagejson */
   packageJson(options?: Config): Config;
   /** @see plugin-php */
@@ -56,7 +40,7 @@ export interface Plugins {
   /** @see prettier-plugin-sql */
   sql(options?: Config): Config;
   /** @see prettier-plugin-tailwindcss */
-  tailwindcss(options?: Config & TailwindcssOptions): Config;
+  tailwindcss(options?: Config): Config;
   /** @see plugin-xml */
   xml(options?: Config & XmlOptions): Config;
   /** @see @prettier/plugin-yuku */
@@ -79,25 +63,10 @@ export interface SortJsonOptions {
   jsonRecursiveSort?: boolean;
 }
 
-/**
- * Options of
- * [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
- */
-export interface TailwindcssOptions {
-  tailwindAttributes?: readonly string[];
-  tailwindFunctions?: readonly string[];
-}
-
 /** Options of [plugin-xml](https://github.com/prettier/plugin-xml) */
 export interface XmlOptions {
   xmlWhitespaceSensitivity?: 'ignore' | 'preserve' | 'strict';
 }
-
-/** Attributes that Tailwind CSS plugins handle in addition to the built-in ones */
-export declare const TAILWIND_ATTRIBUTES: readonly string[];
-
-/** Functions whose arguments Tailwind CSS and classnames treat as class lists */
-export declare const TAILWIND_FUNCTIONS: readonly string[];
 
 export declare const plugins: Plugins;
 
@@ -115,8 +84,7 @@ export declare const plugins: Plugins;
  *
  * Base options are replaced by plugin options and `options`. Collection options
  * (`overrides`, `plugins`) are appended: `plugins` are deduplicated and later
- * `overrides` win. `prettier-plugin-merge` is always moved to the end of the
- * plugin list.
+ * `overrides` win.
  *
  * @param config - Configuration options
  * @param config.options - Base prettier options (highest precedence)

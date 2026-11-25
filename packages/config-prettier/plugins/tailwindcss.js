@@ -1,14 +1,20 @@
-import { mergeConfigs } from '../utils/merge-configs.js';
-import { TAILWIND_ATTRIBUTES, TAILWIND_FUNCTIONS } from '../utils/tailwind.js';
+import { parsers, options as pluginOptions } from 'prettier-plugin-tailwindcss';
 
-const DEFAULTS = {
-  plugins: ['prettier-plugin-tailwindcss'],
-  tailwindAttributes: TAILWIND_ATTRIBUTES,
-  tailwindFunctions: TAILWIND_FUNCTIONS,
+import { mergeConfigs } from '../utils/merge-configs.js';
+
+const cssPlugin = {
+  options: pluginOptions,
+  parsers: { css: parsers.css, less: parsers.less, scss: parsers.scss },
 };
 
+const DEFAULTS = { plugins: [cssPlugin] };
+
 /**
- * Сортирует утилитарные классы Tailwind CSS по каноническому порядку
+ * Сортирует классы в `@apply` для CSS, SCSS и LESS
+ *
+ * Плагин регистрирует только CSS-парсеры, поэтому не трогает разметку Vue.js,
+ * JSX и HTML. Классы в шаблонах форматирует
+ * `eslint-plugin-better-tailwindcss`.
  *
  * @param {Partial<import('prettier').Config>} [options] - Опции, накладываемые
  *   поверх значений по умолчанию. Коллекции (`overrides`, `plugins`)
