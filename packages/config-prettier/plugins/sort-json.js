@@ -2,6 +2,7 @@ import { mergeConfigs } from '../utils/merge-configs.js';
 
 const DEFAULTS = {
   jsonRecursiveSort: true,
+  jsonSortArrays: true,
   plugins: ['prettier-plugin-sort-json'],
 };
 
