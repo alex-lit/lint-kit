@@ -1,6 +1,6 @@
 {
   "name": "@alexlit/config-eslint",
-  "version": "167.0.1",
+  "version": "167.0.2",
   "private": false,
   "description": "eslint config",
   "keywords": [
@@ -60,7 +60,7 @@
     "eslint-plugin-perfectionist": "^5.14.0",
     "eslint-plugin-pinia": "^0.4.2",
     "eslint-plugin-regexp": "^3.3.3",
-    "eslint-plugin-sonarjs": "^4.2.2",
+    "eslint-plugin-sonarjs": "^4.2.3",
     "eslint-plugin-unicorn": "^80.0.0",
     "eslint-plugin-vue": "^10.12.1",
     "eslint-plugin-vuejs-accessibility": "^2.6.3",

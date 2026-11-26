@@ -27,11 +27,7 @@ const rules = {
   'better-tailwindcss/enforce-shorthand-classes': 'warn',
   'better-tailwindcss/no-deprecated-classes': 'warn',
   'better-tailwindcss/no-duplicate-classes': 'warn',
-  // Сохраняем поведение старого `tailwindcss/no-arbitrary-value`
-  'better-tailwindcss/no-restricted-classes': [
-    'warn',
-    { restrict: [String.raw`\[([^\[\]]*?)\](?!:)`] },
-  ],
+  'better-tailwindcss/no-restricted-classes': 'off',
   // В Nuxt UI и кастомных классах правило даёт много ложных срабатываний
   'better-tailwindcss/no-unknown-classes': 'off',
   'better-tailwindcss/no-unnecessary-whitespace': 'warn',
