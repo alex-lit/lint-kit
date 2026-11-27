@@ -55,7 +55,11 @@ export const vue = (config = []) =>
         'vue/attributes-order': ['error', { alphabetical: true }],
         'vue/block-lang': [
           'error',
-          { script: { lang: 'ts' }, style: {}, template: {} },
+          {
+            script: { lang: 'ts' },
+            style: { allowNoLang: true, lang: ['postcss', 'scss'] },
+            template: {},
+          },
         ],
         'vue/block-order': [
           'error',
