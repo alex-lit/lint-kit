@@ -17,6 +17,7 @@ JSON и утилит Tailwind CSS. Вместо того чтобы подклю
 
 - [Установка](#установка)
 - [Быстрый старт](#быстрый-старт)
+- [До и после](#до-и-после)
 - [Пример скриптов для package.json](#пример-скриптов-для-packagejson)
 - [Настройка](#настройка)
   - [Настройки конкретного плагина](#настройки-конкретного-плагина)
@@ -48,6 +49,79 @@ export default defineConfig({
   plugins: [plugins.packageJson(), plugins.xml()],
 });
 ```
+
+## До и после
+
+![Prettier приводит Vue-компонент с TypeScript и Tailwind CSS к единому стилю](https://raw.githubusercontent.com/alex-lit/lint-kit/master/packages/config-prettier/docs/before-after.gif)
+
+До:
+
+<!-- prettier-ignore -->
+```vue
+<script setup lang="ts">
+import { computed } from "vue";
+interface Props{title:string;count?:number;items:string[]}
+const props=defineProps<Props>();const total=computed(()=>props.count??0);
+const format=(value:number):string=>`${value} items`;
+</script>
+
+<template>
+  <div class="p-4 bg-white flex items-center justify-between rounded-lg shadow">
+    <h2 class="text-lg text-gray-900 font-semibold">{{ props.title }}</h2>
+    <span class="text-gray-500 text-sm">{{ format(total) }}</span>
+    <ul class="mt-2 space-y-1"><li v-for="item in items" :key="item"
+      class="text-sm text-gray-700">{{ item }}</li></ul>
+  </div>
+</template>
+
+<style scoped>
+.card{@apply p-4 bg-white flex items-center rounded-lg;}
+</style>
+```
+
+После `prettier --write`:
+
+<!-- prettier-ignore -->
+```vue
+<script setup lang="ts">
+  import { computed } from 'vue';
+  interface Props {
+    title: string;
+    count?: number;
+    items: string[];
+  }
+  const props = defineProps<Props>();
+  const total = computed(() => props.count ?? 0);
+  const format = (value: number): string => `${value} items`;
+</script>
+
+<template>
+  <div class="p-4 bg-white flex items-center justify-between rounded-lg shadow">
+    <h2 class="text-lg text-gray-900 font-semibold">{{ props.title }}</h2>
+    <span class="text-gray-500 text-sm">{{ format(total) }}</span>
+    <ul class="mt-2 space-y-1">
+      <li
+        v-for="item in items"
+        :key="item"
+        class="text-sm text-gray-700"
+      >
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style scoped>
+  .card {
+    @apply flex items-center rounded-lg bg-white p-4;
+  }
+</style>
+```
+
+`--write` форматирует `<script setup lang="ts">`, шаблон и стили, приводит
+кавычки к одинарным, разбивает длинные атрибуты и сортирует классы в `@apply`.
+Классы в разметке Prettier не трогает: по задумке конфигурации их сортирует
+`eslint-plugin-better-tailwindcss` в ESLint.
 
 ## Пример скриптов для package.json
 
