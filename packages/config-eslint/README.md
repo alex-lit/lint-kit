@@ -17,6 +17,7 @@ Prettier и не только - всё, что обычно приходится
 
 - [Установка](#установка)
 - [Быстрый старт](#быстрый-старт)
+- [До и после](#до-и-после)
 - [Пример скриптов для package.json](#пример-скриптов-для-packagejson)
 - [Плагины](#плагины)
 - [Свой конфиг](#свой-конфиг)
@@ -50,6 +51,101 @@ export default defineConfig({
   ],
 });
 ```
+
+## До и после
+
+![ESLint находит ошибки в JavaScript и исправляет их командой --fix](https://raw.githubusercontent.com/alex-lit/lint-kit/master/packages/config-eslint/docs/before-after.gif)
+
+До:
+
+<!-- prettier-ignore -->
+```js
+import path from "path";
+import fs from "fs";
+const DEFAULTS = {
+  zIndex: 10,
+  alpha: "a",
+  beta: true,
+};
+const MODES = ["z", "a", "m", "b", "y"];
+export class Cache {
+  constructor(dir) {
+    this.dir = dir;
+    this.items = [];
+    this.defaults = DEFAULTS;
+  }
+  write(name, value) {
+    fs.writeFileSync(path.join(this.dir, name), JSON.stringify(value));
+    return name;
+  }
+  has(name) {
+    return this.items.indexOf(name) !== -1;
+  }
+  first() {
+    return this.items.filter((item) => item.active)[0];
+  }
+  stamp() {
+    return new Date().getTime();
+  }
+}
+
+export function isMode(kind) {
+  return MODES.includes(kind);
+}
+```
+
+После `eslint --fix`:
+
+<!-- prettier-ignore -->
+```js
+import fs from 'node:fs';
+import path from 'node:path';
+
+const DEFAULTS = {
+  alpha: 'a',
+  beta: true,
+  zIndex: 10,
+};
+
+const MODES = new Set(['a', 'b', 'm', 'y', 'z']);
+
+export class Cache {
+  constructor(dir) {
+    this.dir = dir;
+    this.items = [];
+    this.defaults = DEFAULTS;
+  }
+
+  first() {
+    return this.items.find((item) => item.active);
+  }
+
+  has(name) {
+    return this.items.includes(name);
+  }
+
+  stamp() {
+    return Date.now();
+  }
+
+  write(name, value) {
+    fs.writeFileSync(path.join(this.dir, name), JSON.stringify(value));
+
+    return name;
+  }
+}
+
+export function isMode(kind) {
+  return MODES.has(kind);
+}
+```
+
+`--fix` сортирует импорты, ключи объекта и методы класса, переводит встроенные
+модули на `node:`-протокол, меняет двойные кавычки на одинарные, заменяет
+`indexOf` на `includes`, `filter(...)[0]` на `find`, `new Date().getTime()` на
+`Date.now()`, превращает массив констант в `Set` с `.has()` и добавляет пустые
+строки между блоками. Отступы и переносы ESLint не трогает: за форматирование
+отвечает Prettier.
 
 ## Пример скриптов для package.json
 
