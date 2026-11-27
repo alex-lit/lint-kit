@@ -56,6 +56,7 @@ const BASE_RULES = {
   'at-rule-no-deprecated': [true, { ignoreAtRules: ['apply', 'tailwind'] }],
   'at-rule-no-unknown': null,
   'at-rule-no-vendor-prefix': true,
+  'at-rule-prelude-no-invalid': [true, { ignoreAtRules: ['apply'] }],
   'block-no-empty': null,
   'color-function-notation': 'modern',
   'color-hex-length': 'short',
