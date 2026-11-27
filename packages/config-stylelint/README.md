@@ -13,6 +13,24 @@ Vue-файлов: настроенные правила из популярны�
 Проверки модульные: по умолчанию ничего не включено - вы сами перечисляете
 нужные в `defineConfig`.
 
+## Содержание
+
+- [Установка](#установка)
+- [Быстрый старт](#быстрый-старт)
+- [До и после](#до-и-после)
+- [Пример скриптов для package.json](#пример-скриптов-для-packagejson)
+- [Настройка](#настройка)
+  - [Правила конкретной проверки](#правила-конкретной-проверки)
+  - [Правила для отдельных файлов](#правила-для-отдельных-файлов)
+  - [Приоритет настроек](#приоритет-настроек)
+  - [Общие настройки Stylelint](#общие-настройки-stylelint)
+- [Проверки](#проверки)
+- [Миграция с v65](#миграция-с-v65)
+- [Миграция с v63](#миграция-с-v63)
+- [Миграция с v61](#миграция-с-v61)
+- [Разработка](#разработка)
+- [Полезные ссылки](#полезные-ссылки)
+
 ## Установка
 
 ```bash
@@ -29,6 +47,86 @@ export default defineConfig({
   plugins: [plugins.scss(), plugins.vue(), plugins.prettier()],
 });
 ```
+
+## До и после
+
+![Stylelint находит ошибки в SCSS и исправляет их командой --fix](https://raw.githubusercontent.com/alex-lit/lint-kit/master/packages/config-stylelint/docs/before-after.gif)
+
+До:
+
+```text
+@custom-media   --mobile   (width < 600px);
+@custom-media --reduce-motion (prefers-reduced-motion:reduce);
+
+.card{ padding:var(--card-gap);
+    --color-brand:#FF0000;
+
+    @media (--mobile){padding:calc(var(--card-gap)/2);}
+  --card-gap:16px; display:block;
+  &__title{text-transform:uppercase;font-weight:bold;}
+      --card-bg:#FFFFFF;
+
+
+
+       border-radius:var(--card-radius);
+        --card-radius:12px;
+  color:var(--color-brand);
+  --color-brand-hover:#00FF00;
+      background-color:var(--card-bg);
+  transition:color .2s;
+      &--wide{padding:calc(var(--card-gap)*2);}
+  &:hover{color:var(--color-brand-hover);}
+  @media (--reduce-motion){transition:none;}
+}
+```
+
+После `stylelint --fix`:
+
+```scss
+@custom-media --mobile (width < 600px);
+@custom-media --reduce-motion (prefers-reduced-motion: reduce);
+
+.card {
+  --card-bg: rgb(255 255 255);
+  --card-gap: 16px;
+  --card-radius: 12px;
+  --color-brand: rgb(255 0 0);
+  --color-brand-hover: rgb(0 255 0);
+
+  background-color: var(--card-bg);
+  border-radius: var(--card-radius);
+  color: var(--color-brand);
+  display: block;
+  padding: var(--card-gap);
+  transition: color 0.2s;
+
+  @media (--mobile) {
+    padding: calc(var(--card-gap) / 2);
+  }
+
+  @media (--reduce-motion) {
+    transition: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-brand-hover);
+  }
+
+  &--wide {
+    padding: calc(var(--card-gap) * 2);
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+```
+
+`--fix` сортирует CSS-переменные и свойства, приводит цвета к `rgb`, дополняет
+`:hover` до `:hover, :focus` и переносит вложенные медиазапросы наверх. Проверки
+БЭМ, логических свойств и кастомных медиа-запросов требуют ручной правки.
 
 ## Пример скриптов для package.json
 
