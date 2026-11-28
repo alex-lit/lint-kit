@@ -1,4 +1,27 @@
 
+## v224.2.0
+
+[compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@224.1.1...v224.2.0)
+
+### 📖 Documentation
+
+- **config-stylelint:** Добавь содержание и раздел «До и после» ([9bc4bdd9](https://github.com/alex-lit/lint-kit/commit/9bc4bdd9))
+- **readme:** Добавь содержание в README пакетов ([bcd82a01](https://github.com/alex-lit/lint-kit/commit/bcd82a01))
+- **config-eslint:** Добавь раздел «До и после» с GIF-демо ([365b1b91](https://github.com/alex-lit/lint-kit/commit/365b1b91))
+- **config-prettier:** Добавь раздел «До и после» с демонстрацией ([fb2e8311](https://github.com/alex-lit/lint-kit/commit/fb2e8311))
+- **readme:** Добавь наглядный пример «До и после» с GIF ([91cb4084](https://github.com/alex-lit/lint-kit/commit/91cb4084))
+
+### 🏡 Chore
+
+- **@alexlit/config-eslint:** Bump version ([701082f6](https://github.com/alex-lit/lint-kit/commit/701082f6))
+- **@alexlit/config-stylelint:** Bump version ([fd0824ef](https://github.com/alex-lit/lint-kit/commit/fd0824ef))
+- **@alexlit/config-eslint:** Bump version ([8cae6d2f](https://github.com/alex-lit/lint-kit/commit/8cae6d2f))
+- **@alexlit/config-hooks:** Bump version ([c0aeaaaa](https://github.com/alex-lit/lint-kit/commit/c0aeaaaa))
+
+### ❤️ Contributors
+
+- Alexey Litovchenko ([@alex-lit](https://github.com/alex-lit))
+
 ## v224.1.1
 
 [compare changes](https://github.com/alex-lit/lint-kit/compare/@alexlit/lint-kit@224.1.0...v224.1.1)
